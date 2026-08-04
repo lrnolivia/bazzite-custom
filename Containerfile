@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-deck-nvidia-open-gnome:stable
+FROM ghcr.io/ublue-os/bazzite-deck-nvidia-gnome:testing
 
 ## Remove Branding
 ##
