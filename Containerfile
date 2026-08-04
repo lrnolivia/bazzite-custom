@@ -3,13 +3,13 @@ FROM scratch AS ctx
 COPY build_files /
 COPY system_files /system_files
 
-# Base Image — KDE Plasma, Nvidia drivers, Game Mode (gamescope-session) included
-FROM ghcr.io/ublue-os/bazzite-deck-nvidia:stable
+# Base Image
+FROM ghcr.io/ublue-os/bazzite-deck-nvidia-open-gnome:stable
 
 ## Remove Branding
 ##
 
-# 1) Change Plymouth Boot Logo — DE-agnostic, runs before any desktop loads
+# Change Plymouth Boot Logo
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
 
@@ -18,41 +18,22 @@ RUN \
     --mount=type=bind,from=ghcr.io/blue-build/cli/build-scripts:latest,src=/scripts/,dst=/tmp/scripts/ \
     /tmp/scripts/run_module.sh 'initramfs' '{"type":"initramfs"}'
 
-# 2) Remove Bazzite Steam Videos — DE-agnostic, not tied to GNOME or KDE
+# Remove Bazzite Steam Videos
 RUN printf '#!/usr/bin/bash\nexit 0\n' > /usr/bin/bazzite-steam-brand && \
     chmod +x /usr/bin/bazzite-steam-brand
 
-# 3) Rename Bazzite across OS, including the LOGO= key Plasma's About page
-#    (kinfocenter) actually reads — this replaces the GNOME banner-path
-#    mechanism, which doesn't exist on KDE
+# Rename Bazzite across OS
 RUN sed -i \
     -e 's/^NAME=.*/NAME="SteamOS"/' \
     -e 's/^PRETTY_NAME=.*/PRETTY_NAME="SteamOS"/' \
-    -e 's/^LOGO=.*/LOGO=steamos-logo-icon/' \
-    /usr/lib/os-release && \
-    grep -q '^LOGO=' /usr/lib/os-release || echo 'LOGO=steamos-logo-icon' >> /usr/lib/os-release
+    /usr/lib/os-release
 
-# 4) Replace OS logo for KDE/Plasma (untested upstream — confirm on your own
-#    install). kinfocenter resolves the distro logo through the LOGO= name
-#    above via standard icon-theme lookup, at 8 fixed sizes, rather than the
-#    two hardcoded banner paths GNOME uses.
-#
-#    Rather than requiring 8 manually-exported PNGs, this generates the full
-#    icon set at build time from the single steamos-logo.svg you already
-#    have in system_files/ — scaled to fit and padded onto a transparent
-#    square canvas at each size, per the sizing note in the guide.
-COPY system_files/steamos-logo.svg /usr/share/icons/hicolor/scalable/apps/steamos-logo-icon.svg
-
-RUN dnf install -y ImageMagick && \
-    for size in 16 22 24 32 36 48 96 256; do \
-        mkdir -p /usr/share/icons/hicolor/${size}x${size}/apps && \
-        convert -background none -resize ${size}x${size} -gravity center -extent ${size}x${size} \
-            /usr/share/icons/hicolor/scalable/apps/steamos-logo-icon.svg \
-            /usr/share/icons/hicolor/${size}x${size}/apps/steamos-logo-icon.png; \
-    done && \
-    gtk-update-icon-cache -f -t /usr/share/icons/hicolor || true && \
-    dnf remove -y ImageMagick && \
-    dnf clean all
+# Replace Bazzite GNOME OS Logos
+COPY system_files/steamos-logo.png /usr/share/pixmaps/fedora_logo_med.png
+COPY system_files/steamos-white-logo.png /usr/share/pixmaps/fedora_whitelogo_med.png
+COPY system_files/steamos-logo.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo.svg
+COPY system_files/steamos-logo-white.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo-white.svg
+COPY system_files/steamos-logo-le.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo-le.svg
 
 ##
 ##
