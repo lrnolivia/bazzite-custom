@@ -13,8 +13,14 @@ FROM ghcr.io/ublue-os/bazzite-gnome-nvidia-open:stable
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
 
+
+# Move the watermark to top-middle and disable the firmware (motherboard/UEFI)
 # boot logo baked into the BGRT theme
-RUN sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
+RUN sed -i \
+    -e 's/^WatermarkVerticalAlignment=.*/WatermarkVerticalAlignment=.6/' \
+    /usr/share/plymouth/themes/spinner/spinner.plymouth \
+    /usr/share/plymouth/themes/bgrt/bgrt.plymouth && \
+    sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
     /usr/share/plymouth/themes/bgrt/bgrt.plymouth
 
 RUN \
