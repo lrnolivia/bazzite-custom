@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-kde-nvidia:testing
+FROM ghcr.io/ublue-os/bazzite-nvidia:testing
 
 ## Remove Branding
 ##
