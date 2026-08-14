@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+FROM ghcr.io/ublue-os/bazzite-kde-nvidia:testing
 
 ## Remove Branding
 ##
@@ -22,9 +22,9 @@ RUN if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>
     for f in /usr/share/plymouth/themes/spinner/watermark.png \
              /usr/share/plymouth/themes/bgrt/watermark.png; do \
         if command -v magick >/dev/null 2>&1; then \
-            magick "$f" -resize 350x "$f"; \
+            magick "$f" -resize 400x "$f"; \
         else \
-            convert "$f" -resize 350x "$f"; \
+            convert "$f" -resize 400x "$f"; \
         fi; \
     done
 
@@ -52,40 +52,30 @@ RUN sed -i \
     -e 's/^PRETTY_NAME=.*/PRETTY_NAME="SteamOS"/' \
     /usr/lib/os-release
 
-# Replace Bazzite GNOME OS Logos
+# Replace Bazzite OS Logos
 COPY system_files/steamos-logo.png /usr/share/pixmaps/fedora_logo_med.png
 COPY system_files/steamos-white-logo.png /usr/share/pixmaps/fedora_whitelogo_med.png
 COPY system_files/steamos-logo.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo.svg
 COPY system_files/steamos-logo-white.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo-white.svg
 COPY system_files/steamos-logo-le.svg /usr/share/icons/hicolor/scalable/places/bazzite-logo-le.svg
 
-# Replace GDM Login Screen Logo (small logo at the bottom of the login screen)
-# org.gnome.login-screen.logo scales whatever image is given down to 48px
-# tall, so a raster image looks blurry at that size - point it at the SVG
-# instead, which stays sharp at any scale.
-#
-# Also: disable the "welcome" banner message text (keeps the user-avatar
-# carousel), force a solid black background (no picture, no gradient),
-# and make sure the clock shows the date and day of the week.
-RUN mkdir -p /etc/dconf/db/gdm.d && \
+# Replace SDDM Login Screen Background (KDE's login manager, not GDM)
+# Fedora/Bazzite ships the Breeze SDDM theme under /usr/share/sddm/themes/01-breeze-fedora.
+# Its background is controlled by theme.conf.user, not dconf - forcing
+# type=color with a black color gives the same solid-black result we did
+# for GDM. The clock/date/weekday display is on by default in this theme,
+# so no extra config is needed for that. Note: SDDM's Breeze theme has no
+# equivalent to GDM's "welcome banner message" setting - there's nothing
+# to disable here, since it never had one.
+RUN THEME_DIR=/usr/share/sddm/themes/01-breeze-fedora && \
+    if [ ! -d "$THEME_DIR" ]; then THEME_DIR=/usr/share/sddm/themes/breeze; fi && \
+    mkdir -p "$THEME_DIR" && \
     printf '%s\n' \
-        '[org/gnome/login-screen]' \
-        'logo="/usr/share/icons/hicolor/scalable/places/bazzite-logo-white.svg"' \
-        'banner-message-enable=false' \
-        '' \
-        '[org/gnome/desktop/background]' \
-        'picture-uri=""' \
-        'picture-uri-dark=""' \
-        'picture-options="none"' \
-        'primary-color="#000000"' \
-        'secondary-color="#000000"' \
-        'color-shading-type="solid"' \
-        '' \
-        '[org/gnome/desktop/interface]' \
-        'clock-show-date=true' \
-        'clock-show-weekday=true' \
-        > /etc/dconf/db/gdm.d/95-steamos-branding && \
-    dconf update
+        '[General]' \
+        'type=color' \
+        'color=#000000' \
+        'background=' \
+        > "$THEME_DIR/theme.conf.user"
 
 ##
 ##
