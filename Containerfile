@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:testing
+FROM ghcr.io/ublue-os/bazzite-gnome-nvidia-open:testing
 
 ## Remove Branding
 ##
@@ -30,8 +30,7 @@ RUN if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>
 
 # Move the watermark to top-middle and disable the firmware (motherboard/UEFI)
 # boot logo baked into the BGRT theme
-RUN 
-    sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
+RUN sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
     /usr/share/plymouth/themes/bgrt/bgrt.plymouth
 
 RUN \
