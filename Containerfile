@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
+FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:testing
 
 ## Remove Branding
 ##
@@ -12,6 +12,30 @@ FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
 # Change Plymouth Boot Logo
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
+
+# Enlarge the watermark - the two-step plymouth module has no size/scale
+# key, so the image itself has to be bigger. Adjust the width (400px here)
+# to taste; height scales automatically to preserve aspect ratio.
+RUN if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then \
+        dnf install -y ImageMagick; \
+    fi && \
+    for f in /usr/share/plymouth/themes/spinner/watermark.png \
+             /usr/share/plymouth/themes/bgrt/watermark.png; do \
+        if command -v magick >/dev/null 2>&1; then \
+            magick "$f" -resize 350x "$f"; \
+        else \
+            convert "$f" -resize 350x "$f"; \
+        fi; \
+    done
+
+# Move the watermark to top-middle and disable the firmware (motherboard/UEFI)
+# boot logo baked into the BGRT theme
+RUN sed -i \
+    -e 's/^WatermarkVerticalAlignment=.*/WatermarkVerticalAlignment=.08/' \
+    /usr/share/plymouth/themes/spinner/spinner.plymouth \
+    /usr/share/plymouth/themes/bgrt/bgrt.plymouth && \
+    sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
+    /usr/share/plymouth/themes/bgrt/bgrt.plymouth
 
 RUN \
     --mount=type=bind,from=ghcr.io/blue-build/modules:latest,src=/modules,dst=/tmp/modules,rw \
