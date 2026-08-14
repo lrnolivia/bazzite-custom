@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:testing
+FROM ghcr.io/ublue-os/bazzite-gnome-nvidia:stable
 
 ## Remove Branding
 ##
@@ -63,10 +63,27 @@ COPY system_files/steamos-logo-le.svg /usr/share/icons/hicolor/scalable/places/b
 # org.gnome.login-screen.logo scales whatever image is given down to 48px
 # tall, so a raster image looks blurry at that size - point it at the SVG
 # instead, which stays sharp at any scale.
+#
+# Also: disable the "welcome" banner message text (keeps the user-avatar
+# carousel), force a solid black background (no picture, no gradient),
+# and make sure the clock shows the date and day of the week.
 RUN mkdir -p /etc/dconf/db/gdm.d && \
     printf '%s\n' \
         '[org/gnome/login-screen]' \
         'logo="/usr/share/icons/hicolor/scalable/places/bazzite-logo-white.svg"' \
+        'banner-message-enable=false' \
+        '' \
+        '[org/gnome/desktop/background]' \
+        'picture-uri=""' \
+        'picture-uri-dark=""' \
+        'picture-options="none"' \
+        'primary-color="#000000"' \
+        'secondary-color="#000000"' \
+        'color-shading-type="solid"' \
+        '' \
+        '[org/gnome/desktop/interface]' \
+        'clock-show-date=true' \
+        'clock-show-weekday=true' \
         > /etc/dconf/db/gdm.d/95-steamos-branding && \
     dconf update
 
