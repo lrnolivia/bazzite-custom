@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia-open:stable
+FROM ghcr.io/ublue-os/bazzite-deck-nvidia-gnome:stable
 
 ## Remove Branding
 ##
@@ -13,11 +13,37 @@ FROM ghcr.io/ublue-os/bazzite-gnome-nvidia-open:stable
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
 
+# Enlarge the watermark - the two-step plymouth module has no size/scale
+# key, so the image itself has to be bigger. WIDTH is the only number you
+# should need to touch: bump it up for a bigger logo, down for smaller.
+# Height scales automatically to preserve aspect ratio. The "identify"
+# line prints the resulting pixel size into the build log so you can
+# confirm in the log that the resize actually took effect.
+RUN if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then \
+        dnf install -y ImageMagick; \
+    fi && \
+    WIDTH=900 && \
+    for f in /usr/share/plymouth/themes/spinner/watermark.png \
+             /usr/share/plymouth/themes/bgrt/watermark.png; do \
+        if command -v magick >/dev/null 2>&1; then \
+            magick "$f" -resize "${WIDTH}x" "$f"; \
+            echo "Resized $f to $(magick identify -format '%wx%h' "$f")"; \
+        else \
+            convert "$f" -resize "${WIDTH}x" "$f"; \
+            echo "Resized $f to $(identify -format '%wx%h' "$f")"; \
+        fi; \
+    done
 
-# Move the watermark to top-middle and disable the firmware (motherboard/UEFI)
-# boot logo baked into the BGRT theme
+# Center the watermark and the spinner as a single group in the middle of
+# the screen, with a gap between them: the watermark sits just above
+# center (.40) and the spinner sits just below it (.62). Nudge these two
+# numbers further apart for more gap, closer together for less. Also
+# disable the firmware (motherboard/UEFI) boot logo baked into BGRT.
 RUN sed -i \
-    -e 's/^WatermarkVerticalAlignment=.*/WatermarkVerticalAlignment=.6/' \
+    -e 's/^WatermarkHorizontalAlignment=.*/WatermarkHorizontalAlignment=.5/' \
+    -e 's/^WatermarkVerticalAlignment=.*/WatermarkVerticalAlignment=.40/' \
+    -e 's/^HorizontalAlignment=.*/HorizontalAlignment=.5/' \
+    -e 's/^VerticalAlignment=.*/VerticalAlignment=.62/' \
     /usr/share/plymouth/themes/spinner/spinner.plymouth \
     /usr/share/plymouth/themes/bgrt/bgrt.plymouth && \
     sed -i 's/^UseFirmwareBackground=true/UseFirmwareBackground=false/' \
