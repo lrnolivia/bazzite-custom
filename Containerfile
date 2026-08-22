@@ -4,34 +4,14 @@ COPY build_files /
 COPY system_files /system_files
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite-gnome-nvidia-open:stable
-## Remove Branding
+FROM ghcr.io/ublue-os/bazzite-deck-nvidia-gnome:testing
+## Remove Branding 
 ##
 
 # Change Plymouth Boot Logo
-COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
-COPY system_files/steamos-watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
+COPY system_files/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
+COPY system_files/watermark.png /usr/share/plymouth/themes/bgrt/watermark.png
 
-# Enlarge the watermark - the two-step plymouth module has no size/scale
-# key, so the image itself has to be bigger. WIDTH is the only number you
-# should need to touch: bump it up for a bigger logo, down for smaller.
-# Height scales automatically to preserve aspect ratio. The "identify"
-# line prints the resulting pixel size into the build log so you can
-# confirm in the log that the resize actually took effect.
-RUN if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then \
-        dnf install -y ImageMagick; \
-    fi && \
-    WIDTH=900 && \
-    for f in /usr/share/plymouth/themes/spinner/watermark.png \
-             /usr/share/plymouth/themes/bgrt/watermark.png; do \
-        if command -v magick >/dev/null 2>&1; then \
-            magick "$f" -resize "${WIDTH}x" "$f"; \
-            echo "Resized $f to $(magick identify -format '%wx%h' "$f")"; \
-        else \
-            convert "$f" -resize "${WIDTH}x" "$f"; \
-            echo "Resized $f to $(identify -format '%wx%h' "$f")"; \
-        fi; \
-    done
 
 # Center the watermark and the spinner as a single group in the middle of
 # the screen, with a gap between them: the watermark sits just above
@@ -101,6 +81,13 @@ RUN mkdir -p /etc/dconf/db/gdm.d && \
 ##
 ##
 
+# Restart inputplumber after resume from suspend, so controllers
+# (e.g. Steam Controller 2) re-attach cleanly instead of showing
+# connected but unresponsive.
+RUN mkdir -p /etc/systemd/system/systemd-suspend.service.d && \
+    printf '[Service]\nExecStopPost=/usr/bin/systemctl restart inputplumber.service\n' \
+        > /etc/systemd/system/systemd-suspend.service.d/restart-inputplumber.conf
+
 ### [IM]MUTABLE /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to
 ## make it mutable/writable for users. However, some packages write files to this directory,
@@ -120,7 +107,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    /ctx/build.sh
+    bash /ctx/build.sh
 
 ### LINTING
 ## Verify final image and contents are correct.
