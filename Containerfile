@@ -125,42 +125,9 @@ RUN FEDORA_VERSION=$(rpm -E %fedora) && \
 ## per-user session daemon. This wrapper finds whichever user owns the
 ## active seat0 session and re-execs the real command inside that
 ## user's session bus, so it works regardless of what invoked it.
-RUN cat > /usr/libexec/keyd-session-switch <<'EOF' && \
-    chmod +x /usr/libexec/keyd-session-switch
-#!/usr/bin/bash
-set -euo pipefail
-
-case "${1:-}" in
-    desktop) CMD=(/usr/bin/steamosctl switch-to-desktop-mode) ;;
-    game)    CMD=(/usr/bin/return-to-gamemode) ;;
-    *)       echo "Usage: $0 {desktop|game}" >&2; exit 1 ;;
-esac
-
-USER_NAME=$(loginctl list-sessions --no-legend | awk '$4=="seat0"{print $3; exit}')
-if [ -z "${USER_NAME:-}" ]; then
-    logger -t keyd-session-switch "no seat0 session found, aborting"
-    exit 1
-fi
-USER_UID=$(id -u "$USER_NAME")
-
-exec runuser -u "$USER_NAME" -- env \
-    XDG_RUNTIME_DIR="/run/user/${USER_UID}" \
-    DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${USER_UID}/bus" \
-    "${CMD[@]}"
-EOF
-
-RUN mkdir -p /etc/keyd && \
-    cat > /etc/keyd/default.conf <<'EOF'
-[ids]
-*
-
-[main]
-leftmeta = overload(meta, leftmeta)
-
-[meta]
-d = command(/usr/libexec/keyd-session-switch desktop)
-g = command(/usr/libexec/keyd-session-switch game)
-EOF
+COPY system_files/keyd-session-switch /usr/libexec/keyd-session-switch
+COPY system_files/keyd-default.conf /etc/keyd/default.conf
+RUN chmod 0755 /usr/libexec/keyd-session-switch
 
 RUN systemctl enable keyd.service
 

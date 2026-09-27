@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+set -euo pipefail
+
+case "${1:-}" in
+    desktop) CMD=(/usr/bin/steamosctl switch-to-desktop-mode) ;;
+    game)    CMD=(/usr/bin/return-to-gamemode) ;;
+    *)       echo "Usage: $0 {desktop|game}" >&2; exit 1 ;;
+esac
+
+USER_NAME=$(loginctl list-sessions --no-legend | awk '$4=="seat0"{print $3; exit}')
+if [ -z "${USER_NAME:-}" ]; then
+    logger -t keyd-session-switch "no seat0 session found, aborting"
+    exit 1
+fi
+USER_UID=$(id -u "$USER_NAME")
+
+exec runuser -u "$USER_NAME" -- env \
+    XDG_RUNTIME_DIR="/run/user/${USER_UID}" \
+    DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${USER_UID}/bus" \
+    "${CMD[@]}"
