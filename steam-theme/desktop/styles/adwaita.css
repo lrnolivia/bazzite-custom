@@ -1,6 +1,30 @@
 /* GTK surfaces and fonts around the approved Windows game-page composition. */
+body.DesktopUI {
+ --adw-window-bg:#202020!important;
+ --adw-window-fg:#fafafa!important;
+ --adw-view-bg:#202020!important;
+ --adw-view-fg:#fafafa!important;
+ --adw-headerbar-bg:#2f2f2f!important;
+ --adw-headerbar-fg:#fafafa!important;
+ --adw-headerbar-backdrop:#202020!important;
+ --adw-sidebar-bg:#292929!important;
+ --adw-sidebar-fg:#fafafa!important;
+ --adw-sidebar-backdrop:#292929!important;
+ --adw-secondary-sidebar-bg:#292929!important;
+ --adw-secondary-sidebar-backdrop:#262626!important;
+ --adw-card-bg:#303030!important;
+ --adw-dialog-bg:#363636!important;
+ --adw-popover-bg:#363636!important;
+ --adw-window-bg-rgb:32,32,32;
+ --adw-window-fg-rgb:250,250,250;
+ --adw-view-bg-rgb:32,32,32;
+ --adw-headerbar-bg-rgb:47,47,47;
+ --adw-sidebar-bg-rgb:41,41,41;
+ --library-page-bg:#202020;
+ --library-page-bg-rgb:32,32,32;
+}
 body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i {
- --background-col:rgb(var(--adw-window-bg-rgb,32,32,34));
+ --background-col:var(--library-page-bg,#202020);
  --color-darkest:var(--background-col);
  --library-card:rgb(var(--adw-view-bg-rgb,40,40,42));
  --library-card-raised:rgb(var(--adw-headerbar-bg-rgb,48,48,50));
@@ -157,3 +181,5 @@ body.DesktopUI .AppDetailsMain .InPage .PlayBar.PlayBar::before {
 
 /* Keep the blurred placeholder while Steam advances past failed hero sources. */
 .HeaderBackgroundImage img[data-loew-artwork-ready=false]:not(.ImgBlur) {opacity:0!important;}
+
+body.DesktopUI .PlayButtonContainer>.PlayButton .ButtonText {font-weight:600!important;}

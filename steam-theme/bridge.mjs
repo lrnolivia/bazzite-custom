@@ -31,7 +31,7 @@ function bundle(){
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(map[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===14)return;window.__loewAdwaitaPort=14;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
+ return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===23)return;window.__loewAdwaitaPort=23;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
 }
 // CSS Loader translates dot selectors, while Prime also uses semantic
 // [class~=...] selectors. Supply those aliases in Game Mode popup documents.
@@ -45,7 +45,7 @@ function gameModeBundle(){
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(aliases[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(window.__loewPrimeAliases===9)return;window.__loewPrimeAliasState?.observer.disconnect();window.__loewPrimeAliases=9;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n'+read('desktop/scripts/logoPalette.js').replace('export default','const palettes =')+'\n'+read('game-mode/artworkColor.js')+'\n'+artworkManifest()+scripts.join('\n')+'\n})();';
+ return `(()=>{if(window.__loewPrimeAliases===10)return;window.__loewPrimeAliasState?.observer.disconnect();window.__loewPrimeAliases=10;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n'+read('desktop/scripts/logoPalette.js').replace('export default','const palettes =')+'\n'+read('game-mode/artworkColor.js')+'\n'+artworkManifest()+scripts.join('\n')+'\n})();';
 }
 let payload;
 try{payload=bundle()}catch(e){console.error(e);process.exit(1)}

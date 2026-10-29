@@ -1,0 +1,28 @@
+/* Current libadwaita uses CSS variables; older versions use named colours. */
+:root {
+  --window-bg-color: #202020;
+  --window-fg-color: #fafafa;
+  --view-bg-color: #202020;
+  --view-fg-color: #fafafa;
+  --headerbar-bg-color: #2f2f2f;
+  --headerbar-fg-color: #fafafa;
+  --headerbar-backdrop-color: #202020;
+  --headerbar-shade-color: rgb(0 0 0 / 36%);
+  --headerbar-darker-shade-color: rgb(0 0 0 / 90%);
+  --sidebar-bg-color: #292929;
+  --sidebar-fg-color: #fafafa;
+  --sidebar-backdrop-color: #292929;
+  --sidebar-shade-color: rgb(0 0 0 / 25%);
+  --sidebar-border-color: rgb(0 0 0 / 36%);
+  --secondary-sidebar-bg-color: #292929;
+  --secondary-sidebar-fg-color: #fafafa;
+  --secondary-sidebar-backdrop-color: #262626;
+  --card-bg-color: #303030;
+  --card-fg-color: #fafafa;
+  --card-shade-color: rgb(0 0 0 / 36%);
+  --dialog-bg-color: #363636;
+  --dialog-fg-color: #fafafa;
+  --popover-bg-color: #363636;
+  --popover-fg-color: #fafafa;
+  --popover-shade-color: rgb(0 0 0 / 25%);
+}

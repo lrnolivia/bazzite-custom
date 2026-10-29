@@ -33,7 +33,7 @@
         seen.set(image,source);
         if(!image.animate)return;
         const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
-        const frames=reduced?[{opacity:0},{opacity:1}]:[{opacity:0,scale:kind==='hero'?'1.045':'0.90'},{opacity:1,scale:'1'}];
+        const frames=reduced?[{opacity:0},{opacity:1}]:kind==='hero'?[{opacity:0},{opacity:1}]:[{opacity:0,scale:'0.90'},{opacity:1,scale:'1'}];
         try{
             const animation=image.animate(frames,{duration:reduced?80:300,easing:'cubic-bezier(.2,.65,.3,1)'});
             // Hold the first pose while decoding. Let the browser resolve the
@@ -57,7 +57,7 @@
     function scan(initial=false){
         frame=0;if(stopped)return;
         for(const capsule of document.querySelectorAll(capsuleSelector)){
-            if(!desktop)reveal(capsule.querySelector(heroSelector),'hero',capsule,initial);
+            reveal(capsule.querySelector(heroSelector),'hero',capsule,initial);
             reveal(capsule.querySelector(logoSelector),'logo',capsule,initial);
         }
         const visibility=new Map();

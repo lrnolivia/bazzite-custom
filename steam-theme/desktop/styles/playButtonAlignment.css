@@ -38,7 +38,7 @@
     position: relative !important;
     margin-top: -64px !important;
     height: 424px !important;
-    background: linear-gradient(to bottom,transparent 0,rgba(32,32,32,.04) 160px,rgba(32,32,32,.4) 280px,#202020 424px) !important;
+    background: linear-gradient(to bottom,transparent 0,rgba(var(--library-page-bg-rgb,32,32,32),.04) 160px,rgba(var(--library-page-bg-rgb,32,32,32),.4) 280px,var(--library-page-bg,#202020) 424px) !important;
     backdrop-filter: blur(22px) !important;
     -webkit-backdrop-filter: blur(22px) !important;
     mask-image: linear-gradient(to bottom,transparent 0,#000 64px,#000 100%) !important;
@@ -47,7 +47,7 @@
 ._2OOzYVWIHaKXm6_7sscT9i .BackdropGlass::before,
 ._2OOzYVWIHaKXm6_7sscT9i .BackdropGlass::after { content: none !important; }
 ._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer.ColumnContainer {
-    background: linear-gradient(to bottom,transparent 0,rgba(32,32,32,.18) 48px,rgba(32,32,32,.7) 112px,#202020 180px) !important;
+    background: linear-gradient(to bottom,transparent 0,rgba(var(--library-page-bg-rgb,32,32,32),.18) 48px,rgba(var(--library-page-bg-rgb,32,32,32),.7) 112px,var(--library-page-bg,#202020) 180px) !important;
     min-height: calc(100vh - 48px) !important;
     box-sizing: border-box !important;
     backdrop-filter: none !important;
@@ -72,7 +72,7 @@
     inset: 0;
     z-index: -1;
     border-radius: 10px;
-    background: rgba(32,32,32,.72);
+    background: rgba(var(--library-page-bg-rgb,32,32,32),.72);
     backdrop-filter: blur(22px);
     border: 1px solid rgba(255,255,255,.1);
     box-shadow: 0 6px 22px rgba(0,0,0,.2);
@@ -182,7 +182,7 @@
 /* Cover empty pages after the reflection fades. */
 ._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i {
  min-height: 100vh !important;
- background: linear-gradient(to bottom,transparent 0,transparent 260px,#202020 424px) !important;
+ background: linear-gradient(to bottom,transparent 0,transparent 260px,var(--library-page-bg,#202020) 424px) !important;
 }
 ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButton .ButtonText { margin-left: 0 !important; }
 [data-game-accent-control] {
@@ -201,7 +201,7 @@
 [data-game-accent-picker] h3 {margin:0 0 6px;font-size:18px;font-weight:600;}
 [data-game-accent-picker] p {margin:0 0 16px;color:#cecece;}
 [data-game-accent-picker] .accent-picker-row {display:flex;gap:12px;margin-bottom:16px;}
-[data-game-accent-picker] input {box-sizing:border-box;min-width:0;height:36px;border:1px solid #666;border-radius:4px;background:#202020;color:#fff;font:inherit;}
+[data-game-accent-picker] input {box-sizing:border-box;min-width:0;height:36px;border:1px solid #666;border-radius:4px;background:var(--library-page-bg,#202020);color:#fff;font:inherit;}
 [data-game-accent-picker] input[type=color] {width:44px;padding:3px;cursor:pointer;}
 [data-game-accent-picker] input[type=text] {flex:1;padding:6px 10px;}
 [data-game-accent-picker] .accent-picker-actions {display:flex;gap:8px;}
@@ -233,11 +233,11 @@
 [data-game-accent-picker] {color-scheme:light dark;}
 [data-game-accent-picker] input[type=color] {color-scheme:light dark;}
 @media(prefers-color-scheme:light) {
- [data-game-accent-picker] {background:#f3f3f3;color:#202020;border-color:#ccc;}
+ [data-game-accent-picker] {background:#f3f3f3;color:var(--library-page-bg,#202020);border-color:#ccc;}
  [data-game-accent-picker] p {color:#494949;}
- [data-game-accent-picker] :is(input,button) {background:#fff;color:#202020;border-color:#aaa;}
+ [data-game-accent-picker] :is(input,button) {background:#fff;color:var(--library-page-bg,#202020);border-color:#aaa;}
  [data-game-accent-picker] button:hover {background:#e8e8e8;}
- [data-game-accent-picker] :is(button,input):focus-visible {outline-color:#202020;}
+ [data-game-accent-picker] :is(button,input):focus-visible {outline-color:var(--library-page-bg,#202020);}
 }
 [data-artwork-eyedropper] {position:fixed;inset:0;z-index:2147483647;cursor:crosshair;background:transparent;outline:none;}
 [data-artwork-eyedropper] .artwork-picker-hint {position:absolute;top:20px;left:50%;transform:translateX(-50%);padding:12px 18px;border-radius:8px;background:#252525;color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3);font:14px 'Segoe UI',sans-serif;pointer-events:none;}
@@ -301,13 +301,13 @@
  background:rgba(20,20,20,.24)!important;border:1px solid rgba(255,255,255,.16)!important;
 }
 /* The shared parent paints behind the hero, reflection, and every short page. */
-._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {background:#202020!important;min-height:100%;}
+._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {background:var(--library-page-bg,#202020)!important;min-height:100%;}
 /* Keep native negative-z hero art above the page's solid base. */
 ._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {isolation:isolate!important;}
 .HeaderFeatures>.InCollection {padding:3px 12px!important;line-height:18px!important;font-size:11px!important;font-weight:600!important;}
 /* Preserve Steam's perspective-based hero sizing; paint the base on the scrollport. */
 ._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {background:transparent!important;isolation:auto!important;}
-.AppDetailsMain .ScrollContainer {background-color:#202020!important;}
+.AppDetailsMain .ScrollContainer {background-color:var(--library-page-bg,#202020)!important;}
 ._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control] {background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.1)!important;color:#f4f4f4!important;}
 ._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control]:hover {background:rgba(255,255,255,.19)!important;}
 ._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control] svg {color:#f4f4f4!important;}
@@ -353,7 +353,7 @@
 }
 ._2OOzYVWIHaKXm6_7sscT9i .Backdrop .BackdropGlass.BackdropGlass {
  height:calc(100% + 64px)!important;
- background:linear-gradient(to bottom,rgba(32,32,32,.1),rgba(32,32,32,.25) 60%,rgba(32,32,32,.8))!important;
+ background:linear-gradient(to bottom,rgba(var(--library-page-bg-rgb,32,32,32),.1),rgba(var(--library-page-bg-rgb,32,32,32),.25) 60%,rgba(var(--library-page-bg-rgb,32,32,32),.8))!important;
 }
 
 /* The shared reflection replaces the native second canvas, avoiding a seam. */

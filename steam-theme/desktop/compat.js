@@ -25,7 +25,7 @@ function pruneAdwaita(){
 pruneAdwaita();
 const pruneTimer=setInterval(pruneAdwaita,1500);
 const aliasSignatures=new WeakMap();
-function aliasNode(node){if(node.nodeType!==1)return;const signature=node.getAttribute('class');if(aliasSignatures.get(node)===signature)return;for(const cls of [...node.classList])for(const name of aliases[cls]||[])if(!node.classList.contains(name))node.classList.add(name);aliasSignatures.set(node,node.getAttribute('class'))}
+function aliasNode(node){if(node.nodeType!==1)return;const signature=node.getAttribute('class');if(aliasSignatures.get(node)===signature)return;const missing=new Set();for(const cls of node.classList)for(const name of aliases[cls]||[])if(!node.classList.contains(name))missing.add(name);if(missing.size)node.classList.add(...missing);aliasSignatures.set(node,node.getAttribute('class'))}
 function aliasTree(node){aliasNode(node);if(node.querySelectorAll)node.querySelectorAll('[class]').forEach(aliasNode)}
 aliasTree(document.body);
 let scheduled=false;
