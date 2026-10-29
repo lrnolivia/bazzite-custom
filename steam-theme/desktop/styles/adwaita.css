@@ -34,6 +34,8 @@ body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i {
  font-family:var(--adw-text-font,system-ui);
 }
 body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer,.RightColumn){font-family:var(--adw-text-font,system-ui)}
+body.DesktopUI .AchievementProgress{background:var(--adw-accent-bg)!important}
+body.DesktopUI #lumen-settings-overlay a{color:var(--adw-accent)!important}
 body.DesktopUI #lumen-moon-btn {
  position:fixed!important;inset:6px auto auto 180px!important;
  width:36px!important;height:36px!important;min-width:36px!important;

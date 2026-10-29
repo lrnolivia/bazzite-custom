@@ -1,8 +1,10 @@
-# Adwaita Steam game pages
+# Steam Prime - Gnome
 
-Ports the approved Desktop-2026-10-14.2 game-page design with the user-selected rounded Adwaita Play button into native Linux Steam while retaining the surrounding Adwaita theme. Lumen remains the LuaTools loader. Millennium is not required.
+Steam Prime - Gnome is the Linux GNOME desktop edition, built on Adwaita for Steam. It ports the approved Desktop-2026-10-14.2 game-page design with the user-selected rounded Adwaita Play button into native Linux Steam. Lumen remains the LuaTools loader. Millennium is not required.
 
 Run `python3 install.py` as your desktop user with Node.js 22 or newer available. Restart Steam after installation. The user service waits for Steam's existing loopback debugging endpoint, applies the page assets, reconstructs the CSS-module names used by the approved design, and positions Lumen's button outside Adwaita's clipped menu. The installed client's class map is refreshed whenever the bridge attaches to a new Steam window. Late-loading Adwaita styles are reconciled, including nested rules that suppress Steam's floating bar. Lumen settings use Adwaita surfaces and typography; its fixes control and the floating utility row retain separate hit targets.
+
+Steam Prime - Gnome follows the desktop accent live. It reads GTK 4/GTK 3 custom accent values (including the managed Accented overrides), falls back to GNOME’s accent preference, and watches atomic CSS updates and preference changes. Native desktop popup windows receive the same palette. Selections, focus rings, controls, Lumen and achievement fills use the system accent; Play buttons keep per-game artwork accents. The Game Mode Steam Prime edition retains its own styling.
 
 The metadata bridge permits only three read-only Steam Store endpoints. It sends no account cookies or credentials and enforces URL, response-size, concurrency and request limits. Non-Steam games are matched only when the normalized title has exactly one Steam result. The info panel starts collapsed.
 

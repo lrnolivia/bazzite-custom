@@ -301,7 +301,7 @@
 [data-accent-rgb] {margin-bottom:14px;}
 [data-accent-rgb][hidden] {display:none;}
 [data-accent-rgb] label {display:grid;grid-template-columns:36px 1fr 28px;gap:8px;align-items:center;margin:8px 0;font-size:12px;}
-[data-accent-rgb] input {height:20px!important;width:100%;padding:0;accent-color:#b9cfe4;}
+[data-accent-rgb] input {height:20px!important;width:100%;padding:0;accent-color:var(--adw-accent-bg,#3584e4);}
 [data-accent-rgb] output {text-align:right;font-variant-numeric:tabular-nums;}
 @media(max-width:1200px) {
  .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {grid-template-columns:108px minmax(0,1fr) 220px!important;}

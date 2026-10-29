@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Install the user-local Adwaita game-page bridge; no system Steam files change."""
+"""Install Steam Prime - Gnome; no system Steam files change."""
 from pathlib import Path
 import shutil,subprocess,time,json
 home=Path.home();source=Path(__file__).resolve().parent
+theme_name=json.loads((source/'desktop/theme.json').read_text())['name']
 target=home/'.local/share/loew-steam-theme';state=home/'.local/state/loew-steam-theme';state.mkdir(parents=True,exist_ok=True)
 backup=state/time.strftime('backup-%Y%m%d-%H%M%S');backup.mkdir()
 node=shutil.which('node')
@@ -17,9 +18,37 @@ for p in (target,unit):
 # Replace the packaged assets so retired themes cannot return on reinstall.
 if (target/'game-mode').exists():shutil.rmtree(target/'game-mode')
 shutil.copytree(source,target,dirs_exist_ok=True)
+# Rename existing user-facing launcher/healer labels while retaining their paths
+# and upstream Adwaita installation/health checks.
+labels={
+ home/'.local/bin/steam-adwaita-launch':{
+  '-a "Adwaita for Steam"':'-a "'+theme_name+'"',
+  '"Adwaita loaded correctly."':'"'+theme_name+' loaded correctly."',
+  '"Steam reset Adwaita"':'"Steam reset '+theme_name+'"',
+  '"Adwaita repaired"':'"'+theme_name+' repaired"',
+  '"Adwaita repair failed"':'"'+theme_name+' repair failed"',
+ },
+ home/'.local/bin/adwaita-steam-heal':{
+  'notify-send "Adwaita for Steam"':'notify-send "'+theme_name+'"',
+  'notify_user "Automatic Adwaita repair failed."':'notify_user "Automatic '+theme_name+' repair failed."',
+  'notify_user "Adwaita for Steam updated/repaired."':'notify_user "'+theme_name+' updated/repaired."',
+  'notify_user "Adwaita was reinstalled."':'notify_user "'+theme_name+' was reinstalled."',
+ },
+ home/'.config/autostart/adwaita-steam-heal.desktop':{
+  'Name=Adwaita Steam Self-Heal':'Name='+theme_name+' Self-Heal',
+  'Comment=Repair Adwaita for Steam when entering Desktop Mode':'Comment=Repair '+theme_name+' when entering Desktop Mode',
+ },
+}
+for file,replacements in labels.items():
+ if not file.is_file():continue
+ before=file.read_text();after=before
+ for old,new in replacements.items():after=after.replace(old,new)
+ if after!=before:
+  saved=backup/'user-labels'/file.relative_to(home);saved.parent.mkdir(parents=True,exist_ok=True)
+  shutil.copy2(file,saved);file.write_text(after)
 unit.parent.mkdir(parents=True,exist_ok=True)
 unit.write_text(f'''[Unit]
-Description=Adwaita Steam game pages and Lumen header compatibility
+Description={theme_name} desktop theme and Lumen compatibility
 After=graphical-session.target
 
 [Service]
@@ -50,4 +79,4 @@ if themes.exists():
 subprocess.run(['systemctl','--user','daemon-reload'],check=True)
 subprocess.run(['systemctl','--user','enable','--now','loew-steam-theme.service'],check=True)
 subprocess.run(['systemctl','--user','restart','loew-steam-theme.service'],check=True)
-print(f'Installed: {target}\nRollback backup: {backup}')
+print(f'Installed {theme_name}: {target}\nRollback backup: {backup}')

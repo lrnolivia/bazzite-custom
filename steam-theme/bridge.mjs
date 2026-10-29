@@ -3,9 +3,11 @@ import path from 'node:path';
 import os from 'node:os';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {watchDesktopAccent,desktopAccentCss} from './desktopAccent.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const steam=path.join(os.homedir(),'.local/share/Steam');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const themeName=JSON.parse(read('desktop/theme.json')).name;
 function artworkManifest(){
  const users=path.join(steam,'userdata');const files={};
  // User-local artwork remains on disk; publish only valid Steam asset names.
@@ -31,7 +33,7 @@ function bundle(){
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(map[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===25)return;window.__loewAdwaitaPort=25;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
+ return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===26)return;window.__loewAdwaitaPort=26;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
 }
 // CSS Loader translates dot selectors, while Prime also uses semantic
 // [class~=...] selectors. Supply those aliases in Game Mode popup documents.
@@ -50,6 +52,13 @@ function gameModeBundle(){
 let payload;
 try{payload=bundle()}catch(e){console.error(e);process.exit(1)}
 const connected=new Map();
+const accent=watchDesktopAccent(()=>{
+ for(const ws of connected.values())if(ws.readyState===1&&ws.desktopAccent)ws.send(JSON.stringify({id:900000,method:'Runtime.evaluate',params:{expression:accentInjection()}}));
+});
+function accentInjection(){
+ const css=desktopAccentCss(accent.current);
+ return `(()=>{const apply=()=>{if(!document.body||(!document.body.classList.contains('DesktopUI')&&!document.documentElement.classList.contains('client_chat_frame')))return;let style=document.getElementById('steam-prime-gnome-accent');if(!style){style=document.createElement('style');style.id='steam-prime-gnome-accent';document.head.append(style);}const css=${JSON.stringify(css)};if(style.textContent!==css)style.textContent=css;if(document.documentElement.dataset.steamTheme!==${JSON.stringify(themeName)})document.documentElement.dataset.steamTheme=${JSON.stringify(themeName)};window.__steamPrimeGnomeAccent=${JSON.stringify(accent.current)};};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();})();`;
+}
 const allowedPaths=new Set(['/api/appdetails','/api/storesearch/','/events/ajaxgetpartnereventspageable/']);
 async function metadata(url){
  const parsed=new URL(url);
@@ -60,13 +69,13 @@ async function metadata(url){
  return JSON.parse(Buffer.concat(chunks).toString('utf8'));
 }
 async function attach(page){
- const gameMode=page.title!=='Steam';let gamePayload;
+ const gameMode=page.title==='Steam Big Picture Mode'||/^(MainMenu|QuickAccess)_/.test(page.title),accentOnly=page.title!=='Steam'&&!gameMode;let gamePayload;
  if(gameMode){try{gamePayload=gameModeBundle()}catch(e){console.error(e);return}}
- try{payload=bundle()}catch(e){console.error('Cannot refresh theme bundle:',e);return}
- const ws=new WebSocket(page.webSocketDebuggerUrl);connected.set(page.id,ws);let id=0;let requests=0;let active=0;const token=crypto.randomBytes(16).toString('hex');
+ if(!accentOnly)try{payload=bundle()}catch(e){console.error('Cannot refresh theme bundle:',e);return}
+ const ws=new WebSocket(page.webSocketDebuggerUrl);ws.desktopAccent=!gameMode;connected.set(page.id,ws);let id=0;let requests=0;let active=0;const token=crypto.randomBytes(16).toString('hex');
  const fetchShim=`(()=>{const pending=new Map();let sequence=0;window.__loewThemeFetchResolve=(id,data,error)=>{const p=pending.get(id);if(!p)return;pending.delete(id);clearTimeout(p.timer);error?p.reject(Error(error)):p.resolve(data)};window.__loewThemeFetchJson=url=>new Promise((resolve,reject)=>{const id=++sequence;const timer=setTimeout(()=>{pending.delete(id);reject(Error('Metadata timeout'))},15000);pending.set(id,{resolve,reject,timer});window.__loewThemeFetch(JSON.stringify({id,url,token:${JSON.stringify(token)}}))});})();`;
- const inject=()=>ws.readyState===1&&ws.send(JSON.stringify({id:++id,method:'Runtime.evaluate',params:{expression:gameMode?gamePayload:fetchShim+payload}}));
- ws.onopen=()=>{ws.send(JSON.stringify({id:++id,method:'Runtime.addBinding',params:{name:'__loewThemeFetch'}}));ws.send(JSON.stringify({id:++id,method:'Runtime.enable'}));inject()};
+ const inject=()=>ws.readyState===1&&ws.send(JSON.stringify({id:++id,method:'Runtime.evaluate',params:{expression:gameMode?gamePayload:accentInjection()+(accentOnly?'':fetchShim+payload)}}));
+ ws.onopen=()=>{if(!accentOnly)ws.send(JSON.stringify({id:++id,method:'Runtime.addBinding',params:{name:'__loewThemeFetch'}}));ws.send(JSON.stringify({id:++id,method:'Runtime.enable'}));inject()};
  ws.onmessage=async e=>{const d=JSON.parse(e.data);
  if(d.method==='Runtime.bindingCalled'&&d.params.name==='__loewThemeFetch'){
   let req;try{req=JSON.parse(d.params.payload)}catch{return}
@@ -80,7 +89,8 @@ if(d.method==='Runtime.executionContextCreated')inject();if(d.result?.exceptionD
 }
 async function tick(){try{
  const pages=await(await fetch('http://127.0.0.1:8080/json/list',{signal:AbortSignal.timeout(1500)})).json();
- for(const p of pages)if((p.title==='Steam'||p.title==='Steam Big Picture Mode'||/^(MainMenu|QuickAccess)_/.test(p.title))&&!connected.has(p.id))await attach(p);
+ accent.refresh();
+ for(const p of pages)if((p.title==='Steam'||p.title==='Steam Big Picture Mode'||/^(MainMenu|QuickAccess)_/.test(p.title)||(p.type==='page'&&p.url?.startsWith('about:blank?createflags=')))&&!connected.has(p.id))await attach(p);
  for(const [id,ws]of connected)if(!pages.some(p=>p.id===id)){ws.close();connected.delete(id)}
 }catch{for(const ws of connected.values())ws.close();connected.clear()}}
 await tick();setInterval(tick,2000);
