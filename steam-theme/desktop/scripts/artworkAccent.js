@@ -264,12 +264,3 @@ const accentObserver=new MutationObserver(records=>{
 accentObserver.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','style']});
 document.addEventListener('load',schedule,true);window.addEventListener('popstate',schedule);schedule();
 window.__fluentyArtworkAccentDispose=()=>{accentObserver.disconnect();cancelAnimationFrame(frame);document.removeEventListener('load',schedule,true);window.removeEventListener('popstate',schedule);};
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-window.__loewAdwaitaPortState?.observer?.disconnect();clearInterval(window.__loewAdwaitaPortState?.pruneTimer);document.getElementById('loew-adwaita-game-page')?.remove();
+window.__loewAdwaitaPortState?.observer?.disconnect();if(window.__loewAdwaitaPortState?.scrollHandler)document.removeEventListener('scroll',window.__loewAdwaitaPortState.scrollHandler,true);clearInterval(window.__loewAdwaitaPortState?.pruneTimer);document.getElementById('loew-adwaita-game-page')?.remove();
 const style=document.createElement('style');style.id='loew-adwaita-game-page';style.textContent=css;document.head.append(style);
 // Adwaita's compact detail header and permanent rail conflict with the approved
 // game-page layout. Disable only its detail-scoped rules, leaving the shell intact.
@@ -18,7 +18,18 @@ function aliasNode(node){if(node.nodeType!==1)return;const signature=node.getAtt
 function aliasTree(node){aliasNode(node);if(node.querySelectorAll)node.querySelectorAll('[class]').forEach(aliasNode)}
 aliasTree(document.body);
 let scheduled=false;
-function placeLumen(){
+function syncFloating(){
+ const floating=document.querySelector('._2L3s2nzh7yCnNESfI5_dN1');
+ const inPage=[...document.querySelectorAll('._2OOzYVWIHaKXm6_7sscT9i .InPage')].find(x=>x.getBoundingClientRect().width>0);
+ if(!floating||!inPage)return;
+ const top=floating.parentElement.getBoundingClientRect().top;
+ const visible=inPage.getBoundingClientRect().bottom<=top+32;
+ const value=visible?'true':'false';if(floating.dataset.loewFloating!==value)floating.dataset.loewFloating=value;
+}
+let scrollScheduled=false;
+const scrollHandler=()=>{if(!scrollScheduled){scrollScheduled=true;requestAnimationFrame(()=>{scrollScheduled=false;syncFloating()})}};
+document.addEventListener('scroll',scrollHandler,true);
+function placeLumen(){syncFloating();
  const button=document.getElementById('lumen-moon-btn');if(!button)return;
  if(button.parentElement!==document.body)document.body.append(button);
  button.setAttribute('aria-label','Lumen settings');button.setAttribute('title','Lumen settings');
@@ -28,4 +39,4 @@ const observer=new MutationObserver(records=>{
  if(!scheduled){scheduled=true;requestAnimationFrame(()=>{scheduled=false;placeLumen()})}
 });
 observer.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});placeLumen();
-window.__loewAdwaitaPortState={aliases:Object.keys(aliases).length,observer,pruneTimer};
+window.__loewAdwaitaPortState={aliases:Object.keys(aliases).length,observer,pruneTimer,scrollHandler};
