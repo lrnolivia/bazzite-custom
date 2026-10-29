@@ -1,0 +1,232 @@
+{
+  "name": "MoreBlur",
+  "author": "KokomiCat",
+  "version": "v1.0",
+  "manifest_version": 5,
+  "inject": {
+    "shared.css": [
+      "SP",
+      "QuickAccess",
+      "MainMenu"
+    ]
+  },
+  "patches": {
+    "Blur strength": {
+      "type": "slider",
+      "default": "5",
+      "values": {
+        "0": {
+          "--moreBlur-strength": [
+            "0px",
+            "SP"
+          ]
+        },
+        "1": {
+          "--moreBlur-strength": [
+            "1px",
+            "SP"
+          ]
+        },
+        "2": {
+          "--moreBlur-strength": [
+            "2px",
+            "SP"
+          ]
+        },
+        "3": {
+          "--moreBlur-strength": [
+            "3px",
+            "SP"
+          ]
+        },
+        "4": {
+          "--moreBlur-strength": [
+            "4px",
+            "SP"
+          ]
+        },
+        "5": {
+          "--moreBlur-strength": [
+            "5px",
+            "SP"
+          ]
+        },
+        "6": {
+          "--moreBlur-strength": [
+            "6px",
+            "SP"
+          ]
+        },
+        "7": {
+          "--moreBlur-strength": [
+            "7px",
+            "SP"
+          ]
+        },
+        "8": {
+          "--moreBlur-strength": [
+            "8px",
+            "SP"
+          ]
+        },
+        "9": {
+          "--moreBlur-strength": [
+            "9px",
+            "SP"
+          ]
+        },
+        "10": {
+          "--moreBlur-strength": [
+            "10px",
+            "SP"
+          ]
+        }
+      }
+    },
+    "Header opacity": {
+      "type": "slider",
+      "default": "0.1",
+      "values": {
+        "0.0": {
+          "--moreBlur-header-opacity": [
+            "0.0",
+            "SP"
+          ]
+        },
+        "0.1": {
+          "--moreBlur-header-opacity": [
+            "0.1",
+            "SP"
+          ]
+        },
+        "0.2": {
+          "--moreBlur-header-opacity": [
+            "0.2",
+            "SP"
+          ]
+        },
+        "0.3": {
+          "--moreBlur-header-opacity": [
+            "0.3",
+            "SP"
+          ]
+        },
+        "0.4": {
+          "--moreBlur-header-opacity": [
+            "0.4",
+            "SP"
+          ]
+        },
+        "0.5": {
+          "--moreBlur-header-opacity": [
+            "0.5",
+            "SP"
+          ]
+        },
+        "0.6": {
+          "--moreBlur-header-opacity": [
+            "0.6",
+            "SP"
+          ]
+        },
+        "0.7": {
+          "--moreBlur-header-opacity": [
+            "0.7",
+            "SP"
+          ]
+        },
+        "0.8": {
+          "--moreBlur-header-opacity": [
+            "0.8",
+            "SP"
+          ]
+        },
+        "0.9": {
+          "--moreBlur-header-opacity": [
+            "0.9",
+            "SP"
+          ]
+        },
+        "1.0": {
+          "--moreBlur-header-opacity": [
+            "1.0",
+            "SP"
+          ]
+        }
+      }
+    },
+    "Footer opacity": {
+      "type": "slider",
+      "default": "0.3",
+      "values": {
+        "0.0": {
+          "--moreBlur-footer-opacity": [
+            "0.0",
+            "SP"
+          ]
+        },
+        "0.1": {
+          "--moreBlur-footer-opacity": [
+            "0.1",
+            "SP"
+          ]
+        },
+        "0.2": {
+          "--moreBlur-footer-opacity": [
+            "0.2",
+            "SP"
+          ]
+        },
+        "0.3": {
+          "--moreBlur-footer-opacity": [
+            "0.3",
+            "SP"
+          ]
+        },
+        "0.4": {
+          "--moreBlur-footer-opacity": [
+            "0.4",
+            "SP"
+          ]
+        },
+        "0.5": {
+          "--moreBlur-footer-opacity": [
+            "0.5",
+            "SP"
+          ]
+        },
+        "0.6": {
+          "--moreBlur-footer-opacity": [
+            "0.6",
+            "SP"
+          ]
+        },
+        "0.7": {
+          "--moreBlur-footer-opacity": [
+            "0.7",
+            "SP"
+          ]
+        },
+        "0.8": {
+          "--moreBlur-footer-opacity": [
+            "0.8",
+            "SP"
+          ]
+        },
+        "0.9": {
+          "--moreBlur-footer-opacity": [
+            "0.9",
+            "SP"
+          ]
+        },
+        "1.0": {
+          "--moreBlur-footer-opacity": [
+            "1.0",
+            "SP"
+          ]
+        }
+      }
+    }
+  },
+  "id": "b6b2c3d1-ae8e-441c-b3c4-bc06592f3f82"
+}

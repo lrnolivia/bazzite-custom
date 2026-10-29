@@ -1,0 +1,12 @@
+{
+  "name": "Clean Game Launch",
+  "author": "Niko",
+  "version": "v1.0",
+  "manifest_version": 9,
+  "inject": {
+    "shared.css": [
+      "bigpicture"
+    ]
+  },
+  "id": "acb2027a-003f-45b2-889c-f72ef791cda5"
+}

@@ -1,0 +1,26 @@
+/* ---
+Chromahon QAM
+Custom Template
+--- */
+
+:root {
+
+    --chromahonQAM__main-fg: var(--chromahonQAM__Custom-main-fg);
+    --chromahonQAM__item-separator: var(--chromahonQAM__Custom-item-separator);
+
+    --chromahonQAM__pageHeader-layer1-fg: var(--chromahonQAM__Custom-pageHeader-layer1-fg);
+    --chromahonQAM__pageHeader-layer1-outline: var(--chromahonQAM__Custom-pageHeader-layer1-outline);
+
+    --chromahonQAM__main-fg-hl: var(--chromahonQAM__Custom-main-fg-hl);
+
+    --chromahonQAM__sidebarIcon-fg: var(--chromahonQAM__Custom-sidebarIcon-fg);
+    --chromahonQAM__sidebarIcon-fg-hl: var(--chromahonQAM__Custom-sidebarIcon-fg-hl);
+
+    --chromahonQAM__topBar-bg: var(--chromahonQAM__Custom-topBar-bg);
+    --chromahonQAM__topBar-fg: var(--chromahonQAM__Custom-topBar-fg);
+    --chromahonQAM__topBar-bg-hl: var(--chromahonQAM__Custom-topBar-bg-hl);
+    --chromahonQAM__topBar-fg-hl: var(--chromahonQAM__Custom-topBar-fg-hl);
+
+    --chromahonQAM__notifMark: var(--chromahonQAM__Custom-notifMark);
+
+}

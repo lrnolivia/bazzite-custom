@@ -1,0 +1,19 @@
+:root {
+    --MMHIDE-HOME: flex;
+    --MMHIDE-LIBRARY: flex;
+    --MMHIDE-STORE: flex;
+    --MMHIDE-FRIENDS-AND-CHAT: flex;
+    --MMHIDE-MEDIA: flex;
+    --MMHIDE-DOWNLOADS: flex;
+    --MMHIDE-SETTINGS: flex;
+    --MMHIDE-POWER: flex;
+}
+
+#MainNavMenuContainer>div>:nth-last-child(9) [role=menuitem] {display: var(--MMHIDE-HOME);}
+#MainNavMenuContainer>div>:nth-last-child(8) [role=menuitem] {display: var(--MMHIDE-LIBRARY);}
+#MainNavMenuContainer>div>:nth-last-child(7) [role=menuitem] {display: var(--MMHIDE-STORE);}
+#MainNavMenuContainer>div>:nth-last-child(6) [role=menuitem] {display: var(--MMHIDE-FRIENDS-AND-CHAT);}
+#MainNavMenuContainer>div>:nth-last-child(5) [role=menuitem] {display: var(--MMHIDE-MEDIA);}
+#MainNavMenuContainer>div>:nth-last-child(4) [role=menuitem] {display: var(--MMHIDE-DOWNLOADS);}
+#MainNavMenuContainer>div>:nth-last-child(3) [role=menuitem] {display: var(--MMHIDE-SETTINGS);}
+#MainNavMenuContainer>div>:nth-last-child(2) [role=menuitem] {display: var(--MMHIDE-POWER);}

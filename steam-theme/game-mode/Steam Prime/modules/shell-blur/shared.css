@@ -1,0 +1,64 @@
+/* Header */
+.header_Header.gpfocuswithin {
+	backdrop-filter: blur(var(--moreBlur-strength));
+}
+
+.header_Header.OverrideHeaderBackground.gpfocuswithin,
+.header_Header::before {
+	background-color: rgba(0, 0, 0, var(--moreBlur-header-opacity));
+}
+
+/* Header in library */
+.TabHeaderRowWrapper {
+	backdrop-filter: blur(var(--moreBlur-strength));
+}
+
+/* Footer */
+.footer_BasicFooter {
+	backdrop-filter: blur(var(--moreBlur-strength));
+	background-color: rgba(0, 0, 0, var(--moreBlur-footer-opacity));
+}
+
+/* Volume popin */
+.audio_VolumePopin {
+	background: transparent;
+	box-shadow: none;
+	transition-duration: .44s;
+	transition-timing-function: ease-in-out;
+	will-change: transform, opacity;
+	transition-property: transform, opacity;
+	opacity: 1;
+}
+
+.audio_VolumePopinHidden {
+	transform: translateY(-100%) scale(.85);
+	opacity: .2;
+}
+
+.audio_VolumePopin .gamepadslider_Icon,
+.audio_VolumePopin .gamepaddialog_FieldIcon {
+	display: none;
+}
+
+.audio_VolumePopin .gamepadslider_SliderTrack {
+	background: rgba(255, 255, 255, .3);
+	--left-track-color: rgba(255, 255, 255, .8);
+}
+
+.audio_VolumePopin .gamepaddialog_WithBottomSeparatorStandard::after {
+	content: unset;
+}
+
+.audio_VolumePopin .gamepadslider_SliderTrack::before {
+	transition: width .11s linear;
+}
+
+/* Quick Access Menu */
+.quickaccessmenu_QuickAccessMenu {
+	background: var(--prime-floating,#272725);
+}
+
+/* Main Menu */
+.mainmenu_Menu {
+	background: var(--prime-floating,#272725);
+}

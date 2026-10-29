@@ -1,0 +1,1146 @@
+{
+  "name": "Steam Prime",
+  "display_name": "Steam Prime",
+  "version": "v0.2.0",
+  "manifest_version": 9,
+  "id": "07af227e-d8d4-4085-b7b2-d218e702ce2b",
+  "author": "Lauren Olivia",
+  "tabs": {
+    "default": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*",
+      "notificationtoasts.*"
+    ]
+  },
+  "inject": {
+    "modules/avatar-customization-suite/options/43-round-only.css": [
+      "SP",
+      "QuickAccess"
+    ],
+    "modules/better-achievements/shared.css": [
+      "SP",
+      "MainMenu"
+    ],
+    "modules/better-achievements/rare_achievement_shine/default.css": [
+      "SP",
+      "MainMenu"
+    ],
+    "modules/better-achievements/selected-values-1.css": [
+      "SP",
+      "MainMenu"
+    ],
+    "modules/better-game-badges/shared.css": [
+      "SP"
+    ],
+    "modules/better-game-badges/compatibility/highlighted.css": [
+      "SP"
+    ],
+    "modules/better-game-badges/compatibility/no_deck_icon.css": [
+      "SP"
+    ],
+    "modules/better-game-badges/in_library/highlighted.css": [
+      "SP"
+    ],
+    "modules/better-game-badges/fade_out_badges.css": [
+      "SP"
+    ],
+    "modules/better-game-badges/selected-values-1.css": [
+      "SP"
+    ],
+    "modules/better-game-icons/shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/better-game-icons/download_indicator_bg/transparent.css": [
+      "SP"
+    ],
+    "modules/better-game-icons/selected-values-1.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/clean-game-launch/shared.css": [
+      "bigpicture"
+    ],
+    "modules/clean-gameview/shared.css": [
+      "SP"
+    ],
+    "modules/clean-gameview/selected-values-1.css": [
+      "SP"
+    ],
+    "modules/customizable-keyboard/keyboard.css": [
+      "bigpicture",
+      "QuickAccess",
+      "MainMenu"
+    ],
+    "modules/customizable-keyboard/selected-values-1.css": [
+      "bigpicture",
+      "QuickAccess",
+      "MainMenu"
+    ],
+    "modules/deck-store-better-wishlist/remove-reorder.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "modules/deck-store-better-wishlist/show-release-date.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "modules/deck-store-better-wishlist/enable-advanced-filter.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "modules/deck-store-rounded/shared.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "modules/dellyfooter/shared.css": [
+      "SP"
+    ],
+    "modules/dellyfooter/sizes/small-size.css": [
+      "SP"
+    ],
+    "modules/faster-transition-animations/shared.css": [
+      "SP"
+    ],
+    "modules/fonts/font-css/roboto.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/fullscreen-library-community-media/shared.css": [
+      "bigpicture"
+    ],
+    "modules/improved-media-details/shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/library-move-extra-info/shared.css": [
+      "SP"
+    ],
+    "modules/library-move-extra-info/useobsidian.css": [
+      "SP"
+    ],
+    "modules/library-move-extra-info/selected-values-1.css": [
+      "SP"
+    ],
+    "modules/main-menu-hide-tabs-hide-the-store/shared.css": [
+      "MainMenu"
+    ],
+    "modules/more-library-icons/shared.css": [
+      "bigpicture"
+    ],
+    "modules/more-library-icons/selected-values-1.css": [
+      "SP"
+    ],
+    "modules/overlay-colapse-fix/shared.css": [
+      "bigpicture",
+      "MainMenu"
+    ],
+    "modules/prominent-store-prices/store.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "modules/qam-hide-tabs/shared.css": [
+      "QuickAccess"
+    ],
+    "modules/qam-hide-tabs/selected-values-1.css": [
+      "QuickAccess"
+    ],
+    "modules/rounded-keyboard/shared.css": [
+      "SP"
+    ],
+    "modules/rounded-search/shared.css": [
+      "bigpicture"
+    ],
+    "modules/radius/shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/surfaces/shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/surfaces/complete.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/main-menu/base.css": [
+      "SP",
+      "MainMenu.*"
+    ],
+    "modules/main-menu/controller.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/achievements.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/guides.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/notes.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/game-recording.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/sidebars.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*"
+    ],
+    "modules/context-menu/common.css": [
+      "bigpicture"
+    ],
+    "modules/input-controls/toggles.css": [
+      "QuickAccess"
+    ],
+    "modules/input-controls/buttons.css": [
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "modules/input-controls/sliders.css": [
+      "QuickAccess"
+    ],
+    "modules/input-controls/text-inputs.css": [
+      "MainMenu"
+    ],
+    "modules/status-colors/shared.css": [
+      "QuickAccess",
+      "SP",
+      "MainMenu"
+    ],
+    "modules/header/theme.css": [
+      "bigpicture"
+    ],
+    "modules/modal-blur/shared.css": [
+      "SP"
+    ],
+    "modules/shell-blur/shared.css": [
+      "SP",
+      "QuickAccess",
+      "MainMenu"
+    ],
+    "modules/play-button/shared.css": [
+      "SP"
+    ],
+    "modules/game-page/shared.css": [
+      "SP"
+    ],
+    "foundation.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*",
+      "notificationtoasts.*"
+    ],
+    "menus.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*"
+    ],
+    "modules/game-page/feed.css": [
+      "SP"
+    ],
+    "modules/game-page/game-info.css": [
+      "SP"
+    ],
+    "modules/game-page/articles.css": [
+      "SP"
+    ],
+    "media.css": [
+      "SP"
+    ],
+    "downloads.css": [
+      "SP"
+    ],
+    "modules/radius/round-outline.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "options/header/light.css": [
+      "SP"
+    ],
+    "modules/surfaces/recents/monochrome.css": [
+      "SP"
+    ],
+    "modules/main-menu/opt/edges_common.css": [
+      "SP",
+      "MainMenu.*"
+    ],
+    "modules/main-menu/opt/edges_round.css": [
+      "SP",
+      "MainMenu.*"
+    ],
+    "modules/main-menu/opt/tabIndicator_dot.css": [
+      "SP",
+      "MainMenu.*"
+    ],
+    "modules/main-menu/parts/primaryPanel/itemFocus/bg-solidColors.css": [
+      "SP",
+      "MainMenu.*"
+    ],
+    "modules/main-menu/parts/secondaryPanel/itemFocus/bg-solidColors.css": [
+      "MainMenu.*"
+    ],
+    "modules/main-menu/parts/secondaryPanel/tabIndicator-solidColors.css": [
+      "MainMenu.*"
+    ],
+    "modules/quick-access/tweaks/qam-type-regular_rounded.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/tweaks/qam-rounded_shared-components.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/tweaks/sidebar-standard.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/tweaks/sidebar-page-indicator.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/tweaks/sidebar-hide-help-page.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/tweaks/notifToast-enable_style.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/contentPanel/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/pageHeader/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/dependencies/anim_colorChange-bg.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/itemHighlight/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/sidebarPanel/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/sidebarIconBg/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/quick-access/parts/sidebarIndicator/bg-solid.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/context-menu/edges_round.css": [
+      "bigpicture"
+    ],
+    "modules/context-menu/opt_growlabel.css": [
+      "bigpicture"
+    ],
+    "modules/context-menu/opt_blurtitle.css": [
+      "bigpicture"
+    ],
+    "modules/context-menu/opt_modalfade.css": [
+      "bigpicture"
+    ],
+    "modules/input-controls/opt/toggles_anim-handle.css": [
+      "QuickAccess"
+    ],
+    "modules/status-colors/colors/white.css": [
+      "QuickAccess",
+      "SP",
+      "MainMenu"
+    ],
+    "modules/fixed-choices-1.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*"
+    ],
+    "modules/fixed-choices-2.css": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "modules/fixed-choices-3.css": [
+      "bigpicture"
+    ],
+    "modules/fixed-choices-4.css": [
+      "QuickAccess"
+    ],
+    "modules/fixed-choices-5.css": [
+      "MainMenu"
+    ],
+    "home.css": [
+      "SP"
+    ],
+    "tokens.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*",
+      "notificationtoasts.*",
+      "~https://store.steampowered.com~"
+    ],
+    "footer.css": [
+      "SP"
+    ],
+    "store.css": [
+      "~https://store.steampowered.com~"
+    ],
+    "--moreBlur-header-opacity": [
+      "0.0",
+      "SP"
+    ],
+    "--moreBlur-footer-opacity": [
+      "0.9",
+      "SP"
+    ]
+  },
+  "patches": {
+    "Appearance / Palette": {
+      "type": "dropdown",
+      "default": "Terra Prime HIS",
+      "values": {
+        "Terra Prime HIS": {},
+        "Custom": {}
+      },
+      "components": [
+        {
+          "name": "Recessed",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#000000",
+          "css_variable": "--prime-recessed",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Canvas",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#121211",
+          "css_variable": "--prime-canvas",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Surface",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#222220",
+          "css_variable": "--prime-surface",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Raised",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#343430",
+          "css_variable": "--prime-raised",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Floating",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#272725",
+          "css_variable": "--prime-floating",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Border",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#3d3d38",
+          "css_variable": "--prime-border",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Text",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#f2f1ee",
+          "css_variable": "--prime-text",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Secondary text",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#c2c1bb",
+          "css_variable": "--prime-secondary",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Disabled text",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#a6a69e",
+          "css_variable": "--prime-disabled",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Focus and selectors",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#18afc0",
+          "css_variable": "--prime-focus",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        {
+          "name": "Enabled controls",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#3bcb8d",
+          "css_variable": "--prime-enabled",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        }
+      ]
+    },
+    "Appearance / Control Radius": {
+      "default": "20px",
+      "type": "slider",
+      "values": {
+        "3px": {
+          "modules/radius/intensity/3px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "5px": {
+          "modules/radius/intensity/5px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "10px": {
+          "modules/radius/intensity/10px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "15px": {
+          "modules/radius/intensity/15px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "20px": {
+          "modules/radius/intensity/20px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "30px": {
+          "modules/radius/intensity/30px.css": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        }
+      }
+    },
+    "Appearance / Card Radius": {
+      "type": "slider",
+      "default": "8px",
+      "values": {
+        "0px": {
+          "--prime-card-radius": [
+            "0px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "4px": {
+          "--prime-card-radius": [
+            "4px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "6px": {
+          "--prime-card-radius": [
+            "6px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "8px": {
+          "--prime-card-radius": [
+            "8px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "10px": {
+          "--prime-card-radius": [
+            "10px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "12px": {
+          "--prime-card-radius": [
+            "12px",
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*",
+            "notificationtoasts.*",
+            "~https://store.steampowered.com~"
+          ]
+        }
+      }
+    },
+    "Header / Home and Game Page Top Padding": {
+      "type": "slider",
+      "default": "10px",
+      "values": {
+        "0px": {
+          "--tbp-height": [
+            "0px",
+            "bigpicture"
+          ]
+        },
+        "5px": {
+          "--tbp-height": [
+            "5px",
+            "bigpicture"
+          ]
+        },
+        "10px": {
+          "--tbp-height": [
+            "10px",
+            "bigpicture"
+          ]
+        },
+        "15px": {
+          "--tbp-height": [
+            "15px",
+            "bigpicture"
+          ]
+        },
+        "20px": {
+          "--tbp-height": [
+            "20px",
+            "bigpicture"
+          ]
+        },
+        "25px": {
+          "--tbp-height": [
+            "25px",
+            "bigpicture"
+          ]
+        },
+        "30px": {
+          "--tbp-height": [
+            "30px",
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Header / Sideways Padding": {
+      "type": "slider",
+      "default": "15px",
+      "values": {
+        "0px": {
+          "--tbp-side": [
+            "0px",
+            "bigpicture"
+          ]
+        },
+        "5px": {
+          "--tbp-side": [
+            "5px",
+            "bigpicture"
+          ]
+        },
+        "10px": {
+          "--tbp-side": [
+            "10px",
+            "bigpicture"
+          ]
+        },
+        "15px": {
+          "--tbp-side": [
+            "15px",
+            "bigpicture"
+          ]
+        },
+        "20px": {
+          "--tbp-side": [
+            "20px",
+            "bigpicture"
+          ]
+        },
+        "25px": {
+          "--tbp-side": [
+            "25px",
+            "bigpicture"
+          ]
+        },
+        "30px": {
+          "--tbp-side": [
+            "30px",
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Header / Only Show Sideways Padding On Home": {
+      "type": "checkbox",
+      "values": {
+        "No": {
+          "modules/header/always-side-spacing.css": [
+            "bigpicture"
+          ]
+        },
+        "Yes": {}
+      }
+    },
+    "Header / Left Side Profile": {
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "modules/header/left-side-profile.css": [
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Header / Left Side Time": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "No": {},
+        "Yes": {
+          "modules/header/left-side-time.css": [
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Header / Left Side Battery": {
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "modules/header/left-side-battery.css": [
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Menus / Active Indicator Color": {
+      "type": "none",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "modules/main-menu/parts/primaryPanel/tabIndicator-solidColors.css": [
+            "SP",
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#d1d1d1",
+          "css_variable": "chromahonSM__primaryPanel-tabIndicator",
+          "tabs": [
+            "SP",
+            "MainMenu.*",
+            "QuickAccess.*"
+          ]
+        }
+      ]
+    },
+    "Menus / Context Menu Width": {
+      "type": "slider",
+      "default": "Normal",
+      "values": {
+        "Normal": {},
+        "Wide": {
+          "modules/context-menu/size_wide.css": [
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Menus / Context Menu Layout": {
+      "type": "dropdown",
+      "default": "Top Banner Title",
+      "values": {
+        "Default": {},
+        "Top Banner Title": {
+          "modules/context-menu/layout_topbanner.css": [
+            "bigpicture"
+          ]
+        },
+        "Bottom Stacked + Banner Title": {
+          "modules/context-menu/layout_allbottom.css": [
+            "bigpicture"
+          ]
+        },
+        "Left-Hand Side": {
+          "modules/context-menu/layout_left.css": [
+            "bigpicture"
+          ]
+        },
+        "Bottom Left": {
+          "modules/context-menu/layout_bottomleft.css": [
+            "bigpicture"
+          ]
+        },
+        "Left-Hand Side + Banner Title": {
+          "modules/context-menu/layout_left_banner.css": [
+            "bigpicture"
+          ]
+        },
+        "Top Left + Banner Title": {
+          "modules/context-menu/layout_topleft_banner.css": [
+            "bigpicture"
+          ]
+        }
+      }
+    },
+    "Menus / Center Context Labels": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "modules/context-menu/opt_centerlabel.css": [
+            "bigpicture"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Effects / Dialog Blur": {
+      "type": "slider",
+      "default": "4",
+      "values": {
+        "Off": {
+          "--betterBlur-strength": [
+            "0px",
+            "SP"
+          ]
+        },
+        "1": {
+          "--betterBlur-strength": [
+            "1px",
+            "SP"
+          ]
+        },
+        "2": {
+          "--betterBlur-strength": [
+            "2px",
+            "SP"
+          ]
+        },
+        "3": {
+          "--betterBlur-strength": [
+            "3px",
+            "SP"
+          ]
+        },
+        "4": {
+          "--betterBlur-strength": [
+            "4px",
+            "SP"
+          ]
+        },
+        "5": {
+          "--betterBlur-strength": [
+            "5px",
+            "SP"
+          ]
+        },
+        "6": {
+          "--betterBlur-strength": [
+            "6px",
+            "SP"
+          ]
+        },
+        "7": {
+          "--betterBlur-strength": [
+            "7px",
+            "SP"
+          ]
+        },
+        "8": {
+          "--betterBlur-strength": [
+            "8px",
+            "SP"
+          ]
+        },
+        "9": {
+          "--betterBlur-strength": [
+            "9px",
+            "SP"
+          ]
+        },
+        "10": {
+          "--betterBlur-strength": [
+            "10px",
+            "SP"
+          ]
+        }
+      }
+    },
+    "Effects / Dialog Opacity": {
+      "type": "slider",
+      "default": "0.5",
+      "values": {
+        "0.0": {
+          "--betterBlur-opacity": [
+            "0.0",
+            "SP"
+          ]
+        },
+        "0.1": {
+          "--betterBlur-opacity": [
+            "0.1",
+            "SP"
+          ]
+        },
+        "0.2": {
+          "--betterBlur-opacity": [
+            "0.2",
+            "SP"
+          ]
+        },
+        "0.3": {
+          "--betterBlur-opacity": [
+            "0.3",
+            "SP"
+          ]
+        },
+        "0.4": {
+          "--betterBlur-opacity": [
+            "0.4",
+            "SP"
+          ]
+        },
+        "0.5": {
+          "--betterBlur-opacity": [
+            "0.5",
+            "SP"
+          ]
+        },
+        "0.6": {
+          "--betterBlur-opacity": [
+            "0.6",
+            "SP"
+          ]
+        },
+        "0.7": {
+          "--betterBlur-opacity": [
+            "0.7",
+            "SP"
+          ]
+        },
+        "0.8": {
+          "--betterBlur-opacity": [
+            "0.8",
+            "SP"
+          ]
+        },
+        "0.9": {
+          "--betterBlur-opacity": [
+            "0.9",
+            "SP"
+          ]
+        },
+        "1.0": {
+          "--betterBlur-opacity": [
+            "1.0",
+            "SP"
+          ]
+        }
+      }
+    },
+    "Effects / Shell Blur": {
+      "type": "slider",
+      "default": "5",
+      "values": {
+        "0": {
+          "--moreBlur-strength": [
+            "0px",
+            "SP"
+          ]
+        },
+        "1": {
+          "--moreBlur-strength": [
+            "1px",
+            "SP"
+          ]
+        },
+        "2": {
+          "--moreBlur-strength": [
+            "2px",
+            "SP"
+          ]
+        },
+        "3": {
+          "--moreBlur-strength": [
+            "3px",
+            "SP"
+          ]
+        },
+        "4": {
+          "--moreBlur-strength": [
+            "4px",
+            "SP"
+          ]
+        },
+        "5": {
+          "--moreBlur-strength": [
+            "5px",
+            "SP"
+          ]
+        },
+        "6": {
+          "--moreBlur-strength": [
+            "6px",
+            "SP"
+          ]
+        },
+        "7": {
+          "--moreBlur-strength": [
+            "7px",
+            "SP"
+          ]
+        },
+        "8": {
+          "--moreBlur-strength": [
+            "8px",
+            "SP"
+          ]
+        },
+        "9": {
+          "--moreBlur-strength": [
+            "9px",
+            "SP"
+          ]
+        },
+        "10": {
+          "--moreBlur-strength": [
+            "10px",
+            "SP"
+          ]
+        }
+      }
+    }
+  },
+  "flags": [
+    "REQUIRE_NAV_PATCH"
+  ]
+}

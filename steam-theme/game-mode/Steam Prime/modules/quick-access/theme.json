@@ -1,0 +1,435 @@
+{
+  "name": "CapyMenu (QAM)",
+  "display_name": "Chromahon (QAM)",
+  "author": "Mugen",
+  "version": "v3.0.1",
+  "manifest_version": 9,
+  "flags": [
+    "REQUIRE_NAV_PATCH"
+  ],
+  "tabs": {
+    "default": [
+      "QuickAccess",
+      "notificationtoasts.*"
+    ]
+  },
+  "inject": {
+    "qam_main.css": [],
+    "qam_sidebar.css": [],
+    "qam_paged-content.css": [],
+    "qam_friends-page.css": [],
+    "custom-template.css": []
+  },
+  "patches": {
+    "\u27a4 Global Settings": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "QAM Type": {
+      "type": "slider",
+      "default": "Regular",
+      "values": {
+        "Regular": {
+          "tweaks/qam-type-regular.css": []
+        },
+        "Regular Rounded": {
+          "tweaks/qam-type-regular_rounded.css": [],
+          "tweaks/qam-rounded_shared-components.css": []
+        },
+        "Inverted": {
+          "tweaks/qam-type-inverted.css": []
+        },
+        "Inverted Rounded": {
+          "tweaks/qam-type-inverted_rounded.css": [],
+          "tweaks/qam-rounded_shared-components.css": []
+        }
+      }
+    },
+    "Sidebar Layout": {
+      "type": "slider",
+      "default": "Collapse Top",
+      "values": {
+        "Standard": {
+          "tweaks/sidebar-standard.css": []
+        },
+        "Collapse Center": {
+          "tweaks/sidebar-collapse-center.css": []
+        },
+        "Collapse Top": {
+          "tweaks/sidebar-collapse-top.css": []
+        },
+        "Collapse Bottom": {
+          "tweaks/sidebar-collapse-bottom.css": []
+        }
+      }
+    },
+    "Show Sidebar Page Indicator": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "tweaks/sidebar-page-indicator.css": []
+        },
+        "No": {}
+      }
+    },
+    "Hide Help Page": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "tweaks/sidebar-hide-help-page.css": []
+        },
+        "No": {}
+      }
+    },
+    "Extend QAM Styling To Notification Toasts": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "tweaks/notifToast-enable_style.css": []
+        },
+        "No": {}
+      }
+    },
+    "\u27a4 Content Panel": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Content Panel Background Type": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {
+          "parts/contentPanel/bg-solid.css": []
+        },
+        "IMG": {
+          "parts/contentPanel/bg-img.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Solid Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#0f0f0f",
+          "css_variable": "chromahonQAM__Custom-main-bg",
+          "tabs": []
+        },
+        {
+          "name": "Image Picker",
+          "type": "image-picker",
+          "on": "IMG",
+          "default": "",
+          "css_variable": "chromahonQAM__Custom-main-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Content Panel Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#adadad",
+          "css_variable": "chromahonQAM__Custom-main-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Header Layer 1 Bg Type": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/pageHeader/bg-solid.css": [],
+          "parts/dependencies/anim_colorChange-bg.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#d1d1d1",
+          "css_variable": "--chromahonQAM__Custom-pageHeader-layer1-bg-c1",
+          "tabs": []
+        }
+      ]
+    },
+    "Header Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#202020",
+          "css_variable": "chromahonQAM__Custom-pageHeader-layer1-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Focusable Items In Page": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Focusable Item Bg Highlight Type": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/itemHighlight/bg-solid.css": [],
+          "parts/dependencies/anim_colorChange-bg.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#eb506f",
+          "css_variable": "--chromahonQAM__Custom-itemHighlight-bg-c1",
+          "tabs": []
+        }
+      ]
+    },
+    "Focusable Item Highlight Fg": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#202020",
+          "css_variable": "chromahonQAM__Custom-main-fg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "Item Separators": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#00000000",
+          "css_variable": "chromahonQAM__Custom-item-separator",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Sidebar": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Sidebar Panel Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {
+          "parts/sidebarPanel/bg-solid.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#dbdbdb",
+          "css_variable": "--chromahonQAM__Custom-sidebarPanel-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Sidebar Icon": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#0d0d0d4D",
+          "css_variable": "chromahonQAM__Custom-sidebarIcon-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Sidebar Icon Highlight": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#bababa",
+          "css_variable": "chromahonQAM__Custom-sidebarIcon-fg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "Sidebar Icon Bg Highlight": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/sidebarIconBg/bg-solid.css": [],
+          "parts/dependencies/anim_colorChange-bg.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#161616",
+          "css_variable": "--chromahonQAM__Custom-sidebarIcon-bg-hl-c1",
+          "tabs": []
+        }
+      ]
+    },
+    "Sidebar Page Indicator": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/sidebarIndicator/bg-solid.css": [],
+          "parts/dependencies/anim_colorChange-bg.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#eb506f",
+          "css_variable": "--chromahonQAM__Custom-sidebarIndicator-c1",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Top Bar (Only Visible In-Game)": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Top Bar Background": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#ccc",
+          "css_variable": "chromahonQAM__Custom-topBar-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Top Bar Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#202020",
+          "css_variable": "chromahonQAM__Custom-topBar-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Top Bar Bg Highlight": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#202020",
+          "css_variable": "chromahonQAM__Custom-topBar-bg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "Top Bar Fg Highlight": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#ccc",
+          "css_variable": "chromahonQAM__Custom-topBar-fg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Other": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Notification Mark": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#de234f",
+          "css_variable": "chromahonQAM__Custom-notifMark",
+          "tabs": []
+        }
+      ]
+    }
+  },
+  "id": "726ddfcd-47a0-4f71-81ac-c276936c68cb"
+}

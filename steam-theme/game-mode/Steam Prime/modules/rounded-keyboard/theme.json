@@ -1,0 +1,61 @@
+{
+  "name": "Rounded Keyboard",
+  "version": "v2.0",
+  "author": "CootMoon",
+  "inject": {
+    "shared.css": [
+      "SP"
+    ]
+  },
+  "patches": {
+    "Size": {
+      "default": "10px",
+      "1px": {
+        "size/1px.css": [
+          "SP"
+        ]
+      },
+      "2.5px": {
+        "size/2.5px.css": [
+          "SP"
+        ]
+      },
+      "5px": {
+        "size/5px.css": [
+          "SP"
+        ]
+      },
+      "7.5px": {
+        "size/7.5px.css": [
+          "SP"
+        ]
+      },
+      "10px": {
+        "size/10px.css": [
+          "SP"
+        ]
+      },
+      "12.5px": {
+        "size/12.5px.css": [
+          "SP"
+        ]
+      },
+      "15px": {
+        "size/15px.css": [
+          "SP"
+        ]
+      },
+      "17.5px": {
+        "size/17.5px.css": [
+          "SP"
+        ]
+      },
+      "20px": {
+        "size/20px.css": [
+          "SP"
+        ]
+      }
+    }
+  },
+  "id": "3e3010d6-f776-48d6-89ab-2ce0aa78322b"
+}

@@ -1,0 +1,3812 @@
+{
+  "schema": 1,
+  "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+  "modules": [
+    {
+      "source": "Avatar Customization Suite",
+      "destination": "modules/avatar-customization-suite",
+      "author": "Charmics",
+      "version": "v3.0",
+      "config": {
+        "active": false,
+        "Options are [avatar] [status].": "Round Only"
+      },
+      "choices": {
+        "Options are [avatar] [status].": {
+          "value": "Round Only",
+          "definition": {
+            "type": "dropdown",
+            "default": "Default",
+            "values": {
+              "Default": {
+                "options/00-default.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Normal Narrow": {
+                "options/10-normal-narrow.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Normal Dot": {
+                "options/11-normal-dot.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Normal Square": {
+                "options/12-normal-square.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Normal Only": {
+                "options/13-normal-only.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Frameless Edge": {
+                "options/20-frameless-edge.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Frameless Dot": {
+                "options/21-frameless-dot.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Frameless Square": {
+                "options/22-frameless-square.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Frameless Only": {
+                "options/23-frameless-only.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Rounded Edge": {
+                "options/30-rounded-edge.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Rounded Dot": {
+                "options/31-rounded-dot.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Rounded Square": {
+                "options/32-rounded-square.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Rounded Only": {
+                "options/33-rounded-only.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Round Edge": {
+                "options/40-round-edge.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Round Dot": {
+                "options/41-round-dot.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Round Square": {
+                "options/42-round-square.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Round Only": {
+                "options/43-round-only.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Just Dot": {
+                "options/50-just-dot.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Just Square": {
+                "options/51-just-square.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              },
+              "Nothing": {
+                "options/60-nothing.css": [
+                  "SP",
+                  "QuickAccess"
+                ]
+              }
+            },
+            "components": []
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Better Achievements",
+      "destination": "modules/better-achievements",
+      "author": "RasitAyaz",
+      "version": "v1.2",
+      "config": {
+        "active": false,
+        "Rare Shine Animation": "Only in achievements page",
+        "Achievement Icon Radius": "Round"
+      },
+      "choices": {
+        "Rare Shine Animation": {
+          "value": "Only in achievements page",
+          "definition": {
+            "default": "Only in achievements page",
+            "type": "dropdown",
+            "values": {
+              "Disabled": {
+                "rare_achievement_shine/disabled.css": [
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "Only in achievements page": {
+                "rare_achievement_shine/default.css": [
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "Everywhere": {
+                "rare_achievement_shine/everywhere.css": [
+                  "SP",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Achievement Icon Radius": {
+          "value": "Round",
+          "definition": {
+            "default": "0px",
+            "type": "slider",
+            "values": {
+              "0px": {
+                "--achievement-icon-radius": [
+                  "0px",
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "3px": {
+                "--achievement-icon-radius": [
+                  "3px",
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "5px": {
+                "--achievement-icon-radius": [
+                  "5px",
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "10px": {
+                "--achievement-icon-radius": [
+                  "10px",
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "15px": {
+                "--achievement-icon-radius": [
+                  "15px",
+                  "SP",
+                  "MainMenu"
+                ]
+              },
+              "Round": {
+                "--achievement-icon-radius": [
+                  "50%",
+                  "SP",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Better Game Badges",
+      "destination": "modules/better-game-badges",
+      "author": "RasitAyaz",
+      "version": "v1.8",
+      "config": {
+        "active": false,
+        "Compatibility badges": "Visible on focus",
+        "Compatibility badge style": "Hide the Deck icon",
+        "In library badges": "Visible on focus",
+        "Install status badges": "Visible on focus",
+        "Install status badge style": "Show both",
+        "Hide badges after (seconds)": "0.75"
+      },
+      "choices": {
+        "Compatibility badges": {
+          "value": "Visible on focus",
+          "definition": {
+            "default": "Visible on focus",
+            "type": "dropdown",
+            "values": {
+              "Hidden": {
+                "compatibility/hidden.css": [
+                  "SP"
+                ]
+              },
+              "Visible on focus": {
+                "compatibility/highlighted.css": [
+                  "SP"
+                ]
+              },
+              "Always visible": {
+                "compatibility/visible.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Compatibility badge style": {
+          "value": "Hide the Deck icon",
+          "definition": {
+            "default": "Hide the Deck icon",
+            "type": "dropdown",
+            "values": {
+              "Hide the Deck icon, playable & verified badges": {
+                "compatibility/no_deck_icon.css": [
+                  "SP"
+                ],
+                "compatibility/no_playable_verified.css": [
+                  "SP"
+                ]
+              },
+              "Hide the Deck icon & verified badge": {
+                "compatibility/no_deck_icon.css": [
+                  "SP"
+                ],
+                "compatibility/no_verified.css": [
+                  "SP"
+                ]
+              },
+              "Hide the Deck icon": {
+                "compatibility/no_deck_icon.css": [
+                  "SP"
+                ]
+              },
+              "Show all": {}
+            }
+          },
+          "from_default": false
+        },
+        "In library badges": {
+          "value": "Visible on focus",
+          "definition": {
+            "default": "Visible on focus",
+            "type": "dropdown",
+            "values": {
+              "Hidden": {
+                "in_library/hidden.css": [
+                  "SP"
+                ]
+              },
+              "Visible on focus": {
+                "in_library/highlighted.css": [
+                  "SP"
+                ]
+              },
+              "Always visible": {
+                "in_library/visible.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Install status badges": {
+          "value": "Visible on focus",
+          "definition": {
+            "default": "Visible on focus",
+            "type": "dropdown",
+            "values": {
+              "Hidden": {
+                "install_status/hidden.css": [
+                  "SP"
+                ]
+              },
+              "Visible on focus": {},
+              "Always visible": {
+                "install_status/visible.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Install status badge style": {
+          "value": "Show both",
+          "definition": {
+            "default": "Show both",
+            "type": "dropdown",
+            "values": {
+              "Hide installed badge": {
+                "install_status/no_installed.css": [
+                  "SP"
+                ]
+              },
+              "Hide uninstalled badge": {
+                "install_status/no_uninstalled.css": [
+                  "SP"
+                ]
+              },
+              "Show both": {}
+            }
+          },
+          "from_default": false
+        },
+        "Hide badges after (seconds)": {
+          "value": "0.75",
+          "definition": {
+            "default": "0.75",
+            "type": "slider",
+            "values": {
+              "Never": {},
+              "0.75": {
+                "fade_out_badges.css": [
+                  "SP"
+                ],
+                "--badge-fade-delay": [
+                  "0.75s",
+                  "SP"
+                ]
+              },
+              "1": {
+                "fade_out_badges.css": [
+                  "SP"
+                ],
+                "--badge-fade-delay": [
+                  "1s",
+                  "SP"
+                ]
+              },
+              "1.5": {
+                "fade_out_badges.css": [
+                  "SP"
+                ],
+                "--badge-fade-delay": [
+                  "1.5s",
+                  "SP"
+                ]
+              },
+              "2": {
+                "fade_out_badges.css": [
+                  "SP"
+                ],
+                "--badge-fade-delay": [
+                  "2s",
+                  "SP"
+                ]
+              },
+              "3": {
+                "fade_out_badges.css": [
+                  "SP"
+                ],
+                "--badge-fade-delay": [
+                  "3s",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Better Game Icons",
+      "destination": "modules/better-game-icons",
+      "author": "RasitAyaz",
+      "version": "v1.4",
+      "config": {
+        "active": false,
+        "Radius": "10px",
+        "Downloading Icon Background ": "Transparent"
+      },
+      "choices": {
+        "Radius": {
+          "value": "10px",
+          "definition": {
+            "default": "0px",
+            "type": "slider",
+            "values": {
+              "0px": {
+                "--game-icon-radius": [
+                  "0px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "3px": {
+                "--game-icon-radius": [
+                  "3px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "5px": {
+                "--game-icon-radius": [
+                  "5px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "10px": {
+                "--game-icon-radius": [
+                  "10px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "15px": {
+                "--game-icon-radius": [
+                  "15px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "30px": {
+                "--game-icon-radius": [
+                  "30px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Downloading Icon Background ": {
+          "value": "Transparent",
+          "definition": {
+            "default": "Transparent",
+            "type": "dropdown",
+            "values": {
+              "Transparent": {
+                "download_indicator_bg/transparent.css": [
+                  "SP"
+                ]
+              },
+              "Transparent with shadow": {
+                "download_indicator_bg/transparent_with_shadow.css": [
+                  "SP"
+                ]
+              },
+              "Black": {
+                "download_indicator_bg/black.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Blur Gameview Background",
+      "destination": "modules/blur-gameview-background",
+      "author": "gaker19",
+      "version": "v1.0",
+      "config": {
+        "active": false,
+        "Blur": "4px",
+        "Brightness": "0.8"
+      },
+      "choices": {
+        "Blur": {
+          "value": "4px",
+          "definition": {
+            "default": "4px",
+            "type": "slider",
+            "values": {
+              "Off": {
+                "--gaker19-blur-strength-gameview": [
+                  "0px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "2px": {
+                "--gaker19-blur-strength-gameview": [
+                  "2px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "4px": {
+                "--gaker19-blur-strength-gameview": [
+                  "4px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "8px": {
+                "--gaker19-blur-strength-gameview": [
+                  "8px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "16px": {
+                "--gaker19-blur-strength-gameview": [
+                  "16px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "32px": {
+                "--gaker19-blur-strength-gameview": [
+                  "32px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "64px": {
+                "--gaker19-blur-strength-gameview": [
+                  "64px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "128px": {
+                "--gaker19-blur-strength-gameview": [
+                  "128px",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Brightness": {
+          "value": "0.8",
+          "definition": {
+            "default": "1",
+            "type": "slider",
+            "values": {
+              "0": {
+                "--gaker19-brightness-gameview": [
+                  "0",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "0.2": {
+                "--gaker19-brightness-gameview": [
+                  "0.2",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "0.4": {
+                "--gaker19-brightness-gameview": [
+                  "0.4",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "0.6": {
+                "--gaker19-brightness-gameview": [
+                  "0.6",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "0.8": {
+                "--gaker19-brightness-gameview": [
+                  "0.8",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "1": {
+                "--gaker19-brightness-gameview": [
+                  "1",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "1.2": {
+                "--gaker19-brightness-gameview": [
+                  "1.2",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "1.4": {
+                "--gaker19-brightness-gameview": [
+                  "1.4",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "1.6": {
+                "--gaker19-brightness-gameview": [
+                  "1.6",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "1.8": {
+                "--gaker19-brightness-gameview": [
+                  "1.8",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "2": {
+                "--gaker19-brightness-gameview": [
+                  "2",
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Clean Game Launch",
+      "destination": "modules/clean-game-launch",
+      "author": "Niko",
+      "version": "v1.0",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    },
+    {
+      "source": "Clean Gameview",
+      "destination": "modules/clean-gameview",
+      "author": "SuchMeme",
+      "version": "v1.7",
+      "config": {
+        "active": false,
+        "Play Bar Style": "Blur",
+        "Alignment": "Zoom-Center",
+        "Show Steam Cloud": "Yes",
+        "Ignore Footer": "No",
+        "Lock Logo": "No"
+      },
+      "choices": {
+        "Play Bar Style": {
+          "value": "Blur",
+          "definition": {
+            "type": "dropdown",
+            "default": "Transparent",
+            "values": {
+              "Transparent": {
+                "transparent.css": [
+                  "SP"
+                ]
+              },
+              "Blur": {
+                "blur.css": [
+                  "SP"
+                ]
+              },
+              "Connected with Body": {
+                "connected.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Alignment": {
+          "value": "Zoom-Center",
+          "definition": {
+            "type": "dropdown",
+            "default": "Zoom-Center",
+            "values": {
+              "Zoom-Center": {},
+              "Zoom-Left": {
+                "alignments/left.css": [
+                  "SP"
+                ]
+              },
+              "Zoom-Right": {
+                "alignments/right.css": [
+                  "SP"
+                ]
+              },
+              "Contain": {
+                "alignments/contain.css": [
+                  "SP"
+                ]
+              },
+              "Stretch": {
+                "alignments/stretch.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Show Steam Cloud": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+              "Yes": {
+                "steamcloud.css": [
+                  "SP"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        },
+        "Ignore Footer": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "default": "No",
+            "values": {
+              "Yes": {
+                "--CGV-footer-height": [
+                  "0px",
+                  "SP"
+                ],
+                "--CGV-play-anim-height": [
+                  "100vh",
+                  "SP"
+                ]
+              },
+              "No": {
+                "--CGV-footer-height": [
+                  "40px",
+                  "SP"
+                ],
+                "--CGV-play-anim-height": [
+                  "58vw",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Lock Logo": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "default": "Yes",
+            "values": {
+              "Yes": {
+                "lockedlogo.css": [
+                  "SP"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Compact Activity & News",
+      "destination": "modules/compact-activity-news",
+      "author": "Jonius7",
+      "version": "v1.0",
+      "config": {
+        "active": false,
+        "Activity & News": "Yes",
+        "Events": "Yes"
+      },
+      "choices": {
+        "Activity & News": {
+          "value": "Yes",
+          "definition": {
+            "default": "Yes",
+            "type": "checkbox",
+            "values": {
+              "Yes": {
+                "gamepage_activitynews.css": [
+                  "library"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        },
+        "Events": {
+          "value": "Yes",
+          "definition": {
+            "default": "Yes",
+            "type": "checkbox",
+            "values": {
+              "Yes": {
+                "gamepage_events.css": [
+                  "library"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Customizable Keyboard",
+      "destination": "modules/customizable-keyboard",
+      "author": "KeeGooRoomiE",
+      "version": "v2.0.0",
+      "config": {
+        "active": false,
+        "Preset": {
+          "value": "One Dark Style",
+          "components": {
+            "Keyboard Background": "#101015",
+            "Key Color": "#1a1b22",
+            "Key Focused": "#242633",
+            "Key Pressed": "#2f3242",
+            "Key Border Color": "#3c3f52",
+            "Key Text": "#f5f5f7",
+            "Hint Text": "#a0a3b5",
+            "Accent Color": "#00bfa5",
+            "Accent Text": "#0b1015"
+          }
+        },
+        "Press animation": "On",
+        "Function keys": "Accent"
+      },
+      "choices": {
+        "Preset": {
+          "value": {
+            "value": "One Dark Style",
+            "components": {
+              "Keyboard Background": "#101015",
+              "Key Color": "#1a1b22",
+              "Key Focused": "#242633",
+              "Key Pressed": "#2f3242",
+              "Key Border Color": "#3c3f52",
+              "Key Text": "#f5f5f7",
+              "Hint Text": "#a0a3b5",
+              "Accent Color": "#00bfa5",
+              "Accent Text": "#0b1015"
+            }
+          },
+          "definition": {
+            "default": "One Dark Style",
+            "type": "dropdown",
+            "values": {
+              "Steam Green": {
+                "--sdkb-bg-color": [
+                  "#3a4232",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#4E5846",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#525a44",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#404638",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#2b3025",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#8a8560",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#404638",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "1",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 1px 1px 0 rgba(210,205,150,0.18), inset -1px -1px 0 rgba(0,0,0,0.32)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "#404638",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(80%) sepia(25%) saturate(700%) hue-rotate(1deg) brightness(92%) contrast(87%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-bg": [
+                  "#404638",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#404638",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "inset 2px 2px 0 #000000, inset -2px -2px 0 #c9b968",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(0,0,0,0.22)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Spectrum": {
+                "--sdkb-bg-color": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-panel-bg": [
+                  "linear-gradient(60deg, #6D1F3F, #712062, #571C74, #371876, #171B74, #181C7B, #213B7C, #2A5678, #2C5A7D, #3B7B7C, #3B7B55, #43852D, #41812C, #70802D, #776627, #7E4A23, #7D241F)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "rgba(255,255,255,0.22)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#cfcfcf",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "2",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "0 0 0 4px #000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(100%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-bg": [
+                  "transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-bg": [
+                  "transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "0 0 0 4px #000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(0,0,0,0.2)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-focus-shadow": [
+                  "0 0 6px 2px rgba(255,255,255,0.55)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Cerulean": {
+                "--sdkb-bg-color": [
+                  "#0a2f4a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#124366",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#1a5480",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#0e3a5a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#1f6590",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#bce0f5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#78a8c8",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#22a8ec",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#04202e",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "3",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(40,170,240,0.22)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Digital": {
+                "--sdkb-bg-color": [
+                  "#020a03",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#081208",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#0d1f0d",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#050d05",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#123016",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#5bff5b",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#2f8a2f",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#39ff14",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#001400",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "0 0 transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#33ff1e",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#001400",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(70%) sepia(64%) saturate(1600%) hue-rotate(72deg) brightness(112%) contrast(104%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "#0f3a16",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#7bff7b",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#39ff14",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "0 0 14px 2px #39ff14",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "#39ff14",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#39ff14",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Seafoam": {
+                "--sdkb-bg-color": [
+                  "#0a3d33",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#12564a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#1a6858",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#0e4a3e",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#1f7565",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#b8f0e2",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#78c0b0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#1fd0a8",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#04241c",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "3",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(30,240,200,0.22)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Candy Coded": {
+                "--sdkb-bg-color": [
+                  "#e6e7ea",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-gradient": [
+                  "linear-gradient(60deg, #ffffff, #dcdce2)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#79c2c7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#5fb0b6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "1",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#3a3f4a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#b7bec9",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#2b2e38",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "22",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 0 1px #E6E6E6, 0 0 4px rgba(0,0,0,0.18)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "#2b2e38",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-bg": [
+                  "#2b2e38",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#3E444F",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#3E444F",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(23%) sepia(11%) saturate(1200%) hue-rotate(182deg) brightness(94%) contrast(89%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#5fb0b6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "0 0 transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(95,176,182,0.35)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-bg": [
+                  "#ffffff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-text": [
+                  "#3a3f4a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-panel-bg": [
+                  "linear-gradient(60deg, #ffffff, #dcdce2)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Grape": {
+                "--sdkb-bg-color": [
+                  "#2a0f4a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#3d1a66",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#4a2078",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#331555",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#52288a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#d9b8f5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#a888c8",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#8a3fd0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#f0e2fa",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "3",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(180,90,255,0.25)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Ruby": {
+                "--sdkb-bg-color": [
+                  "#4a0f1c",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#6b1526",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#7d1c30",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#5a1020",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#8a2038",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#f0a8b2",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#c07782",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#b02038",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#f5dde1",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "3",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(255,60,90,0.25)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Pumpkin": {
+                "--sdkb-bg-color": [
+                  "#6e3212",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#824018",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#96501f",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#6a3010",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#a05a28",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#f5c89a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#c89060",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#d0641f",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#2a1206",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "3",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(255,140,60,0.25)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "OLED": {
+                "--sdkb-bg-color": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#0a0a0c",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#161616",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#230902",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#76200F",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#ff5a1f",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#76200F",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#ff5a1f",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 0 0 8px rgba(235,71,43,0.30)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "var(--sdkb-key-bg)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "var(--sdkb-accent)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#EB472B",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(42%) sepia(72%) saturate(2200%) hue-rotate(342deg) brightness(94%) contrast(95%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#EB472B",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "1",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#230902",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#EB472B",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "inset 0 0 10px rgba(235,71,43,0.45)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(235,71,43,0.28)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Limited Edition White": {
+                "--sdkb-bg-color": [
+                  "#B5B5B5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#EDEDED",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#E65A35",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#949494",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#B6B6B6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#DADADA",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#B5B5B5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "inset 1px 1px 0 #949494",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "#B5B5B5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(97%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-bg": [
+                  "#B5B5B5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#E65A35",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#F8FDFD",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "0 0 transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(255,255,255,0.25)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-bg": [
+                  "#B5B5B5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-text": [
+                  "#F7F7F7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Marshmallow": {
+                "--sdkb-bg-color": [
+                  "#fdf2f7",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#ffeef5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-gradient": [
+                  "linear-gradient(60deg, #fff6fb, #ffe1ee)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#ffe0ee",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#ffd4e6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-width": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#8a8790",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#c2bcc8",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#ffb3cf",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#6f6c78",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "20",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "0 3px 8px rgba(180,120,150,0.28), inset 0 1px 0 rgba(255,255,255,0.7)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-bg": [
+                  "#ffc9de",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "#7d7a85",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-color": [
+                  "#8a8790",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glyph-filter": [
+                  "brightness(0) saturate(100%) invert(58%) sepia(6%) saturate(250%) hue-rotate(230deg) brightness(94%) contrast(85%)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-bg": [
+                  "#ffc9de",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-util-text": [
+                  "#8a8790",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-bg": [
+                  "#ffd4e6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-text": [
+                  "#7d7a85",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-press-shadow": [
+                  "inset 0 2px 5px rgba(170,110,140,0.38)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-ripple": [
+                  "rgba(255,255,255,0.4)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-bg": [
+                  "#ffeef5",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-spacebar-text": [
+                  "#8a8790",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "One Dark Style": {
+                "--sdkb-bg-color": [
+                  "#1e2127",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#282c34",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#303542",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#3b404c",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#3b404c",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#abb2bf",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#5c6370",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#61afef",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#0b1015",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "0 0 transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "OLED Black": {
+                "--sdkb-bg-color": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-hover": [
+                  "#101015",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-bg-pressed": [
+                  "#101015",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-border-color": [
+                  "#2a2b30",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-color": [
+                  "#d0d0d0",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-text-secondary": [
+                  "#7f828a",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent": [
+                  "#00b8ff",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-accent-text": [
+                  "#000000",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-key-radius": [
+                  "6",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-glow": [
+                  "0 0 transparent",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Custom": {}
+            },
+            "components": [
+              {
+                "name": "Keyboard Background",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#101015",
+                "css_variable": "sdkb-bg-color",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Key Color",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#1a1b22",
+                "css_variable": "sdkb-key-bg",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Key Focused",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#242633",
+                "css_variable": "sdkb-key-bg-hover",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Key Pressed",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#2f3242",
+                "css_variable": "sdkb-key-bg-pressed",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Key Border Color",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#3c3f52",
+                "css_variable": "sdkb-key-border-color",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Key Text",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#f5f5f7",
+                "css_variable": "sdkb-key-text-color",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Hint Text",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#a0a3b5",
+                "css_variable": "sdkb-key-text-secondary",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Accent Color",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#00bfa5",
+                "css_variable": "sdkb-accent",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              {
+                "name": "Accent Text",
+                "type": "color-picker",
+                "on": "Custom",
+                "default": "#0b1015",
+                "css_variable": "sdkb-accent-text",
+                "tabs": [
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              }
+            ]
+          },
+          "from_default": false
+        },
+        "Press animation": {
+          "value": "On",
+          "definition": {
+            "default": "On",
+            "type": "dropdown",
+            "values": {
+              "On": {
+                "--sdkb-press-scale": [
+                  "0.9",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              },
+              "Off": {
+                "--sdkb-press-scale": [
+                  "1",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Function keys": {
+          "value": "Accent",
+          "definition": {
+            "default": "Accent",
+            "type": "dropdown",
+            "values": {
+              "Accent": {},
+              "Neutral": {
+                "--sdkb-fn-bg": [
+                  "var(--sdkb-key-bg)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ],
+                "--sdkb-fn-text": [
+                  "var(--sdkb-key-text-color)",
+                  "bigpicture",
+                  "QuickAccess",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Deck Store - Better Wishlist",
+      "destination": "modules/deck-store-better-wishlist",
+      "author": "MattSeys",
+      "version": "v0.1",
+      "config": {
+        "active": false,
+        "Remove re-order": "Yes",
+        "Show release date": "Yes",
+        "Enable advanced filter": "Yes"
+      },
+      "choices": {
+        "Remove re-order": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {
+                "remove-reorder.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        },
+        "Show release date": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {
+                "show-release-date.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        },
+        "Enable advanced filter": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {
+                "enable-advanced-filter.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "No": {}
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Deck Store - Rounded",
+      "destination": "modules/deck-store-rounded",
+      "author": "MattSeys",
+      "version": "v0.1",
+      "config": {
+        "active": false,
+        "Intensity": "10px"
+      },
+      "choices": {
+        "Intensity": {
+          "value": "10px",
+          "definition": {
+            "default": "10px",
+            "type": "slider",
+            "values": {
+              "3px": {
+                "intensity/3px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "5px": {
+                "intensity/5px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "10px": {
+                "intensity/10px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "15px": {
+                "intensity/15px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "20px": {
+                "intensity/20px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              },
+              "30px": {
+                "intensity/30px.css": [
+                  "~https://store.steampowered.com~"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "DellyFooter",
+      "destination": "modules/dellyfooter",
+      "author": "Dellyare",
+      "version": "v1.1",
+      "config": {
+        "active": false,
+        "Effect": "Blur",
+        "Size": "Small",
+        "Rounded corners": "No",
+        "Normal font": "No",
+        "Remove text": "No",
+        "Remove icons": "No"
+      },
+      "choices": {
+        "Effect": {
+          "value": "Blur",
+          "definition": {
+            "default": "Blur",
+            "type": "dropdown",
+            "values": {
+              "None": {},
+              "Blur": {
+                "effects/blur-effect.css": [
+                  "SP"
+                ]
+              },
+              "Gradient": {
+                "effects/gradient-effect.css": [
+                  "SP"
+                ]
+              },
+              "RGB": {
+                "effects/rgb-effect.css": [
+                  "SP"
+                ]
+              },
+              "RGB Breathing": {
+                "effects/breathing-rgb-effect.css": [
+                  "SP"
+                ]
+              },
+              "Christmas": {
+                "effects/christmas-effect.css": [
+                  "SP"
+                ]
+              },
+              "Transparent": {
+                "effects/transparent-effect.css": [
+                  "SP"
+                ]
+              },
+              "Inverted": {
+                "effects/inverted-effect.css": [
+                  "SP"
+                ]
+              },
+              "MacOS (Light)": {
+                "effects/macos-light-effect.css": [
+                  "SP"
+                ]
+              },
+              "MacOS (Dark)": {
+                "effects/macos-dark-effect.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Size": {
+          "value": "Small",
+          "definition": {
+            "default": "Default",
+            "type": "dropdown",
+            "values": {
+              "Default": {
+                "sizes/default-size.css": [
+                  "SP"
+                ]
+              },
+              "Small": {
+                "sizes/small-size.css": [
+                  "SP"
+                ]
+              },
+              "Smaller": {
+                "sizes/tiny-size.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Rounded corners": {
+          "value": "No",
+          "definition": {
+            "default": "No",
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "checkboxes/round-corners.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Normal font": {
+          "value": "No",
+          "definition": {
+            "default": "No",
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "checkboxes/normal-font.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Remove text": {
+          "value": "No",
+          "definition": {
+            "default": "No",
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "checkboxes/remove-font.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Remove icons": {
+          "value": "No",
+          "definition": {
+            "default": "No",
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "checkboxes/remove-icons.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Desktop Rounded Games",
+      "destination": "modules/desktop-rounded-games",
+      "author": "SuchMeme",
+      "version": null,
+      "config": {
+        "active": false,
+        "Border Radius": "15px"
+      },
+      "choices": {
+        "Border Radius": {
+          "value": "15px",
+          "definition": {
+            "default": "10px",
+            "type": "slider",
+            "values": {
+              "5px": {
+                "--desktopgb": [
+                  "5px",
+                  "SteamLibraryWindow|Steam"
+                ]
+              },
+              "10px": {
+                "--desktopgb": [
+                  "10px",
+                  "SteamLibraryWindow|Steam"
+                ]
+              },
+              "15px": {
+                "--desktopgb": [
+                  "15px",
+                  "SteamLibraryWindow|Steam"
+                ]
+              },
+              "20px": {
+                "--desktopgb": [
+                  "20px",
+                  "SteamLibraryWindow|Steam"
+                ]
+              },
+              "25px": {
+                "--desktopgb": [
+                  "25px",
+                  "SteamLibraryWindow|Steam"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Faster Transition Animations",
+      "destination": "modules/faster-transition-animations",
+      "author": "SuchMeme",
+      "version": "v1.1",
+      "config": {
+        "active": false,
+        "Speed": "3x"
+      },
+      "choices": {
+        "Speed": {
+          "value": "3x",
+          "definition": {
+            "type": "slider",
+            "default": "3x",
+            "values": {
+              "Instant": {
+                "Time/0ms.css": [
+                  "SP"
+                ]
+              },
+              "6x": {
+                "Time/100ms.css": [
+                  "SP"
+                ]
+              },
+              "3x": {},
+              "2x": {
+                "Time/300ms.css": [
+                  "SP"
+                ]
+              },
+              "1.5x": {
+                "Time/400ms.css": [
+                  "SP"
+                ]
+              },
+              "1.2x": {
+                "Time/500ms.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Fonts",
+      "destination": "modules/fonts",
+      "author": "EMERALD0874",
+      "version": "v3.3",
+      "config": {
+        "active": false,
+        "Font": "Roboto",
+        "Text Transform": "None"
+      },
+      "choices": {
+        "Font": {
+          "value": "Roboto",
+          "definition": {
+            "default": "None",
+            "type": "dropdown",
+            "values": {
+              "None": {},
+              "Android Insomnia": {
+                "font-css/android-insomnia.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Atkinson Hyperlegible": {
+                "font-css/atkinson-hyperlegible.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Bahnschrift": {
+                "font-css/bahnschrift.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "DePixel Breit": {
+                "font-css/depixel.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Figtree": {
+                "font-css/figtree.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Fira Sans": {
+                "font-css/fira-sans.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Josefin Sans": {
+                "font-css/josefin-sans.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Lato": {
+                "font-css/lato.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Montserrat": {
+                "font-css/montserrat.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "OpenDyslexic": {
+                "font-css/opendyslexic.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Optima Nova": {
+                "font-css/optima-nova.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Roboto": {
+                "font-css/roboto.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Custom Template": {
+                "font-css/custom.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Text Transform": {
+          "value": "None",
+          "definition": {
+            "default": "None",
+            "type": "dropdown",
+            "values": {
+              "None": {},
+              "Standard Case": {
+                "case/standard-case.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              },
+              "Uppercase": {
+                "case/uppercase.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Fullscreen Library & Community Media",
+      "destination": "modules/fullscreen-library-community-media",
+      "author": "Niko",
+      "version": "v1.0",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    },
+    {
+      "source": "Improved Media Details",
+      "destination": "modules/improved-media-details",
+      "author": "Matthias#8282",
+      "version": null,
+      "config": {
+        "active": false,
+        "Always Show Details": "No"
+      },
+      "choices": {
+        "Always Show Details": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "alldetails.css": [
+                  "SP",
+                  "MainMenu",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Library Move Extra Info",
+      "destination": "modules/library-move-extra-info",
+      "author": "Matthias, RasitAyaz",
+      "version": "v1.5",
+      "config": {
+        "active": false,
+        "Horizontal Align": "Left when highlighted",
+        "Vertical Align": "Bottom edge",
+        "Use Obsidian": "Yes",
+        "Roundedness": "10px"
+      },
+      "choices": {
+        "Horizontal Align": {
+          "value": "Left when highlighted",
+          "definition": {
+            "default": "Left when highlighted",
+            "type": "dropdown",
+            "values": {
+              "Left": {
+                "--library-extra-info-left": [
+                  "5px",
+                  "SP"
+                ],
+                "--library-extra-info-focus-left": [
+                  "5px",
+                  "SP"
+                ]
+              },
+              "Left when highlighted": {
+                "--library-extra-info-left": [
+                  "0px",
+                  "SP"
+                ],
+                "--library-extra-info-right": [
+                  "0px",
+                  "SP"
+                ],
+                "--library-extra-info-focus-left": [
+                  "5px",
+                  "SP"
+                ]
+              },
+              "Center": {
+                "--library-extra-info-left": [
+                  "0px",
+                  "SP"
+                ],
+                "--library-extra-info-right": [
+                  "0px",
+                  "SP"
+                ],
+                "--library-extra-info-focus-left": [
+                  "0px",
+                  "SP"
+                ],
+                "--library-extra-info-focus-right": [
+                  "0px",
+                  "SP"
+                ]
+              },
+              "Right": {
+                "--library-extra-info-right": [
+                  "5px",
+                  "SP"
+                ],
+                "--library-extra-info-focus-right": [
+                  "5px",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Vertical Align": {
+          "value": "Bottom edge",
+          "definition": {
+            "default": "Bottom edge",
+            "type": "dropdown",
+            "values": {
+              "Top edge": {
+                "--library-extra-info-top": [
+                  "-10px",
+                  "SP"
+                ]
+              },
+              "Top": {
+                "--library-extra-info-top": [
+                  "5px",
+                  "SP"
+                ]
+              },
+              "Bottom": {
+                "--library-extra-info-bottom": [
+                  "5px",
+                  "SP"
+                ]
+              },
+              "Bottom edge": {
+                "--library-extra-info-bottom": [
+                  "-10px",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Use Obsidian": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "useobsidian.css": [
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Roundedness": {
+          "value": "10px",
+          "definition": {
+            "default": "10px",
+            "type": "slider",
+            "values": {
+              "0px": {
+                "--library-extra-info-radius-size": [
+                  "0px",
+                  "SP"
+                ]
+              },
+              "3px": {
+                "--library-extra-info-radius-size": [
+                  "3px",
+                  "SP"
+                ]
+              },
+              "5px": {
+                "--library-extra-info-radius-size": [
+                  "5px",
+                  "SP"
+                ]
+              },
+              "10px": {
+                "--library-extra-info-radius-size": [
+                  "10px",
+                  "SP"
+                ]
+              },
+              "15px": {
+                "--library-extra-info-radius-size": [
+                  "15px",
+                  "SP"
+                ]
+              },
+              "20px": {
+                "--library-extra-info-radius-size": [
+                  "20px",
+                  "SP"
+                ]
+              },
+              "30px": {
+                "--library-extra-info-radius-size": [
+                  "30px",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Main Menu Hide Tabs (hide the Store)",
+      "destination": "modules/main-menu-hide-tabs-hide-the-store",
+      "author": "alesya-h",
+      "version": "v1.1",
+      "config": {
+        "active": false,
+        "Home": "Yes",
+        "Library": "Yes",
+        "Store": "Yes",
+        "Friends & Chat": "Yes",
+        "Media": "Yes",
+        "Downloads": "Yes",
+        "Settings": "Yes",
+        "Power": "Yes"
+      },
+      "choices": {
+        "Home": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-HOME": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Library": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-LIBRARY": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Store": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-STORE": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Friends & Chat": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-FRIENDS-AND-CHAT": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Media": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-MEDIA": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Downloads": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-DOWNLOADS": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Settings": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-SETTINGS": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Power": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--MMHIDE-POWER": [
+                  "none",
+                  "MainMenu"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "More Library Icons",
+      "destination": "modules/more-library-icons",
+      "author": "ACViper",
+      "version": "v1.3",
+      "config": {
+        "active": false,
+        "Library Columns": "8"
+      },
+      "choices": {
+        "Library Columns": {
+          "value": "8",
+          "definition": {
+            "default": "6",
+            "type": "slider",
+            "values": {
+              "6": {
+                "--mli-zoom": [
+                  "87%",
+                  "SP"
+                ],
+                "--mli-zoom-tv": [
+                  "122%",
+                  "SP"
+                ]
+              },
+              "7": {
+                "--mli-zoom": [
+                  "74%",
+                  "SP"
+                ],
+                "--mli-zoom-tv": [
+                  "105%",
+                  "SP"
+                ]
+              },
+              "8": {
+                "--mli-zoom": [
+                  "65%",
+                  "SP"
+                ],
+                "--mli-zoom-tv": [
+                  "92%",
+                  "SP"
+                ]
+              },
+              "9": {
+                "--mli-zoom": [
+                  "56%",
+                  "SP"
+                ],
+                "--mli-zoom-tv": [
+                  "81%",
+                  "SP"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "No News Section",
+      "destination": "modules/no-news-section",
+      "author": "Sims",
+      "version": "v1.1",
+      "config": {
+        "active": false,
+        "Remove Add Shelf": "No"
+      },
+      "choices": {
+        "Remove Add Shelf": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "No": {},
+              "Yes": {
+                "remove_add_shelf.css": [
+                  "desktop"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "No Recommend",
+      "destination": "modules/no-recommend",
+      "author": "ReticentRobot",
+      "version": "v1.0",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    },
+    {
+      "source": "Overlay Colapse Fix",
+      "destination": "modules/overlay-colapse-fix",
+      "author": "Niko",
+      "version": "v1.0",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    },
+    {
+      "source": "Prominent Store Prices",
+      "destination": "modules/prominent-store-prices",
+      "author": "SuchMeme",
+      "version": "v1.1",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    },
+    {
+      "source": "QAM Hide Tabs",
+      "destination": "modules/qam-hide-tabs",
+      "author": "SuchMeme",
+      "version": "v1.2",
+      "config": {
+        "active": false,
+        "Remote Play Together": "Yes",
+        "Notifications": "Yes",
+        "Friends": "Yes",
+        "Settings": "Yes",
+        "Performance": "Yes",
+        "Soundtrack": "No",
+        "Help": "No",
+        "Keyboard": "Yes"
+      },
+      "choices": {
+        "Remote Play Together": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-0": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Notifications": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-1": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Friends": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-2": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Settings": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-3": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Performance": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-4": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Soundtrack": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-5": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Help": {
+          "value": "No",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-6": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        },
+        "Keyboard": {
+          "value": "Yes",
+          "definition": {
+            "type": "checkbox",
+            "values": {
+              "Yes": {},
+              "No": {
+                "--QAMHIDE-KEYBOARD": [
+                  "none",
+                  "QuickAccess"
+                ]
+              }
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Rounded Keyboard",
+      "destination": "modules/rounded-keyboard",
+      "author": "CootMoon",
+      "version": "v2.0",
+      "config": {
+        "active": false,
+        "Size": "10px"
+      },
+      "choices": {
+        "Size": {
+          "value": "10px",
+          "definition": {
+            "default": "10px",
+            "1px": {
+              "size/1px.css": [
+                "SP"
+              ]
+            },
+            "2.5px": {
+              "size/2.5px.css": [
+                "SP"
+              ]
+            },
+            "5px": {
+              "size/5px.css": [
+                "SP"
+              ]
+            },
+            "7.5px": {
+              "size/7.5px.css": [
+                "SP"
+              ]
+            },
+            "10px": {
+              "size/10px.css": [
+                "SP"
+              ]
+            },
+            "12.5px": {
+              "size/12.5px.css": [
+                "SP"
+              ]
+            },
+            "15px": {
+              "size/15px.css": [
+                "SP"
+              ]
+            },
+            "17.5px": {
+              "size/17.5px.css": [
+                "SP"
+              ]
+            },
+            "20px": {
+              "size/20px.css": [
+                "SP"
+              ]
+            }
+          },
+          "from_default": false
+        }
+      }
+    },
+    {
+      "source": "Rounded search",
+      "destination": "modules/rounded-search",
+      "author": "FredFisher2",
+      "version": "v1.0",
+      "config": {
+        "active": false
+      },
+      "choices": {}
+    }
+  ]
+}

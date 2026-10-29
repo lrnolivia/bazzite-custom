@@ -1,0 +1,3011 @@
+{
+  "schema": 1,
+  "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+  "choices": {
+    "— Shared appearance —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Appearance / Outlines": {
+      "value": "Round",
+      "definition": {
+        "default": "Round",
+        "type": "dropdown",
+        "values": {
+          "Round": {
+            "modules/radius/round-outline.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess"
+            ]
+          },
+          "Square": {},
+          "Hidden": {
+            "modules/radius/hide-outline.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess"
+            ]
+          }
+        }
+      }
+    },
+    "Header / Foreground Contrast": {
+      "value": "Light",
+      "definition": {
+        "type": "dropdown",
+        "default": "Light",
+        "values": {
+          "Adaptive": {},
+          "Light": {
+            "options/header/light.css": [
+              "SP"
+            ]
+          },
+          "Dark": {
+            "options/header/dark.css": [
+              "SP"
+            ]
+          }
+        }
+      }
+    },
+    "Header / Soft Shadows": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {},
+          "No": {
+            "options/header/no-shadow.css": [
+              "SP"
+            ]
+          }
+        }
+      }
+    },
+    "— Appearance —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Appearance / Main Color": {
+      "value": {
+        "value": "Black",
+        "components": {
+          "Background Color": "#000"
+        }
+      },
+      "definition": {
+        "default": "Black",
+        "type": "dropdown",
+        "values": {
+          "Black": {},
+          "Dark Gray": {
+            "modules/surfaces/colors/dark-gray.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Gray": {
+            "modules/surfaces/colors/gray.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Red": {
+            "modules/surfaces/colors/red.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Orange": {
+            "modules/surfaces/colors/orange.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Yellow": {
+            "modules/surfaces/colors/yellow.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Green": {
+            "modules/surfaces/colors/green.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Blue": {
+            "modules/surfaces/colors/blue.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Indigo": {
+            "modules/surfaces/colors/indigo.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Violet": {
+            "modules/surfaces/colors/violet.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Custom": {}
+        },
+        "components": [
+          {
+            "name": "Background Color",
+            "type": "color-picker",
+            "on": "Custom",
+            "default": "#000",
+            "css_variable": "--obsidian-main-color",
+            "tabs": [
+              "SP",
+              "MainMenu",
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Appearance / Recent Games Background": {
+      "value": {
+        "value": "White",
+        "components": {
+          "Recent Games Color": "#fff"
+        }
+      },
+      "definition": {
+        "default": "White",
+        "type": "dropdown",
+        "values": {
+          "Default": {},
+          "None": {
+            "modules/surfaces/recents/none.css": [
+              "SP"
+            ]
+          },
+          "White": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ]
+          },
+          "Gray": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/gray.css": [
+              "SP"
+            ]
+          },
+          "Dark Gray": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/dark-gray.css": [
+              "SP"
+            ]
+          },
+          "Black": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/black.css": [
+              "SP"
+            ]
+          },
+          "Red": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/red.css": [
+              "SP"
+            ]
+          },
+          "Orange": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/orange.css": [
+              "SP"
+            ]
+          },
+          "Yellow": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/yellow.css": [
+              "SP"
+            ]
+          },
+          "Green": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/green.css": [
+              "SP"
+            ]
+          },
+          "Blue": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/blue.css": [
+              "SP"
+            ]
+          },
+          "Indigo": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/indigo.css": [
+              "SP"
+            ]
+          },
+          "Violet": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/violet.css": [
+              "SP"
+            ]
+          },
+          "OLED Limited Edition": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ],
+            "modules/surfaces/recents/oled.css": [
+              "SP"
+            ]
+          },
+          "Custom": {
+            "modules/surfaces/recents/monochrome.css": [
+              "SP"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Recent Games Color",
+            "type": "color-picker",
+            "on": "Custom",
+            "default": "#fff",
+            "css_variable": "--obsidian-recents-color",
+            "tabs": [
+              "SP"
+            ]
+          }
+        ]
+      }
+    },
+    "Appearance / Disable Blur": {
+      "value": "No",
+      "definition": {
+        "default": "Yes",
+        "type": "checkbox",
+        "values": {
+          "Yes": {
+            "modules/surfaces/other/no-blur.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Appearance / Disable Glow": {
+      "value": "No",
+      "definition": {
+        "default": "Yes",
+        "type": "checkbox",
+        "values": {
+          "Yes": {
+            "modules/surfaces/other/no-glow.css": [
+              "SP",
+              "MainMenu",
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "— Main Menu —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Main Menu / Edges": {
+      "value": "Round",
+      "definition": {
+        "type": "slider",
+        "default": "Semi-Round",
+        "values": {
+          "Default": {},
+          "Semi-Round": {
+            "modules/main-menu/opt/edges_common.css": [
+              "SP",
+              "MainMenu.*"
+            ],
+            "modules/main-menu/opt/edges_semi-round.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          },
+          "Round": {
+            "modules/main-menu/opt/edges_common.css": [
+              "SP",
+              "MainMenu.*"
+            ],
+            "modules/main-menu/opt/edges_round.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        }
+      }
+    },
+    "Main Menu / Item Focus Grow Anim": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {},
+          "No": {
+            "modules/main-menu/opt/noGrow_itemFocus.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        }
+      }
+    },
+    "Main Menu / Active Tab Indicator Type": {
+      "value": "Dot",
+      "definition": {
+        "type": "slider",
+        "default": "None",
+        "values": {
+          "Default": {},
+          "Wide": {
+            "modules/main-menu/opt/tabIndicator_wide.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          },
+          "Dot": {
+            "modules/main-menu/opt/tabIndicator_dot.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          },
+          "None": {
+            "modules/main-menu/opt/tabIndicator_none.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        }
+      }
+    },
+    "Main Menu / Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 0%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {},
+          "IMG": {
+            "modules/main-menu/parts/primaryPanel/img.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Solid Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#0f0f0f",
+            "css_variable": "chromahonSM__primaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          },
+          {
+            "name": "Image Picker",
+            "type": "image-picker",
+            "on": "IMG",
+            "default": "",
+            "css_variable": "chromahonSM__primaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Collapse Bg": {
+      "value": "No",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {
+            "modules/main-menu/opt/collapseBg_primaryPanel.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Main Menu / Item Label": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#f0f0f0"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#f0f0f0",
+            "css_variable": "chromahonSM__primaryPanel-item-label",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Item Icon": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#f0f0f0"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {},
+          "Hide": {
+            "modules/main-menu/opt/hideIcons_primaryPanel.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#f0f0f0",
+            "css_variable": "chromahonSM__primaryPanel-item-svg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Item Focus Background": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/main-menu/parts/primaryPanel/itemFocus/bg-solidColors.css": [
+              "SP",
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#0f0f0f",
+            "css_variable": "chromahonSM__primaryPanel-itemFocus-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Item Focus Label": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 18%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#f5f5f5",
+            "css_variable": "chromahonSM__primaryPanel-itemFocus-label",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Item Focus Icon": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(52, 100%, 0%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#f5f5f5",
+            "css_variable": "chromahonSM__primaryPanel-itemFocus-svg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Secondary Panel > Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 10%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {},
+          "IMG": {
+            "modules/main-menu/parts/secondaryPanel/img.css": [
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Solid Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#0f0f0f",
+            "css_variable": "chromahonSM__secondaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          },
+          {
+            "name": "Image Picker",
+            "type": "image-picker",
+            "on": "IMG",
+            "default": "",
+            "css_variable": "chromahonSM__secondaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Secondary Panel > Item Label": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 40%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#202020",
+            "css_variable": "chromahonSM__secondaryPanel-item-label",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Secondary Panel > Item Focus Background": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 65%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/main-menu/parts/secondaryPanel/itemFocus/bg-solidColors.css": [
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#121212",
+            "css_variable": "chromahonSM__secondaryPanel-itemFocus-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Secondary Panel > Item Focus Label": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 10%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#f5f5f5",
+            "css_variable": "chromahonSM__secondaryPanel-itemFocus-label",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Secondary Panel > Active Tab Indicator": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(180, 100%, 35%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/main-menu/parts/secondaryPanel/tabIndicator-solidColors.css": [
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#d1d1d1",
+            "css_variable": "chromahonSM__secondaryPanel-tabIndicator",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Tertiary Panel > Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 15%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {},
+          "IMG": {
+            "modules/main-menu/parts/tertiaryPanel/img.css": [
+              "MainMenu.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Solid Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#121212",
+            "css_variable": "chromahonSM__tertiaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          },
+          {
+            "name": "Image Picker",
+            "type": "image-picker",
+            "on": "IMG",
+            "default": "",
+            "css_variable": "chromahonSM__tertiaryPanel-bg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Main Menu / Tertiary Panel > Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#e3e3e3"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#e3e3e3",
+            "css_variable": "chromahonSM__tertiaryPanel-fg",
+            "tabs": [
+              "SP",
+              "MainMenu.*",
+              "QuickAccess.*"
+            ]
+          }
+        ]
+      }
+    },
+    "— Quick Access —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Quick Access / QAM Type": {
+      "value": "Regular Rounded",
+      "definition": {
+        "type": "slider",
+        "default": "Regular",
+        "values": {
+          "Regular": {
+            "modules/quick-access/tweaks/qam-type-regular.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Regular Rounded": {
+            "modules/quick-access/tweaks/qam-type-regular_rounded.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/tweaks/qam-rounded_shared-components.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Inverted": {
+            "modules/quick-access/tweaks/qam-type-inverted.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Inverted Rounded": {
+            "modules/quick-access/tweaks/qam-type-inverted_rounded.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/tweaks/qam-rounded_shared-components.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        }
+      }
+    },
+    "Quick Access / Sidebar Layout": {
+      "value": "Standard",
+      "definition": {
+        "type": "slider",
+        "default": "Collapse Top",
+        "values": {
+          "Standard": {
+            "modules/quick-access/tweaks/sidebar-standard.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Collapse Center": {
+            "modules/quick-access/tweaks/sidebar-collapse-center.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Collapse Top": {
+            "modules/quick-access/tweaks/sidebar-collapse-top.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "Collapse Bottom": {
+            "modules/quick-access/tweaks/sidebar-collapse-bottom.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        }
+      }
+    },
+    "Quick Access / Show Sidebar Page Indicator": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/quick-access/tweaks/sidebar-page-indicator.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Quick Access / Hide Help Page": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/quick-access/tweaks/sidebar-hide-help-page.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Quick Access / Extend QAM Styling To Notification Toasts": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/quick-access/tweaks/notifToast-enable_style.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Quick Access / Content Panel Background Type": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "#0f0f0f",
+          "Image Picker": ""
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {
+            "modules/quick-access/parts/contentPanel/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          "IMG": {
+            "modules/quick-access/parts/contentPanel/bg-img.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Solid Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#0f0f0f",
+            "css_variable": "chromahonQAM__Custom-main-bg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          },
+          {
+            "name": "Image Picker",
+            "type": "image-picker",
+            "on": "IMG",
+            "default": "",
+            "css_variable": "chromahonQAM__Custom-main-bg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Content Panel Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#adadad"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#adadad",
+            "css_variable": "chromahonQAM__Custom-main-fg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Header Layer 1 Bg Type": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 2%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/quick-access/parts/pageHeader/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/parts/dependencies/anim_colorChange-bg.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#d1d1d1",
+            "css_variable": "--chromahonQAM__Custom-pageHeader-layer1-bg-c1",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Header Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#202020",
+            "css_variable": "chromahonQAM__Custom-pageHeader-layer1-fg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Focusable Item Bg Highlight Type": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 0%, 0.6)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/quick-access/parts/itemHighlight/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/parts/dependencies/anim_colorChange-bg.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#eb506f",
+            "css_variable": "--chromahonQAM__Custom-itemHighlight-bg-c1",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Focusable Item Highlight Fg": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 85%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#202020",
+            "css_variable": "chromahonQAM__Custom-main-fg-hl",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Item Separators": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(2, 1%, 41%, 0)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#00000000",
+            "css_variable": "chromahonQAM__Custom-item-separator",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Sidebar Panel Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 0%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {
+            "modules/quick-access/parts/sidebarPanel/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#dbdbdb",
+            "css_variable": "--chromahonQAM__Custom-sidebarPanel-bg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Sidebar Icon": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 71%, 0.30196078431372547)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#0d0d0d4D",
+            "css_variable": "chromahonQAM__Custom-sidebarIcon-fg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Sidebar Icon Highlight": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#bababa",
+            "css_variable": "chromahonQAM__Custom-sidebarIcon-fg-hl",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Sidebar Icon Bg Highlight": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 30%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/quick-access/parts/sidebarIconBg/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/parts/dependencies/anim_colorChange-bg.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#161616",
+            "css_variable": "--chromahonQAM__Custom-sidebarIcon-bg-hl-c1",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Sidebar Page Indicator": {
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(55, 79.48717948717946%, 45%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Colors",
+        "values": {
+          "Solid Colors": {
+            "modules/quick-access/parts/sidebarIndicator/bg-solid.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ],
+            "modules/quick-access/parts/dependencies/anim_colorChange-bg.css": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color 1",
+            "type": "color-picker",
+            "on": "Solid Colors",
+            "default": "#eb506f",
+            "css_variable": "--chromahonQAM__Custom-sidebarIndicator-c1",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Top Bar Background": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 3%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#ccc",
+            "css_variable": "chromahonQAM__Custom-topBar-bg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Top Bar Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#202020",
+            "css_variable": "chromahonQAM__Custom-topBar-fg",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Top Bar Bg Highlight": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 4%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#202020",
+            "css_variable": "chromahonQAM__Custom-topBar-bg-hl",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Top Bar Fg Highlight": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 61%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#ccc",
+            "css_variable": "chromahonQAM__Custom-topBar-fg-hl",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "Quick Access / Notification Mark": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(345.88235294117646, 73.91304347826087%, 62%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#de234f",
+            "css_variable": "chromahonQAM__Custom-notifMark",
+            "tabs": [
+              "QuickAccess",
+              "notificationtoasts.*"
+            ]
+          }
+        ]
+      }
+    },
+    "— Context Menus —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Context Menus / Edges": {
+      "value": "Round",
+      "definition": {
+        "type": "slider",
+        "default": "Round",
+        "values": {
+          "Sharp": {},
+          "Sharp w/ Padding": {
+            "modules/context-menu/edges_padding.css": [
+              "bigpicture"
+            ]
+          },
+          "Round": {
+            "modules/context-menu/edges_round.css": [
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Menu Background": {
+      "value": "OLED Black",
+      "definition": {
+        "type": "dropdown",
+        "default": "OLED Black",
+        "values": {
+          "∅ None": {
+            "--chromahonCM__body-bg": [
+              "#00000000",
+              "bigpicture"
+            ]
+          },
+          "OLED Black": {
+            "--chromahonCM__body-bg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Dark Gray": {
+            "--chromahonCM__body-bg": [
+              "#141414",
+              "bigpicture"
+            ]
+          },
+          "Bright Gray": {
+            "--chromahonCM__body-bg": [
+              "#bdbdbd",
+              "bigpicture"
+            ]
+          },
+          "Transparent Black": {
+            "--chromahonCM__body-bg": [
+              "#00000080",
+              "bigpicture"
+            ]
+          },
+          "Transparent White": {
+            "--chromahonCM__body-bg": [
+              "#ffffff80",
+              "bigpicture"
+            ]
+          },
+          "Marine Blue": {
+            "--chromahonCM__body-bg": [
+              "#0d1226",
+              "bigpicture"
+            ]
+          },
+          "Earthy Brown": {
+            "--chromahonCM__body-bg": [
+              "#241e20",
+              "bigpicture"
+            ]
+          },
+          "Wine Red": {
+            "--chromahonCM__body-bg": [
+              "#400b1e",
+              "bigpicture"
+            ]
+          },
+          "Beige": {
+            "--chromahonCM__body-bg": [
+              "#b5ada1",
+              "bigpicture"
+            ]
+          },
+          "Aubergine": {
+            "--chromahonCM__body-bg": [
+              "#2a0f30",
+              "bigpicture"
+            ]
+          },
+          "Orange": {
+            "--chromahonCM__body-bg": [
+              "#9c3b1e",
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Menu Foreground": {
+      "value": {
+        "value": "White",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "White",
+        "values": {
+          "White": {
+            "--chromahonCM__body-fg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Black": {
+            "--chromahonCM__body-fg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Custom...": {}
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Custom...",
+            "default": "#eee",
+            "css_variable": "chromahonCM__body-fg",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Item Focus Background": {
+      "value": "White",
+      "definition": {
+        "type": "dropdown",
+        "default": "White",
+        "values": {
+          "Bright Gray": {
+            "--chromahonCM__itemfocus-bg": [
+              "#eee",
+              "bigpicture"
+            ]
+          },
+          "White": {
+            "--chromahonCM__itemfocus-bg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Dark Gray": {
+            "--chromahonCM__itemfocus-bg": [
+              "#141414",
+              "bigpicture"
+            ]
+          },
+          "Pale Yellow": {
+            "--chromahonCM__itemfocus-bg": [
+              "#b8af65",
+              "bigpicture"
+            ]
+          },
+          "Leaf Green": {
+            "--chromahonCM__itemfocus-bg": [
+              "#62a35b",
+              "bigpicture"
+            ]
+          },
+          "Pastel Pink": {
+            "--chromahonCM__itemfocus-bg": [
+              "#dbb4c4",
+              "bigpicture"
+            ]
+          },
+          "Wine Red": {
+            "--chromahonCM__itemfocus-bg": [
+              "#400b1e",
+              "bigpicture"
+            ]
+          },
+          "Aquamarine Blue": {
+            "--chromahonCM__itemfocus-bg": [
+              "#52bf9d",
+              "bigpicture"
+            ]
+          },
+          "Orange": {
+            "--chromahonCM__itemfocus-bg": [
+              "#bf7747",
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Item Focus Foreground": {
+      "value": {
+        "value": "Black",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "Black",
+        "values": {
+          "White": {
+            "--chromahonCM__itemfocus-fg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Black": {
+            "--chromahonCM__itemfocus-fg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Custom...": {}
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Custom...",
+            "default": "#eee",
+            "css_variable": "chromahonCM__itemfocus-fg",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Title Background": {
+      "value": "Transparent Black",
+      "definition": {
+        "type": "dropdown",
+        "default": "Transparent White",
+        "values": {
+          "∅ None": {
+            "--chromahonCM__title-bg": [
+              "#00000000",
+              "bigpicture"
+            ]
+          },
+          "OLED Black": {
+            "--chromahonCM__title-bg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Dark Gray": {
+            "--chromahonCM__title-bg": [
+              "#141414",
+              "bigpicture"
+            ]
+          },
+          "Bright Gray": {
+            "--chromahonCM__title-bg": [
+              "#bdbdbd",
+              "bigpicture"
+            ]
+          },
+          "Transparent Black": {
+            "--chromahonCM__title-bg": [
+              "#00000066",
+              "bigpicture"
+            ]
+          },
+          "Transparent White": {
+            "--chromahonCM__title-bg": [
+              "#ffffff66",
+              "bigpicture"
+            ]
+          },
+          "Marine Blue": {
+            "--chromahonCM__title-bg": [
+              "#0d1226",
+              "bigpicture"
+            ]
+          },
+          "Earthy Brown": {
+            "--chromahonCM__title-bg": [
+              "#241e20",
+              "bigpicture"
+            ]
+          },
+          "Wine Red": {
+            "--chromahonCM__title-bg": [
+              "#400b1e",
+              "bigpicture"
+            ]
+          },
+          "Beige": {
+            "--chromahonCM__title-bg": [
+              "#b5ada1",
+              "bigpicture"
+            ]
+          },
+          "Aubergine": {
+            "--chromahonCM__title-bg": [
+              "#2a0f30",
+              "bigpicture"
+            ]
+          },
+          "Orange": {
+            "--chromahonCM__title-bg": [
+              "#9c3b1e",
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Title Foreground": {
+      "value": {
+        "value": "White",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "White",
+        "values": {
+          "White": {
+            "--chromahonCM__title-fg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Black": {
+            "--chromahonCM__title-fg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Custom...": {}
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Custom...",
+            "default": "#eee",
+            "css_variable": "chromahonCM__title-fg",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Modal Background (Affects all modals)": {
+      "value": {
+        "value": "SteamOS Default",
+        "components": {
+          "Color Picker": "#34e8eb80",
+          "Image Picker": ""
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "SteamOS Default",
+        "values": {
+          "∅ None": {
+            "modules/context-menu/opt_bgmodal_none.css": [
+              "bigpicture"
+            ]
+          },
+          "SteamOS Default": {},
+          "Colored Blur": {
+            "modules/context-menu/opt_bgmodal_color.css": [
+              "bigpicture"
+            ]
+          },
+          "Image": {
+            "modules/context-menu/opt_bgmodal_image.css": [
+              "bigpicture"
+            ]
+          }
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Colored Blur",
+            "default": "#34e8eb80",
+            "css_variable": "chromahonCM__bgfilter-color",
+            "tabs": [
+              "bigpicture"
+            ]
+          },
+          {
+            "name": "Image Picker",
+            "type": "image-picker",
+            "on": "Image",
+            "default": "",
+            "css_variable": "chromahonCM__bgfilter-image",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Special Button Focus Background": {
+      "value": "Same as Item Focus",
+      "definition": {
+        "type": "dropdown",
+        "default": "Same as Item Focus",
+        "values": {
+          "Same as Item Focus": {},
+          "Bright Gray": {
+            "--chromahonCM__specialfocus-bg": [
+              "#eee",
+              "bigpicture"
+            ]
+          },
+          "White": {
+            "--chromahonCM__specialfocus-bg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Dark Gray": {
+            "--chromahonCM__specialfocus-bg": [
+              "#141414",
+              "bigpicture"
+            ]
+          },
+          "Pale Yellow": {
+            "--chromahonCM__specialfocus-bg": [
+              "#b8af65",
+              "bigpicture"
+            ]
+          },
+          "Leaf Green": {
+            "--chromahonCM__specialfocus-bg": [
+              "#62a35b",
+              "bigpicture"
+            ]
+          },
+          "Pastel Pink": {
+            "--chromahonCM__specialfocus-bg": [
+              "#dbb4c4",
+              "bigpicture"
+            ]
+          },
+          "Wine Red": {
+            "--chromahonCM__specialfocus-bg": [
+              "#400b1e",
+              "bigpicture"
+            ]
+          },
+          "Aquamarine Blue": {
+            "--chromahonCM__specialfocus-bg": [
+              "#52bf9d",
+              "bigpicture"
+            ]
+          },
+          "Orange": {
+            "--chromahonCM__specialfocus-bg": [
+              "#bf7747",
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Special Button Focus Foreground": {
+      "value": {
+        "value": "Same as Item Focus",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "Same as Item Focus",
+        "values": {
+          "Same as Item Focus": {},
+          "White": {
+            "--chromahonCM__specialfocus-fg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Black": {
+            "--chromahonCM__specialfocus-fg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Custom...": {}
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Custom...",
+            "default": "#eee",
+            "css_variable": "chromahonCM__specialfocus-fg",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Power: Destruct. Button Focus Background": {
+      "value": "Same as Item Focus",
+      "definition": {
+        "type": "dropdown",
+        "default": "Same as Item Focus",
+        "values": {
+          "Same as Item Focus": {},
+          "Bright Gray": {
+            "--chromahonCM__destructfocus-bg": [
+              "#eee",
+              "bigpicture"
+            ]
+          },
+          "White": {
+            "--chromahonCM__destructfocus-bg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Dark Gray": {
+            "--chromahonCM__destructfocus-bg": [
+              "#141414",
+              "bigpicture"
+            ]
+          },
+          "Pale Yellow": {
+            "--chromahonCM__destructfocus-bg": [
+              "#b8af65",
+              "bigpicture"
+            ]
+          },
+          "Leaf Green": {
+            "--chromahonCM__destructfocus-bg": [
+              "#62a35b",
+              "bigpicture"
+            ]
+          },
+          "Pastel Pink": {
+            "--chromahonCM__destructfocus-bg": [
+              "#dbb4c4",
+              "bigpicture"
+            ]
+          },
+          "Wine Red": {
+            "--chromahonCM__destructfocus-bg": [
+              "#400b1e",
+              "bigpicture"
+            ]
+          },
+          "Aquamarine Blue": {
+            "--chromahonCM__destructfocus-bg": [
+              "#52bf9d",
+              "bigpicture"
+            ]
+          },
+          "Orange": {
+            "--chromahonCM__destructfocus-bg": [
+              "#bf7747",
+              "bigpicture"
+            ]
+          }
+        }
+      }
+    },
+    "Context Menus / Power: Destruct. Button Focus Foreground": {
+      "value": {
+        "value": "Same as Item Focus",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "definition": {
+        "type": "dropdown",
+        "default": "Same as Item Focus",
+        "values": {
+          "Same as Item Focus": {},
+          "White": {
+            "--chromahonCM__destructfocus-fg": [
+              "#fff",
+              "bigpicture"
+            ]
+          },
+          "Black": {
+            "--chromahonCM__destructfocus-fg": [
+              "#000",
+              "bigpicture"
+            ]
+          },
+          "Custom...": {}
+        },
+        "components": [
+          {
+            "name": "Color Picker",
+            "type": "color-picker",
+            "on": "Custom...",
+            "default": "#eee",
+            "css_variable": "chromahonCM__destructfocus-fg",
+            "tabs": [
+              "bigpicture"
+            ]
+          }
+        ]
+      }
+    },
+    "Context Menus / Grow label on focus": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {
+            "modules/context-menu/opt_growlabel.css": [
+              "bigpicture"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Context Menus / Remove label separators": {
+      "value": "No",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {
+            "modules/context-menu/opt_separators.css": [
+              "bigpicture"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Context Menus / Blur title (Trsp solid colors only. Recommended w/ Modal Bg Img.)": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/context-menu/opt_blurtitle.css": [
+              "bigpicture"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Context Menus / Modal Background fade-in": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/context-menu/opt_modalfade.css": [
+              "bigpicture"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "— Controls —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Controls / Light Scheme Adjustments": {
+      "value": "Disabled",
+      "definition": {
+        "type": "dropdown",
+        "default": "Disabled",
+        "values": {
+          "Disabled": {},
+          "Apply to Quick Access Menu": {
+            "modules/input-controls/opt/schemeIsLight.css": [
+              "QuickAccess"
+            ]
+          },
+          "Apply to Steam Menu": {
+            "modules/input-controls/opt/schemeIsLight.css": [
+              "MainMenu"
+            ]
+          },
+          "Apply to both menus": {
+            "modules/input-controls/opt/schemeIsLight.css": [
+              "MainMenu",
+              "QuickAccess"
+            ]
+          }
+        }
+      }
+    },
+    "Controls / Quick Access / Non-Round Toggles": {
+      "value": "No",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {
+            "modules/input-controls/opt/toggles_non-round.css": [
+              "QuickAccess"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Controls / Quick Access / Toggle Handle Animation": {
+      "value": "Yes",
+      "definition": {
+        "type": "checkbox",
+        "default": "Yes",
+        "values": {
+          "Yes": {
+            "modules/input-controls/opt/toggles_anim-handle.css": [
+              "QuickAccess"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Controls / Quick Access / Toggle Rail 'Enabled'": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#50eb79"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#50eb79",
+            "css_variable": "--chromahonControls__toggle-ON-rail",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Toggle Handle 'Enabled'": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#fff"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#fff",
+            "css_variable": "--chromahonControls__toggle-ON-handle",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Toggle Rail 'Disabled'": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#292929"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#292929",
+            "css_variable": "--chromahonControls__toggle-OFF-rail",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Toggle Handle 'Disabled'": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#363636"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#363636",
+            "css_variable": "--chromahonControls__toggle-OFF-handle",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Non-Round Sliders": {
+      "value": "No",
+      "definition": {
+        "type": "checkbox",
+        "default": "No",
+        "values": {
+          "Yes": {
+            "modules/input-controls/opt/sliders_non-round.css": [
+              "QuickAccess"
+            ]
+          },
+          "No": {}
+        }
+      }
+    },
+    "Controls / Quick Access / Slider Fill": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(50, 80%, 61.76470588235294%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#50eb79",
+            "css_variable": "--chromahonControls__slider-fill",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Slider Empty": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 50%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#ffffff4D",
+            "css_variable": "--chromahonControls__slider-empty",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Slider Handle": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#fff"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#fff",
+            "css_variable": "--chromahonControls__slider-handle",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Slider Highlight": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 80%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#1C1C1C",
+            "css_variable": "--chromahonControls__slider-hl",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Button Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 60%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#161616",
+            "css_variable": "--chromahonControls__button-bg",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Button Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 20%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#ccc",
+            "css_variable": "--chromahonControls__button-fg",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Button Highlight Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 90%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#d6d6d6",
+            "css_variable": "--chromahonControls__button-bg-hl",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Quick Access / Button Highlight Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 35%, 1)"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#121212",
+            "css_variable": "--chromahonControls__button-fg-hl",
+            "tabs": [
+              "QuickAccess"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Button Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 10%, 1)"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#0f0f0f",
+            "css_variable": "--chromahonControls__button-bg",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Button Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#bababa"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#bababa",
+            "css_variable": "--chromahonControls__button-fg",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Button Highlight Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#d6d6d6"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#d6d6d6",
+            "css_variable": "--chromahonControls__button-bg-hl",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Button Highlight Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#121212"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#121212",
+            "css_variable": "--chromahonControls__button-fg-hl",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Text Input Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#0f0f0f"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#0f0f0f",
+            "css_variable": "--chromahonControls__textInput-bg",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Text Input Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#bababa"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#bababa",
+            "css_variable": "--chromahonControls__textInput-fg",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Text Input Highlight Background": {
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#d6d6d6"
+        }
+      },
+      "definition": {
+        "type": "slider",
+        "default": "Solid Color",
+        "values": {
+          "Solid Color": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "Solid Color",
+            "default": "#d6d6d6",
+            "css_variable": "--chromahonControls__textInput-bg-hl",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "Controls / Main Menu / Text Input Highlight Foreground": {
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#121212"
+        }
+      },
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        },
+        "components": [
+          {
+            "name": "Color",
+            "type": "color-picker",
+            "on": "_",
+            "default": "#121212",
+            "css_variable": "--chromahonControls__textInput-fg-hl",
+            "tabs": [
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "— Indicators —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "Indicators / Theme Color": {
+      "value": {
+        "value": "White",
+        "components": {
+          "Main Color": "#f00",
+          "Text Color": "#000"
+        }
+      },
+      "definition": {
+        "default": "Orange",
+        "type": "dropdown",
+        "values": {
+          "Red": {
+            "modules/status-colors/colors/red.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Orange": {},
+          "Yellow": {
+            "modules/status-colors/colors/yellow.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Green": {
+            "modules/status-colors/colors/green.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Lime": {
+            "modules/status-colors/colors/lime.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Blue": {
+            "modules/status-colors/colors/blue.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Indigo": {
+            "modules/status-colors/colors/indigo.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Magenta": {
+            "modules/status-colors/colors/magenta.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Gradient RGB": {
+            "modules/status-colors/colors/gradient_rgb.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Gradient Deck": {
+            "modules/status-colors/colors/gradient_deck.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Gray": {
+            "modules/status-colors/colors/gray.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "White": {
+            "modules/status-colors/colors/white.css": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          "Custom": {}
+        },
+        "components": [
+          {
+            "name": "Main Color",
+            "type": "color-picker",
+            "on": "Custom",
+            "default": "#f00",
+            "css_variable": "colored-toggles-main-color",
+            "tabs": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          },
+          {
+            "name": "Text Color",
+            "type": "color-picker",
+            "on": "Custom",
+            "default": "#000",
+            "css_variable": "colored-toggles-friends-text-color",
+            "tabs": [
+              "QuickAccess",
+              "SP",
+              "MainMenu"
+            ]
+          }
+        ]
+      }
+    },
+    "— Header —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "— Effects —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    },
+    "— Game Pages —": {
+      "value": "_",
+      "definition": {
+        "type": "none",
+        "values": {
+          "_": {}
+        }
+      }
+    }
+  }
+}

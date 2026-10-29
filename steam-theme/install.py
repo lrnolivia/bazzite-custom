@@ -14,6 +14,8 @@ for p in (target,unit):
  if p.exists():
   if p.is_dir():shutil.copytree(p,backup/p.name)
   else:shutil.copy2(p,backup/p.name)
+# Replace the packaged assets so retired themes cannot return on reinstall.
+if (target/'game-mode').exists():shutil.rmtree(target/'game-mode')
 shutil.copytree(source,target,dirs_exist_ok=True)
 unit.parent.mkdir(parents=True,exist_ok=True)
 unit.write_text(f'''[Unit]
@@ -31,15 +33,20 @@ UMask=0077
 [Install]
 WantedBy=default.target
 ''')
-# Keep the approved Game Mode themes separate, including their user settings.
+# Steam Prime includes the former standalone Game Mode components.
+# Copy nested assets recursively, retaining an existing Prime customization.
 themes=home/'homebrew/themes'
 if themes.exists():
  for theme in (target/'game-mode').iterdir():
+  if not theme.is_dir():continue
   dst=themes/theme.name
   if dst.exists():shutil.copytree(dst,backup/theme.name)
-  for src in theme.iterdir():
-   if src.name=='config_USER.json' and (dst/src.name).exists():continue
-   dst.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst/src.name)
+  saved={}
+  if theme.name=='Steam Prime':
+   for cfg in dst.glob('config_*.json'):
+    saved[cfg.name]=cfg.read_bytes()
+  shutil.copytree(theme,dst,dirs_exist_ok=True)
+  for name,data in saved.items():(dst/name).write_bytes(data)
 subprocess.run(['systemctl','--user','daemon-reload'],check=True)
 subprocess.run(['systemctl','--user','enable','--now','loew-steam-theme.service'],check=True)
 subprocess.run(['systemctl','--user','restart','loew-steam-theme.service'],check=True)

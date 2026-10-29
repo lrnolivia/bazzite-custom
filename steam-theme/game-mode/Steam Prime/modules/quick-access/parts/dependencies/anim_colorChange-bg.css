@@ -1,0 +1,17 @@
+@keyframes chromahonQAM__Anim-colorChange {
+    0% {
+        background: var(--chromahonQAM__AnimParam-colorChange-c1);
+    }
+    25% {
+        background: var(--chromahonQAM__AnimParam-colorChange-c2);
+    }
+    50% {
+        background: var(--chromahonQAM__AnimParam-colorChange-c3);
+    }
+    75% {
+        background: var(--chromahonQAM__AnimParam-colorChange-c4);
+    }
+    100% {
+        background: var(--chromahonQAM__AnimParam-colorChange-c1);
+    }
+}

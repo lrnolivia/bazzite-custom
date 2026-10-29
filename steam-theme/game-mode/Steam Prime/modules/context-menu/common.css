@@ -1,0 +1,136 @@
+/* ---
+Chromahon (Context Menus)
+--- */
+
+:root {
+    /* These variables will be reassigned as options are toggled
+    Without any input from the user they default to the following variables which are the user-defined settings for focused items
+    If the user chooses any custom option for the Play/Destruct Button then --chromahonCM__specialfocus-bg/fg (resp. --chromahonCM__destructfocus-bg/fg) will be re-injected with the new values as per theme.json
+    */
+    --chromahonCM__specialfocus-bg: var(--chromahonCM__itemfocus-bg);
+    --chromahonCM__specialfocus-fg: var(--chromahonCM__itemfocus-fg);
+    --chromahonCM__destructfocus-bg: var(--chromahonCM__itemfocus-bg);
+    --chromahonCM__destructfocus-fg: var(--chromahonCM__itemfocus-fg);
+}
+
+/* Title */
+.gamepadcontextmenu_BasicContextMenuHeader_2Jp8B {
+    background: var(--chromahonCM__title-bg);
+    color: var(--chromahonCM__title-fg);
+    margin: 0 0 10px 0;
+    padding: 12px 16px 12px 16px;
+    align-self: center;
+}
+
+/* Context Menu containers */
+.gamepadcontextmenu_contextMenuContents_sIgB- {
+    background: var(--chromahonCM__body-bg);
+    filter: none;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB->:first-child {
+    margin-top: 0;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB->:last-child {
+    margin-bottom: 0;
+}
+
+/* Context Menu item */
+/* Item normal */
+.uWT-cMCXkxiyxcSs9UA-0 .contextMenuItem {
+    background: transparent;
+    color: var(--chromahonCM__body-fg);
+
+    /* Special button (e.g. Launch, Install, etc.) */
+    &.Z5iAXBkRFGnwpXsO8ANTl {
+        font-weight: bold;
+    }
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover {
+    background: #ffffff0c;
+}
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem .gamepadcontextmenu_Arrow_2EDBb svg {
+    fill: var(--chromahonCM__body-fg);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_PlusCircle line {
+    stroke: var(--chromahonCM__body-fg);
+}
+
+/* Item focus */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r {
+    background: var(--chromahonCM__itemfocus-bg);
+    color: var(--chromahonCM__itemfocus-fg);
+}
+.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_contextMenuItem_1sdvo.contextMenuItem.gamepadcontextmenu_Focused_X813r .gamepadcontextmenu_Arrow_2EDBb svg {
+    fill: var(--chromahonCM__itemfocus-fg);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus .SVGIcon_PlusCircle line {
+    stroke: var(--chromahonCM__itemfocus-fg);
+}
+
+/* Focused special button (e.g. Launch, Install, etc.) */
+.uWT-cMCXkxiyxcSs9UA-0 .contextMenuItem.Z5iAXBkRFGnwpXsO8ANTl.gpfocus,
+.uWT-cMCXkxiyxcSs9UA-0 .contextMenuItem.Z5iAXBkRFGnwpXsO8ANTl:hover {
+    background: var(--chromahonCM__specialfocus-bg);
+    color: var(--chromahonCM__specialfocus-fg);
+}
+
+/* Item currently active */
+.gamepadcontextmenu_Selected_1PnET {
+    background: none !important;
+    color: var(--chromahonCM__body-fg) !important;
+    font-weight: bold;
+}
+.gamepadcontextmenu_Selected_1PnET::before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    -webkit-mask-image: url('/themes_custom/Steam%20Prime/modules/context-menu/assets/checkmark.svg');
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    background: var(--chromahonCM__body-fg);
+    margin-right: 12px;
+
+}
+.gamepadcontextmenu_Selected_1PnET.gamepadcontextmenu_Focused_X813r {
+    background: var(--chromahonCM__itemfocus-bg) !important;
+    color: var(--chromahonCM__itemfocus-fg) !important;
+}
+.gamepadcontextmenu_Selected_1PnET.gamepadcontextmenu_Focused_X813r::before {
+    background: var(--chromahonCM__itemfocus-fg) !important;
+}
+
+/* Nested item focus open */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x {
+    background: var(--chromahonCM__itemfocus-bg);
+    color: var(--chromahonCM__itemfocus-fg);
+    font-weight: bold;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x .gamepadcontextmenu_Arrow_2EDBb svg {
+    fill: var(--chromahonCM__itemfocus-fg);
+}
+
+.gamepadcontextmenu_contextMenuItem_1sdvo .dropdownlabel_DropDownLabelTitle_uDBZW {
+    color: var(--chromahonCM__body-fg);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .dropdownlabel_DropDownLabelDescription_1JPcb {
+    color: var(--chromahonCM__body-fg);
+    opacity: .65;
+}
+
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus .dropdownlabel_DropDownLabelTitle_uDBZW {
+    color: var(--chromahonCM__itemfocus-fg);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gpfocus .dropdownlabel_DropDownLabelDescription_1JPcb {
+    color: var(--chromahonCM__itemfocus-fg);
+}
+
+/* Destructive buttons */
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Destructive_3aIFv.gamepadcontextmenu_Focused_X813r.gpfocus {
+    background: var(--chromahonCM__destructfocus-bg);
+    color: var(--chromahonCM__destructfocus-fg);
+}
+
+/* Item separator */
+#MainNavMenu-Rest .ixiWPQKqTMxnq43WgT3vj {
+    background: #ffffff0c;
+}

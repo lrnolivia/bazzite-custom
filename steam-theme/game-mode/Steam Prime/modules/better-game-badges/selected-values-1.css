@@ -1,0 +1,4 @@
+/* Current selected values retained during consolidation. */
+:root {
+ --badge-fade-delay:0.75s;
+}

@@ -1,0 +1,35 @@
+/* Preserved selected values; shared styling is controlled by the public palette. */
+:root {
+ --chromahonControls__toggle-ON-rail:#50eb79;
+ --chromahonControls__toggle-ON-rail_r:80;
+ --chromahonControls__toggle-ON-rail_g:235;
+ --chromahonControls__toggle-ON-rail_b:121;
+ --chromahonControls__toggle-ON-rail_rgb:80,235,121;
+ --chromahonControls__toggle-ON-handle:#fff;
+ --chromahonControls__toggle-ON-handle_r:15;
+ --chromahonControls__toggle-ON-handle_g:15;
+ --chromahonControls__toggle-ON-handle_b:15;
+ --chromahonControls__toggle-ON-handle_rgb:15,15,15;
+ --chromahonControls__toggle-OFF-rail:#292929;
+ --chromahonControls__toggle-OFF-rail_r:41;
+ --chromahonControls__toggle-OFF-rail_g:41;
+ --chromahonControls__toggle-OFF-rail_b:41;
+ --chromahonControls__toggle-OFF-rail_rgb:41,41,41;
+ --chromahonControls__toggle-OFF-handle:#363636;
+ --chromahonControls__toggle-OFF-handle_r:54;
+ --chromahonControls__toggle-OFF-handle_g:54;
+ --chromahonControls__toggle-OFF-handle_b:54;
+ --chromahonControls__toggle-OFF-handle_rgb:54,54,54;
+ --chromahonControls__slider-fill:hsla(50, 80%, 61.76470588235294%, 1);
+ --chromahonControls__slider-empty:hsla(0, 0%, 50%, 1);
+ --chromahonControls__slider-handle:#fff;
+ --chromahonControls__slider-handle_r:15;
+ --chromahonControls__slider-handle_g:15;
+ --chromahonControls__slider-handle_b:15;
+ --chromahonControls__slider-handle_rgb:15,15,15;
+ --chromahonControls__slider-hl:hsla(0, 0%, 80%, 1);
+ --chromahonControls__button-bg:hsla(0, 0%, 60%, 1);
+ --chromahonControls__button-fg:hsla(0, 0%, 20%, 1);
+ --chromahonControls__button-bg-hl:hsla(0, 0%, 90%, 1);
+ --chromahonControls__button-fg-hl:hsla(0, 0%, 35%, 1);
+}

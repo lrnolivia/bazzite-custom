@@ -1,0 +1,4 @@
+:root {
+    /* Needs to be 1ms, otherwise ui navigation breaks */
+    --fta-transition-duration: 1ms
+}

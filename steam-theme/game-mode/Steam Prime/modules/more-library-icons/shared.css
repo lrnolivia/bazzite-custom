@@ -1,0 +1,13 @@
+/* Zoom Rows for Library*/
+.rz1mrOnj9WN6UErES7qsq.Panel {
+    zoom: var(--mli-zoom);
+}
+._11p6Fm47YPaY-YjtuLYMMJ {
+	gap: 21px !important;
+	padding: 12px;
+}
+
+/* TV Zoom Rows for Library*/
+@media (min-width: 900px) {.rz1mrOnj9WN6UErES7qsq.Panel {
+    zoom: var(--mli-zoom-tv);
+}}

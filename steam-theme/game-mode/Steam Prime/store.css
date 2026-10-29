@@ -1,0 +1,71 @@
+/* Big Picture Store uses React feature panels, not the desktop legacy shell. */
+html[class~='GamepadMode'] body[class~='v6'][class~='app'] {background:#000!important;color:var(--prime-text);}
+html[class~='GamepadMode'] body[class~='v6'] [class~='page_top_area'] {height:auto!important;min-height:0!important;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='page_title_area'][class~='game_title_area'][class~='page_content'] {height:auto!important;min-height:0!important;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='page_content'] {
+ width:auto!important;max-width:none!important;box-sizing:border-box!important;margin-inline:2.8vw!important;
+}
+html[class~='GamepadMode'] body[class~='v6'] div[class~='rightcol'] {width:auto!important;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='middle_page'] {width:auto!important;max-width:100%!important;box-sizing:border-box;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='page_top_area'],[class~='game_background_glow'],[class~='game_page_background'],[class~='middle_page'],[class~='game_description_column'],[class~='game_meta_data']) {background-color:transparent!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is(#gamepad_carousel,#summaryBarTop,#gamepadPurchaseOptions) {width:100%!important;max-width:100%!important;box-sizing:border-box;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='page_top_area'],[class~='middle_page']) {width:calc(100% - 5.6vw)!important;max-width:none!important;margin-inline:2.8vw!important;box-sizing:border-box;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='game_background_glow'] {width:100%!important;max-width:100%!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='page_top_area'],[class~='middle_page']) [class~='page_content'] {width:100%!important;margin-inline:0!important;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='full_width_carousel_container'] {width:100%!important;max-width:100%!important;margin-inline:0!important;}
+html[class~='GamepadMode'] body[class~='v6'][class~='app']:has(#gamepad_carousel) #game_highlights {display:none!important;}
+html[class~='GamepadMode'] body[class~='v6'][class~='app']:has(#gamepad_carousel) [class~='block'][class~='game_media_and_summary_ctn'] {margin-bottom:20px!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='game_page_autocollapse'],[class~='game_page_autocollapse_ctn']) {max-width:100%!important;}
+html[class~='GamepadMode'] body[class~='v6'] [class~='game_description_column'] h2[class~='bb_tag'] {
+ width:auto!important;height:auto!important;min-height:0!important;font-size:20px!important;line-height:1.3!important;
+ padding:0!important;margin:18px 0 12px!important;background:transparent!important;
+}
+/* Shared material, with a single frosted boundary around each functional panel. */
+html[class~='GamepadMode'] body[class~='v6'] :is(
+ #gamepad_carousel [class~='_2Cp-F0qCW7cAQbmpJCHIuk'],
+ #summaryBarTop [class~='_1eIF6oOHrg65kqvbTZmsnv'],
+ #FeatureTarget_purchase-options [class~='_2Cp-F0qCW7cAQbmpJCHIuk'],
+ #FeatureTarget_purchase-options [class~='_3TUpv9-O4TIdg6P4Fx3oE7'],
+ #FeatureTarget_about-this-game>[class~='_2OFBKij25NOweLoQKnH-Hl'],
+ [class~='game_meta_data'] [id^='FeatureTarget_']>[class~='Panel'],
+ [class~='review_box'],
+ #FeatureTarget_appreviews [class~='_2uvK1zucSC4I2mo3PDObGs']) {
+ background:rgba(255,255,255,.09)!important;background-image:none!important;
+ border-radius:var(--prime-card-radius,8px)!important;backdrop-filter:blur(18px)!important;
+ color:var(--prime-text)!important;box-sizing:border-box;
+}
+html[class~='GamepadMode'] body[class~='v6'] #FeatureTarget_about-this-game>[class~='_2OFBKij25NOweLoQKnH-Hl'] {padding:16px!important;}
+html[class~='GamepadMode'] body[class~='v6'] #gamepad_carousel :is([class~='_3ulAzvZbXfVEZatmwdipsk'],[class~='_3C1PO6CmOdCmEpWqSSnfgG']) {border-radius:var(--prime-card-radius,8px)!important;overflow:hidden;}
+html[class~='GamepadMode'] body[class~='v6'] #gamepad_carousel [class~='_23N7SSBmU_2S4o8Kc8NBEg'] {background:rgba(255,255,255,.13)!important;border-radius:var(--prime-radius,20px)!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='StoreSalePriceWidgetContainer'],[class~='game_purchase_action_bg']) {background:transparent!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='app_tag'],[class~='tag']) {background:rgba(255,255,255,.09)!important;color:var(--prime-secondary)!important;border-radius:999px!important;}
+html[class~='GamepadMode'] body[class~='v6'] a {color:var(--prime-focus);text-underline-offset:.2em;}
+html[class~='GamepadMode'] body[class~='v6'] :is([class~='game_meta_data'],[class~='game_description_column']) {color:var(--prime-secondary)!important;}
+html[class~='GamepadMode'] body[class~='v6'] :is(h1,h2,h3,[class~='game_area_purchase_game'] h1) {color:var(--prime-text)!important;}
+html[class~='GamepadMode'] body[class~='v6'] #FeatureTarget_purchase-options button[data-accent-color='storegreen'],
+html[class~='GamepadMode'] body[class~='v6'] [class~='btn_green_steamui']>span {
+ background:#3bcb8d!important;background-image:none!important;color:#08281b!important;
+ border-radius:var(--prime-radius,20px)!important;min-height:36px;box-sizing:border-box;
+}
+html[class~='GamepadMode'] body[class~='v6'] #FeatureTarget_purchase-options button[data-accent-color='storegreen']:is([class~='gpfocus'],:focus-visible,:hover) {
+ background:#64dfa8!important;outline:2px solid #fff!important;outline-offset:3px;
+ box-shadow:0 0 20px rgba(59,203,141,.35)!important;
+}
+html[class~='GamepadMode'] body[class~='v6'] [class~='game_page_background'] {position:relative;z-index:1;}
+html[class~='GamepadMode'] body[class~='v6'] [data-prime-store-reflection] {
+ position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+ background:#000;
+}
+html[class~='GamepadMode'] body[class~='v6'] [data-prime-store-reflection]::before {
+ content:'';position:absolute;inset:12vh -40px -40px;background-image:var(--prime-store-art);
+ background-size:cover;background-position:center top;transform:scaleY(-1);
+ filter:blur(36px) saturate(1.1) brightness(.55);opacity:.65;
+ mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent);
+}
+html[class~='GamepadMode'] body[class~='v6'] [class~='game_page_background_ctn'] {
+ opacity:.45!important;mask-image:linear-gradient(to bottom,#000,transparent 100vh)!important;
+}
+@media(max-width:900px) {
+ html[class~='GamepadMode'] body[class~='v6'] [class~='middle_page'] {display:flex!important;flex-direction:column!important;gap:20px!important;}
+ html[class~='GamepadMode'] body[class~='v6'] :is([class~='game_description_column'],[class~='game_meta_data']) {width:100%!important;margin:0!important;float:none!important;}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Rounded search",
+  "author": "FredFisher2",
+  "version": "v1.0",
+  "manifest_version": 8,
+  "inject": {
+    "shared.css": [
+      "bigpicture"
+    ]
+  },
+  "id": "840a2962-2727-4e00-989e-a1e46c369792"
+}

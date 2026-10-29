@@ -1,0 +1,110 @@
+/* Game Info shares the desktop anatomy with Big Picture sizing and native focus. */
+.BasicUI [class~='TabContentsScroll']:has([class~='GameInfoContainer']) {padding-top:0!important;}
+.BasicUI [class~='AppDetailsContent']:has([class~='GameInfoContainer']) {margin-top:0!important;}
+.BasicUI [class~='GameInfoContainer'] {
+ display:flex!important;flex-direction:column!important;gap:16px!important;
+ min-width:0!important;padding:24px 0 80px!important;margin:0!important;
+ color:var(--prime-text)!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer'] {
+ width:100%!important;min-width:0!important;height:auto!important;max-height:none!important;
+ margin:0!important;padding:0!important;overflow:visible!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer']>[class~='Container'] {
+ position:static!important;height:auto!important;transform:none!important;opacity:1!important;
+ padding:0!important;background:transparent!important;overflow:visible!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer'] [class~='InnerContainer'] {
+ display:grid!important;grid-template-columns:120px minmax(0,1.5fr) minmax(190px,1fr) minmax(210px,.85fr)!important;
+ grid-template-areas:none!important;grid-template-rows:auto!important;align-items:start!important;
+ gap:24px!important;width:100%!important;min-width:0!important;height:auto!important;
+ margin:0!important;padding:24px!important;box-sizing:border-box!important;
+ background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.035)),rgba(12,12,12,.18)!important;
+ border-radius:var(--prime-card-radius,8px)!important;backdrop-filter:blur(24px) saturate(1.15)!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>:is([class~='Portrait'],[class~='SectionContainer']) {
+ grid-area:auto!important;position:static!important;min-width:0!important;width:auto!important;
+ height:auto!important;min-height:0!important;margin:0!important;padding:0!important;align-self:start!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Portrait'] {grid-column:1!important;grid-row:1!important;position:relative!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Description'] {grid-column:2!important;grid-row:1!important;display:grid!important;grid-template-columns:minmax(0,max-content);justify-content:center!important;text-align:left!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Stats'] {grid-column:3!important;grid-row:1!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='FeaturesList'] {grid-column:4!important;grid-row:1!important;display:grid!important;grid-template-columns:minmax(0,max-content)!important;grid-template-rows:repeat(4,minmax(32px,auto)) auto!important;justify-content:center!important;align-content:start!important;gap:8px!important;text-align:left!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer'] [class~='InnerContainer']:not(:has(>[class~='Portrait'])) {grid-template-columns:minmax(0,1fr)!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']:not(:has(>[class~='Portrait']))>* {grid-column:1 / -1!important;grid-row:auto!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='PortraitImage'] {
+ width:100%!important;height:auto!important;aspect-ratio:2/3!important;overflow:hidden!important;
+ border-radius:var(--prime-card-radius,8px)!important;padding:0!important;box-sizing:border-box!important;min-height:0!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='PortraitImage'] img {display:block!important;position:static!important;width:100%!important;height:100%!important;object-fit:cover!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='GameDescription'] {font-size:16px!important;line-height:1.55!important;max-width:65ch!important;color:var(--prime-text)!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='Stats'] {display:grid!important;grid-template-columns:minmax(0,max-content)!important;justify-content:center!important;gap:12px!important;text-align:left!important;}
+.BasicUI [class~='GameInfoContainer'] :is([class~='AssociationList'],[class~='Release']) {
+ display:grid!important;grid-template-columns:minmax(76px,auto) minmax(0,1fr)!important;
+ gap:8px!important;align-items:baseline!important;margin:0!important;font-size:14px!important;line-height:1.5!important;
+}
+.BasicUI [class~='GameInfoContainer'] [class~='Stats'] [class~='Label'] {color:var(--prime-secondary)!important;}
+.BasicUI [class~='GameInfoContainer'] :is([class~='Name'],[class~='Date']) {color:var(--prime-text)!important;overflow-wrap:anywhere;}
+.BasicUI [class~='GameInfoContainer'] [class~='Association'] {display:flex!important;flex-direction:column!important;gap:2px!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='FeaturesList'] {height:auto!important;min-height:200px!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='FeaturesList']>[class~='Container'] {display:flex!important;align-items:center!important;gap:10px!important;min-height:32px!important;height:auto!important;padding:0!important;margin:0!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='FeaturesList'] [class~='Icon'] {display:grid!important;place-items:center;flex:0 0 36px!important;width:36px!important;min-width:36px!important;height:28px!important;max-width:36px!important;max-height:28px!important;margin:0!important;object-fit:contain!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='FeaturesList'] [class~='Icon'] svg {width:28px!important;height:28px!important;max-width:28px!important;max-height:28px!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='FeaturesList'] [class~='Label'] {font-size:14px!important;line-height:1.4!important;color:var(--prime-secondary)!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='GameInfoShadow'],.BasicUI [class~='GameInfoContainer'] [class~='FeaturesList']>[class~='Container'][data-feature-hidden] {display:none!important;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages] {display:flex!important;grid-row:5;flex-wrap:wrap;align-items:center;justify-content:center!important;gap:4px;min-height:32px;margin-top:auto;padding-top:8px;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages]:empty {display:none!important;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages] button {display:grid!important;place-items:center;width:32px!important;min-width:32px!important;height:32px!important;min-height:32px!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;border-radius:999px!important;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages] button::before {content:''!important;display:block!important;width:6px!important;height:6px!important;min-width:0!important;border:0!important;border-radius:999px!important;background:var(--prime-secondary)!important;box-shadow:none!important;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages] button[aria-pressed='true']::before {width:16px!important;background:var(--prime-text)!important;}
+.BasicUI [class~='GameInfoContainer'] [data-feature-pages] button:is(:focus-visible,.gpfocus) {outline:2px solid #fff!important;outline-offset:2px;}
+/* Unmatched shortcuts keep Steam's honest notice beside their own artwork. */
+.BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer']>[class~='Container']:has(>[class~='Shortcut']) {
+ display:grid!important;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:start;
+ padding:24px!important;background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.035)),rgba(12,12,12,.18)!important;
+ border-radius:var(--prime-card-radius,8px);backdrop-filter:blur(24px) saturate(1.15);
+}
+.BasicUI [class~='GameInfoContainer'] [class~='Container']:has(>[class~='Shortcut'])>[class~='InnerContainer'] {display:contents!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='Container']:has(>[class~='Shortcut']) [class~='Portrait'] {grid-column:1!important;grid-row:1!important;}
+.BasicUI [class~='GameInfoContainer'] [class~='Shortcut'] {grid-column:2;grid-row:1;padding:0!important;margin:0!important;font-size:16px!important;line-height:1.55!important;color:var(--prime-secondary)!important;}
+.BasicUI [data-bpm-shortcut-content] {display:flex;flex-direction:column;gap:16px;}
+/* One wrapping rail keeps the native link elements and their controller handlers. */
+.BasicUI [class~='GameInfoContainer'] :is([class~='GameInfoQuickLinks'],[data-shortcut-links]) {
+ display:block!important;width:100%!important;min-width:0!important;height:auto!important;
+ margin:0!important;padding:8px!important;box-sizing:border-box!important;
+ background:rgba(255,255,255,.065)!important;border-radius:var(--prime-card-radius,8px)!important;
+ backdrop-filter:blur(20px)!important;
+}
+.BasicUI [class~='GameInfoQuickLinks']>div,.BasicUI [class~='GameInfoQuickLinks']>div>div {width:100%!important;max-width:100%!important;margin:0!important;}
+.BasicUI [class~='GameInfoQuickLinks'] [class~='BoxCarousel'] {overflow:visible!important;}
+.BasicUI [class~='GameInfoQuickLinks'] [class~='BoxCarouselContents'],.BasicUI [data-shortcut-links] [class~='Links'] {
+ display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;
+ gap:4px 8px!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important;
+ overflow:visible!important;scroll-padding:0!important;transform:none!important;background:transparent!important;
+}
+.BasicUI [class~='GameInfoQuickLinks'] [class~='ForcedCarouselPadding'] {display:none!important;}
+.BasicUI [class~='GameInfoQuickLinks']:not(:has([class~='Anchor'])) {display:none!important;}
+.BasicUI [data-shortcut-links] [class~='LinkInner'] {display:contents!important;}
+.BasicUI [class~='GameInfoContainer'] :is([class~='GameInfoQuickLinks'],[data-shortcut-links]) [class~='Anchor'] {
+ display:flex!important;align-items:center!important;justify-content:center!important;flex:0 1 auto!important;
+ min-height:40px!important;height:auto!important;max-width:100%!important;padding:8px 14px!important;
+ box-sizing:border-box!important;border-radius:var(--prime-radius,20px)!important;
+ background:transparent!important;color:var(--prime-secondary)!important;text-decoration:none!important;
+ font-size:16px!important;line-height:1.4!important;
+}
+.BasicUI [class~='GameInfoQuickLinks'] [class~='Link'] {padding:0!important;margin:0!important;background:transparent!important;color:inherit!important;}
+.BasicUI [class~='GameInfoContainer'] :is([class~='GameInfoQuickLinks'],[data-shortcut-links]) [class~='Anchor']:is(:hover,:focus-visible,.gpfocus) {background:#fff!important;color:#222220!important;outline:2px solid rgba(255,255,255,.55);outline-offset:2px;}
+.BasicUI [class~='GameInfoQuickLinks'] [class~='Text'],.BasicUI [data-shortcut-links] [class~='Text'] {color:inherit!important;text-shadow:none!important;}
+.BasicUI [class~='GameInfoCollections'] {margin:8px 0 0!important;min-width:0!important;}
+@media(max-width:1200px) {
+ .BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer'] [class~='InnerContainer'] {grid-template-columns:108px minmax(0,1fr) 220px!important;gap:16px 24px!important;}
+ .BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Portrait'] {grid-row:1 / span 2!important;}
+ .BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Description'] {grid-column:2!important;}
+ .BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='Stats'] {grid-column:2!important;grid-row:2!important;}
+ .BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='FeaturesList'] {grid-column:3!important;grid-row:1 / span 2!important;}
+}
+@media(max-width:850px) {
+ .BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer']>[class~='Container']:has(>[class~='Shortcut']) {grid-template-columns:88px minmax(0,1fr);padding:20px!important;gap:16px;}
+ .BasicUI [class~='GameInfoContainer'] [class~='AppGameInfoContainer'] [class~='InnerContainer'] {grid-template-columns:88px minmax(0,1fr)!important;padding:20px!important;gap:16px!important;}
+ .BasicUI [class~='GameInfoContainer'] [class~='InnerContainer']>[class~='FeaturesList'] {grid-column:1 / -1!important;grid-row:3!important;}
+}

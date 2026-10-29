@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-automatic-surface-settings-2026-10-15.zip",
+  "reason": "Header and footer backdrops follow the page and scroll state automatically; obsolete opacity sliders are consolidated while their saved values remain available for recovery.",
+  "choices": {
+    "Effects / Header Opacity": {
+      "value": "0.0",
+      "definition": {
+        "type": "slider",
+        "default": "0.1",
+        "values": {
+          "0.0": {
+            "--moreBlur-header-opacity": [
+              "0.0",
+              "SP"
+            ]
+          },
+          "0.1": {
+            "--moreBlur-header-opacity": [
+              "0.1",
+              "SP"
+            ]
+          },
+          "0.2": {
+            "--moreBlur-header-opacity": [
+              "0.2",
+              "SP"
+            ]
+          },
+          "0.3": {
+            "--moreBlur-header-opacity": [
+              "0.3",
+              "SP"
+            ]
+          },
+          "0.4": {
+            "--moreBlur-header-opacity": [
+              "0.4",
+              "SP"
+            ]
+          },
+          "0.5": {
+            "--moreBlur-header-opacity": [
+              "0.5",
+              "SP"
+            ]
+          },
+          "0.6": {
+            "--moreBlur-header-opacity": [
+              "0.6",
+              "SP"
+            ]
+          },
+          "0.7": {
+            "--moreBlur-header-opacity": [
+              "0.7",
+              "SP"
+            ]
+          },
+          "0.8": {
+            "--moreBlur-header-opacity": [
+              "0.8",
+              "SP"
+            ]
+          },
+          "0.9": {
+            "--moreBlur-header-opacity": [
+              "0.9",
+              "SP"
+            ]
+          },
+          "1.0": {
+            "--moreBlur-header-opacity": [
+              "1.0",
+              "SP"
+            ]
+          }
+        }
+      }
+    },
+    "Effects / Footer Opacity": {
+      "value": "0.9",
+      "definition": {
+        "type": "slider",
+        "default": "0.3",
+        "values": {
+          "0.0": {
+            "--moreBlur-footer-opacity": [
+              "0.0",
+              "SP"
+            ]
+          },
+          "0.1": {
+            "--moreBlur-footer-opacity": [
+              "0.1",
+              "SP"
+            ]
+          },
+          "0.2": {
+            "--moreBlur-footer-opacity": [
+              "0.2",
+              "SP"
+            ]
+          },
+          "0.3": {
+            "--moreBlur-footer-opacity": [
+              "0.3",
+              "SP"
+            ]
+          },
+          "0.4": {
+            "--moreBlur-footer-opacity": [
+              "0.4",
+              "SP"
+            ]
+          },
+          "0.5": {
+            "--moreBlur-footer-opacity": [
+              "0.5",
+              "SP"
+            ]
+          },
+          "0.6": {
+            "--moreBlur-footer-opacity": [
+              "0.6",
+              "SP"
+            ]
+          },
+          "0.7": {
+            "--moreBlur-footer-opacity": [
+              "0.7",
+              "SP"
+            ]
+          },
+          "0.8": {
+            "--moreBlur-footer-opacity": [
+              "0.8",
+              "SP"
+            ]
+          },
+          "0.9": {
+            "--moreBlur-footer-opacity": [
+              "0.9",
+              "SP"
+            ]
+          },
+          "1.0": {
+            "--moreBlur-footer-opacity": [
+              "1.0",
+              "SP"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Bahnschrift;
+  src: url("/themes_custom/Steam%20Prime/modules/fonts/fonts/bahnschrift.ttf");
+}
+
+* {
+  font-family: Bahnschrift !important;
+}

@@ -1,0 +1,458 @@
+{
+  "name": "Chromahon - All Sidebars",
+  "display_name": "Chromahon (All Sidebars)",
+  "author": "Mugen",
+  "version": "v3.0.1-local.1",
+  "manifest_version": 9,
+  "dependencies": {
+    "CapyInputs": {}
+  },
+  "flags": [
+    "OPTIONAL_DEPENDENCIES"
+  ],
+  "tabs": {
+    "default": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*"
+    ]
+  },
+  "inject": {
+    "base.css": [
+      "MainMenu.*"
+    ],
+    "controller.css": [
+      "MainMenu.*"
+    ],
+    "achievements.css": [
+      "MainMenu.*"
+    ],
+    "guides.css": [
+      "MainMenu.*"
+    ],
+    "notes.css": [
+      "MainMenu.*"
+    ],
+    "game-recording.css": [
+      "MainMenu.*"
+    ],
+    "sidebars.css": [
+      "SP",
+      "MainMenu.*",
+      "QuickAccess.*"
+    ]
+  },
+  "patches": {
+    "\u27a4 USAGE NOTES": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Primary Panel = Home, Library, etc.": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Secondary Panel = Resume game, Controller settings, etc. (In Game Only)": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Tertiary Panel = Paged content (In Game Only)": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "\u27a4 Global Settings": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Edges": {
+      "type": "slider",
+      "default": "Semi-Round",
+      "values": {
+        "Default": {},
+        "Semi-Round": {
+          "opt/edges_common.css": [
+            "MainMenu.*"
+          ],
+          "opt/edges_semi-round.css": [
+            "MainMenu.*"
+          ]
+        },
+        "Round": {
+          "opt/edges_common.css": [
+            "MainMenu.*"
+          ],
+          "opt/edges_round.css": [
+            "MainMenu.*"
+          ]
+        }
+      }
+    },
+    "Item Focus Grow Anim": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {},
+        "No": {
+          "opt/noGrow_itemFocus.css": [
+            "MainMenu.*"
+          ]
+        }
+      }
+    },
+    "Active Tab Indicator Type": {
+      "type": "slider",
+      "default": "None",
+      "values": {
+        "Default": {},
+        "Wide": {
+          "opt/tabIndicator_wide.css": [
+            "MainMenu.*"
+          ]
+        },
+        "Dot": {
+          "opt/tabIndicator_dot.css": [
+            "MainMenu.*"
+          ]
+        },
+        "None": {
+          "opt/tabIndicator_none.css": [
+            "MainMenu.*"
+          ]
+        }
+      }
+    },
+    "\u27a4 Primary Panel": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Primary Panel > Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {},
+        "IMG": {
+          "parts/primaryPanel/img.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Solid Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#0f0f0f",
+          "css_variable": "chromahonSM__primaryPanel-bg",
+          "tabs": []
+        },
+        {
+          "name": "Image Picker",
+          "type": "image-picker",
+          "on": "IMG",
+          "default": "",
+          "css_variable": "chromahonSM__primaryPanel-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Collapse Bg": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt/collapseBg_primaryPanel.css": [
+            "MainMenu.*"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Primary Panel > Item Label": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#f0f0f0",
+          "css_variable": "chromahonSM__primaryPanel-item-label",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Item Icon": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {},
+        "Hide": {
+          "opt/hideIcons_primaryPanel.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#f0f0f0",
+          "css_variable": "chromahonSM__primaryPanel-item-svg",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Item Focus Background": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/primaryPanel/itemFocus/bg-solidColors.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#0f0f0f",
+          "css_variable": "chromahonSM__primaryPanel-itemFocus-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Item Focus Label": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#f5f5f5",
+          "css_variable": "chromahonSM__primaryPanel-itemFocus-label",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Item Focus Icon": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#f5f5f5",
+          "css_variable": "chromahonSM__primaryPanel-itemFocus-svg",
+          "tabs": []
+        }
+      ]
+    },
+    "Primary Panel > Active Tab Indicator": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/primaryPanel/tabIndicator-solidColors.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#d1d1d1",
+          "css_variable": "chromahonSM__primaryPanel-tabIndicator",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Secondary Panel": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Secondary Panel > Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {},
+        "IMG": {
+          "parts/secondaryPanel/img.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Solid Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#0f0f0f",
+          "css_variable": "chromahonSM__secondaryPanel-bg",
+          "tabs": []
+        },
+        {
+          "name": "Image Picker",
+          "type": "image-picker",
+          "on": "IMG",
+          "default": "",
+          "css_variable": "chromahonSM__secondaryPanel-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Secondary Panel > Item Label": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#202020",
+          "css_variable": "chromahonSM__secondaryPanel-item-label",
+          "tabs": []
+        }
+      ]
+    },
+    "Secondary Panel > Item Focus Background": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/secondaryPanel/itemFocus/bg-solidColors.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#121212",
+          "css_variable": "chromahonSM__secondaryPanel-itemFocus-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Secondary Panel > Item Focus Label": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#f5f5f5",
+          "css_variable": "chromahonSM__secondaryPanel-itemFocus-label",
+          "tabs": []
+        }
+      ]
+    },
+    "Secondary Panel > Active Tab Indicator": {
+      "type": "slider",
+      "default": "Solid Colors",
+      "values": {
+        "Solid Colors": {
+          "parts/secondaryPanel/tabIndicator-solidColors.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Color 1",
+          "type": "color-picker",
+          "on": "Solid Colors",
+          "default": "#d1d1d1",
+          "css_variable": "chromahonSM__secondaryPanel-tabIndicator",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Tertiary Panel": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Tertiary Panel > Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {},
+        "IMG": {
+          "parts/tertiaryPanel/img.css": [
+            "MainMenu.*"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Solid Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#121212",
+          "css_variable": "chromahonSM__tertiaryPanel-bg",
+          "tabs": []
+        },
+        {
+          "name": "Image Picker",
+          "type": "image-picker",
+          "on": "IMG",
+          "default": "",
+          "css_variable": "chromahonSM__tertiaryPanel-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "Tertiary Panel > Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#e3e3e3",
+          "css_variable": "chromahonSM__tertiaryPanel-fg",
+          "tabs": []
+        }
+      ]
+    }
+  },
+  "id": "87a2321c-a728-4ed6-9d0d-bee9308ad0dc",
+  "priority": 150
+}

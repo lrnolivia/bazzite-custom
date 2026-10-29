@@ -1,0 +1,17 @@
+/* Media artwork shares the card-radius control, with one image clipping boundary. */
+.BasicUI :is([class~='ListItemThumbnailImg'],[class~='PreviewThumbnailImg'],[class~='ClipThumbnail'],[class~='ClickableScreenshot'],[class~='ThumbnailImage'],[class~='PlaceholderThumbnail'],[class~='PreviewRecording'],[class~='ExportPreview']) {
+ border-radius:var(--prime-card-radius,8px)!important;
+}
+.BasicUI :is([class~='ClipThumbnail'],[class~='ClickableScreenshot'],[class~='PreviewRecording'],[class~='ExportPreview']) {overflow:hidden!important;}
+.BasicUI :is([class~='ClipThumbnail'],[class~='ClickableScreenshot'],[class~='PreviewRecording'],[class~='ExportPreview']) :is(img,video,canvas,[class~='ListItemThumbnailImg'],[class~='PreviewThumbnailImg']) {
+ border-radius:0!important;
+}
+.BasicUI [class~='ListItemAndGlowContainer'] :is([class~='ListItem'],[class~='BackgroundImageGlow']) {border-radius:var(--prime-card-radius,8px)!important;}
+.BasicUI [class~='ListItemAndGlowContainer'] [class~='ListItem']::after {border-radius:inherit!important;}
+.BasicUI [class~='ActivityPublishedScreenshot'] :is([class~='ImageWrapper'],[class~='CarouselThumb']),
+.BasicUI [class~='ActivityPublishedVideo'] [class~='VideoPreview'],
+.BasicUI [class~='CommunityContentContainer'] :is([class~='Preview'],[class~='PreviewContainer'],[class~='ArtItem']) {
+ border-radius:var(--prime-card-radius,8px)!important;overflow:hidden!important;
+}
+.BasicUI [class~='ActivityPublishedScreenshot'] :is([class~='ImageWrapper'],[class~='CarouselThumb']) img,
+.BasicUI [class~='CommunityContentContainer'] :is([class~='Preview'],[class~='PreviewContainer'],[class~='ArtItem']) img {border-radius:0!important;}

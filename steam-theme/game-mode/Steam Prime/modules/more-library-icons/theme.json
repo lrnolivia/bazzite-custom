@@ -1,0 +1,60 @@
+{
+  "name": "More Library Icons",
+  "author": "ACViper",
+  "version": "v1.3",
+  "manifest_version": 5,
+  "inject": {
+    "shared.css": [
+      "bigpicture"
+    ]
+  },
+  "patches": {
+    "Library Columns": {
+      "default": "6",
+      "type": "slider",
+      "values": {
+        "6": {
+          "--mli-zoom": [
+            "87%",
+            "SP"
+          ],
+          "--mli-zoom-tv": [
+            "122%",
+            "SP"
+          ]
+        },
+        "7": {
+          "--mli-zoom": [
+            "74%",
+            "SP"
+          ],
+          "--mli-zoom-tv": [
+            "105%",
+            "SP"
+          ]
+        },
+        "8": {
+          "--mli-zoom": [
+            "65%",
+            "SP"
+          ],
+          "--mli-zoom-tv": [
+            "92%",
+            "SP"
+          ]
+        },
+        "9": {
+          "--mli-zoom": [
+            "56%",
+            "SP"
+          ],
+          "--mli-zoom-tv": [
+            "81%",
+            "SP"
+          ]
+        }
+      }
+    }
+  },
+  "id": "3965b187-d6f6-4cf5-a82e-40cbc137ef7e"
+}

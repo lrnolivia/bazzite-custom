@@ -1,0 +1,27 @@
+/*
+  SF Pro Text custom font for the Decky "Fonts" theme.
+
+  Put these files in:
+    /themes_custom/Steam%20Prime/modules/fonts/fonts/
+
+    SF-Pro-Text-Regular.otf
+    SF-Pro-Text-Medium.otf
+*/
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/themes_custom/Steam%20Prime/modules/fonts/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/themes_custom/Steam%20Prime/modules/fonts/fonts/SF-Pro-Text-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  font-family: "SF Pro Text" !important;
+}

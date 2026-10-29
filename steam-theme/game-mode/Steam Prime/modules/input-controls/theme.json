@@ -1,0 +1,441 @@
+{
+  "name": "CapyInputs",
+  "display_name": "Chromahon (Input Controls)",
+  "author": "Mugen",
+  "version": "v1.0.0",
+  "manifest_version": 9,
+  "tabs": {
+    "qam": [
+      "QuickAccess"
+    ],
+    "sm": [
+      "MainMenu"
+    ],
+    "both": [
+      "MainMenu",
+      "QuickAccess"
+    ],
+    "default": [
+      "qam"
+    ]
+  },
+  "inject": {
+    "toggles.css": [],
+    "buttons.css": [
+      "both"
+    ],
+    "sliders.css": [],
+    "text-inputs.css": [
+      "sm"
+    ]
+  },
+  "patches": {
+    "Light Scheme Adjustments": {
+      "type": "dropdown",
+      "default": "Disabled",
+      "values": {
+        "Disabled": {},
+        "Apply to Quick Access Menu": {
+          "opt/schemeIsLight.css": []
+        },
+        "Apply to Steam Menu": {
+          "opt/schemeIsLight.css": [
+            "sm"
+          ]
+        },
+        "Apply to both menus": {
+          "opt/schemeIsLight.css": [
+            "both"
+          ]
+        }
+      }
+    },
+    "\u27a4 Quick Access Menu": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "QAM > Non-Round Toggles": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt/toggles_non-round.css": []
+        },
+        "No": {}
+      }
+    },
+    "QAM > Toggle Handle Animation": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "opt/toggles_anim-handle.css": []
+        },
+        "No": {}
+      }
+    },
+    "QAM > Toggle Rail 'Enabled'": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#50eb79",
+          "css_variable": "--chromahonControls__toggle-ON-rail",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Toggle Handle 'Enabled'": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#fff",
+          "css_variable": "--chromahonControls__toggle-ON-handle",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Toggle Rail 'Disabled'": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#292929",
+          "css_variable": "--chromahonControls__toggle-OFF-rail",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Toggle Handle 'Disabled'": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#363636",
+          "css_variable": "--chromahonControls__toggle-OFF-handle",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Non-Round Sliders": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt/sliders_non-round.css": []
+        },
+        "No": {}
+      }
+    },
+    "QAM > Slider Fill": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#50eb79",
+          "css_variable": "--chromahonControls__slider-fill",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Slider Empty": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#ffffff4D",
+          "css_variable": "--chromahonControls__slider-empty",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Slider Handle": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#fff",
+          "css_variable": "--chromahonControls__slider-handle",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Slider Highlight": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#1C1C1C",
+          "css_variable": "--chromahonControls__slider-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Button Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#161616",
+          "css_variable": "--chromahonControls__button-bg",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Button Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#ccc",
+          "css_variable": "--chromahonControls__button-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Button Highlight Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#d6d6d6",
+          "css_variable": "--chromahonControls__button-bg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "QAM > Button Highlight Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#121212",
+          "css_variable": "--chromahonControls__button-fg-hl",
+          "tabs": []
+        }
+      ]
+    },
+    "\u27a4 Steam Menu": {
+      "type": "none",
+      "values": {
+        "_": {}
+      }
+    },
+    "Steam Menu > Button Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#0f0f0f",
+          "css_variable": "--chromahonControls__button-bg",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Button Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#bababa",
+          "css_variable": "--chromahonControls__button-fg",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Button Highlight Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#d6d6d6",
+          "css_variable": "--chromahonControls__button-bg-hl",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Button Highlight Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#121212",
+          "css_variable": "--chromahonControls__button-fg-hl",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Text Input Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#0f0f0f",
+          "css_variable": "--chromahonControls__textInput-bg",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Text Input Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#bababa",
+          "css_variable": "--chromahonControls__textInput-fg",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Text Input Highlight Background": {
+      "type": "slider",
+      "default": "Solid Color",
+      "values": {
+        "Solid Color": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "Solid Color",
+          "default": "#d6d6d6",
+          "css_variable": "--chromahonControls__textInput-bg-hl",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    },
+    "Steam Menu > Text Input Highlight Foreground": {
+      "type": "none",
+      "values": {
+        "_": {}
+      },
+      "components": [
+        {
+          "name": "Color",
+          "type": "color-picker",
+          "on": "_",
+          "default": "#121212",
+          "css_variable": "--chromahonControls__textInput-fg-hl",
+          "tabs": [
+            "sm"
+          ]
+        }
+      ]
+    }
+  },
+  "id": "7ac19e2d-8b1c-4ca6-8ec2-7d35dd488489"
+}

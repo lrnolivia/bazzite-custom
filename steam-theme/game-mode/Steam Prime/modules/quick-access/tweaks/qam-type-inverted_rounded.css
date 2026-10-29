@@ -1,0 +1,36 @@
+:root {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+._1gJzx0OgstpPqW34DFUKC6 {
+    flex-direction: row-reverse;
+}
+
+/* sidebar */
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    border-top-left-radius: var(--chromahonQAM__tweakOn-qamType-inverted-tl-radius);
+    border-bottom-left-radius: var(--chromahonQAM__tweakOn-qamType-inverted-bl-radius);
+    border-top-right-radius: var(--chromahonQAM__tweakOn-qamType-inverted-tr-radius);
+    border-bottom-right-radius: var(--chromahonQAM__tweakOn-qamType-inverted-br-radius);
+}
