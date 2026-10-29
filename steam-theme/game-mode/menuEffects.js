@@ -20,11 +20,17 @@
     ]);
     let frame;
     const elements = [];
+    const mainFade=document.createElement('div');mainFade.dataset.primeLinuxMainFade='';mainFade.setAttribute('aria-hidden','true');mainFade.hidden=true;document.body.append(mainFade);
     const measure = () => {
         frame = 0;
         for (const target of elements) {
             const rect = target.getBoundingClientRect();
             const visibleWidth = Math.max(0, Math.min(innerWidth, rect.right) - Math.max(0, rect.left));
+            if(target.classList.contains('_1PGlK8mZ0CDISnm-gwJqo')) {
+                const value=String(visibleWidth>=1);
+                mainFade.hidden=visibleWidth<1;
+                if(target.parentElement.dataset.primeMainMenuOpen!==value)target.parentElement.dataset.primeMainMenuOpen=value;
+            }
             if (visibleWidth < 1) continue;
             for (const [name, property] of names) if (target.classList.contains(name)) {
                 const contentWidth=name==='_1PGlK8mZ0CDISnm-gwJqo'&&!target.classList.contains('_26eRZxfJYfD_NywcU-TRuh')?Math.min(300,visibleWidth):visibleWidth;
@@ -49,7 +55,7 @@
     }
     measure();
     window.__steamPrimeMenuEffects = {refresh: schedule, dispose: () => {
-        observer.disconnect();changes.disconnect();cancelAnimationFrame(frame);
+        observer.disconnect();changes.disconnect();cancelAnimationFrame(frame);mainFade.remove();
         for (const element of elements) {
             element.removeEventListener('transitionend', schedule);
             element.removeEventListener('animationend', schedule);

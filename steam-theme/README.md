@@ -15,3 +15,5 @@ To disable the desktop port: `systemctl --user disable --now loew-steam-theme.se
 Reference export SHA256: `652415de58921be62852d34bf7683fa4e0851e6df0a0f4493986165f4fcc5019`. All 130 files in its snapshot manifest were verified before selecting the game-page assets. Upstream Adwaita retains its own license and installation.
 
 The bridge decorates only page changes and image loads. It caches reconciled stylesheets, avoids style-observer feedback loops, and fetches metadata only for the active non-Steam page. Hero logo centering is handled by the page CSS rather than scanning and rewriting the library.
+
+Game Mode artwork caching preserves original bytes, stores versioned custom artwork and hash-addressed local Steam heroes/logos in IndexedDB, and warms a bounded set of decoded images during idle time. It does not resize the displayed artwork. The first visit can still require a download/decode; later visits can reuse cached blobs. The cache limits encoded images to 128 MiB in memory and 192 MiB on disk, with at most 96 MiB of warmed decoded images.

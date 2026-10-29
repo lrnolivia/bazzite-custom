@@ -190,3 +190,14 @@
 
 /* Linux native browser popups have an opaque backing. Keep it inside the panel. */
 .BasicUI [class~='_1PGlK8mZ0CDISnm-gwJqo']:not([class~='_26eRZxfJYfD_NywcU-TRuh']) {width:min(300px,100vw)!important;}
+
+/* Native popup visibility can precede Steam's host-backdrop Visible class. */
+.BasicUI [data-prime-main-menu-open=true] {opacity:1!important;}
+
+/* Keep the main feather above game-page stacking contexts, below native menus. */
+[data-prime-linux-main-fade]:not([hidden]) {
+ position:fixed;inset:0;z-index:2147483000;pointer-events:none;
+ background:linear-gradient(to right,#000 0,#000 282px,rgba(0,0,0,.85) 298px,rgba(0,0,0,.65) 346px,rgba(0,0,0,.4) 422px,rgba(0,0,0,.2) 522px,rgba(0,0,0,.07) 622px,rgba(0,0,0,.015) 722px,transparent 802px);
+}
+
+body:has(>[data-prime-linux-main-fade]) .BasicUI [class~='BackgroundGlass']:has(>[class~='_1PGlK8mZ0CDISnm-gwJqo']) {background-image:none!important;}
