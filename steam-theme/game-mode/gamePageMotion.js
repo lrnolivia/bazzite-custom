@@ -1,5 +1,6 @@
 (() => {
-    if(document.title!=='Steam Big Picture Mode')return;
+    const desktop=document.title==='Steam'&&document.body.classList.contains('DesktopUI');
+    if(document.title!=='Steam Big Picture Mode'&&!desktop)return;
     window.__steamPrimeGameMotionDispose?.();
     const capsuleSelector='.TopCapsule,.NZMJ6g2iVnFsOOp-lDmIP';
     const heroSelector='.HeaderBackgroundImage img.ImgSrc:not(.ImgBlur),._1IX7FPSY9Jb82KhBVBSkZa img.HNbe3eZf6H7dtJ042x1vM:not(.HSQWw9HUAP6jtA2OZjS-u):not(._3_IUVzR9tpG_JKEjhwXEAb)';
@@ -56,7 +57,7 @@
     function scan(initial=false){
         frame=0;if(stopped)return;
         for(const capsule of document.querySelectorAll(capsuleSelector)){
-            reveal(capsule.querySelector(heroSelector),'hero',capsule,initial);
+            if(!desktop)reveal(capsule.querySelector(heroSelector),'hero',capsule,initial);
             reveal(capsule.querySelector(logoSelector),'logo',capsule,initial);
         }
         const visibility=new Map();

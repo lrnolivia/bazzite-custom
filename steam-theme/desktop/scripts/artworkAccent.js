@@ -1,5 +1,15 @@
 import palettes from './logoPalette.js';
 window.__fluentyArtworkAccentDispose?.();
+const accentAnimations=new Map();
+function fadeAccent(button,from,to){
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches||!button.animate)return;
+ accentAnimations.get(button)?.cancel();
+ const overlay=document.createElement('span');overlay.dataset.accentFade='';overlay.setAttribute('aria-hidden','true');overlay.style.backgroundColor=from;button.append(overlay);
+ const animation=overlay.animate([{opacity:1},{opacity:0}],{duration:440,easing:'cubic-bezier(.2,.65,.3,1)',fill:'both'});
+ animation.pause();animation.currentTime=0;accentAnimations.set(button,animation);
+ requestAnimationFrame(()=>{if(button.isConnected&&accentAnimations.get(button)===animation)animation.play();else animation.cancel()});
+ animation.finished.catch(()=>{}).finally(()=>{overlay.remove();if(accentAnimations.get(button)===animation)accentAnimations.delete(button)});
+}
 const sampled = new Map();
 const sampleStorageKey='fluenty.artworkAccent.samples.v1';
 let sampleCache={};
@@ -225,6 +235,8 @@ function logoArtwork() {
     function apply(value) {
         if(current!==revision)return; currentAutomatic=value; value=overrides[gameKey]?manualColor(overrides[gameKey]):vivid(value); activeColor=value;
         for(const bar of bars) {
+            const changed=bar.style.getPropertyValue('--game-play-accent')!==value.color;
+            const fades=changed?[...bar.querySelectorAll('.PlayButtonContainer>.ButtonChild')].map(button=>({button,from:getComputedStyle(button).backgroundColor})):[];
             const tone=window.__fluentyAccentTone?.(value.color,value.text);
             if(tone)value={...value,text:tone.text};
             const glyphText=tone?.glyph||'#'+(value.text||'#252525').match(/\w\w/g).map(v=>Math.round(parseInt(v,16)*.76+255*.24).toString(16).padStart(2,'0')).join('');
@@ -238,6 +250,7 @@ function logoArtwork() {
                 bar.style.setProperty('--game-play-hover',value.hover);
                 bar.style.setProperty('--game-play-text',value.text||'#252525');
             }
+            if(changed)for(const {button,from}of fades)fadeAccent(button,from,value.color);
         }
     }
         refreshAccent=()=>apply(currentAutomatic);
@@ -263,4 +276,4 @@ const accentObserver=new MutationObserver(records=>{
 });
 accentObserver.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src']});
 document.addEventListener('load',schedule,true);window.addEventListener('popstate',schedule);schedule();
-window.__fluentyArtworkAccentDispose=()=>{accentObserver.disconnect();cancelAnimationFrame(frame);document.removeEventListener('load',schedule,true);window.removeEventListener('popstate',schedule);};
+window.__fluentyArtworkAccentDispose=()=>{for(const a of accentAnimations.values())a.cancel();accentAnimations.clear();accentObserver.disconnect();cancelAnimationFrame(frame);document.removeEventListener('load',schedule,true);window.removeEventListener('popstate',schedule);};

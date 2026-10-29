@@ -124,3 +124,24 @@ body.DesktopUI .AppDetailsMain ._2_86QNCjVvJTL3Qe6Xztx_{display:none!important;b
 
 /* Summary line measurement should reflow its own card, not the entire page. */
 body.DesktopUI .ActivityFeedContainer .Event.Panel {contain:layout style!important;}
+
+/* Preserve the tall Windows artwork instead of the native 320px crop. */
+body.DesktopUI .AppDetailsMain .Header:has(.HeaderBackgroundImage) {height:clamp(360px,44vh,520px)!important;min-height:clamp(360px,44vh,520px)!important;max-height:none!important;}
+body.DesktopUI .AppDetailsMain .Header .NZMJ6g2iVnFsOOp-lDmIP,
+body.DesktopUI .AppDetailsMain .Header .HeaderBackgroundImage {height:100%!important;max-height:none!important;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild:not(.PlayButton) {display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 34px!important;width:34px!important;min-width:34px!important;padding:0!important;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild:not(.PlayButton)>.SVGIcon_FlatArrow {display:none!important;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild:not(.PlayButton)::before {
+ content:''!important;display:block!important;position:static!important;
+ width:6px!important;height:6px!important;margin:0 0 3px!important;padding:0!important;
+ border:0!important;border-right:2px solid currentColor!important;border-bottom:2px solid currentColor!important;
+ transform:rotate(45deg)!important;background:none!important;mask:none!important;
+}
+body.DesktopUI .PlayButtonContainer>.ButtonChild {transition:background-color 440ms cubic-bezier(.2,.65,.3,1),color 300ms ease!important;}
+@media(prefers-reduced-motion:reduce){body.DesktopUI .PlayButtonContainer>.ButtonChild {transition:none!important;}}
+
+/* Fade the old surface above the new accent without animating layout. */
+body.DesktopUI .PlayButtonContainer>.ButtonChild>[data-accent-fade] {position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild>:not([data-accent-fade]) {z-index:1;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild:not(.PlayButton)::before {position:relative!important;z-index:1;}
+body.DesktopUI .PlayButtonContainer>.ButtonChild :is(svg,.ButtonText) {transition:color 300ms ease;}
