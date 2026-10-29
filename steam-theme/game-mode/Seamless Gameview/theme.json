@@ -1,0 +1,11 @@
+{
+  "name": "Seamless Gameview",
+  "version": "v1.0",
+  "manifest_version": 9,
+  "id": "e046573f-6ea5-4d92-b277-79836737d6db",
+  "inject": {
+    "shared.css": [
+      "SP"
+    ]
+  }
+}

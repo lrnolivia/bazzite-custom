@@ -1,0 +1,11 @@
+{
+  "name": "Artwork Play Buttons",
+  "version": "v1.0",
+  "manifest_version": 9,
+  "id": "aee7f3fb-2bab-43e4-955d-136a52494ee5",
+  "inject": {
+    "shared.css": [
+      "SP"
+    ]
+  }
+}

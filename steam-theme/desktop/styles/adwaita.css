@@ -1,0 +1,105 @@
+/* GTK surfaces and fonts around the approved Windows game-page composition. */
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i {
+ --background-col:rgb(var(--adw-window-bg-rgb,32,32,34));
+ --color-darkest:var(--background-col);
+ --library-card:rgb(var(--adw-view-bg-rgb,40,40,42));
+ --library-card-raised:rgb(var(--adw-headerbar-bg-rgb,48,48,50));
+ --library-text:rgb(var(--adw-window-fg-rgb,245,245,245));
+ --library-secondary:rgba(var(--adw-window-fg-rgb,245,245,245),.72);
+ --SystemAccentColorLight2:rgb(var(--adw-accent-bg-rgb,53,132,228));
+ font-family:var(--adw-text-font,system-ui);
+}
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer,.RightColumn){font-family:var(--adw-text-font,system-ui)}
+body.DesktopUI #lumen-moon-btn {
+ position:fixed!important;inset:6px auto auto 180px!important;
+ width:36px!important;height:36px!important;min-width:36px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ margin:0!important;padding:0!important;border-radius:8px!important;
+ background:transparent!important;z-index:2147483000!important;cursor:pointer;
+ -webkit-app-region:no-drag!important;pointer-events:auto!important;
+}
+body.DesktopUI #lumen-moon-btn .lumen-auto-fix-pill-copy{display:none!important}
+body.DesktopUI #lumen-moon-btn:hover{background:rgba(255,255,255,.12)!important}
+body.DesktopUI #lumen-moon-btn:focus-visible{outline:2px solid rgb(var(--adw-accent-bg-rgb,53,132,228))!important;outline-offset:-2px!important}
+body.DesktopUI #lumen-settings-overlay{z-index:2147483100!important}
+@supports not (backdrop-filter:blur(12px)){
+ ._2OOzYVWIHaKXm6_7sscT9i .PlayBar{background:var(--background-col)!important}
+}
+@media(max-width:900px){
+ ._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer{display:flex!important;flex-direction:column!important}
+ ._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.RightColumn{width:auto!important;max-width:none!important;position:static!important}
+}
+@media(prefers-reduced-motion:reduce){
+ ._2OOzYVWIHaKXm6_7sscT9i :is(.PlayBar,.InnerContainer,.AppGameInfoContainer){transition:none!important;animation:none!important}
+}
+/* Restore Steam's glyphs where Adwaita replaces them with masked icons. */
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton>svg,
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton>div>svg {
+ display:block!important;width:20px!important;height:20px!important;color:var(--library-text)!important;
+}
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton::before,
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton::after{display:none!important}
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton{display:flex!important;align-items:center!important;justify-content:center!important}
+/* Lumen uses Adwaita's surfaces, typography, controls and accent. */
+body.DesktopUI #lumen-settings-overlay {
+ --lumen-window:rgb(var(--adw-window-bg-rgb,36,36,36));
+ --lumen-sidebar:rgb(var(--adw-sidebar-bg-rgb,47,47,47));
+ --lumen-view:rgb(var(--adw-view-bg-rgb,30,30,30));
+ --lumen-ink:rgb(var(--adw-window-fg-rgb,250,250,250));
+ --lumen-dim:rgba(var(--adw-window-fg-rgb,250,250,250),.65);
+ --lumen-accent:rgb(var(--adw-accent-bg-rgb,53,132,228));
+ font-family:var(--adw-text-font,system-ui)!important;color:var(--lumen-ink)!important;
+ background:rgba(0,0,0,.45)!important;
+}
+#lumen-settings-overlay .lumen-win {
+ width:980px;max-width:calc(100vw - 48px);height:680px;max-height:calc(100vh - 64px);
+ border-radius:12px!important;border:1px solid rgba(255,255,255,.08)!important;
+ box-shadow:0 18px 48px rgba(0,0,0,.36)!important;background:var(--lumen-window)!important;
+ color:var(--lumen-ink)!important;
+}
+#lumen-settings-overlay .lumen-side{flex-basis:210px;background:var(--lumen-sidebar)!important;padding:12px 8px 8px!important;border-right:1px solid rgba(0,0,0,.3)}
+#lumen-settings-overlay .lumen-side-title{font-size:20px!important;font-weight:700!important;text-transform:none!important;letter-spacing:normal!important;padding:12px 12px 22px!important;color:var(--lumen-ink)!important}
+#lumen-settings-overlay .lumen-tab{box-sizing:border-box;height:42px!important;padding:10px 12px!important;margin:2px 0!important;border-radius:6px!important;color:var(--lumen-ink)!important;font-size:14px!important}
+#lumen-settings-overlay .lumen-tab:hover{background:rgba(255,255,255,.07)!important}
+#lumen-settings-overlay .lumen-tab.active{background:rgba(var(--adw-accent-bg-rgb,53,132,228),.22)!important;color:var(--lumen-ink)!important;font-weight:600}
+#lumen-settings-overlay :is(.lumen-content,.lumen-body,.lumen-ctop){background:var(--lumen-window)!important;color:var(--lumen-ink)!important}
+#lumen-settings-overlay .lumen-ctop{padding:18px 24px!important;border-bottom:1px solid rgba(255,255,255,.06)!important;gap:8px}
+#lumen-settings-overlay .lumen-ctop .h{font-size:20px!important;font-weight:700!important;color:var(--lumen-ink)!important}
+#lumen-settings-overlay .lumen-body{padding:24px!important}
+#lumen-settings-overlay :is(.lumen-row,.lumen-about-intro,.lumen-account-card){border-color:rgba(255,255,255,.08)!important}
+#lumen-settings-overlay :is(.lumen-desc,.lumen-hint,.lumen-about-credit,.lumen-about-state){color:var(--lumen-dim)!important}
+#lumen-settings-overlay :is(button,.lumen-btn,.lumen-about-btn,.lumen-act){font-family:inherit!important;border:0!important;border-radius:6px!important;background:rgba(255,255,255,.09)!important;color:var(--lumen-ink)!important;min-height:32px;padding:6px 12px!important;box-shadow:none!important}
+#lumen-settings-overlay :is(button,.lumen-btn,.lumen-about-btn):hover{background:rgba(255,255,255,.14)!important}
+#lumen-settings-overlay :is(button.primary,.lumen-account-button.primary){background:var(--lumen-accent)!important;color:white!important}
+#lumen-settings-overlay :is(input[type=text],input[type=password],input[type=url],input[type=number],select,textarea){font-family:inherit!important;background:var(--lumen-view)!important;color:var(--lumen-ink)!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:6px!important;padding:8px!important;box-sizing:border-box}
+#lumen-settings-overlay :is(button,input,select,textarea,[role=button]):focus-visible{outline:2px solid var(--lumen-accent)!important;outline-offset:2px!important}
+#lumen-settings-overlay .lumen-sw .sl{border-radius:100px!important;background:rgba(255,255,255,.2)!important}
+#lumen-settings-overlay .lumen-sw input:checked+.sl{background:var(--lumen-accent)!important}
+#lumen-settings-overlay .lumen-ctop .x{display:flex;align-items:center;justify-content:center;min-width:28px;min-height:28px;border-radius:100px;background:rgba(255,255,255,.1);color:var(--lumen-ink)!important;font-size:14px}
+#lumen-settings-overlay .lumen-account-entry{background:transparent!important;border-radius:6px!important;text-align:left!important}
+@media(max-width:760px){
+ #lumen-settings-overlay .lumen-win{max-width:calc(100vw - 16px);max-height:calc(100vh - 24px)}
+ #lumen-settings-overlay .lumen-side{flex-basis:150px}
+ #lumen-settings-overlay .lumen-ctop{flex-wrap:wrap;padding:12px!important}
+ #lumen-settings-overlay .lumen-body{padding:16px!important}
+}
+body.DesktopUI ._2OOzYVWIHaKXm6_7sscT9i .PlayBar .MenuButton>.zvLq1GUCH3yLuqv_TXBJ1 {display:flex!important;width:20px!important;height:20px!important;align-items:center;justify-content:center}
+/* User-selected Adwaita pill and full-width artwork. */
+body.DesktopUI ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer{border-radius:999px!important}
+body.DesktopUI ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.PlayButton.ButtonChild:only-child{border-radius:999px!important}
+body.DesktopUI ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.PlayButton.ButtonChild:not(:only-child){border-radius:999px 0 0 999px!important}
+body.DesktopUI ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.ButtonChild:not(.PlayButton){border-radius:0 999px 999px 0!important}
+body.DesktopUI .HeaderBackgroundImage .QlR9EFwTdUNm_J5vx54_Z>.ImgSrc{width:100%!important;max-width:none!important;object-fit:cover!important}
+/* Keep the native visibility class in charge of the floating bar. */
+body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1{display:block!important}
+/* The floating bar lives outside the page overview: share its utility rules. */
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton{display:flex!important;align-items:center!important;justify-content:center!important}
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton::before,
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton::after{display:none!important}
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton>svg,
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton>div>svg{display:block!important;width:20px!important;height:20px!important;color:rgb(var(--adw-window-fg-rgb,245,245,245))!important}
+body.DesktopUI .AppDetailsMain .PlayBar .MenuButton>.DotDotDot{display:flex!important;width:20px!important;height:20px!important;align-items:center;justify-content:center}
+body.DesktopUI .AppDetailsMain .PlayBar .RightControls{margin-left:8px!important;flex:0 0 auto!important}
+body.DesktopUI .AppDetailsMain .PlayBar #lumen-fixes-btn{display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 32px!important;width:32px!important;height:32px!important;min-width:32px!important;box-sizing:border-box!important;padding:8px!important;margin:0!important;border-radius:6px!important;background:rgba(255,255,255,.1)!important}
+body.DesktopUI .AppDetailsMain .PlayBar #lumen-fixes-btn>span:not(.ic){display:none!important}
+body.DesktopUI .AppDetailsMain .PlayBar #lumen-fixes-btn .ic{width:16px!important;height:16px!important;display:block!important}
