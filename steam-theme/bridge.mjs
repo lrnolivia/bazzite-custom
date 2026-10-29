@@ -22,12 +22,14 @@ function bundle(){
 function gameModeBundle(){
  const dir=path.join(root,'game-mode/Steam Prime');let css='';
  const walk=p=>{for(const f of fs.readdirSync(p,{withFileTypes:true})){const q=path.join(p,f.name);if(f.isDirectory())walk(q);else if(f.name.endsWith('.css'))css+=fs.readFileSync(q,'utf8')+'\n'}};walk(dir);
+ const scripts=['bigPictureExtras','footerExtras','menuEffects','uiMotion','gamePageMotion','cardEntrance','optimizeStyles'].map(n=>read(`game-mode/${n}.js`));
  const needed=new Set([...css.matchAll(/\[class~=['"]([A-Za-z_][\w-]*)['"]\]/g)].map(m=>m[1]));
+ for(const m of (css+'\n'+scripts.join('\n')).matchAll(/\.([A-Z][A-Za-z0-9_]*)/g))needed.add(m[1]);
  const aliases={};
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(aliases[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(window.__loewPrimeAliases)return;window.__loewPrimeAliases=true;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n})();';
+ return `(()=>{if(window.__loewPrimeAliases===4)return;window.__loewPrimeAliasState?.observer.disconnect();window.__loewPrimeAliases=4;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n'+read('desktop/scripts/logoPalette.js').replace('export default','const palettes =')+'\n'+read('game-mode/artworkColor.js')+'\n'+scripts.join('\n')+'\n})();';
 }
 let payload;
 try{payload=bundle()}catch(e){console.error(e);process.exit(1)}

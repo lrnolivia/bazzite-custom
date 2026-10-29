@@ -181,3 +181,13 @@ html[data-steam-prime-page=home] .BasicUI .BasicHome [class~='TabHeaderRowWrappe
 #header [class~='SearchAndTitleContainer']:is(.gpfocuswithin,:focus-within,[class~='_1bmuJRkMBGcApfJwlj_k-F'],[class~='_2YxXntwjdsceSnfMRClWHG']:hover) input::placeholder {
  color:var(--prime-menu-highlight-text)!important;filter:none!important;text-shadow:none!important;
 }
+
+/* Keep the same inset when Home yields to a game detail route. */
+html:is([data-steam-prime-page=home],[data-steam-prime-page=game]):not([data-prime-header-compact=true]) .BasicUI #header {
+ position:fixed!important;top:0!important;
+ padding-top:var(--tbp-height,30px)!important;
+ height:calc(40px + var(--tbp-height,30px))!important;
+ min-height:calc(40px + var(--tbp-height,30px))!important;
+ max-height:calc(40px + var(--tbp-height,30px))!important;
+ box-sizing:border-box!important;
+}

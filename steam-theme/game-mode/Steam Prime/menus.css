@@ -180,3 +180,13 @@
  --prime-menu-fade-start:calc(var(--prime-quick-menu-width,348px) + 2px);
  background-image:linear-gradient(to left,#000 0,#000 var(--prime-menu-fade-start),rgba(0,0,0,.85) calc(var(--prime-menu-fade-start) + 16px),rgba(0,0,0,.65) calc(var(--prime-menu-fade-start) + 64px),rgba(0,0,0,.4) calc(var(--prime-menu-fade-start) + 140px),rgba(0,0,0,.2) calc(var(--prime-menu-fade-start) + 240px),rgba(0,0,0,.07) calc(var(--prime-menu-fade-start) + 340px),rgba(0,0,0,.015) calc(var(--prime-menu-fade-start) + 440px),transparent calc(var(--prime-menu-fade-start) + 520px))!important;
 }
+
+/* Linux paints the fade in the host as well as the native menu popup. */
+.BasicUI .BackgroundGlass:has(>._1PGlK8mZ0CDISnm-gwJqo) {
+ --prime-menu-fade-start:calc(min(300px,100vw) - 18px);
+ background-color:transparent!important;
+ background-image:linear-gradient(to right,#000 0,#000 var(--prime-menu-fade-start),rgba(0,0,0,.85) calc(var(--prime-menu-fade-start) + 16px),rgba(0,0,0,.65) calc(var(--prime-menu-fade-start) + 64px),rgba(0,0,0,.4) calc(var(--prime-menu-fade-start) + 140px),rgba(0,0,0,.2) calc(var(--prime-menu-fade-start) + 240px),rgba(0,0,0,.07) calc(var(--prime-menu-fade-start) + 340px),rgba(0,0,0,.015) calc(var(--prime-menu-fade-start) + 440px),transparent calc(var(--prime-menu-fade-start) + 520px))!important;
+}
+
+/* Linux native browser popups have an opaque backing. Keep it inside the panel. */
+.BasicUI [class~='_1PGlK8mZ0CDISnm-gwJqo']:not([class~='_26eRZxfJYfD_NywcU-TRuh']) {width:min(300px,100vw)!important;}
