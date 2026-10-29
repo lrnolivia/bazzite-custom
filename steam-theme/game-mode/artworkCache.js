@@ -138,7 +138,14 @@
             const activeNative=new Set([...images].filter(image=>!(image.currentSrc||image.src||'').startsWith('blob:')).map(image=>identify(image.currentSrc||image.src)).filter(Boolean).map(source=>source.replace(/\.(?:jpg|png)(?=\?)/i,'')));
             descriptor=Object.getOwnPropertyDescriptor(next,'GetCustomImageURLs');
             wrapped=function(...args){
-                const urls=original.apply(this,args);if(!Array.isArray(urls)||!urls.length)return urls;
+                let urls=original.apply(this,args);
+                const manifest=host.__loewCustomArtwork,app=args[0],suffix=args[1]||'';
+                if(manifest&&!(app?.rt_custom_image_mtime>manifest.scannedAt)){
+                    const known=manifest.files[String(app?.appid)+':'+suffix];
+                    if(known)urls=known.map(url=>new host.URL(url,host.location.href).href);
+                    else if(['','p','_hero','_logo'].some(kind=>manifest.files[String(app?.appid)+':'+kind]))urls=[];
+                }
+                if(!Array.isArray(urls)||!urls.length)return urls;
                 const source=urls.map(identify);if(!source.some(Boolean))return urls;
                 const signature=urls.join('\n'),route=noteRoute();
                 const previous=choices.get(signature);
@@ -169,11 +176,11 @@
             const entry=memory.get(identify(image.src));
             if(entry){image.src=entry.url;stats.hits++;scheduleWarm(entry);}
         }
-        return {version:3,clients:0,stats,ready,learn,attach,detach,noteRoute,use};
+        return {version:4,clients:0,stats,ready,learn,attach,detach,noteRoute,use};
     }
     const previous=host.__steamPrimeOriginalArtworkCache;
-    if(previous&&previous.version!==3)previous.detach();
-    const cache=previous?.version===3?previous:(host.__steamPrimeOriginalArtworkCache=createCache());
+    if(previous&&previous.version!==4)previous.detach();
+    const cache=previous?.version===4?previous:(host.__steamPrimeOriginalArtworkCache=createCache());
     cache.clients++;
     let disposed=false,attempts=0,retry=0;
     cache.ready.then(()=>{if(!disposed&&!cache.attach(document.images))retry=host.setInterval(()=>{if(cache.attach(document.images)||++attempts>=30)host.clearInterval(retry);},500);});

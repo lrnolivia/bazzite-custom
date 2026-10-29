@@ -6,17 +6,31 @@ import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const steam=path.join(os.homedir(),'.local/share/Steam');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+function artworkManifest(){
+ const users=path.join(steam,'userdata');const files={};
+ // User-local artwork remains on disk; publish only valid Steam asset names.
+ for(const user of fs.readdirSync(users)){
+  const grid=path.join(users,user,'config/grid');if(!/^\d+$/.test(user)||!fs.existsSync(grid))continue;
+  for(const name of fs.readdirSync(grid)){
+   const match=name.match(/^(\d+)(p|_hero|_logo)?\.(jpg|png)$/i);if(!match)continue;
+   const stat=fs.statSync(path.join(grid,name));if(!stat.isFile())continue;
+   const key=match[1]+':'+(match[2]||'');
+   (files[key]??=[]).push('/customimages/'+name+'?v='+Math.round(stat.mtimeMs)+'&s='+stat.size);
+  }
+ }
+ return `;(window.opener||window).__loewCustomArtwork=${JSON.stringify({scannedAt:Date.now()/1000,files})};`;
+}
 function bundle(){
  const sources=['libraryExtras','artworkAccent','nonSteamMetadata'].map(n=>read(`desktop/scripts/${n}.js`));
  sources[1]=sources[1].replace("import palettes from './logoPalette.js';",read('desktop/scripts/logoPalette.js').replace('export default','const palettes ='));
- sources.push(read('game-mode/artworkCache.js'));
+ sources.push(artworkManifest()+read('game-mode/artworkCache.js'));
  const css=read('desktop/styles/libraryFeed.css')+'\n'+read('desktop/styles/playButtonAlignment.css')+'\n'+read('desktop/styles/adwaita.css');
  const needed=new Set([...((css+'\n'+sources.join('\n')).matchAll(/\.([A-Z][A-Za-z0-9_]*)/g))].map(m=>m[1]));
  const map={};
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(map[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===7)return;window.__loewAdwaitaPort=7;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
+ return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===9)return;window.__loewAdwaitaPort=9;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
 }
 // CSS Loader translates dot selectors, while Prime also uses semantic
 // [class~=...] selectors. Supply those aliases in Game Mode popup documents.
@@ -30,7 +44,7 @@ function gameModeBundle(){
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(aliases[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(window.__loewPrimeAliases===6)return;window.__loewPrimeAliasState?.observer.disconnect();window.__loewPrimeAliases=6;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n'+read('desktop/scripts/logoPalette.js').replace('export default','const palettes =')+'\n'+read('game-mode/artworkColor.js')+'\n'+scripts.join('\n')+'\n})();';
+ return `(()=>{if(window.__loewPrimeAliases===7)return;window.__loewPrimeAliasState?.observer.disconnect();window.__loewPrimeAliases=7;const aliases=${JSON.stringify(aliases)};`+read('game-mode/aliases.js')+'\n'+read('desktop/scripts/logoPalette.js').replace('export default','const palettes =')+'\n'+read('game-mode/artworkColor.js')+'\n'+artworkManifest()+scripts.join('\n')+'\n})();';
 }
 let payload;
 try{payload=bundle()}catch(e){console.error(e);process.exit(1)}

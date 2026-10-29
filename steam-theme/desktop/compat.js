@@ -1,3 +1,4 @@
+document.getElementById('loew-card-layout-isolation')?.remove();
 window.__loewAdwaitaPortState?.observer?.disconnect();if(window.__loewAdwaitaPortState?.scrollHandler)document.removeEventListener('scroll',window.__loewAdwaitaPortState.scrollHandler,true);clearInterval(window.__loewAdwaitaPortState?.pruneTimer);document.getElementById('loew-adwaita-game-page')?.remove();
 const style=document.createElement('style');style.id='loew-adwaita-game-page';style.textContent=css;document.head.append(style);
 // Adwaita's compact detail header and permanent rail conflict with the approved

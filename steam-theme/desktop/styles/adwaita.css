@@ -121,3 +121,6 @@ body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .ActionSection{display:f
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .PlayButtonContainer{height:46px!important;margin:0!important;align-self:center!important;transform:none!important;top:auto!important;bottom:auto!important}
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .ButtonChild{height:46px!important;top:auto!important;bottom:auto!important;transform:none!important;align-self:center!important;line-height:1!important}
 body.DesktopUI .AppDetailsMain ._2_86QNCjVvJTL3Qe6Xztx_{display:none!important;background:none!important}
+
+/* Summary line measurement should reflow its own card, not the entire page. */
+body.DesktopUI .ActivityFeedContainer .Event.Panel {contain:layout style!important;}
