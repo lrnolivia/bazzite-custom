@@ -24,6 +24,10 @@
 ._2OOzYVWIHaKXm6_7sscT9i > :not(.Backdrop):not(.ColumnContainer) {
     text-shadow: 0 1px 4px rgba(0,0,0,.55);
 }
+/* Dark lettering needs separation, without a second dark halo around it. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .PlayButtonContainer {
+    text-shadow: 0 1px 4px rgba(0,0,0,var(--game-play-text-shadow-opacity,.55));
+}
 /* Feather sharp artwork into the existing reflected image. */
 .HeaderBackgroundImage .ImgSrc:not(.ImgBlur) {
     mask-image: linear-gradient(to bottom,#000 calc(100% - 64px),rgba(0,0,0,.85) calc(100% - 40px),rgba(0,0,0,.35) calc(100% - 16px),transparent 100%) !important;

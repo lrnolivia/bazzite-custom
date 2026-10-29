@@ -239,6 +239,9 @@ function logoArtwork() {
             const fades=changed?[...bar.querySelectorAll('.PlayButtonContainer>.ButtonChild')].map(button=>({button,from:getComputedStyle(button).backgroundColor})):[];
             const tone=window.__fluentyAccentTone?.(value.color,value.text);
             if(tone)value={...value,text:tone.text};
+            const foreground=(value.text||'#252525').match(/\w\w/g).slice(0,3).map(v=>parseInt(v,16));
+            const shadowOpacity=luminance(foreground)<.18?'.10':'.55';
+            if(bar.style.getPropertyValue('--game-play-text-shadow-opacity')!==shadowOpacity)bar.style.setProperty('--game-play-text-shadow-opacity',shadowOpacity);
             const glyphText=tone?.glyph||'#'+(value.text||'#252525').match(/\w\w/g).map(v=>Math.round(parseInt(v,16)*.76+255*.24).toString(16).padStart(2,'0')).join('');
             if(bar.style.getPropertyValue('--game-play-glyph')!==glyphText)bar.style.setProperty('--game-play-glyph',glyphText);
             for(const part of bar.querySelectorAll('._2AzIX5kl9k6JnxLfR5H4kX, ._2AzIX5kl9k6JnxLfR5H4kX *')) {
