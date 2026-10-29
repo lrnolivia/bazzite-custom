@@ -116,13 +116,8 @@ body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1::before,
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1::after,
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1>.PlayBar::before,
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1>.PlayBar::after {display:none!important;content:none!important}
-body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel::before{box-shadow:none!important;backdrop-filter:none!important;background:rgba(var(--adw-window-bg-rgb,36,36,36),.97)!important}
+body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel::before{box-shadow:none!important;backdrop-filter:blur(22px)!important;background:rgba(var(--adw-window-bg-rgb,36,36,36),.72)!important}
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .ActionSection{display:flex!important;align-items:center!important;height:46px!important;padding:0!important;margin-top:0!important;margin-bottom:0!important}
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .PlayButtonContainer{height:46px!important;margin:0!important;align-self:center!important;transform:none!important;top:auto!important;bottom:auto!important}
 body.DesktopUI .AppDetailsMain>._2L3s2nzh7yCnNESfI5_dN1 .ButtonChild{height:46px!important;top:auto!important;bottom:auto!important;transform:none!important;align-self:center!important;line-height:1!important}
-/* Avoid a separate live blur pass for every card in the scrolling page. */
-body.DesktopUI .AppDetailsMain ._2OOzYVWIHaKXm6_7sscT9i :is(.Event.Panel,.AppDetailsSection,.PostTextEntry.AddToFeed,.CommunityItem:not(.Blank)){
- backdrop-filter:none!important;background:rgb(var(--adw-view-bg-rgb,40,40,40))!important;
-}
-body.DesktopUI .AppDetailsMain ._2OOzYVWIHaKXm6_7sscT9i :is(.BackdropGlass,.Links,.AppGameInfoContainer>.InnerContainer){backdrop-filter:none!important}
 body.DesktopUI .AppDetailsMain ._2_86QNCjVvJTL3Qe6Xztx_{display:none!important;background:none!important}
