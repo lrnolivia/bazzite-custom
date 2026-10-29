@@ -62,7 +62,7 @@
     }
     async function scan(){
         if(stopped||running)return;running=true;
-        try{for(const app of games()){if(stopped)break;await match(app);}}
+        try{const app=active();if(app)await match(app);}
         finally{running=false;render();}
     }
     function active(){

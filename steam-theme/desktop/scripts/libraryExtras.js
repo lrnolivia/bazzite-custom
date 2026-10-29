@@ -243,7 +243,7 @@
     }
     function update(){scheduled=false;decorateNews();decorateComposer();paginateFeatures();enhanceColorPicker();refineAccents();alignFamilyLibrary();reflectArtwork();sizeInfoPanels();}
     const observer=new MutationObserver(records=>{if(records.some(r=>r.type==='childList'||r.target.matches?.('._3Y87YQY56ZCOqhgcZFaDc5.Panel'))&&!scheduled){scheduled=true;setTimeout(update,100);}});
-    observer.observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['style']});update();
+    observer.observe(document.documentElement,{subtree:true,childList:true});update();
     window.addEventListener('resize',update);
     window.__fluentyLibraryExtrasDispose=()=>{observer.disconnect();document.removeEventListener('click',pickClick,true);window.removeEventListener('resize',update);};
 })();

@@ -2,15 +2,25 @@ window.__loewAdwaitaPortState?.observer?.disconnect();if(window.__loewAdwaitaPor
 const style=document.createElement('style');style.id='loew-adwaita-game-page';style.textContent=css;document.head.append(style);
 // Adwaita's compact detail header and permanent rail conflict with the approved
 // game-page layout. Disable only its detail-scoped rules, leaving the shell intact.
+const prunedRuleCounts=new WeakMap();
 function removeDetailOverrides(sheet){
  let rules;try{rules=sheet.cssRules}catch{return}
+ // Imports precede normal CSS rules. Visit imports even while their bytes load.
+ for(const r of rules){if(r.styleSheet){removeDetailOverrides(r.styleSheet);continue}if(r.type===1||r.type===4)break}
+ if(prunedRuleCounts.get(sheet)===rules.length)return;
  for(let i=rules.length-1;i>=0;i--){const r=rules[i];
-  if(r.styleSheet){if((r.href||'').includes('adwaita'))removeDetailOverrides(r.styleSheet);continue}
-  if(r.cssRules&&!r.selectorText){removeDetailOverrides(r);continue}
-  if(r.selectorText&&/appdetails_|sharedappdetailsheader_|\._2iE-78WxX2Pj4GHbq7YJiA|\._2OOzYVWIHaKXm6_7sscT9i|\._3Y87YQY56ZCOqhgcZFaDc5|\._2L3s2nzh7yCnNESfI5_dN1|\._39RheXihcN6H2k2muQTjkI/.test(r.selectorText))sheet.deleteRule(i);else if(r.cssRules)removeDetailOverrides(r);
+  if(r.styleSheet)continue;
+  if(r.selectorText&&/appdetails_|sharedappdetailsheader_|\._2iE-78WxX2Pj4GHbq7YJiA|\._2OOzYVWIHaKXm6_7sscT9i|\._3Y87YQY56ZCOqhgcZFaDc5|\._2L3s2nzh7yCnNESfI5_dN1|\._39RheXihcN6H2k2muQTjkI/.test(r.selectorText))sheet.deleteRule(i);
+  else if(r.cssRules)removeDetailOverrides(r);
+ }
+ prunedRuleCounts.set(sheet,sheet.cssRules.length);
+}
+function pruneAdwaita(){
+ for(const sheet of document.styleSheets){
+  if((sheet.href||'').includes('/adwaita/')){removeDetailOverrides(sheet);continue}
+  try{for(const r of sheet.cssRules){if(r.styleSheet&&(r.href||'').includes('/adwaita/'))removeDetailOverrides(r.styleSheet);else if(r.type===1||r.type===4)break}}catch{}
  }
 }
-function pruneAdwaita(){for(const sheet of document.styleSheets){if((sheet.href||'').includes('/adwaita/'))removeDetailOverrides(sheet);else{try{for(const r of sheet.cssRules)if(r.styleSheet&&(r.href||'').includes('/adwaita/'))removeDetailOverrides(r.styleSheet)}catch{}}}}
 pruneAdwaita();
 const pruneTimer=setInterval(pruneAdwaita,1500);
 const aliasSignatures=new WeakMap();

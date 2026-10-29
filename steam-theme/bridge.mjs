@@ -7,15 +7,15 @@ const root=path.dirname(fileURLToPath(import.meta.url));
 const steam=path.join(os.homedir(),'.local/share/Steam');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 function bundle(){
- const sources=['libraryExtras','nativeLogoCenter','artworkAccent','nonSteamMetadata'].map(n=>read(`desktop/scripts/${n}.js`));
- sources[2]=sources[2].replace("import palettes from './logoPalette.js';",read('desktop/scripts/logoPalette.js').replace('export default','const palettes ='));
+ const sources=['libraryExtras','artworkAccent','nonSteamMetadata'].map(n=>read(`desktop/scripts/${n}.js`));
+ sources[1]=sources[1].replace("import palettes from './logoPalette.js';",read('desktop/scripts/logoPalette.js').replace('export default','const palettes ='));
  const css=read('desktop/styles/libraryFeed.css')+'\n'+read('desktop/styles/playButtonAlignment.css')+'\n'+read('desktop/styles/adwaita.css');
  const needed=new Set([...((css+'\n'+sources.join('\n')).matchAll(/\.([A-Z][A-Za-z0-9_]*)/g))].map(m=>m[1]));
  const map={};
  for(const m of fs.readFileSync(path.join(steam,'steamui/sp.js'),'utf8').matchAll(/\b([A-Za-z]\w*):"([_A-Za-z0-9-]{8,40})"/g)){
   if(needed.has(m[1]))(map[m[2]]??=[]).push(m[1]);
  }
- return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===4)return;window.__loewAdwaitaPort=4;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
+ return `(()=>{if(!document.body.classList.contains('DesktopUI'))return;if(window.__loewAdwaitaPort===5)return;window.__loewAdwaitaPort=5;const aliases=${JSON.stringify(map)};const css=${JSON.stringify(css)};`+read('desktop/compat.js')+'\n'+sources.map(source=>'(()=>{'+source+'\n})();').join('\n')+'\n})();';
 }
 let payload;
 try{payload=bundle()}catch(e){console.error(e);process.exit(1)}

@@ -228,10 +228,10 @@ function logoArtwork() {
             const tone=window.__fluentyAccentTone?.(value.color,value.text);
             if(tone)value={...value,text:tone.text};
             const glyphText=tone?.glyph||'#'+(value.text||'#252525').match(/\w\w/g).map(v=>Math.round(parseInt(v,16)*.76+255*.24).toString(16).padStart(2,'0')).join('');
-            bar.style.setProperty('--game-play-glyph',glyphText);
+            if(bar.style.getPropertyValue('--game-play-glyph')!==glyphText)bar.style.setProperty('--game-play-glyph',glyphText);
             for(const part of bar.querySelectorAll('._2AzIX5kl9k6JnxLfR5H4kX, ._2AzIX5kl9k6JnxLfR5H4kX *')) {
                 const isGlyph=part.closest('svg')||part.closest('.ButtonChild:not(.PlayButton)');
-                part.style.setProperty('color',isGlyph?glyphText:(value.text||'#252525'),'important');
+                const desired=isGlyph?glyphText:(value.text||'#252525');if(part.style.getPropertyValue('color')!==desired)part.style.setProperty('color',desired,'important');
             }
             if(bar.style.getPropertyValue('--game-play-accent')!==value.color || bar.style.getPropertyValue('--game-play-text')!==value.text) {
                 bar.style.setProperty('--game-play-accent',value.color);
@@ -261,6 +261,6 @@ function schedule(){if(!scheduled){scheduled=true;frame=requestAnimationFrame(up
 const accentObserver=new MutationObserver(records=>{
     if(records.some(r=>r.type==='childList'||r.attributeName==='src'||(r.attributeName==='style'&&!r.target.closest('._3Y87YQY56ZCOqhgcZFaDc5'))))schedule();
 });
-accentObserver.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','style']});
+accentObserver.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src']});
 document.addEventListener('load',schedule,true);window.addEventListener('popstate',schedule);schedule();
 window.__fluentyArtworkAccentDispose=()=>{accentObserver.disconnect();cancelAnimationFrame(frame);document.removeEventListener('load',schedule,true);window.removeEventListener('popstate',schedule);};

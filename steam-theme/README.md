@@ -11,3 +11,5 @@ Game Mode assets remain separate Artwork Play Buttons and Seamless Gameview them
 To disable the desktop port: `systemctl --user disable --now loew-steam-theme.service`, then restart Steam. Backups of earlier local files and replaced Game Mode themes are stored under `~/.local/state/loew-steam-theme/`. Restore those separately if needed. The bridge does not change game data or Steam credentials.
 
 Reference export SHA256: `652415de58921be62852d34bf7683fa4e0851e6df0a0f4493986165f4fcc5019`. All 130 files in its snapshot manifest were verified before selecting the game-page assets. Upstream Adwaita retains its own license and installation.
+
+The bridge decorates only page changes and image loads. It caches reconciled stylesheets, avoids style-observer feedback loops, and fetches metadata only for the active non-Steam page. Hero logo centering is handled by the page CSS rather than scanning and rewriting the library.
