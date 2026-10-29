@@ -1,0 +1,518 @@
+/* Scoped to the news/activity feed and the right-hand detail column. */
+._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer,.RightColumn) {
+ --library-card:#2b2b2b;
+ --library-card-raised:#323232;
+ --library-text:#f4f4f4;
+ --library-secondary:#c5c5c5;
+ font-family:'Segoe UI Variable Text','Segoe UI',sans-serif;
+}
+/* A quiet surface per story, with no stacked frames or grain. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Event.Panel {
+ background:var(--library-card)!important;
+ border:1px solid rgba(255,255,255,.065)!important;
+ border-radius:8px!important;
+ box-shadow:none!important;
+ margin:0 0 16px!important;
+ overflow:hidden;
+ color:var(--library-text);
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEvent {
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ margin:0!important;border-radius:0!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEvent::before {content:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Container {
+ padding:20px!important;box-sizing:border-box;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Contents {
+ display:flex!important;align-items:center!important;gap:20px!important;padding:0!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .MediumImageContainer {
+ flex:0 0 26%!important;width:26%!important;max-width:240px;min-width:150px;
+ margin:0!important;align-self:center;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Image {
+ display:block;width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover;border-radius:4px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_TextColumn {
+ flex:1;min-width:0;margin:0!important;padding:0!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventType {
+ position:static!important;display:flex!important;align-items:baseline;gap:4px;
+ margin:0 0 8px!important;padding:0!important;min-height:0!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventType div {
+ margin:0!important;padding:0!important;font-size:12px!important;line-height:1.4!important;
+ color:var(--library-secondary)!important;font-weight:400!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Title {
+ margin:0 0 8px!important;color:var(--library-text)!important;
+ font-size:18px!important;font-weight:600!important;line-height:1.35!important;letter-spacing:normal!important;
+ white-space:normal!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Summary {
+ margin:0!important;color:var(--library-secondary)!important;font-size:14px!important;
+ line-height:1.5!important;-webkit-line-clamp:3!important;max-height:none!important;max-width:72ch;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventFeaturedHeader {
+ position:static!important;margin:16px 20px 0!important;padding:0!important;
+ background:transparent!important;color:var(--library-secondary)!important;
+ font-size:12px!important;font-weight:400!important;line-height:1.4!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .EventHeadline {
+ position:relative!important;min-height:40px;box-sizing:border-box;
+ margin:0!important;padding:12px 16px!important;background:transparent!important;border:0!important;
+ color:var(--library-secondary)!important;font-size:13px!important;line-height:1.5!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .EventActorAvatar {border-radius:4px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .EventBody {
+ margin:0!important;padding:4px 16px 16px!important;background:transparent!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.Name,.ActorName) {font-weight:600!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Desc {
+ color:var(--library-secondary)!important;font-size:14px!important;line-height:1.45!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar {
+ position:relative!important;inset:auto!important;display:flex!important;align-items:center;
+ margin:0!important;padding:8px 16px!important;min-height:36px;box-sizing:border-box;
+ border-top:1px solid rgba(255,255,255,.045);background:rgba(0,0,0,.055);
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer ._19LfMT7PFWg2xHOqNjR99q {
+ position:static!important;inset:auto!important;margin:0!important;padding:12px 16px 0!important;
+ font-size:12px!important;line-height:1.5!important;color:var(--library-secondary)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingContainer {margin:0!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.CommentButton,.LikeButton) {
+ border-radius:4px;padding:4px 6px;transition:background-color 140ms ease;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.CommentButton,.LikeButton):hover {background:rgba(255,255,255,.06);}
+/* Sidebar cards share one surface; headers participate in normal flow. */
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AppDetailsSection {
+ background:var(--library-card)!important;border:1px solid rgba(255,255,255,.065)!important;
+ border-radius:8px!important;box-shadow:none!important;overflow:hidden;margin-bottom:20px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .SectionHeader {
+ position:static!important;inset:auto!important;height:auto!important;min-height:0!important;
+ margin:0!important;padding:16px 18px 12px!important;background:transparent!important;
+ border:0!important;box-sizing:border-box;z-index:auto!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .LabelText {
+ font-size:18px!important;font-weight:600!important;line-height:1.3!important;color:var(--library-text)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AppDetailsSectionContainer {
+ margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .Body {
+ margin:0!important;padding:4px 18px 18px!important;border:0!important;background:transparent!important;
+ font-size:14px!important;line-height:1.5!important;color:var(--library-secondary)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .Highlight {
+ margin:0!important;padding:4px 18px 16px!important;border:0!important;background:transparent!important;
+ color:var(--library-secondary)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AchievementProgressContainer {
+ height:4px!important;margin-top:8px!important;border-radius:2px!important;background:#181818!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AchievementProgress {border-radius:2px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn :is(.Name,.BadgeName) {color:var(--library-text)!important;font-weight:600!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn :is(.Desc,.InstructionText,.NoneTaken,.CardsLeft,.UnlockedLabel) {
+ color:var(--library-secondary)!important;font-size:14px!important;line-height:1.5!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AppDetailsButton {
+ padding:6px 12px!important;min-height:32px!important;border-radius:4px!important;
+ font-family:inherit!important;font-size:14px!important;font-weight:400!important;
+ background:#373737!important;border:1px solid rgba(255,255,255,.08)!important;color:#f4f4f4!important;
+ max-width:100%;white-space:normal;transition:background-color 140ms ease;
+}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .AppDetailsButton:hover {background:#414141!important;}
+._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer,.RightColumn) :is(button,[role=button],[role=link]):focus-visible {
+ outline:2px solid #f4f4f4!important;outline-offset:2px;
+}
+@media(max-width:1100px) {
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Contents {gap:14px!important;}
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .MediumImageContainer {min-width:120px;}
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Title {font-size:16px!important;}
+}
+@media(prefers-reduced-motion:reduce) {
+ ._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer,.RightColumn) * {transition:none!important;}
+}
+
+/* Dates stay in a real row, rather than reserving a side gutter. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDay {display:block!important;width:100%!important;margin-bottom:20px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDate {
+ display:block!important;position:static!important;float:none!important;width:auto!important;
+ margin:8px 0!important;padding:0 2px!important;text-align:left!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Event.Panel {width:100%!important;max-width:none!important;box-sizing:border-box;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventType {border:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventMediumImage_Container {padding:18px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer > .SectionHeader {position:static!important;padding:0 0 12px!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer > .AppDetailsSectionContainer {margin:0!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .SeekTarget {margin-bottom:0!important;}
+/* The information panel uses a translucent shell and quiet grouped fields. */
+.AppGameInfoContainer ._2jPMy2QZr8bWi6yrk5ZzHA {background:transparent!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {
+ display:grid!important;grid-template-columns:108px minmax(200px,1.6fr) minmax(200px,1fr) minmax(170px,.85fr);
+ gap:20px!important;align-items:start!important;box-sizing:border-box;
+ margin:8px 20px 16px!important;padding:20px!important;width:auto!important;
+ background:rgba(255,255,255,.075)!important;backdrop-filter:blur(24px);
+ border:1px solid rgba(255,255,255,.10)!important;border-radius:8px!important;
+ color:#f3f3f3;font-family:'Segoe UI Variable Text','Segoe UI',sans-serif;
+}
+.AppGameInfoContainer .Portrait {width:108px!important;min-width:0!important;margin:0!important;}
+.AppGameInfoContainer .PortraitImage {width:108px!important;height:162px!important;border-radius:4px!important;overflow:hidden;}
+.AppGameInfoContainer .SectionContainer {margin:0!important;padding:0!important;min-width:0!important;width:auto!important;}
+.AppGameInfoContainer .GameDescription {font-size:14px!important;line-height:1.55!important;color:#e5e5e5!important;max-width:70ch;}
+.AppGameInfoContainer :is(.Stats,.FeaturesList).SectionContainer {
+ background:rgba(0,0,0,.13)!important;border-radius:4px!important;padding:12px!important;
+}
+.AppGameInfoContainer :is(.AssociationList,.Release) {display:grid!important;grid-template-columns:82px minmax(0,1fr);gap:8px;margin:0 0 10px!important;align-items:baseline;}
+.AppGameInfoContainer .Stats :is(.Label,.Name,.Date) {font-size:13px!important;line-height:1.45!important;}
+.AppGameInfoContainer .Stats .Label {color:#bdbdbd!important;}
+.AppGameInfoContainer .Stats :is(.Name,.Date) {color:#f2f2f2!important;font-weight:500!important;}
+.AppGameInfoContainer .FeaturesList>.Container {display:flex;align-items:center;gap:8px;padding:3px 0!important;margin:0 0 6px!important;}
+.AppGameInfoContainer .FeaturesList .Label {font-size:13px!important;line-height:1.4!important;color:#dedede!important;}
+.AppGameInfoContainer .FeaturesList .Icon {width:22px!important;height:18px!important;object-fit:contain;margin:0!important;opacity:.8;}
+@media(max-width:1250px) {
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {grid-template-columns:96px minmax(200px,1fr) minmax(190px,1fr);gap:16px!important;}
+ .AppGameInfoContainer .Portrait {width:96px!important;grid-row:span 2;}
+ .AppGameInfoContainer .PortraitImage {width:96px!important;height:144px!important;}
+ .AppGameInfoContainer .FeaturesList {grid-column:2 / -1;display:flex!important;flex-wrap:wrap;gap:8px 16px;}
+}
+
+/* Two explicit columns keep their gutters independent of the full-width navigation. */
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer.ColumnContainer {
+ display:grid!important;grid-template-columns:minmax(0,1fr) minmax(260px,32%);gap:24px;align-items:start;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.Spotlights:empty {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.Spotlights:not(:empty) {grid-column:1;grid-row:1;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.RightColumn {grid-column:2;grid-row:1 / span 2;float:none!important;width:auto!important;min-width:0;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.LeftColumn {grid-column:1;float:none!important;width:100%!important;min-width:0;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer:has(>.Spotlights:not(:empty))>.LeftColumn {grid-row:2;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer:not(:has(>.Spotlights:not(:empty)))>.LeftColumn {grid-row:1;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer>.AppDetailsSectionContainer,
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer>.AppDetailsSectionContainer>.Body {width:100%!important;max-width:none!important;padding:0!important;box-sizing:border-box;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar {
+ opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.LikeButton,.CommentButton,.LikeCount,.CommentCount) {opacity:1!important;visibility:visible!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Event:not(.Panel) {background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventFeatured {padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventFeaturedHeader {
+ background:transparent!important;background-image:none!important;color:#c5c5c5!important;border:0!important;box-shadow:none!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventFeaturedHeader::before {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Container {padding:18px!important;background:transparent!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Contents {display:flex!important;align-items:center;gap:20px;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Contents>.Blur {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Contents>.ImageContainer {flex:0 0 32%!important;width:32%!important;max-width:260px;min-width:150px;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Image:not(.Blur) {width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover;border-radius:4px;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_TextColumn {min-width:0;flex:1;padding:0!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Title {font-size:18px!important;font-weight:600!important;line-height:1.35!important;color:#f4f4f4!important;margin:0 0 8px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Summary {font-size:14px!important;line-height:1.5!important;color:#c5c5c5!important;}
+.AppGameInfoContainer {padding-left:0!important;padding-right:0!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {background:rgba(var(--adw-window-bg-rgb,36,36,36),.42)!important;}
+
+/* Remove the old float-layout width reservation inside the new feed column. */
+._2OOzYVWIHaKXm6_7sscT9i .LeftColumn .AppDetailsSection {width:100%!important;max-width:none!important;margin-right:0!important;box-sizing:border-box;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer>.AppDetailsSectionContainer,
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Body.InnerContainer {margin-right:0!important;margin-left:0!important;width:100%!important;max-width:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDate {
+ display:flex!important;align-items:center;gap:6px;line-height:18px!important;height:auto!important;
+ min-height:18px!important;padding:0!important;margin:12px 0 8px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDate .Rule {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDate::after {display:inline-block!important;font-size:13px!important;line-height:18px!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.PartnerEventMediumImage_Container,.PartnerEventLargeImage_Container) {padding:12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Contents) {gap:16px!important;height:auto!important;min-height:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Contents>.ImageContainer {padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.PartnerEventLargeImage_Image:not(.Blur),.PartnerEventMediumImage_Image) {display:block!important;border-radius:6px!important;box-shadow:0 3px 10px rgba(0,0,0,.24)!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.PartnerEventLargeImage_TextColumn,.PartnerEventMediumImage_TextColumn) {height:auto!important;max-height:none!important;overflow:visible!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventFeaturedHeader {margin:12px 12px 0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar {height:34px!important;min-height:34px!important;padding:4px 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.LikeButton,.CommentButton) {height:24px!important;min-height:24px!important;padding:0 4px!important;box-sizing:border-box!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer :is(.LikeCount,.CommentCount) {color:#c5c5c5!important;font-size:12px!important;}
+
+/* One thumbnail measure for both regular stories and major updates. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .MediumImageContainer,
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PartnerEventLargeImage_Contents>.ImageContainer {
+ flex:0 0 28%!important;width:28%!important;max-width:none!important;min-width:150px!important;
+ padding:0!important;margin:0!important;box-sizing:border-box!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar {padding:5px 13px!important;height:36px!important;min-height:36px!important;}
+/* Compact information layout: poster, description and facts, then two feature columns. */
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {
+ grid-template-columns:108px minmax(220px,1.3fr) minmax(220px,1fr)!important;
+ grid-template-rows:auto auto!important;gap:14px 20px!important;align-items:start!important;
+}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Portrait {grid-column:1!important;grid-row:1 / span 2!important;height:162px!important;align-self:start!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Description {grid-column:2!important;grid-row:1!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Stats {grid-column:3!important;grid-row:1!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.FeaturesList {
+ grid-column:2 / -1!important;grid-row:2!important;display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px 20px!important;
+ padding:12px!important;align-items:start!important;height:auto!important;min-height:0!important;
+}
+.AppGameInfoContainer .Portrait .PortraitImage {
+ width:108px!important;height:162px!important;padding:0!important;aspect-ratio:2/3!important;
+ box-sizing:border-box!important;border:0!important;
+}
+.AppGameInfoContainer .Portrait .PortraitImage img {
+ position:static!important;display:block!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;
+}
+.AppGameInfoContainer .FeaturesList>.Container {margin:0!important;padding:0!important;min-height:24px!important;height:auto!important;gap:8px!important;box-sizing:border-box;}
+.AppGameInfoContainer .FeaturesList>.Container::before {content:none!important;}
+.AppGameInfoContainer .FeaturesList .Icon {
+ display:block!important;padding:0!important;flex:0 0 24px!important;width:24px!important;height:20px!important;
+ min-width:24px!important;box-sizing:border-box!important;object-fit:contain!important;
+}
+@media(max-width:1050px) {
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {grid-template-columns:108px minmax(0,1fr)!important;}
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Stats {grid-column:2!important;grid-row:2!important;}
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.FeaturesList {grid-column:1 / -1!important;grid-row:3!important;}
+}
+
+/* Date and category share a row above the aligned story image and copy. */
+.ActivityFeedContainer .AppActivityDay[data-dates-in-cards]>.AppActivityDate {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Contents) {
+ display:grid!important;grid-template-columns:minmax(150px,28%) minmax(0,1fr);grid-template-rows:auto auto auto;gap:8px 16px!important;align-items:start!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_TextColumn,.PartnerEventLargeImage_TextColumn) {display:contents!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.MediumImageContainer,.PartnerEventLargeImage_Contents>.ImageContainer) {grid-column:1;grid-row:2 / span 2;width:100%!important;min-width:0!important;align-self:start!important;}
+[data-story-date] {grid-column:1;grid-row:1;align-self:center;font-size:12px;line-height:24px;color:#bdbdbd;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType {grid-column:2;grid-row:1;margin:0!important;align-self:center;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType>div:first-child {padding:3px 9px!important;background:rgba(255,255,255,.065);border-radius:999px;font-size:12px!important;line-height:18px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .DayPosted {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Title,.PartnerEventLargeImage_Title) {grid-column:2;grid-row:2;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Summary,.PartnerEventLargeImage_Summary) {grid-column:2;grid-row:3;align-self:start;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar {padding:6px 14px!important;height:38px!important;min-height:38px!important;}
+/* Five features per page, with a quiet dot navigator. */
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {grid-template-columns:108px minmax(200px,1.4fr) minmax(200px,.9fr) minmax(200px,.9fr)!important;grid-template-rows:auto!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.FeaturesList {grid-column:4!important;grid-row:1!important;display:flex!important;flex-direction:column!important;gap:6px!important;min-height:190px!important;}
+.AppGameInfoContainer .FeaturesList>[data-feature-hidden] {display:none!important;}
+[data-feature-pages] {display:flex;align-items:center;justify-content:center;gap:2px;margin-top:auto;padding-top:8px;}
+[data-feature-pages] button {display:grid;place-items:center;width:24px;height:24px;padding:0;border:0;background:transparent;cursor:pointer;border-radius:4px;}
+[data-feature-pages] button::before {content:'';width:5px;height:5px;border-radius:50%;background:#858585;transition:width 160ms ease,background-color 160ms ease;}
+[data-feature-pages] button[aria-pressed=true]::before {width:16px;border-radius:4px;background:#e0e0e0;}
+[data-feature-pages] button:focus-visible {outline:2px solid #fff;outline-offset:1px;}
+[data-accent-swatch] {width:44px!important;height:36px!important;min-width:44px;padding:0!important;border:1px solid #777!important;border-radius:4px!important;cursor:pointer;}
+[data-accent-rgb] {margin-bottom:14px;}
+[data-accent-rgb][hidden] {display:none;}
+[data-accent-rgb] label {display:grid;grid-template-columns:36px 1fr 28px;gap:8px;align-items:center;margin:8px 0;font-size:12px;}
+[data-accent-rgb] input {height:20px!important;width:100%;padding:0;accent-color:var(--adw-accent-bg,#3584e4);}
+[data-accent-rgb] output {text-align:right;font-variant-numeric:tabular-nums;}
+@media(max-width:1200px) {
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {grid-template-columns:108px minmax(0,1fr) 220px!important;}
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Description {grid-column:2!important;grid-row:1!important;}
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.Stats {grid-column:2!important;grid-row:2!important;}
+ .AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7>.FeaturesList {grid-column:3!important;grid-row:1 / span 2!important;}
+}
+/* Shared story anatomy: heading, media/copy row, and metadata/actions footer. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Contents,.PartnerEventTextOnly_Container) {
+ display:grid!important;grid-template-columns:minmax(150px,28%) minmax(0,1fr)!important;grid-template-rows:auto auto auto!important;gap:10px 16px!important;align-items:start!important;
+ height:auto!important;min-height:0!important;max-height:none!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;box-sizing:border-box!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventTextOnly_Container {padding:12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_TextColumn,.PartnerEventLargeImage_TextColumn,.PartnerEventTextOnly_TextColumn) {display:contents!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType {
+ grid-column:1 / -1!important;grid-row:1!important;justify-self:start!important;align-self:start!important;
+ display:inline-flex!important;align-items:center!important;width:max-content!important;max-width:100%;height:auto!important;min-height:0!important;
+ padding:2px 8px!important;margin:0!important;border-radius:999px!important;background:rgba(255,255,255,.065)!important;
+ color:#c5c5c5!important;font-size:10px!important;font-weight:600!important;line-height:16px!important;letter-spacing:.04em!important;text-transform:uppercase!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType>div:first-child {
+ padding:0!important;background:transparent!important;font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-title] {
+ grid-column:1 / -1!important;grid-row:2!important;margin:0 0 2px!important;padding:0!important;
+ color:#f4f4f4!important;font-size:18px!important;font-weight:600!important;line-height:1.35!important;white-space:normal!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-media] {
+ grid-column:1!important;grid-row:3!important;width:100%!important;min-width:0!important;max-width:none!important;height:auto!important;
+ aspect-ratio:16/9!important;align-self:start!important;padding:0!important;margin:0!important;box-sizing:border-box!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventTextOnly_Icon {
+ display:grid!important;place-items:center!important;border-radius:6px!important;background:rgba(255,255,255,.045)!important;
+ box-shadow:0 3px 10px rgba(0,0,0,.2)!important;color:#bdbdbd!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventTextOnly_Icon svg {width:48px!important;height:48px!important;max-width:40%!important;max-height:60%!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-summary] {
+ grid-column:2!important;grid-row:3!important;align-self:start!important;padding:0!important;margin:0!important;
+ height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;
+ color:#c5c5c5!important;font-size:14px!important;line-height:1.5!important;-webkit-line-clamp:unset!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventTextOnly_Summary {color:inherit!important;font-size:inherit!important;line-height:inherit!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .RatingBar {
+ display:flex!important;align-items:center!important;gap:12px!important;padding:8px 14px!important;height:auto!important;min-height:42px!important;justify-content:flex-end!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .RatingBar :is(.ButtonSpacer,.RatingDetails:empty) {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .RatingBar [data-story-date] {
+ display:inline-flex!important;align-items:center!important;gap:6px!important;margin:0 auto 0 0!important;padding:0!important;
+ font-family:'Segoe UI Variable Text','Segoe UI',sans-serif!important;font-size:12px!important;font-weight:400!important;line-height:20px!important;
+ font-variant-numeric:tabular-nums;color:#bdbdbd!important;letter-spacing:normal!important;white-space:nowrap!important;
+}
+[data-story-date] svg {display:block;width:14px;height:14px;flex:0 0 14px;}
+/* The expanding native wrapper must measure the complete bordered shell. */
+.AppGameInfoContainer>._2jPMy2QZr8bWi6yrk5ZzHA {display:flow-root!important;padding:8px 0 16px!important;box-sizing:border-box!important;}
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {margin:0 20px!important;}
+.AppGameInfoContainer.AppDetailsExpanded {height:auto!important;}
+.AppGameInfoContainer [data-feature-pages] button {
+ display:grid!important;place-items:center!important;position:static!important;width:24px!important;height:24px!important;min-width:24px!important;min-height:24px!important;max-width:24px!important;max-height:24px!important;
+ padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;background:transparent!important;outline:0!important;border-radius:4px!important;
+}
+.AppGameInfoContainer [data-feature-pages] button::before {content:''!important;display:block!important;width:5px!important;height:5px!important;min-width:0!important;min-height:0!important;border:0!important;border-radius:999px!important;background:#858585!important;box-shadow:none!important;}
+.AppGameInfoContainer [data-feature-pages] button[aria-pressed=true]::before {width:14px!important;background:#e0e0e0!important;}
+.AppGameInfoContainer [data-feature-pages] button:focus-visible {outline:2px solid #fff!important;outline-offset:1px!important;}
+/* A single compact Activity card contains its heading and composer. */
+.ActivityFeedContainer[data-composer-card]>.SectionHeader {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PostTextEntry.AddToFeed {
+ display:block!important;position:relative!important;padding:16px!important;margin:0 0 16px!important;min-height:0!important;height:auto!important;
+ background:var(--library-card)!important;border:1px solid rgba(255,255,255,.065)!important;border-radius:8px!important;box-shadow:none!important;box-sizing:border-box!important;
+}
+[data-composer-heading] {font-family:inherit!important;font-size:18px!important;font-weight:600!important;line-height:1.3!important;color:#f4f4f4!important;padding:0!important;margin:0 0 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PostTextEntryArea {
+ display:block!important;position:static!important;box-sizing:border-box!important;width:100%!important;height:56px!important;min-height:56px!important;padding:12px!important;margin:0!important;
+ border:1px solid rgba(255,255,255,.06)!important;border-radius:4px!important;background:rgba(0,0,0,.09)!important;font-family:inherit!important;font-size:14px!important;line-height:1.5!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PostTextEntry .Controls {position:static!important;height:auto!important;min-height:0!important;margin-top:8px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .PostTextEntry:not(:focus-within) .Controls {display:none!important;}
+/* Shared sidebar spacing with room for button wrapping. */
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.RightColumn {padding-top:var(--library-sidebar-inset,0px)!important;box-sizing:border-box!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .SectionHeader {padding:16px 16px 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .Body {padding:0 16px 16px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .Highlight {padding:0 16px 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .ButtonContainer {display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;padding:0!important;margin:12px 0 0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .ButtonContainer .AppDetailsButton {position:static!important;float:none!important;margin:0!important;min-width:0!important;max-width:100%!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn :is(.NoneTaken,.InstructionText) {margin:0 0 8px!important;}
+/* Clear the native negative date gutter above the first story. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .AppActivityDay {margin:0 0 16px!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .RightColumn .SeekTarget {padding-top:0!important;margin-top:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType * {text-transform:uppercase!important;letter-spacing:.04em!important;font-size:10px!important;font-weight:600!important;line-height:16px!important;}
+/* The heading and compact category share one header; short copy sits with its media. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Contents,.PartnerEventTextOnly_Container) {
+ grid-template-columns:minmax(150px,28%) minmax(0,1fr) max-content!important;grid-template-rows:auto auto!important;row-gap:12px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-title] {grid-column:1 / 3!important;grid-row:1!important;align-self:center!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType {grid-column:3!important;grid-row:1!important;align-self:start!important;justify-self:end!important;max-width:200px;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-media] {grid-column:1!important;grid-row:2!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-summary] {grid-column:2 / -1!important;grid-row:2!important;align-self:center!important;}
+@media(max-width:1100px) {
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is(.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Contents,.PartnerEventTextOnly_Container) {grid-template-columns:minmax(120px,32%) minmax(0,1fr)!important;grid-template-rows:auto auto auto!important;}
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] .PartnerEventType {grid-column:1 / -1!important;grid-row:1!important;justify-self:start!important;}
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-title] {grid-column:1 / -1!important;grid-row:2!important;}
+ ._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] :is([data-story-media],[data-story-summary]) {grid-row:3!important;}
+}
+/* Community media, guides and their actions use the same card material. */
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer {font-family:'Segoe UI Variable Text','Segoe UI',sans-serif;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .CommunityItem:not(.Blank) {
+ background:#2b2b2b!important;border:1px solid rgba(255,255,255,.065)!important;border-radius:8px!important;box-shadow:none!important;overflow:hidden!important;box-sizing:border-box!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .ChildItem {background:transparent!important;box-shadow:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer :is(.ArtItem,.PreviewContainer) {background:transparent!important;box-shadow:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Preview {border-radius:6px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .DescriptionRow {padding:6px 10px!important;background:rgba(var(--adw-window-bg-rgb,36,36,36),.8)!important;color:#ededed!important;font-size:14px!important;line-height:1.4!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .AuthorSection {padding:12px 12px 48px!important;min-height:88px!important;height:auto!important;box-sizing:border-box!important;border-top:1px solid rgba(255,255,255,.045)!important;background:transparent!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .AuthorName {font-size:13px!important;line-height:1.4!important;color:#c5c5c5!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .AuthorSection .Avatar {width:28px!important;height:28px!important;min-width:28px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .CommunityItem .Controls {
+ position:absolute!important;left:auto!important;right:12px!important;bottom:10px!important;transform:none!important;
+ display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:6px!important;padding:0!important;margin:0!important;height:28px!important;opacity:1!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control {display:flex!important;align-items:center!important;gap:5px!important;padding:0 6px!important;min-height:28px!important;background:rgba(255,255,255,.055)!important;border:1px solid rgba(255,255,255,.06)!important;border-radius:4px!important;box-sizing:border-box!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Button {display:grid!important;place-items:center!important;width:20px!important;height:24px!important;background:transparent!important;border:0!important;margin:0!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Count {margin:0!important;padding:0!important;color:#c5c5c5!important;font-size:12px!important;line-height:18px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Controls svg {color:#d6d6d6!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control:not(.Active) svg path {fill:currentColor!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide {padding:16px!important;background:transparent!important;box-sizing:border-box!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .TopSection {padding:0!important;margin:0 0 12px!important;background:transparent!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .GuideTitle {display:inline-flex!important;width:max-content!important;padding:2px 8px!important;margin:0 0 10px!important;border-radius:999px!important;background:rgba(255,255,255,.065)!important;color:#c5c5c5!important;font-size:10px!important;font-weight:600!important;line-height:16px!important;letter-spacing:.04em!important;text-transform:uppercase!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .TopSectionInner {display:flex!important;align-items:flex-start!important;gap:12px!important;padding:0!important;background:transparent!important;border:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .TopSectionInner img {width:80px!important;height:80px!important;flex:0 0 80px!important;object-fit:cover!important;border-radius:6px!important;box-shadow:0 3px 10px rgba(0,0,0,.2)!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .Title {font-size:16px!important;font-weight:600!important;line-height:1.35!important;color:#f4f4f4!important;padding:0!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Guide .Description {font-size:14px!important;line-height:1.5!important;color:#c5c5c5!important;padding:0!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer [data-story-layout] [data-story-title] {font-size:20px!important;font-weight:700!important;line-height:1.3!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Icon16:not(.Selected) {filter:grayscale(1) brightness(1.7);}
+[data-story-heading-icon] {display:inline-block!important;width:20px!important;height:20px!important;margin:0 8px 0 0!important;vertical-align:-3px!important;overflow:visible!important;color:#d6d6d6!important;}
+/* Community actions remain visible, left-aligned, and contained in their footer. */
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .CommunityItem .Controls {
+ left:12px!important;right:auto!important;justify-content:flex-start!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Controls :is(.Control,.Button,.Count,.Icon16) {visibility:visible!important;opacity:1!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control {align-items:center!important;gap:5px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control>.Button {order:0!important;display:grid!important;place-items:center!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control>.Count {order:1!important;line-height:18px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Icon16 {display:block!important;position:static!important;inset:auto!important;transform:none!important;flex:0 0 16px!important;width:16px!important;height:18px!important;margin:0!important;padding:0!important;background-position:center!important;background-repeat:no-repeat!important;background-size:16px 16px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .CommunityItem>.MenuButton {visibility:visible!important;opacity:1!important;}
+
+/* Community actions have one stable size in both pointer states. */
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Controls .Control,
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .CommunityItem:hover .Controls .Control {
+ transform:none!important;scale:1!important;transition:background-color 140ms ease!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control span.Icon16 {
+ background:none!important;background-color:currentColor!important;filter:none!important;color:#d6d6d6!important;
+ mask-position:center!important;mask-size:16px 16px!important;mask-repeat:no-repeat!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control span.Icon16.Selected {color:var(--SystemAccentColorLight2,#91caff)!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Icon16.ThumbsUp {mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M7%209%2010%203c.5-1%202-.5%202%201v4h4c1%200%201.8.8%201.5%202l-1.3%206c-.2.6-.7%201-1.4%201H7zM3%209h3v8H3z%22/%3E%3C/svg%3E")!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Icon16.ThumbsDown {mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22m7%2011%203%206c.5%201%202%20.5%202-1v-4h4c1%200%201.8-.8%201.5-2l-1.3-6c-.2-.6-.7-1-1.4-1H7zM3%203h3v8H3z%22/%3E%3C/svg%3E")!important;}
+._2OOzYVWIHaKXm6_7sscT9i .CommunityContentContainer .Control .Icon16.Comments {mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M4%203h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H9l-5%203v-3a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2z%22/%3E%3C/svg%3E")!important;}
+
+/* A quiet acrylic shell receives the shared artwork reflection. */
+.AppGameInfoContainer ._37mmOlZM_8n5yJAG5CHiW7.InnerContainer {
+ position:relative!important;
+ background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.035)),rgba(12,12,12,.18)!important;
+ backdrop-filter:blur(24px) saturate(1.15) brightness(.8)!important;
+}
+/* Empty native spotlight placeholders must not reserve a grid row. */
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.Spotlights {padding:0!important;margin:0!important;min-height:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer>.Spotlights:not(:has(.Event.Panel)) {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer:not(:has(>.Spotlights .Event.Panel))>.LeftColumn {grid-row:1!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Spotlights .ActivityFeedContainer.Rollup {margin:0!important;padding:0!important;}
+
+/* Matched shortcuts reuse the same information, news and navigation surfaces. */
+[data-has-shortcut-metadata]>.AppGameInfoContainer:not([data-shortcut-info]),
+[data-has-shortcut-metadata]>.LinksSection:not([data-shortcut-links]) {display:none!important;}
+[data-shortcut-info] {position:relative;z-index:1;}
+[data-shortcut-info] .FeaturesList .Icon {display:grid;place-items:center;}
+[data-shortcut-info] .FeaturesList .Icon svg {width:20px;height:20px;}
+[data-shortcut-links] .Links {display:flex!important;align-items:center!important;justify-content:space-around!important;}
+[data-shortcut-news] {width:100%!important;min-width:0!important;}
+[data-shortcut-news]>.SectionHeader {font-size:18px!important;font-weight:600!important;color:#f4f4f4!important;line-height:1.4!important;}
+[data-shortcut-news] .shortcut-read-news {margin-left:auto;color:#dedede;font-size:12px;}
+[data-shortcut-news] :is(.shortcut-all-news,.shortcut-empty) {display:block;margin:8px 0 20px;color:#c5c5c5;font-size:13px;line-height:1.5;}
+
+/* Neutral over the solid page, artwork-tinted where reflection is present. */
+._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer .Event.Panel,.RightColumn .AppDetailsSection,.ActivityFeedContainer .PostTextEntry.AddToFeed,.CommunityContentContainer .CommunityItem:not(.Blank)) {background:rgba(255,255,255,.05)!important;backdrop-filter:blur(20px) saturate(1.1)!important;}
+@supports not (backdrop-filter:blur(1px)) {._2OOzYVWIHaKXm6_7sscT9i :is(.ActivityFeedContainer .Event.Panel,.RightColumn .AppDetailsSection,.ActivityFeedContainer .PostTextEntry.AddToFeed,.CommunityContentContainer .CommunityItem:not(.Blank)) {background:#2b2b2b!important;}}
+
+/* Matched games share the native information toggle and story header geometry. */
+[data-shortcut-info][hidden] {display:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer [data-shortcut-toggle-info]::before {content:none!important;display:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer [data-shortcut-toggle-info]>svg {display:block!important;position:static!important;width:20px!important;height:20px!important;margin:0!important;}
+[data-shortcut-news] .PartnerEventMediumImage_Title {text-decoration:none!important;display:block!important;}
+[data-shortcut-news] .shortcut-read-news {text-decoration:none;}
+[data-shortcut-news] a:hover {text-decoration:none;}
+
+/* The outer event owns the featured surface; its content adds no second plate. */
+._2OOzYVWIHaKXm6_7sscT9i .ActivityFeedContainer .Event.Panel :is(.PartnerEventMediumImage_Container,.PartnerEventLargeImage_Container,.PartnerEventTextOnly_Container) {background:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;}
+
+/* Keep matched-game links above the shared reflection, like native links. */
+[data-shortcut-links] {position:relative!important;z-index:1!important;}
+[data-shortcut-links] .Anchor {opacity:1!important;text-decoration:none!important;}
+
+/* Expand the real frosted surface without Steam's opaque transition overlay. */
+.AppGameInfoContainer .GameInfoShadow {display:none!important;}
+.AppGameInfoContainer {transition:height 220ms cubic-bezier(.2,.7,.2,1)!important;}
+.AppGameInfoContainer>._2jPMy2QZr8bWi6yrk5ZzHA {transform:none!important;transition:opacity 160ms ease!important;}
+.AppGameInfoContainer.AppDetailsExpanded {height:var(--library-info-height,auto)!important;}
+.AppGameInfoContainer.AppDetailsCollapsed {height:0!important;}
+.AppGameInfoContainer.AppDetailsCollapsed>._2jPMy2QZr8bWi6yrk5ZzHA {opacity:0!important;}
+.AppGameInfoContainer.AppDetailsExpanded>._2jPMy2QZr8bWi6yrk5ZzHA {opacity:1!important;}
+[data-game-accent-picker] {max-height:calc(100vh - 24px)!important;overflow:auto!important;}
+[data-accent-artwork] {margin:12px 0 14px;padding:0;}
+[data-accent-artwork] img {display:block;width:100%;height:auto;aspect-ratio:460/215;object-fit:cover;border-radius:6px;cursor:crosshair;}
+[data-accent-artwork] figcaption {margin-top:6px;font-size:11px;line-height:16px;color:#c5c5c5;}
+@media(prefers-reduced-motion:reduce) {.AppGameInfoContainer,.AppGameInfoContainer>._2jPMy2QZr8bWi6yrk5ZzHA {transition:none!important;}}

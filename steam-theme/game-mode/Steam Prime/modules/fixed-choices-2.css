@@ -1,0 +1,28 @@
+/* Preserved selected values; shared styling is controlled by the public palette. */
+:root {
+ --chromahonQAM__Custom-main-bg:#0f0f0f;
+ --chromahonQAM__Custom-main-bg_r:15;
+ --chromahonQAM__Custom-main-bg_g:15;
+ --chromahonQAM__Custom-main-bg_b:15;
+ --chromahonQAM__Custom-main-bg_rgb:15,15,15;
+ --chromahonQAM__Custom-main-fg:#adadad;
+ --chromahonQAM__Custom-main-fg_r:173;
+ --chromahonQAM__Custom-main-fg_g:173;
+ --chromahonQAM__Custom-main-fg_b:173;
+ --chromahonQAM__Custom-main-fg_rgb:173,173,173;
+ --chromahonQAM__Custom-pageHeader-layer1-bg-c1:hsla(0, 0%, 2%, 1);
+ --chromahonQAM__Custom-pageHeader-layer1-fg:hsla(0, 0%, 100%, 1);
+ --chromahonQAM__Custom-itemHighlight-bg-c1:hsla(0, 0%, 0%, 0.6);
+ --chromahonQAM__Custom-main-fg-hl:hsla(0, 0%, 85%, 1);
+ --chromahonQAM__Custom-item-separator:hsla(2, 1%, 41%, 0);
+ --chromahonQAM__Custom-sidebarPanel-bg:hsla(0, 0%, 0%, 1);
+ --chromahonQAM__Custom-sidebarIcon-fg:hsla(0, 0%, 71%, 0.30196078431372547);
+ --chromahonQAM__Custom-sidebarIcon-fg-hl:hsla(0, 0%, 100%, 1);
+ --chromahonQAM__Custom-sidebarIcon-bg-hl-c1:hsla(0, 0%, 30%, 1);
+ --chromahonQAM__Custom-sidebarIndicator-c1:hsla(55, 79.48717948717946%, 45%, 1);
+ --chromahonQAM__Custom-topBar-bg:hsla(0, 0%, 3%, 1);
+ --chromahonQAM__Custom-topBar-fg:hsla(0, 0%, 100%, 1);
+ --chromahonQAM__Custom-topBar-bg-hl:hsla(0, 0%, 4%, 1);
+ --chromahonQAM__Custom-topBar-fg-hl:hsla(0, 0%, 61%, 1);
+ --chromahonQAM__Custom-notifMark:hsla(345.88235294117646, 73.91304347826087%, 62%, 1);
+}

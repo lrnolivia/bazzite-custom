@@ -1,0 +1,52 @@
+/* Shared menu states, including the full-screen settings and game-properties rails. */
+:root {
+ --chromahon-sidebar-highlight:#fff;
+ --chromahon-sidebar-highlight-text:#000;
+}
+/* Current Steam exports plus the legacy module mapping used by some branches. */
+._23IDiI-F_FxXotrgpY71r8 :is(._1BbM8Qq8OL5N8gL4PYH397,.oolk0QUQxvkDdIGMGIIFU) {border-radius:var(--round-radius-size,16px)!important;}
+._23IDiI-F_FxXotrgpY71r8 :is(._3x-ZK1MiNB1Uvo7Aa6qEBs,._2ADpTpv53dcY1uFpMWO1KT) {color:var(--chromahonSM__primaryPanel-item-label,#f0f0f0)!important;}
+._23IDiI-F_FxXotrgpY71r8 :is(._1BbM8Qq8OL5N8gL4PYH397,.oolk0QUQxvkDdIGMGIIFU):is(:hover,:focus-within,:has(.gpfocus)) {background:#fff!important;animation:none!important;}
+._23IDiI-F_FxXotrgpY71r8 :is(._1BbM8Qq8OL5N8gL4PYH397,.oolk0QUQxvkDdIGMGIIFU):is(:hover,:focus-within,:has(.gpfocus)) :is(._3x-ZK1MiNB1Uvo7Aa6qEBs,._2ADpTpv53dcY1uFpMWO1KT,._3xZ3ZujYllkNRr5UdDfNmz) {color:#000!important;}
+._23IDiI-F_FxXotrgpY71r8 ._1uLVHdiiCg78BRnhqLxUID::after {background:var(--chromahonSM__primaryPanel-tabIndicator,#ffdd00)!important;animation:none!important;}
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8 {
+ width:calc(100% - 24px)!important;margin:3px 12px!important;box-sizing:border-box;
+ border-radius:var(--round-radius-size,16px)!important;overflow:hidden!important;
+}
+.mainmenu_Menu_23IDi .mainmenu_Item_2w9Tp {
+ color:var(--chromahonSM__primaryPanel-item-label,#f0f0f0)!important;
+ background:transparent!important;animation:none!important;transform:none!important;
+}
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:is(:hover,:focus-within):not(:has(.Blocked)),
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:has(.gpfocus) {
+ background:var(--chromahon-sidebar-highlight)!important;animation:none!important;
+}
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:is(:hover,:focus-within) *,
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:has(.gpfocus) * {
+ color:var(--chromahon-sidebar-highlight-text)!important;animation:none!important;
+}
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:is(:hover,:focus-within) .mainmenu_Item_2w9Tp,
+.mainmenu_Menu_23IDi .mainmenu_ItemOuter_1BbM8:has(.gpfocus) .mainmenu_Item_2w9Tp {background:transparent!important;}
+.BasicUI :is(._1d6VIquCc410kNE7rDAje6,._2kwFFHckg8jvnwJfg9-la8) {
+ background:var(--chromahonSM__primaryPanel-bg,#000)!important;
+}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO) {
+ width:calc(100% - 24px)!important;margin:4px 12px!important;box-sizing:border-box!important;
+ border-radius:var(--round-radius-size,16px)!important;border:0!important;clip-path:none!important;
+ color:var(--chromahonSM__primaryPanel-item-label,#f0f0f0)!important;
+ background:transparent!important;animation:none!important;transform:none!important;position:relative;
+}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO) :is(span,svg,._2PPbMrzl8PKBwpkjYs9b0i) {color:inherit!important;}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO):is(.gpfocus,:hover,:focus-visible,._1ELdDY5kb5jxjXe-FpWBo5,._2DpXjzK3WWsOtUWUrcuOG7,[aria-selected=true]) {
+ background:var(--chromahon-sidebar-highlight)!important;color:var(--chromahon-sidebar-highlight-text)!important;
+ box-shadow:none!important;animation:none!important;
+}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO):is(.gpfocus,:hover,:focus-visible,._1ELdDY5kb5jxjXe-FpWBo5,._2DpXjzK3WWsOtUWUrcuOG7,[aria-selected=true]) * {
+ color:var(--chromahon-sidebar-highlight-text)!important;
+}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO)::before,
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO)::after {content:none!important;background:none!important;animation:none!important;}
+.BasicUI :is(._2mL2HfT5AkDXRi1YBnRWKa._1ELdDY5kb5jxjXe-FpWBo5,._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7,[aria-selected=true]._1-vlriAtKYDViAEunue4VO)::before {
+ content:''!important;position:absolute;left:8px;top:50%;transform:translateY(-50%);
+ width:8px;height:8px;border-radius:50%;background:var(--chromahonSM__primaryPanel-tabIndicator,#ffdd00)!important;
+}

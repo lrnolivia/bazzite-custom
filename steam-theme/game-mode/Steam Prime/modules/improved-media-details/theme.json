@@ -1,0 +1,28 @@
+{
+  "name": "Improved Media Details",
+  "author": "Matthias#8282",
+  "manifest_version": 3,
+  "inject": {
+    "shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess"
+    ]
+  },
+  "patches": {
+    "Always Show Details": {
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "alldetails.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      }
+    }
+  },
+  "id": "7708d24d-752f-42e5-8cab-789098906e64"
+}

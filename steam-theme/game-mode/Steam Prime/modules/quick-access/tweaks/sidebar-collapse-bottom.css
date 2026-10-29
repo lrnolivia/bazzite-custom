@@ -1,0 +1,11 @@
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    align-self: flex-end;
+}
+
+/* Content Panel Rounded Adjustments */
+._2BB6uf--jFaAmdnwLOqMU7 {
+    border-top-left-radius: var(--chromahonQAM__tweakOn-sidebarLayout-collapseBottom-tl-radius);
+    border-top-right-radius: var(--chromahonQAM__tweakOn-sidebarLayout-collapseBottom-tr-radius);
+    border-bottom-left-radius: var(--chromahonQAM__tweakOn-sidebarLayout-collapseBottom-bl-radius);
+    border-bottom-right-radius: var(--chromahonQAM__tweakOn-sidebarLayout-collapseBottom-br-radius);
+}

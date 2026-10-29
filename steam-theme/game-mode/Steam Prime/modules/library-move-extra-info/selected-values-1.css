@@ -1,0 +1,8 @@
+/* Current selected values retained during consolidation. */
+:root {
+ --library-extra-info-left:0px;
+ --library-extra-info-right:0px;
+ --library-extra-info-focus-left:5px;
+ --library-extra-info-bottom:-10px;
+ --library-extra-info-radius-size:10px;
+}

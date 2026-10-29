@@ -1,0 +1,38 @@
+{
+  "name": "Compact Activity & News",
+  "version": "v1.0",
+  "author": "Jonius7",
+  "manifest_version": 9,
+  "tabs": {
+    "library": [
+      "desktop"
+    ]
+  },
+  "patches": {
+    "Activity & News": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "gamepage_activitynews.css": [
+            "library"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Events": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "gamepage_events.css": [
+            "library"
+          ]
+        },
+        "No": {}
+      }
+    }
+  },
+  "id": "c69315d7-e8d3-4b0e-994d-a6a9b215b675"
+}

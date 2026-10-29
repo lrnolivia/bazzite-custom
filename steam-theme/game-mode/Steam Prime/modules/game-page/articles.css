@@ -1,0 +1,32 @@
+/* Opened news articles use the same HIS surfaces as their feed cards. */
+.BasicUI [class~='BasicPartnerEvent'] {
+ background:color-mix(in srgb,var(--prime-surface,#222220) 66%,transparent)!important;background-image:none!important;
+ backdrop-filter:blur(24px)!important;-webkit-backdrop-filter:blur(24px)!important;
+ color:var(--prime-text,#f2f1ee)!important;border:1px solid var(--prime-border,#3d3d38)!important;
+ border-radius:var(--prime-card-radius,8px)!important;overflow:hidden!important;box-shadow:var(--prime-shadow)!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='EventCoverImageBackground'],[class~='EventBackgroundBlur']) {display:none!important;}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='LibraryEventTitleContainer'],[class~='LibraryEventBodyContainer'],[class~='EventDetailsBody'],[class~='EventBodyCtn'],[class~='EventBody'],[class~='EventDetailTitleContainer']) {
+ background:transparent!important;background-image:none!important;color:var(--prime-text)!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='EventDetailTitle'],[class~='GameIconAndName'],[class~='Header2'],[class~='Header3']) {color:var(--prime-text)!important;}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='EventTypeAndTimeRow'],[class~='EventDetailTimeInfo'],[class~='EventDetailsSubTitle']) {color:var(--prime-secondary)!important;}
+.BasicUI [class~='BasicPartnerEvent'] a {color:var(--prime-focus)!important;}
+.BasicUI [class~='BasicPartnerEvent'] :is(button,[role='button'],[class~='Button'],[class~='DialogButton']) {
+ background:var(--prime-raised)!important;background-image:none!important;color:var(--prime-text)!important;
+ border:0!important;border-radius:var(--prime-radius)!important;box-shadow:none!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is(button,[role='button'],[class~='Button'],[class~='DialogButton']):is(:hover,:focus-visible,.gpfocus) {
+ background:#fff!important;color:var(--prime-menu-highlight-text)!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is(button,[role='button'],[class~='Button'],[class~='DialogButton']) svg {color:inherit!important;}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='VoteContainer'],[class~='DiscussContainer'],[class~='LibraryEventFooter']) {
+ background:transparent!important;background-image:none!important;color:var(--prime-secondary)!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='VoteContainer'],[class~='DiscussContainer']) :is(span,svg,[class~='VoteCount'],[class~='DiscussCount'],[class~='VoteIcon'],[class~='DiscussIcon']) {
+ color:inherit!important;
+}
+.BasicUI [class~='BasicPartnerEvent'] :is([class~='VoteContainer'],[class~='DiscussContainer']) :is([class~='Active'],[class~='VotedUp'],[aria-pressed='true']) {color:var(--prime-enabled)!important;}
+.BasicUI [class~='BasicPartnerEvent'] :is(button,[role='button'],[class~='Button'],[class~='DialogButton']) {
+ background:rgba(255,255,255,.1)!important;
+}

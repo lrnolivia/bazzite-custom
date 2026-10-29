@@ -1,0 +1,93 @@
+/* Home shares the game-page materials without changing the Beta carousel layout. */
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventPreviewContainer'],
+.BasicUI [class~='RecentlyCompleted'] [class~='RecentlyCompletedItem'],
+.BasicUI [class~='StoreCarouselCtn'] [class~='GameCapsule'] {
+ background:rgba(255,255,255,.09)!important;background-image:none!important;
+ border-radius:var(--prime-card-radius,8px)!important;overflow:hidden!important;
+ backdrop-filter:blur(18px)!important;-webkit-backdrop-filter:blur(18px)!important;
+ color:var(--prime-text)!important;
+}
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventImageWrapper'] {border-radius:var(--prime-card-radius,8px) var(--prime-card-radius,8px) 0 0!important;overflow:hidden!important;aspect-ratio:16/9!important;}
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventImageWrapper'] img {border-radius:inherit!important;}
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventInfo'],
+.BasicUI [class~='RecentlyCompleted'] :is([class~='TopSection'],[class~='BottomSection']),
+.BasicUI [class~='StoreCarouselCtn'] [class~='BottomBar'] {background:transparent!important;background-image:none!important;color:var(--prime-text)!important;}
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventInfo'] {padding:12px!important;box-sizing:border-box!important;}
+.BasicUI [class~='BasicHomeUpdates'] [class~='Darkener'] {background:rgba(0,0,0,.08)!important;mix-blend-mode:normal!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='LandscapeImage'] {border-radius:0!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSaleNewItem'] {background:var(--prime-focus)!important;color:var(--prime-canvas)!important;}
+.BasicUI [class~='BasicHomeUpdates'] :is([class~='EventType'],[class~='AppName']),
+.BasicUI [class~='RecentlyCompleted'] [class~='BottomSection'] {color:var(--prime-secondary)!important;}
+.BasicUI [class~='BasicHomeUpdates'] [class~='EventPreviewContainer']::after,
+.BasicUI [class~='StoreCarouselCtn'] [class~='GameCapsule']::after {border-radius:inherit!important;}
+.BasicUI [class~='BasicHome'] :is([class~='TabbedContent'],[class~='TabContents'],[class~='BasicHomeUpdates']) {background:transparent!important;}
+.BasicUI [class~='BasicHome'] [class~='ScrollArea'] {position:relative!important;isolation:isolate;background:#000!important;}
+.BasicUI [data-prime-home-reflection] {
+ position:absolute;left:0;right:0;top:var(--prime-home-reflection-top,700px);
+ height:calc(100vh + 100px);z-index:-1;pointer-events:none;overflow:hidden;
+ mask-image:linear-gradient(to bottom,transparent,#000 120px,#000 65%,transparent);
+ -webkit-mask-image:linear-gradient(to bottom,transparent,#000 120px,#000 65%,transparent);
+}
+.BasicUI [data-prime-home-reflection]::before {
+ content:'';position:absolute;inset:-40px;background-image:var(--prime-home-art);
+ background-size:cover;background-position:center;transform:scaleY(-1);
+ filter:blur(36px) saturate(1.15) brightness(.65);opacity:.6;
+}
+/* Native Home positions tab content against its own scroll plane. */
+.BasicUI [class~='BasicHome'] [class~='RecentGamesBackgroundImages'] {
+ mask-image:linear-gradient(to bottom,rgba(0,0,0,.85),#000 20%,#000)!important;
+ -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.85),#000 20%,#000)!important;
+}
+.BasicUI [class~='BasicHome'] [class~='RecentGamesBackgroundImages']::after {
+ content:'';position:absolute;left:0;right:0;bottom:0;height:300px;z-index:2;pointer-events:none;
+ background:linear-gradient(to bottom,transparent,rgba(0,0,0,.07) 18%,rgba(0,0,0,.2) 36%,rgba(0,0,0,.48) 54%,rgba(0,0,0,.8) 72%,#000 90%);
+}
+/* The card owns its artwork clipping; focus effects can extend beyond it. */
+.BasicUI [class~='StoreCarouselCtn'] [class~='GameCapsule'] {overflow:visible!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='LandscapeImage'] {
+ border-radius:var(--prime-card-radius,8px) var(--prime-card-radius,8px) 0 0!important;
+}
+.BasicUI [class~='StoreCarouselCtn'] [class~='BottomBar'] {
+ align-items:center!important;min-height:40px!important;height:auto!important;padding:6px 10px!important;
+ box-sizing:border-box!important;gap:8px!important;
+ border-radius:0 0 var(--prime-card-radius,8px) var(--prime-card-radius,8px)!important;
+}
+.BasicUI [class~='StoreCarouselCtn'] [class~='PriceCtn'] {min-width:0!important;flex:1!important;height:auto!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSalePriceWidgetContainer'] {align-items:center!important;justify-content:flex-end!important;padding-right:0!important;flex-wrap:wrap!important;gap:4px!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSaleNewItem'] {border-radius:999px!important;}
+/* Recommended reuses HIS surfaces, including Steam's calendar and queue widgets. */
+.BasicUI [class~='PersonalCalendarWidgetDay'],
+.BasicUI [class~='DiscoveryQueueWidgetCtn'] {
+ background:rgba(255,255,255,.09)!important;background-image:none!important;
+ border-radius:var(--prime-card-radius,8px)!important;backdrop-filter:blur(18px)!important;
+ color:var(--prime-text)!important;
+}
+.BasicUI [class~='PersonalCalendarWidget'] :is([class~='DayTitle'],[class~='DayAppContainer']) {background:transparent!important;color:var(--prime-secondary)!important;}
+.BasicUI [class~='PersonalCalendarWidget'] [class~='Today'] {color:var(--prime-focus)!important;}
+.BasicUI [class~='PersonalCalendarWidget'] [class~='StoreAppCapsule'] {border-radius:var(--prime-card-radius,8px)!important;}
+.BasicUI [class~='PersonalCalendarWidget'] [class~='StoreAppCapsule'] img {border-radius:inherit!important;}
+.BasicUI [class~='DiscoveryQueueWidgetCtn'] [class~='WidgetHeaderCtn'] {background:transparent!important;background-image:none!important;}
+.BasicUI [class~='BasicHome'] [data-prime-focus-art] {position:relative;isolation:isolate;overflow:visible!important;}
+.BasicUI [class~='BasicHome'] [data-prime-focus-art]::before {content:none;}
+/* This layer sits outside every carousel viewport, so its glow cannot be clipped. */
+[data-prime-home-glow] {
+ position:fixed;z-index:500;pointer-events:none;box-sizing:border-box;padding:40px 48px 56px;
+ border-radius:calc(var(--prime-card-radius,8px) + 48px);opacity:.8;
+ mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);mask-clip:content-box,border-box;mask-composite:exclude;
+ -webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-clip:content-box,border-box;-webkit-mask-composite:xor;
+}
+[data-prime-home-glow]::before {content:none;}
+[data-prime-home-glow-art] {
+ position:absolute;inset:48px;width:calc(100% - 96px);height:calc(100% - 96px);
+ border-radius:var(--prime-card-radius,8px);object-fit:fill;opacity:1;
+ filter:blur(24px) saturate(3) brightness(2);
+}
+.BasicUI [class~='StoreCarouselCtn'] {margin-block:24px!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='GameCapsule'] {height:auto!important;min-height:146px!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSalePriceWidgetContainer'] {height:auto!important;min-height:24px!important;}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSalePriceBox'] {display:flex!important;align-items:center!important;height:auto!important;line-height:1.2!important;}
+.BasicUI [class~='StoreCarouselCtn'] :is([class~='StoreSalePrepurchaseLabel'],[class~='StoreSalePrePurchaseLabel']) {
+ position:static!important;inset:auto!important;background:transparent!important;color:var(--prime-secondary)!important;
+ font-size:11px!important;line-height:1.2!important;padding:2px 4px!important;
+}
+.BasicUI [class~='StoreCarouselCtn'] [class~='StoreSaleNewItem'] {line-height:1.2!important;font-size:11px!important;padding:2px 8px!important;}

@@ -1,0 +1,15 @@
+/* Current selected values retained during consolidation. */
+:root {
+ --sdkb-bg-color:#1e2127;
+ --sdkb-key-bg:#282c34;
+ --sdkb-key-bg-hover:#303542;
+ --sdkb-key-bg-pressed:#3b404c;
+ --sdkb-key-border-color:#3b404c;
+ --sdkb-key-text-color:#abb2bf;
+ --sdkb-key-text-secondary:#5c6370;
+ --sdkb-accent:#61afef;
+ --sdkb-accent-text:#0b1015;
+ --sdkb-key-radius:0;
+ --sdkb-glow:0 0 transparent;
+ --sdkb-press-scale:0.9;
+}

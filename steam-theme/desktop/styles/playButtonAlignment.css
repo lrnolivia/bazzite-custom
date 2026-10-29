@@ -1,0 +1,417 @@
+/* Full-width controls with comfortable gutters. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel {
+    width: auto !important;
+    margin: 0 24px !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box !important;
+    --playButtonColor: var(--game-play-accent, #f7f7f7);
+    --playButtonHoverColor: var(--game-play-hover, #e8e8e8);
+    --rightSideButtonColor: var(--game-play-accent, #f7f7f7);
+    --rightSideButtonHoverColor: var(--game-play-hover, #e8e8e8);
+}
+.DgVQapkBmhAW6oPY5rPZo.Panel { width: 100% !important; }
+/* No solid panel behind the in-page controls. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .PlayBar.PlayBar,
+._2OOzYVWIHaKXm6_7sscT9i .InPage .InnerContainer.InnerContainer {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .InPage .InnerContainer > * {
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,.32));
+}
+._2OOzYVWIHaKXm6_7sscT9i > :not(.Backdrop):not(.ColumnContainer) {
+    text-shadow: 0 1px 4px rgba(0,0,0,.55);
+}
+/* Dark lettering needs separation, without a second dark halo around it. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .PlayButtonContainer {
+    text-shadow: 0 1px 4px rgba(0,0,0,var(--game-play-text-shadow-opacity,.55));
+}
+/* Feather sharp artwork into the existing reflected image. */
+.HeaderBackgroundImage .ImgSrc:not(.ImgBlur) {
+    mask-image: linear-gradient(to bottom,#000 calc(100% - 64px),rgba(0,0,0,.85) calc(100% - 40px),rgba(0,0,0,.35) calc(100% - 16px),transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to bottom,#000 calc(100% - 64px),rgba(0,0,0,.85) calc(100% - 40px),rgba(0,0,0,.35) calc(100% - 16px),transparent 100%) !important;
+}
+/* Keep the reflection near the header and taper its tail. */
+.HeaderBackgroundImage .ImgBlurBackdrop.ImgBlur {
+    mask-image: linear-gradient(to bottom,#000 0,rgba(0,0,0,.9) 110px,rgba(0,0,0,.45) 230px,transparent 360px) !important;
+    -webkit-mask-image: linear-gradient(to bottom,#000 0,rgba(0,0,0,.9) 110px,rgba(0,0,0,.45) 230px,transparent 360px) !important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Backdrop .BackdropGlass.BackdropGlass {
+    position: relative !important;
+    margin-top: -64px !important;
+    height: 424px !important;
+    background: linear-gradient(to bottom,transparent 0,rgba(var(--library-page-bg-rgb,32,32,32),.04) 160px,rgba(var(--library-page-bg-rgb,32,32,32),.4) 280px,var(--library-page-bg,#202020) 424px) !important;
+    backdrop-filter: blur(22px) !important;
+    -webkit-backdrop-filter: blur(22px) !important;
+    mask-image: linear-gradient(to bottom,transparent 0,#000 64px,#000 100%) !important;
+    -webkit-mask-image: linear-gradient(to bottom,transparent 0,#000 64px,#000 100%) !important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .BackdropGlass::before,
+._2OOzYVWIHaKXm6_7sscT9i .BackdropGlass::after { content: none !important; }
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer.ColumnContainer {
+    background: linear-gradient(to bottom,transparent 0,rgba(var(--library-page-bg-rgb,32,32,32),.18) 48px,rgba(var(--library-page-bg-rgb,32,32,32),.7) 112px,var(--library-page-bg,#202020) 180px) !important;
+    min-height: calc(100vh - 48px) !important;
+    box-sizing: border-box !important;
+    backdrop-filter: none !important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer a,
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer button { text-shadow: 0 1px 3px rgba(0,0,0,.3); }
+/* The sticky surface arrives independently of its controls. */
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBar.PlayBar { background: none !important; box-shadow: none !important; }
+._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel {
+    position: relative !important;
+    isolation: isolate;
+    height: auto !important;
+    min-height: 78px !important;
+    margin: 16px 24px !important;
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+}
+._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background: rgba(var(--library-page-bg-rgb,32,32,32),.72);
+    backdrop-filter: blur(22px);
+    border: 1px solid rgba(255,255,255,.1);
+    box-shadow: 0 6px 22px rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(8px) scale(.99);
+    transition: opacity 280ms ease,transform 340ms cubic-bezier(.2,.75,.2,1);
+    pointer-events: none;
+}
+._2L3s2nzh7yCnNESfI5_dN1._39RheXihcN6H2k2muQTjkI .InnerContainer.Panel::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+/* One owner for primary-button surfaces and all label descendants. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel ._2AzIX5kl9k6JnxLfR5H4kX {
+    background: var(--game-play-accent,#f7f7f7) !important;
+    color: var(--game-play-text,#252525) !important;
+    transition: background-color 260ms ease,color 260ms ease !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel ._2AzIX5kl9k6JnxLfR5H4kX * { color: var(--game-play-text,#252525) !important; }
+._3Y87YQY56ZCOqhgcZFaDc5.Panel ._2AzIX5kl9k6JnxLfR5H4kX:hover { background: var(--game-play-hover,#e8e8e8) !important; }
+@media(prefers-reduced-motion:reduce) {
+    ._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel::before,
+    ._3Y87YQY56ZCOqhgcZFaDc5.Panel ._2AzIX5kl9k6JnxLfR5H4kX { transition: none !important; }
+}
+
+/* Keep both halves of the desktop action button at the same height. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer {
+ display: flex !important;
+ align-items: stretch !important;
+ height: 46px !important;
+ border-radius: 4px !important;
+ overflow: hidden !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer > .ButtonChild {
+ display: flex !important;
+ align-items: center !important;
+ justify-content: center !important;
+ gap: 10px !important;
+ height: 100% !important;
+ min-height: 0 !important;
+ margin: 0 !important;
+ box-sizing: border-box !important;
+ border-radius: 0 !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer > .ButtonChild:not(.PlayButton) {
+ flex: 0 0 36px !important;
+ padding: 0 !important;
+ border-left: 1px solid rgba(255,255,255,.12) !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButton.ButtonChild > svg.SVGIcon_Play {
+ display: block !important;
+ position: static !important;
+ width: 19px !important;
+ height: 19px !important;
+ margin: 0 !important;
+ flex: 0 0 19px !important;
+ fill: currentColor !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButton.ButtonChild > svg.SVGIcon_Play path {
+ fill: currentColor !important;
+}
+/* A small artwork lockup replaces the sticky icon and name. */
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBarIconAndGame {
+ align-items: center !important;
+ min-width: 0 !important;
+}
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBarIconAndGame[data-logo-ready="true"] > :not([data-floating-game-logo]) {
+ display: none !important;
+}
+[data-floating-game-logo] {
+ display: block !important;
+ width: auto !important;
+ max-width: min(220px,22vw) !important;
+ height: 44px !important;
+ object-fit: contain !important;
+ object-position: left center !important;
+ filter: drop-shadow(0 2px 4px rgba(0,0,0,.35));
+}
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBarGameName {
+ font-size: 20px !important;
+ font-weight: 600 !important;
+ line-height: 1.2 !important;
+ color: #f6f6f6 !important;
+}
+/* Frosted navigation surface over the reflected artwork. */
+._2OOzYVWIHaKXm6_7sscT9i .DgVQapkBmhAW6oPY5rPZo.Links.Panel {
+ width: calc(100% - 88px) !important;
+ margin: 16px 44px 20px !important;
+ border-radius: 8px !important;
+ background: rgba(255,255,255,.12) !important;
+ border: 1px solid rgba(255,255,255,.16) !important;
+ backdrop-filter: blur(18px) !important;
+ box-shadow: 0 3px 14px rgba(0,0,0,.1);
+ overflow: hidden;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .LinkInner { top: 0 !important; }
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel :is(.Anchor,.Link,.Text) {
+ color: #f8f8f8 !important;
+ opacity: 1 !important;
+ font-weight: 500 !important;
+ text-shadow: 0 1px 3px rgba(0,0,0,.45) !important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor:hover {
+ background: rgba(255,255,255,.1) !important;
+}
+
+/* Cover empty pages after the reflection fades. */
+._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i {
+ min-height: 100vh !important;
+ background: linear-gradient(to bottom,transparent 0,transparent 260px,var(--library-page-bg,#202020) 424px) !important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButton .ButtonText { margin-left: 0 !important; }
+[data-game-accent-control] {
+ display: grid; place-items: center; width: 32px; height: 32px; padding: 6px;
+ border: 0; border-radius: 4px; background: rgba(255,255,255,.06); color: #dedede;
+ cursor: pointer; margin-right: 8px;
+}
+[data-game-accent-control]:hover {background:rgba(255,255,255,.12);color:#fff;}
+[data-game-accent-control]:focus-visible {outline:2px solid #fff;outline-offset:2px;}
+[data-game-accent-control] svg {display:block!important;width:20px;height:20px;fill:currentColor;}
+[data-game-accent-picker] {
+ position:fixed;inset:auto;margin:0;width:312px;box-sizing:border-box;padding:20px;
+ background:#2c2c2c;color:#f5f5f5;border:1px solid rgba(255,255,255,.16);border-radius:8px;
+ box-shadow:0 8px 32px rgba(0,0,0,.35);font:14px/1.45 'Segoe UI Variable Text','Segoe UI',sans-serif;
+}
+[data-game-accent-picker] h3 {margin:0 0 6px;font-size:18px;font-weight:600;}
+[data-game-accent-picker] p {margin:0 0 16px;color:#cecece;}
+[data-game-accent-picker] .accent-picker-row {display:flex;gap:12px;margin-bottom:16px;}
+[data-game-accent-picker] input {box-sizing:border-box;min-width:0;height:36px;border:1px solid #666;border-radius:4px;background:var(--library-page-bg,#202020);color:#fff;font:inherit;}
+[data-game-accent-picker] input[type=color] {width:44px;padding:3px;cursor:pointer;}
+[data-game-accent-picker] input[type=text] {flex:1;padding:6px 10px;}
+[data-game-accent-picker] .accent-picker-actions {display:flex;gap:8px;}
+[data-game-accent-picker] button {padding:7px 12px;border:1px solid #666;border-radius:4px;background:#3b3b3b;color:#fff;font:inherit;cursor:pointer;}
+[data-game-accent-picker] button:hover {background:#474747;}
+[data-game-accent-picker] :is(button,input):focus-visible {outline:2px solid #fff;outline-offset:2px;}
+[data-game-accent-picker] .accent-picker-status {margin:12px 0 0;min-height:0;font-size:12px;line-height:18px;}
+[data-game-accent-picker] .accent-picker-status:empty {display:none;}
+
+/* Shared content edge, aligned with the game information panel. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .InnerContainer.Panel {margin:0 20px!important;padding:16px 0!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer > .PlayButton.ButtonChild {
+ justify-content:flex-start!important;padding:0 20px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection {margin:8px 20px 12px!important;padding:0!important;width:auto!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection .AppDetailsSectionContainer,
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection .LinksSectionBody {margin:0!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection .DgVQapkBmhAW6oPY5rPZo.Links.Panel {
+ display:flex!important;align-items:center;justify-content:space-between;flex-wrap:wrap;
+ gap:4px;width:100%!important;height:auto!important;min-height:40px;box-sizing:border-box;
+ margin:0!important;padding:3px 8px!important;border-radius:999px!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .LinkInner {position:static!important;flex:1 1 auto;height:auto!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor {display:flex;align-items:center;justify-content:center;min-height:32px;border-radius:999px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .ColumnContainer.ColumnContainer {padding:8px 20px 24px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LeftColumn {padding:0!important;margin:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LeftColumn>.SeekTarget>.AppDetailsSection {padding:0!important;}
+/* Native form controls use the system appearance. */
+[data-game-accent-picker] {color-scheme:light dark;}
+[data-game-accent-picker] input[type=color] {color-scheme:light dark;}
+@media(prefers-color-scheme:light) {
+ [data-game-accent-picker] {background:#f3f3f3;color:var(--library-page-bg,#202020);border-color:#ccc;}
+ [data-game-accent-picker] p {color:#494949;}
+ [data-game-accent-picker] :is(input,button) {background:#fff;color:var(--library-page-bg,#202020);border-color:#aaa;}
+ [data-game-accent-picker] button:hover {background:#e8e8e8;}
+ [data-game-accent-picker] :is(button,input):focus-visible {outline-color:var(--library-page-bg,#202020);}
+}
+[data-artwork-eyedropper] {position:fixed;inset:0;z-index:2147483647;cursor:crosshair;background:transparent;outline:none;}
+[data-artwork-eyedropper] .artwork-picker-hint {position:absolute;top:20px;left:50%;transform:translateX(-50%);padding:12px 18px;border-radius:8px;background:#252525;color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.3);font:14px 'Segoe UI',sans-serif;pointer-events:none;}
+[data-artwork-eyedropper] .artwork-picker-preview {position:fixed;width:auto;min-width:100px;padding:8px 12px;border:1px solid #aaa;border-radius:6px;background:#222;color:#fff;font:13px 'Segoe UI',sans-serif;pointer-events:none;box-shadow:0 3px 12px rgba(0,0,0,.3);}
+[data-artwork-eyedropper] .artwork-picker-preview span {display:inline-block;width:18px;height:18px;vertical-align:middle;margin-right:8px;border:1px solid #ccc;border-radius:3px;}
+
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection {margin:8px 0 12px!important;}
+
+/* Compact full-bleed navigation: a single dark pill with no nested hover fill. */
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection .DgVQapkBmhAW6oPY5rPZo.Links.Panel {
+ padding:2px 12px!important;min-height:34px!important;gap:0!important;
+ background:rgba(20,20,20,.52)!important;border:1px solid rgba(255,255,255,.10)!important;box-shadow:none!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .LinkInner {padding:0!important;margin:0!important;box-sizing:border-box!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel :is(.Anchor,.Link) {
+ height:28px!important;min-height:28px!important;padding:0 10px!important;margin:0!important;
+ background:transparent!important;border:0!important;box-shadow:none!important;box-sizing:border-box!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel :is(.Anchor,.Link):hover {background:transparent!important;box-shadow:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Text {line-height:28px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor:hover .Text {color:#fff!important;text-decoration:underline;text-underline-offset:3px;}
+
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer {width:auto!important;flex:0 0 auto!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.PlayButton.ButtonChild {width:140px!important;min-width:140px!important;flex:0 0 140px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection {margin:8px 20px 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .LinksSection .DgVQapkBmhAW6oPY5rPZo.Links.Panel {
+ background:rgba(255,255,255,.055)!important;border-color:rgba(255,255,255,.09)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel :is(.Anchor,.Link,.Text) {color:#c9c9c9!important;font-weight:400!important;text-shadow:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor:hover {background:rgba(255,255,255,.075)!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor:hover .Text {color:#ededed!important;text-decoration:none!important;}
+
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer {width:fit-content!important;min-width:0!important;}
+
+/* Hover capsules hug their labels instead of filling the whole segment. */
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .LinkInner {display:flex!important;justify-content:center!important;align-items:center!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Anchor {display:inline-flex!important;width:max-content!important;max-width:100%;height:24px!important;min-height:24px!important;padding:0 12px!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Link {height:24px!important;min-height:24px!important;padding:0!important;}
+._2OOzYVWIHaKXm6_7sscT9i .Links.Panel .Text {line-height:24px!important;}
+
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.ButtonChild:not(.PlayButton)::before {color:var(--game-play-glyph,var(--game-play-text,#252525))!important;}
+
+/* One total action width, with or without a dropdown. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.PlayButton.ButtonChild:only-child {width:176px!important;min-width:176px!important;flex-basis:176px!important;}
+/* Let the entire logo fit inside the sticky header's old icon slot. */
+._2L3s2nzh7yCnNESfI5_dN1 :is(.StatusAndStats,.StatusNameContainer,.PlayBarIconAndGame) {height:auto!important;min-height:46px!important;max-height:none!important;overflow:visible!important;align-items:center!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBarIconAndGame>[data-floating-game-logo] {
+ width:220px!important;height:40px!important;max-height:40px!important;object-fit:contain!important;
+ object-position:left center!important;transform:none!important;clip-path:none!important;mask-image:none!important;
+}
+
+/* Make centering the default for every game's hero logo. */
+.Header .BoxSizerValidRegion>.BoxSizer {
+ left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;
+ max-width:72%!important;max-height:70%!important;
+}
+.Header .TitleImageContainer>.TitleLogo {object-fit:contain!important;object-position:center!important;}
+.HeaderFeatures>.InCollection {
+ border-radius:999px!important;padding:5px 14px!important;line-height:20px!important;
+ height:auto!important;min-height:0!important;box-sizing:border-box;
+ background:rgba(20,20,20,.24)!important;border:1px solid rgba(255,255,255,.16)!important;
+}
+/* The shared parent paints behind the hero, reflection, and every short page. */
+._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {background:var(--library-page-bg,#202020)!important;min-height:100%;}
+/* Keep native negative-z hero art above the page's solid base. */
+._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {isolation:isolate!important;}
+.HeaderFeatures>.InCollection {padding:3px 12px!important;line-height:18px!important;font-size:11px!important;font-weight:600!important;}
+/* Preserve Steam's perspective-based hero sizing; paint the base on the scrollport. */
+._1SvpjsckP9cPRxO6gCBHrw:has(.HeaderBackgroundImage) {background:transparent!important;isolation:auto!important;}
+.AppDetailsMain .ScrollContainer {background-color:var(--library-page-bg,#202020)!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control] {background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.1)!important;color:#f4f4f4!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control]:hover {background:rgba(255,255,255,.19)!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control] svg {color:#f4f4f4!important;}
+/* Hero art is sized by its own frame, without the native doubled parallax plane. */
+.Header .HeaderBackgroundImage {transform:none!important;}
+/* Fixed controls use one row even when a game has a family-sharing status line. */
+._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel {min-height:78px!important;padding:16px 20px!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel>.Row {display:flex!important;align-items:center!important;height:46px!important;min-height:46px!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .InnerContainer.Panel>div:has(>.SharedLibrary) {display:none!important;}
+._2L3s2nzh7yCnNESfI5_dN1 :is(.StatusAndStats,.StatusNameContainer) {height:46px!important;min-height:46px!important;max-height:46px!important;overflow:visible!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .GameStatsSection {display:none!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .PlayBarIconAndGame {position:static!important;height:46px!important;min-height:46px!important;align-items:center!important;}
+._2L3s2nzh7yCnNESfI5_dN1 .RightControls {height:46px!important;justify-content:center!important;}
+/* One Fluent glyph per utility action, with shared geometry and surface. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer {display:flex!important;align-items:center!important;gap:8px!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer>.MenuButtonContainer {width:32px!important;height:32px!important;margin:0!important;padding:0!important;flex:0 0 32px!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer :is(.MenuButton,[data-game-accent-control]) {
+ display:grid!important;place-items:center!important;box-sizing:border-box!important;position:relative!important;
+ width:32px!important;height:32px!important;min-width:32px!important;flex:0 0 32px!important;padding:0!important;margin:0!important;
+ background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.1)!important;border-radius:4px!important;color:#f4f4f4!important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer :is(.MenuButton,[data-game-accent-control]):hover {background:rgba(255,255,255,.19)!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer .MenuButton>svg,
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer .MenuButton>.DotDotDot {display:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppButtonsContainer .MenuButton::before {
+ display:block!important;position:static!important;inset:auto!important;transform:none!important;width:20px!important;height:20px!important;
+ padding:0!important;margin:0!important;line-height:20px!important;font-size:22px!important;text-align:center!important;color:inherit!important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control]>svg {position:static!important;inset:auto!important;transform:none!important;display:block!important;width:20px!important;height:20px!important;margin:0!important;color:inherit!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel [data-game-accent-control] circle {fill:currentColor!important;}
+/* Center the Play glyph and label as a group in each action surface. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.PlayButton.ButtonChild {justify-content:center!important;text-align:center!important;}
+
+/* One reflected artwork plane flows behind controls, information and links. */
+._2OOzYVWIHaKXm6_7sscT9i .Backdrop {
+ top:-96px!important;height:calc(var(--library-reflection-height,420px) + 96px)!important;pointer-events:none!important;
+ mask-image:linear-gradient(to bottom,transparent 0,rgba(0,0,0,.55) 64px,#000 144px,#000 65%,transparent 100%)!important;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Backdrop::before {
+ content:'';position:absolute;inset:0;z-index:-1;
+ background-image:var(--library-reflected-art);background-size:cover;background-position:center;
+ transform:scaleY(-1);filter:blur(32px) saturate(1.15);opacity:.55;
+}
+._2OOzYVWIHaKXm6_7sscT9i .Backdrop .BackdropGlass.BackdropGlass {
+ height:calc(100% + 64px)!important;
+ background:linear-gradient(to bottom,rgba(var(--library-page-bg-rgb,32,32,32),.1),rgba(var(--library-page-bg-rgb,32,32,32),.25) 60%,rgba(var(--library-page-bg-rgb,32,32,32),.8))!important;
+}
+
+/* The shared reflection replaces the native second canvas, avoiding a seam. */
+.HeaderBackgroundImage .ImgBlurBackdrop.ImgBlur {opacity:0!important;}
+.HeaderBackgroundImage>.ImgBlur:not(.ImgBlurBackdrop) {
+ mask-image:linear-gradient(to bottom,#000 calc(100% - 120px),transparent 100%)!important;
+}
+
+/* Bring the in-page controls nearer to the sharp artwork. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .PlayBar>.InnerContainer.Panel {padding-top:8px!important;padding-bottom:12px!important;}
+
+/* The ownership note sits between the action and status groups. */
+._2OOzYVWIHaKXm6_7sscT9i .InPage .InnerContainer>div:has(>.SharedLibrary) {display:none!important;}
+._2OOzYVWIHaKXm6_7sscT9i .InPage .InnerContainer>.Row {align-items:center!important;}
+[data-family-library-pill] {
+ display:inline-flex!important;align-items:center!important;align-self:center!important;
+ flex:0 1 auto!important;min-width:0!important;max-width:160px!important;margin:0 14px 0 12px!important;
+ padding:4px 10px!important;border:0!important;border-radius:999px!important;
+ background:rgba(0,0,0,.28)!important;color:#d4dadd!important;font-size:11px!important;
+ font-weight:400!important;line-height:16px!important;white-space:normal!important;
+ box-sizing:border-box!important;text-shadow:none!important;filter:none!important;
+}
+
+/* Primary action feedback shared with Game Mode. */
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppActionButton .ButtonChild {display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;text-align:center!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppActionButton .ButtonChild>svg {position:static!important;inset:auto!important;margin:0!important;transform:none!important;animation:none!important;filter:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .AppActionButton .ButtonText {margin:0!important;padding:0!important;text-align:center!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer {position:relative!important;overflow:visible!important;isolation:isolate!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.ButtonChild {position:relative!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.ButtonChild::after {content:none!important;clip-path:none!important;animation:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer::after {
+ content:''!important;position:absolute!important;inset:-3.5px!important;
+ border:2px solid transparent!important;border-radius:inherit!important;box-sizing:border-box!important;
+ pointer-events:none!important;background:transparent!important;clip-path:none!important;
+ mix-blend-mode:soft-light!important;opacity:.8!important;animation:none!important;transition:border-color 140ms ease!important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer::before {
+ content:''!important;position:absolute!important;inset:0!important;border-radius:inherit!important;
+ background:transparent!important;pointer-events:none!important;
+ box-shadow:0 0 24px 5px color-mix(in srgb,var(--game-play-accent,#fff) 75%,transparent)!important;
+ opacity:0;animation:none!important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer>.ButtonChild:is(:hover,:focus-visible,.gpfocus) {outline:none!important;box-shadow:none!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer:is(.gpfocus,.gpfocuswithin,:focus-within,:has(>.ButtonChild:is(:hover,.gpfocus))) {
+ box-shadow:0 0 16px 3px color-mix(in srgb,var(--game-play-accent,#fff) 65%,transparent)!important;
+ animation:none!important;
+}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer:is(.gpfocus,.gpfocuswithin,:focus-within,:has(>.ButtonChild:is(:hover,.gpfocus)))::before {opacity:1;animation:desktop-play-pill-glow 3s ease-in-out infinite!important;}
+._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer:is(.gpfocus,.gpfocuswithin,:focus-within,:has(>.ButtonChild:is(:hover,.gpfocus)))::after {border-color:#fff!important;}
+@keyframes desktop-play-pill-glow {
+ 0%,100% {opacity:.45;}
+ 50% {opacity:1;}
+}
+@media(prefers-reduced-motion:reduce) {
+ ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer {animation:none!important;}
+ ._3Y87YQY56ZCOqhgcZFaDc5.Panel .PlayButtonContainer::before {animation:none!important;}
+}

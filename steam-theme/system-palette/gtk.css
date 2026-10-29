@@ -1,0 +1,26 @@
+/* Neutral surfaces sampled from Lumen. Accent colours stay user managed. */
+@define-color window_bg_color #202020;
+@define-color window_fg_color #fafafa;
+@define-color view_bg_color #202020;
+@define-color view_fg_color #fafafa;
+@define-color headerbar_bg_color #2f2f2f;
+@define-color headerbar_fg_color #fafafa;
+@define-color headerbar_backdrop_color #202020;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.9);
+@define-color sidebar_bg_color #292929;
+@define-color sidebar_fg_color #fafafa;
+@define-color sidebar_backdrop_color #292929;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
+@define-color sidebar_border_color rgba(0, 0, 0, 0.36);
+@define-color secondary_sidebar_bg_color #292929;
+@define-color secondary_sidebar_fg_color #fafafa;
+@define-color secondary_sidebar_backdrop_color #262626;
+@define-color card_bg_color #303030;
+@define-color card_fg_color #fafafa;
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+@define-color dialog_bg_color #363636;
+@define-color dialog_fg_color #fafafa;
+@define-color popover_bg_color #363636;
+@define-color popover_fg_color #fafafa;
+@define-color popover_shade_color rgba(0, 0, 0, 0.25);

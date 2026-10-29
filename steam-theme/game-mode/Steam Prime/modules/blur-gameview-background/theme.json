@@ -1,0 +1,178 @@
+{
+  "name": "Blur Gameview Background",
+  "version": "v1.0",
+  "author": "gaker19",
+  "manifest_version": 9,
+  "inject": {
+    "shared.css": [
+      "SP"
+    ]
+  },
+  "patches": {
+    "Blur": {
+      "default": "4px",
+      "type": "slider",
+      "values": {
+        "Off": {
+          "--gaker19-blur-strength-gameview": [
+            "0px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "2px": {
+          "--gaker19-blur-strength-gameview": [
+            "2px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "4px": {
+          "--gaker19-blur-strength-gameview": [
+            "4px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "8px": {
+          "--gaker19-blur-strength-gameview": [
+            "8px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "16px": {
+          "--gaker19-blur-strength-gameview": [
+            "16px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "32px": {
+          "--gaker19-blur-strength-gameview": [
+            "32px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "64px": {
+          "--gaker19-blur-strength-gameview": [
+            "64px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "128px": {
+          "--gaker19-blur-strength-gameview": [
+            "128px",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "Brightness": {
+      "default": "1",
+      "type": "slider",
+      "values": {
+        "0": {
+          "--gaker19-brightness-gameview": [
+            "0",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "0.2": {
+          "--gaker19-brightness-gameview": [
+            "0.2",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "0.4": {
+          "--gaker19-brightness-gameview": [
+            "0.4",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "0.6": {
+          "--gaker19-brightness-gameview": [
+            "0.6",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "0.8": {
+          "--gaker19-brightness-gameview": [
+            "0.8",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "1": {
+          "--gaker19-brightness-gameview": [
+            "1",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "1.2": {
+          "--gaker19-brightness-gameview": [
+            "1.2",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "1.4": {
+          "--gaker19-brightness-gameview": [
+            "1.4",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "1.6": {
+          "--gaker19-brightness-gameview": [
+            "1.6",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "1.8": {
+          "--gaker19-brightness-gameview": [
+            "1.8",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "2": {
+          "--gaker19-brightness-gameview": [
+            "2",
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      }
+    }
+  },
+  "id": "9e7827ab-dba8-475c-92c8-f0186c61fcd7"
+}

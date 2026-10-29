@@ -1,0 +1,574 @@
+{
+  "name": "CapyMenu (Context Menus)",
+  "display_name": "Chromahon (Context Menus)",
+  "author": "Mugen",
+  "version": "v2.0.1",
+  "manifest_version": 9,
+  "tabs": {
+    "default": [
+      "bigpicture"
+    ]
+  },
+  "inject": {
+    "common.css": []
+  },
+  "patches": {
+    "Edges": {
+      "type": "slider",
+      "default": "Round",
+      "values": {
+        "Sharp": {},
+        "Sharp w/ Padding": {
+          "edges_padding.css": []
+        },
+        "Round": {
+          "edges_round.css": []
+        }
+      }
+    },
+    "Size": {
+      "type": "slider",
+      "default": "Normal",
+      "values": {
+        "Normal": {},
+        "Wide": {
+          "size_wide.css": []
+        }
+      }
+    },
+    "Layout": {
+      "type": "dropdown",
+      "default": "Top Banner Title",
+      "values": {
+        "Default": {},
+        "Top Banner Title": {
+          "layout_topbanner.css": []
+        },
+        "Bottom Stacked + Banner Title": {
+          "layout_allbottom.css": []
+        },
+        "Left-Hand Side": {
+          "layout_left.css": []
+        },
+        "Bottom Left": {
+          "layout_bottomleft.css": []
+        },
+        "Left-Hand Side + Banner Title": {
+          "layout_left_banner.css": []
+        },
+        "Top Left + Banner Title": {
+          "layout_topleft_banner.css": []
+        }
+      }
+    },
+    "Menu Background": {
+      "type": "dropdown",
+      "default": "OLED Black",
+      "values": {
+        "\u2205 None": {
+          "--chromahonCM__body-bg": [
+            "#00000000"
+          ]
+        },
+        "OLED Black": {
+          "--chromahonCM__body-bg": [
+            "#000"
+          ]
+        },
+        "Dark Gray": {
+          "--chromahonCM__body-bg": [
+            "#141414"
+          ]
+        },
+        "Bright Gray": {
+          "--chromahonCM__body-bg": [
+            "#bdbdbd"
+          ]
+        },
+        "Transparent Black": {
+          "--chromahonCM__body-bg": [
+            "#00000080"
+          ]
+        },
+        "Transparent White": {
+          "--chromahonCM__body-bg": [
+            "#ffffff80"
+          ]
+        },
+        "Marine Blue": {
+          "--chromahonCM__body-bg": [
+            "#0d1226"
+          ]
+        },
+        "Earthy Brown": {
+          "--chromahonCM__body-bg": [
+            "#241e20"
+          ]
+        },
+        "Wine Red": {
+          "--chromahonCM__body-bg": [
+            "#400b1e"
+          ]
+        },
+        "Beige": {
+          "--chromahonCM__body-bg": [
+            "#b5ada1"
+          ]
+        },
+        "Aubergine": {
+          "--chromahonCM__body-bg": [
+            "#2a0f30"
+          ]
+        },
+        "Orange": {
+          "--chromahonCM__body-bg": [
+            "#9c3b1e"
+          ]
+        }
+      }
+    },
+    "Menu Foreground": {
+      "type": "dropdown",
+      "default": "White",
+      "values": {
+        "White": {
+          "--chromahonCM__body-fg": [
+            "#fff"
+          ]
+        },
+        "Black": {
+          "--chromahonCM__body-fg": [
+            "#000"
+          ]
+        },
+        "Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Custom...",
+          "default": "#eee",
+          "css_variable": "chromahonCM__body-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Item Focus Background": {
+      "type": "dropdown",
+      "default": "White",
+      "values": {
+        "Bright Gray": {
+          "--chromahonCM__itemfocus-bg": [
+            "#eee"
+          ]
+        },
+        "White": {
+          "--chromahonCM__itemfocus-bg": [
+            "#fff"
+          ]
+        },
+        "Dark Gray": {
+          "--chromahonCM__itemfocus-bg": [
+            "#141414"
+          ]
+        },
+        "Pale Yellow": {
+          "--chromahonCM__itemfocus-bg": [
+            "#b8af65"
+          ]
+        },
+        "Leaf Green": {
+          "--chromahonCM__itemfocus-bg": [
+            "#62a35b"
+          ]
+        },
+        "Pastel Pink": {
+          "--chromahonCM__itemfocus-bg": [
+            "#dbb4c4"
+          ]
+        },
+        "Wine Red": {
+          "--chromahonCM__itemfocus-bg": [
+            "#400b1e"
+          ]
+        },
+        "Aquamarine Blue": {
+          "--chromahonCM__itemfocus-bg": [
+            "#52bf9d"
+          ]
+        },
+        "Orange": {
+          "--chromahonCM__itemfocus-bg": [
+            "#bf7747"
+          ]
+        }
+      }
+    },
+    "Item Focus Foreground": {
+      "type": "dropdown",
+      "default": "Black",
+      "values": {
+        "White": {
+          "--chromahonCM__itemfocus-fg": [
+            "#fff"
+          ]
+        },
+        "Black": {
+          "--chromahonCM__itemfocus-fg": [
+            "#000"
+          ]
+        },
+        "Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Custom...",
+          "default": "#eee",
+          "css_variable": "chromahonCM__itemfocus-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Title Background": {
+      "type": "dropdown",
+      "default": "Transparent White",
+      "values": {
+        "\u2205 None": {
+          "--chromahonCM__title-bg": [
+            "#00000000"
+          ]
+        },
+        "OLED Black": {
+          "--chromahonCM__title-bg": [
+            "#000"
+          ]
+        },
+        "Dark Gray": {
+          "--chromahonCM__title-bg": [
+            "#141414"
+          ]
+        },
+        "Bright Gray": {
+          "--chromahonCM__title-bg": [
+            "#bdbdbd"
+          ]
+        },
+        "Transparent Black": {
+          "--chromahonCM__title-bg": [
+            "#00000066"
+          ]
+        },
+        "Transparent White": {
+          "--chromahonCM__title-bg": [
+            "#ffffff66"
+          ]
+        },
+        "Marine Blue": {
+          "--chromahonCM__title-bg": [
+            "#0d1226"
+          ]
+        },
+        "Earthy Brown": {
+          "--chromahonCM__title-bg": [
+            "#241e20"
+          ]
+        },
+        "Wine Red": {
+          "--chromahonCM__title-bg": [
+            "#400b1e"
+          ]
+        },
+        "Beige": {
+          "--chromahonCM__title-bg": [
+            "#b5ada1"
+          ]
+        },
+        "Aubergine": {
+          "--chromahonCM__title-bg": [
+            "#2a0f30"
+          ]
+        },
+        "Orange": {
+          "--chromahonCM__title-bg": [
+            "#9c3b1e"
+          ]
+        }
+      }
+    },
+    "Title Foreground": {
+      "type": "dropdown",
+      "default": "White",
+      "values": {
+        "White": {
+          "--chromahonCM__title-fg": [
+            "#fff"
+          ]
+        },
+        "Black": {
+          "--chromahonCM__title-fg": [
+            "#000"
+          ]
+        },
+        "Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Custom...",
+          "default": "#eee",
+          "css_variable": "chromahonCM__title-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Modal Background (Affects all modals)": {
+      "type": "dropdown",
+      "default": "SteamOS Default",
+      "values": {
+        "\u2205 None": {
+          "opt_bgmodal_none.css": []
+        },
+        "SteamOS Default": {},
+        "Colored Blur": {
+          "opt_bgmodal_color.css": []
+        },
+        "Image": {
+          "opt_bgmodal_image.css": []
+        }
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Colored Blur",
+          "default": "#34e8eb80",
+          "css_variable": "chromahonCM__bgfilter-color",
+          "tabs": []
+        },
+        {
+          "name": "Image Picker",
+          "type": "image-picker",
+          "on": "Image",
+          "default": "",
+          "css_variable": "chromahonCM__bgfilter-image",
+          "tabs": []
+        }
+      ]
+    },
+    "Special Button Focus Background": {
+      "type": "dropdown",
+      "default": "Same as Item Focus",
+      "values": {
+        "Same as Item Focus": {},
+        "Bright Gray": {
+          "--chromahonCM__specialfocus-bg": [
+            "#eee"
+          ]
+        },
+        "White": {
+          "--chromahonCM__specialfocus-bg": [
+            "#fff"
+          ]
+        },
+        "Dark Gray": {
+          "--chromahonCM__specialfocus-bg": [
+            "#141414"
+          ]
+        },
+        "Pale Yellow": {
+          "--chromahonCM__specialfocus-bg": [
+            "#b8af65"
+          ]
+        },
+        "Leaf Green": {
+          "--chromahonCM__specialfocus-bg": [
+            "#62a35b"
+          ]
+        },
+        "Pastel Pink": {
+          "--chromahonCM__specialfocus-bg": [
+            "#dbb4c4"
+          ]
+        },
+        "Wine Red": {
+          "--chromahonCM__specialfocus-bg": [
+            "#400b1e"
+          ]
+        },
+        "Aquamarine Blue": {
+          "--chromahonCM__specialfocus-bg": [
+            "#52bf9d"
+          ]
+        },
+        "Orange": {
+          "--chromahonCM__specialfocus-bg": [
+            "#bf7747"
+          ]
+        }
+      }
+    },
+    "Special Button Focus Foreground": {
+      "type": "dropdown",
+      "default": "Same as Item Focus",
+      "values": {
+        "Same as Item Focus": {},
+        "White": {
+          "--chromahonCM__specialfocus-fg": [
+            "#fff"
+          ]
+        },
+        "Black": {
+          "--chromahonCM__specialfocus-fg": [
+            "#000"
+          ]
+        },
+        "Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Custom...",
+          "default": "#eee",
+          "css_variable": "chromahonCM__specialfocus-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Power: Destruct. Button Focus Background": {
+      "type": "dropdown",
+      "default": "Same as Item Focus",
+      "values": {
+        "Same as Item Focus": {},
+        "Bright Gray": {
+          "--chromahonCM__destructfocus-bg": [
+            "#eee"
+          ]
+        },
+        "White": {
+          "--chromahonCM__destructfocus-bg": [
+            "#fff"
+          ]
+        },
+        "Dark Gray": {
+          "--chromahonCM__destructfocus-bg": [
+            "#141414"
+          ]
+        },
+        "Pale Yellow": {
+          "--chromahonCM__destructfocus-bg": [
+            "#b8af65"
+          ]
+        },
+        "Leaf Green": {
+          "--chromahonCM__destructfocus-bg": [
+            "#62a35b"
+          ]
+        },
+        "Pastel Pink": {
+          "--chromahonCM__destructfocus-bg": [
+            "#dbb4c4"
+          ]
+        },
+        "Wine Red": {
+          "--chromahonCM__destructfocus-bg": [
+            "#400b1e"
+          ]
+        },
+        "Aquamarine Blue": {
+          "--chromahonCM__destructfocus-bg": [
+            "#52bf9d"
+          ]
+        },
+        "Orange": {
+          "--chromahonCM__destructfocus-bg": [
+            "#bf7747"
+          ]
+        }
+      }
+    },
+    "Power: Destruct. Button Focus Foreground": {
+      "type": "dropdown",
+      "default": "Same as Item Focus",
+      "values": {
+        "Same as Item Focus": {},
+        "White": {
+          "--chromahonCM__destructfocus-fg": [
+            "#fff"
+          ]
+        },
+        "Black": {
+          "--chromahonCM__destructfocus-fg": [
+            "#000"
+          ]
+        },
+        "Custom...": {}
+      },
+      "components": [
+        {
+          "name": "Color Picker",
+          "type": "color-picker",
+          "on": "Custom...",
+          "default": "#eee",
+          "css_variable": "chromahonCM__destructfocus-fg",
+          "tabs": []
+        }
+      ]
+    },
+    "Grow label on focus": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt_growlabel.css": []
+        },
+        "No": {}
+      }
+    },
+    "Center labels": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt_centerlabel.css": []
+        },
+        "No": {}
+      }
+    },
+    "Remove label separators": {
+      "type": "checkbox",
+      "default": "No",
+      "values": {
+        "Yes": {
+          "opt_separators.css": []
+        },
+        "No": {}
+      }
+    },
+    "Blur title (Trsp solid colors only. Recommended w/ Modal Bg Img.)": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "opt_blurtitle.css": []
+        },
+        "No": {}
+      }
+    },
+    "Modal Background fade-in": {
+      "type": "checkbox",
+      "default": "Yes",
+      "values": {
+        "Yes": {
+          "opt_modalfade.css": []
+        },
+        "No": {}
+      }
+    }
+  },
+  "id": "477cdaf5-a81d-407c-b14c-ab7b937887c3"
+}

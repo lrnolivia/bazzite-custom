@@ -1,0 +1,271 @@
+{
+  "name": "Obsidian - Complete",
+  "author": "EMERALD0874",
+  "version": "v4.2-local.1",
+  "manifest_version": 6,
+  "inject": {
+    "shared.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess",
+      "notificationtoasts.*"
+    ],
+    "complete.css": [
+      "SP",
+      "MainMenu",
+      "QuickAccess",
+      "notificationtoasts.*"
+    ]
+  },
+  "patches": {
+    "Main Color": {
+      "default": "Black",
+      "type": "dropdown",
+      "values": {
+        "Black": {},
+        "Dark Gray": {
+          "colors/dark-gray.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Gray": {
+          "colors/gray.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Red": {
+          "colors/red.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Orange": {
+          "colors/orange.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Yellow": {
+          "colors/yellow.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Green": {
+          "colors/green.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Blue": {
+          "colors/blue.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Indigo": {
+          "colors/indigo.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Violet": {
+          "colors/violet.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "Custom": {}
+      },
+      "components": [
+        {
+          "name": "Background Color",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#000",
+          "css_variable": "--obsidian-main-color",
+          "tabs": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      ]
+    },
+    "Recent Games Background": {
+      "default": "White",
+      "type": "dropdown",
+      "values": {
+        "Default": {},
+        "None": {
+          "recents/none.css": [
+            "SP"
+          ]
+        },
+        "White": {
+          "recents/monochrome.css": [
+            "SP"
+          ]
+        },
+        "Gray": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/gray.css": [
+            "SP"
+          ]
+        },
+        "Dark Gray": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/dark-gray.css": [
+            "SP"
+          ]
+        },
+        "Black": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/black.css": [
+            "SP"
+          ]
+        },
+        "Red": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/red.css": [
+            "SP"
+          ]
+        },
+        "Orange": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/orange.css": [
+            "SP"
+          ]
+        },
+        "Yellow": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/yellow.css": [
+            "SP"
+          ]
+        },
+        "Green": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/green.css": [
+            "SP"
+          ]
+        },
+        "Blue": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/blue.css": [
+            "SP"
+          ]
+        },
+        "Indigo": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/indigo.css": [
+            "SP"
+          ]
+        },
+        "Violet": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/violet.css": [
+            "SP"
+          ]
+        },
+        "OLED Limited Edition": {
+          "recents/monochrome.css": [
+            "SP"
+          ],
+          "recents/oled.css": [
+            "SP"
+          ]
+        },
+        "Custom": {
+          "recents/monochrome.css": [
+            "SP"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Recent Games Color",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#fff",
+          "css_variable": "--obsidian-recents-color",
+          "tabs": [
+            "SP"
+          ]
+        }
+      ]
+    },
+    "Disable Blur": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "other/no-blur.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Disable Glow": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "other/no-glow.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess",
+            "notificationtoasts.*"
+          ]
+        },
+        "No": {}
+      }
+    }
+  },
+  "id": "4fad1202-287f-452c-95a6-cde27e3abe10",
+  "display_name": "Obsidian (Complete)",
+  "priority": 90
+}

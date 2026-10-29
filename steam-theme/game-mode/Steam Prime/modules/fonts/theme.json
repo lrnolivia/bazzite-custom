@@ -1,0 +1,129 @@
+{
+  "name": "Fonts",
+  "author": "EMERALD0874",
+  "version": "v3.3",
+  "manifest_version": 3,
+  "inject": {},
+  "patches": {
+    "Font": {
+      "default": "None",
+      "type": "dropdown",
+      "values": {
+        "None": {},
+        "Android Insomnia": {
+          "font-css/android-insomnia.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Atkinson Hyperlegible": {
+          "font-css/atkinson-hyperlegible.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Bahnschrift": {
+          "font-css/bahnschrift.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "DePixel Breit": {
+          "font-css/depixel.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Figtree": {
+          "font-css/figtree.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Fira Sans": {
+          "font-css/fira-sans.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Josefin Sans": {
+          "font-css/josefin-sans.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Lato": {
+          "font-css/lato.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Montserrat": {
+          "font-css/montserrat.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "OpenDyslexic": {
+          "font-css/opendyslexic.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Optima Nova": {
+          "font-css/optima-nova.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Roboto": {
+          "font-css/roboto.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Custom Template": {
+          "font-css/custom.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      }
+    },
+    "Text Transform": {
+      "default": "None",
+      "type": "dropdown",
+      "values": {
+        "None": {},
+        "Standard Case": {
+          "case/standard-case.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        },
+        "Uppercase": {
+          "case/uppercase.css": [
+            "SP",
+            "MainMenu",
+            "QuickAccess"
+          ]
+        }
+      }
+    }
+  },
+  "id": "fbcb2d3f-6cd8-4475-8a17-b5b71c06db61"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Steam Prime - Gnome",
+  "platform": "Linux / GNOME desktop",
+  "base": "Adwaita for Steam",
+  "description": "Steam Prime game pages, neutral GNOME surfaces and live desktop accent colours."
+}

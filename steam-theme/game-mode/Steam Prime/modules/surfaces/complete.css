@@ -1,0 +1,27 @@
+/* Neutral surfaces for shared Game Mode dialogs, properties, settings and searches. */
+.BasicUI {
+ --obsidian-surface:color-mix(in srgb,var(--obsidian-main-color,#000) 91%,white);
+ --obsidian-surface-raised:color-mix(in srgb,var(--obsidian-main-color,#000) 86%,white);
+}
+.BasicUI :is(.gamepadpagedsettings_PagedSettingsDialog_PageContent_3mgb-,.gamepadpagedsettings_PagedSettingsDialog_ContentColumn_3JPle,.gamepadpagedsettings_PagedSettingsDialog_PageListColumn_2EZ3o,.gamepadpagedsettings_PagedSettingsDialog_2Pqja,.gamepadpage_GamepadPage_2FqpD.gamepadpage_DialogBackground_2msTK,.gamepadsearch_GamepadSearch_P_AlE) {
+ background:var(--obsidian-main-color,#000)!important;background-image:none!important;
+}
+.BasicUI :is(.gamepaddialog_Field_S-_La,.gamepaddialog_Background_2CCdO) {
+ background:var(--obsidian-surface)!important;background-image:none!important;
+ color:#f0f0f0!important;
+}
+.BasicUI .gamepaddialog_Field_S-_La:is(.gpfocus,.gamepaddialog_ActiveAndUnfocused_28cXJ) {
+ background:var(--obsidian-surface-raised)!important;
+}
+.BasicUI :is(.gamepaddialog_Field_S-_La,.gamepaddialog_GamepadDialogContent_3joNk) :is(.DialogInput,.DialogDropDown,.DialogButton) {
+ background-color:var(--obsidian-surface-raised)!important;background-image:none!important;color:#f4f4f4!important;
+}
+.BasicUI .gamepaddialog_Field_S-_La :is(input,textarea)::placeholder {color:#c9cdd2!important;opacity:1!important;}
+.BasicUI :is(.gamepadpagedsettings_PagedSettingsDialog_Title_3aOHb,.gamepadpagedsettings_PagedSettingsDialog_PageContent_3mgb-) {color:#f4f4f4!important;}
+.BasicUI :is(.PagedSettingsDialog,._33vqr13-jdnjTkKKTh414f) {background:var(--obsidian-main-color,#000)!important;}
+/* Downloads retains its live graphs and status colors, with neutral page surfaces. */
+.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp {background:var(--obsidian-main-color,#000)!important;background-image:none!important;}
+.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp :is(._373v1eWNyaPKhgnea9FZSt,._2t4iM2UfdSVa7UiCcjDLsk,._1ashwbbBZrppDqaals3644,._32eLZRkdi_FgZPoefB5zMS,._1ugNiylO2vKXhirsGocAxa,._3Mbhnlk1Go2j8yCdjthzc7) {background:var(--obsidian-main-color,#000)!important;background-image:none!important;}
+.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp :is(._21P7c4MWmsU2QSZeL-uyZo,._1VNuYHM6BPBOJspC6zPf5r,._2sCvZTD6ZTZz3p9_ekH_gI,._3ebCJiEl-ybizhZ4avcFw5) {background:var(--obsidian-surface)!important;background-image:none!important;color:#f4f4f4!important;}
+.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp :is(._3oavRVhIS9tC3vBsFT4Ggi,._1GdR5LbENV7LOGROJBxohI,.wLQrwye_1FusReFo2MyGF) {background:var(--obsidian-surface-raised)!important;background-image:none!important;color:#f4f4f4!important;}
+.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp :is(.RfMM3QjbVZCURuo5YTHWD,._3B3J2qtE6ozU_VXMMN2L51) {background-image:none!important;}

@@ -1,0 +1,25 @@
+{
+  "name": "No News Section",
+  "version": "v1.1",
+  "manifest_version": 8,
+  "inject": {
+    "library.css": [
+      "SteamLibraryWindow|Steam"
+    ]
+  },
+  "patches": {
+    "Remove Add Shelf": {
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "remove_add_shelf.css": [
+            "desktop"
+          ]
+        }
+      }
+    }
+  },
+  "author": "Sims",
+  "id": "28b0e96e-8047-485c-910d-3ea6fa4f11d3"
+}

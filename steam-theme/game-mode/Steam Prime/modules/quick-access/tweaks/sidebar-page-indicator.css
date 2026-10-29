@@ -1,0 +1,13 @@
+._1S76C3gQf4oOTbLdTMVH0m._2QHMua1-KysYKpszTPAW_O {
+    position: relative;
+    z-index: 1;
+}
+._1S76C3gQf4oOTbLdTMVH0m._2QHMua1-KysYKpszTPAW_O::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    bottom: 0;
+    background: var(--chromahonQAM__sidebarIndicator);
+    animation:none;
+}

@@ -1,0 +1,28 @@
+/* A feathered backdrop leaves the native footer controls and geometry intact. */
+.BasicUI [class~='BasicFooter'] {
+ isolation:isolate!important;overflow:visible!important;
+ background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+ border-top:0!important;box-shadow:none!important;
+}
+.BasicUI [class~='BasicFooter']::before {content:none!important;}
+.BasicUI [data-prime-footer-layer] {
+ position:fixed;inset:auto 0 0;height:164px;z-index:10;pointer-events:none;opacity:1;
+ background:linear-gradient(to top,#000,rgba(0,0,0,.85) 35px,rgba(0,0,0,.5) 64px,rgba(0,0,0,.2) 96px,rgba(0,0,0,.07) 120px,rgba(0,0,0,.015) 145px,transparent 164px);
+ backdrop-filter:blur(var(--moreBlur-strength,8px))!important;-webkit-backdrop-filter:blur(var(--moreBlur-strength,8px))!important;
+ mask-image:linear-gradient(to top,#000,#000 20px,rgba(0,0,0,.85) 44px,rgba(0,0,0,.45) 80px,rgba(0,0,0,.1) 120px,transparent 164px);
+ -webkit-mask-image:linear-gradient(to top,#000,#000 20px,rgba(0,0,0,.85) 44px,rgba(0,0,0,.45) 80px,rgba(0,0,0,.1) 120px,transparent 164px);
+}
+/* Home's isolated scroll plane keeps its native tab controls above the backdrop. */
+.BasicUI [class~='ScrollArea']>[data-prime-footer-layer] {z-index:1;}
+/* Game pages use their hero fade; the extra footer effect altered control colors. */
+html[data-steam-prime-page=game] .BasicUI [data-prime-footer-layer] {display:none!important;}
+/* A longer feather uses the free space above the bar without reaching controls. */
+html[data-steam-prime-page=game] .BasicUI [class~='BasicFooter']::before {
+ content:''!important;position:absolute!important;inset:calc(-1 * var(--prime-footer-feather-rise,0px)) 0 0!important;width:auto!important;height:auto!important;
+ margin:0!important;z-index:-1!important;pointer-events:none!important;opacity:1!important;
+ background:linear-gradient(to bottom,transparent,rgba(0,0,0,.12) 30%,rgba(0,0,0,.45) 60%,rgba(0,0,0,.82) 82%,#000)!important;
+ backdrop-filter:blur(var(--moreBlur-strength,8px))!important;-webkit-backdrop-filter:blur(var(--moreBlur-strength,8px))!important;
+ mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,.25) 20%,rgba(0,0,0,.7) 50%,#000 85%)!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,.25) 20%,rgba(0,0,0,.7) 50%,#000 85%)!important;
+ clip-path:inset(0)!important;overflow:hidden!important;transform:none!important;
+}

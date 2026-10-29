@@ -1,0 +1,113 @@
+{
+  "name": "Main Menu Hide Tabs (hide the Store)",
+  "author": "alesya-h",
+  "manifest_version": 9,
+  "version": "v1.1",
+  "flags": [
+    "REQUIRE_NAV_PATCH"
+  ],
+  "inject": {
+    "shared.css": [
+      "MainMenu"
+    ]
+  },
+  "patches": {
+    "Home": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-HOME": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Library": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-LIBRARY": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Store": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-STORE": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Friends & Chat": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-FRIENDS-AND-CHAT": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Media": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-MEDIA": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Downloads": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-DOWNLOADS": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Settings": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-SETTINGS": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "Power": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {},
+        "No": {
+          "--MMHIDE-POWER": [
+            "none",
+            "MainMenu"
+          ]
+        }
+      }
+    }
+  },
+  "id": "72c0a8a8-5099-43c7-a551-5d0c8461dafe"
+}

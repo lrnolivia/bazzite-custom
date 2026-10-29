@@ -1,0 +1,9 @@
+/* Preserved selected values; shared styling is controlled by the public palette. */
+:root {
+ --chromahonCM__body-bg:#000;
+ --chromahonCM__body-fg:#fff;
+ --chromahonCM__itemfocus-bg:#fff;
+ --chromahonCM__itemfocus-fg:#000;
+ --chromahonCM__title-bg:#00000066;
+ --chromahonCM__title-fg:#fff;
+}

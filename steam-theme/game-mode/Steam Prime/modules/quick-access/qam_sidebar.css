@@ -1,0 +1,71 @@
+/* ----------
+Chromahon QAM
+Sidebar
+---------- */
+
+:root {
+    --chromahonQAM__sidebarIcon-bg-hl-anim: none;
+
+
+
+
+
+
+
+
+
+
+}
+
+/* sidebar items container */
+._3Ag1wVkrYOaZyOUNWGLf3Y {
+    background: var(--chromahonQAM__sidebarPanel-bg);
+}
+
+/* sidebar item */
+._1S76C3gQf4oOTbLdTMVH0m {
+    height: fit-content;
+    color: var(--chromahonQAM__sidebarIcon-fg);
+}
+
+/* Navigation */
+    /* sidebar icon when sidebar is being focused */
+    .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu.gpfocus {
+        background: var(--chromahonQAM__sidebarIcon-bg-hl);
+        animation:none;
+        color: var(--chromahonQAM__sidebarIcon-fg-hl);
+    }
+    /* sidebar icon when tabbed content is being focused */
+    .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu {
+        background: var(--chromahonQAM__sidebarIcon-bg-hl);
+        animation:none;
+        color: var(--chromahonQAM__sidebarIcon-fg-hl);
+    }
+    /* "hotfix": sometimes the sidebar is "not entirely focused" but navigable; not sure what triggers that state */
+    .quickaccessmenu_Tab_1S76C.gpfocus {
+        background: var(--chromahonQAM__sidebarIcon-bg-hl);
+        animation:none;
+        color: var(--chromahonQAM__sidebarIcon-fg-hl);
+    }
+    ._1S76C3gQf4oOTbLdTMVH0m {
+        transition: none;
+    }
+
+/* keyboard button (in-game) */
+._1RN_UxDCIp9wCvlh0m7OL5 {
+    border: none;
+}
+._1RN_UxDCIp9wCvlh0m7OL5 svg path {
+    fill: var(--chromahonQAM__sidebarIcon-fg);
+}
+._1RN_UxDCIp9wCvlh0m7OL5.gpfocus svg path {
+    fill: var(--chromahonQAM__sidebarIcon-fg-hl);
+}
+
+/* notification mark */
+._1S76C3gQf4oOTbLdTMVH0m > div {
+    background: var(--chromahonQAM__notifMark) !important;
+}
+
+/* separator on the right */
+._3Ag1wVkrYOaZyOUNWGLf3Y::after { visibility: hidden; }

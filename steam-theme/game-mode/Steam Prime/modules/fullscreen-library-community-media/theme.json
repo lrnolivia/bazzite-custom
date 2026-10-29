@@ -1,0 +1,12 @@
+{
+  "name": "Fullscreen Library & Community Media",
+  "author": "Niko",
+  "version": "v1.0",
+  "manifest_version": 9,
+  "inject": {
+    "shared.css": [
+      "bigpicture"
+    ]
+  },
+  "id": "c63416ca-5aa8-46d9-9fa9-34360ec521b3"
+}

@@ -1,0 +1,203 @@
+/* One menu surface owner. Semantic attributes bypass mismatched loader class aliases. */
+:root {
+ --chromahon-sidebar-highlight:#fff;
+ --chromahon-sidebar-highlight-text:var(--prime-menu-highlight-text,#222220);
+ --chromahonQAM__main-bg:#000;
+ --chromahonQAM__sidebarPanel-bg:#000;
+ --chromahonQAM__main-fg:var(--prime-text,#f2f1ee);
+ --chromahonQAM__main-fg-hl:var(--prime-menu-highlight-text,#222220);
+ --chromahonQAM__itemHighlight-bg:#fff;
+ --chromahonQAM__sidebarIcon-bg-hl:#fff;
+ --chromahonQAM__sidebarIcon-fg-hl:var(--prime-menu-highlight-text,#222220);
+}
+#QuickAccess-Menu :is([class~='PanelOuterNav'],[class~='HeaderContainer']) {
+ background:#000!important;background-image:none!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+#MainNavMenuContainer,#MainNavMenuContainer [role='menu'],
+#QuickAccess-NA,#QuickAccess-Menu,#QuickAccess-Menu [class~='Tabs'] {
+ background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+/* Browser-backed pages sit above the host fade, so each menu also owns its opaque panel. */
+#QuickAccess-Menu,#QuickAccess-Menu [class~='Tabs'] {background-color:#000!important;}
+/* The extra transparent browser area carries the fade above native Store web views. */
+.BasicUI [class~='_1PGlK8mZ0CDISnm-gwJqo']:not([class~='_26eRZxfJYfD_NywcU-TRuh']) {width:min(820px,100vw)!important;}
+.BasicUI [class~='_2orc8-PBheKd3BvuGXV6ZL'] {
+ top:0!important;bottom:0!important;height:100%!important;max-height:none!important;margin-block:0!important;
+}
+#MainNavMenuContainer [role='menu'] {
+ width:min(300px,100vw)!important;max-width:none!important;height:100%!important;
+ margin:0!important;padding-block:16px!important;box-sizing:border-box!important;
+}
+#MainNavMenuContainer [class~='ItemOuter'] {
+ width:calc(100% - 40px)!important;margin:4px 20px!important;
+ border-radius:var(--prime-radius)!important;box-sizing:border-box!important;
+}
+#MainNavMenuContainer [class~='Item'] {
+ display:grid!important;grid-template-columns:8px 24px minmax(0,1fr)!important;
+ column-gap:12px!important;align-items:center!important;
+ padding:10px 16px!important;min-height:48px!important;box-sizing:border-box!important;
+ transform:none!important;animation:none!important;transition:none!important;
+}
+#MainNavMenuContainer [class~='ActiveDot'] {
+ position:relative!important;grid-column:1!important;grid-row:1!important;
+ left:auto!important;top:auto!important;bottom:auto!important;transform:none!important;
+ width:8px!important;height:8px!important;margin:0!important;
+ opacity:1!important;visibility:visible!important;background:var(--prime-menu-indicator,#ffdd00)!important;
+ animation:none!important;transition:none!important;border-radius:50%!important;
+}
+#MainNavMenuContainer [class~='Item'][class~='Active'] {position:relative!important;}
+#MainNavMenuContainer [class~='Item'][class~='Active']::before {
+ content:''!important;position:absolute!important;left:16px;top:50%;transform:translateY(-50%);
+ width:8px;height:8px;border-radius:50%;background:var(--prime-menu-indicator,#ffdd00)!important;pointer-events:none;
+}
+#MainNavMenuContainer [class~='ItemIcon'] {
+ grid-column:2!important;grid-row:1!important;display:grid!important;place-items:center!important;
+ width:24px!important;height:24px!important;margin:0!important;transform:none!important;transition:none!important;
+}
+#MainNavMenuContainer [class~='ItemIcon']>svg {
+ display:block!important;position:static!important;width:20px!important;height:20px!important;
+ margin:0!important;transform:none!important;transition:none!important;
+}
+#MainNavMenuContainer [class~='ItemLabel'] {
+ grid-column:3!important;grid-row:1!important;min-width:0!important;margin:0!important;
+ font-size:18px!important;transform:none!important;transition:none!important;
+}
+#MainNavMenuContainer [class~='ItemLabel'] * {color:inherit!important;font-size:inherit!important;transform:none!important;transition:none!important;}
+.BasicUI :is([class~='PagedSettingsDialog_PageListItem'],[class~='_2mL2HfT5AkDXRi1YBnRWKa'],[class~='_1-vlriAtKYDViAEunue4VO']) {
+ width:calc(100% - 40px)!important;margin:4px 20px!important;padding-inline:36px 16px!important;
+}
+.BasicUI :is([class~='PagedSettingsDialog_PageListItem'],[class~='_2mL2HfT5AkDXRi1YBnRWKa'],[class~='_1-vlriAtKYDViAEunue4VO'])::before {left:16px!important;}
+#MainNavMenuContainer [class~='ItemOuter']:is(.gpfocus,.gpfocuswithin,:has(.gpfocus),:has([class~='Active']),:hover,:focus-within) :is([class~='ItemLabel'],[class~='ItemIcon']) {
+ color:var(--prime-menu-highlight-text)!important;
+}
+#QuickAccess-Menu {
+ width:348px!important;height:100%!important;max-width:100%!important;
+ padding:0!important;margin:0!important;box-sizing:border-box!important;
+}
+#QuickAccess-NA {height:100%!important;max-height:none!important;margin:0!important;}
+#QuickAccess-NA.QAMFriendExpanded #QuickAccess-Menu {width:100%!important;}
+#QuickAccess-Menu [class~='Menu'] {width:100%!important;max-width:none!important;}
+#QuickAccess-Menu [class~='Tabs'] {width:48px!important;flex:0 0 48px!important;box-sizing:border-box!important;}
+#QuickAccess-Menu [class~='PanelOuterNav'] {margin:0!important;min-width:0!important;flex:1!important;box-sizing:border-box!important;}
+#QuickAccess-Menu [class~='TabGroupPanel'] {width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;padding-right:12px!important;}
+#QuickAccess-Menu [class~='Field'] {min-width:0!important;}
+#QuickAccess-Menu :is([class~='TabHeader'],[class~='TabPanelHeader'],[class~='TabHeaderRow'],[class~='Title'],[class~='_34nl5vUoFCDYYnmHNL7axB'],[class~='_3ys3Sy3ff2qe7MBpyd1Qru']) {
+ background:#000!important;background-image:none!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important;color:var(--prime-text)!important;
+}
+#QuickAccess-Menu :is([class~='TabHeader'],[class~='TabPanelHeader'],[class~='TabHeaderRow'],[class~='Tabs'],[class~='Tab'],[class~='_34nl5vUoFCDYYnmHNL7axB'],[class~='_3ys3Sy3ff2qe7MBpyd1Qru'])::before,
+#QuickAccess-Menu :is([class~='TabHeader'],[class~='TabPanelHeader'],[class~='TabHeaderRow'],[class~='Tabs'],[class~='Tab'],[class~='_34nl5vUoFCDYYnmHNL7axB'],[class~='_3ys3Sy3ff2qe7MBpyd1Qru'])::after {content:none!important;box-shadow:none!important;background:none!important;}
+#QuickAccess-Menu [role='tab'] {
+ color:var(--prime-text)!important;background:transparent!important;
+ border:0!important;border-radius:var(--prime-radius)!important;
+ animation:none!important;box-shadow:none!important;opacity:1!important;
+}
+#QuickAccess-Menu [role='tab']:is([aria-selected='true'],.gpfocus,:focus-visible) {
+ background:#fff!important;color:var(--prime-menu-highlight-text)!important;
+}
+#QuickAccess-Menu [role='tab']>svg {color:inherit!important;}
+/* Rows form a simple list; only the actual controls receive a filled surface. */
+#QuickAccess-Menu :is([class~='PanelSection'],[class~='PanelSectionRow']) {
+ border-radius:0!important;background:transparent!important;box-shadow:none!important;
+}
+#QuickAccess-Menu [class~='Field'] {
+ background:transparent!important;background-image:none!important;
+ border-radius:var(--prime-card-radius)!important;box-shadow:none!important;
+ margin-block:2px!important;color:var(--prime-text)!important;
+}
+#QuickAccess-Menu [class~='Field']:is(.gpfocus,.gpfocuswithin,:focus-within) {
+ background:#fff!important;color:var(--prime-menu-highlight-text)!important;animation:none!important;border-radius:var(--prime-radius)!important;
+}
+#QuickAccess-Menu [class~='Field']:is(.gpfocus,.gpfocuswithin,:focus-within) :is([class~='FieldLabel'],[class~='FieldDescription'],[class~='DialogLabel'],[class~='FieldIcon']) {
+ color:var(--prime-menu-highlight-text)!important;opacity:1!important;
+}
+#QuickAccess-Menu [class~='FieldDescription'] {color:var(--prime-secondary)!important;opacity:1!important;}
+#QuickAccess-Menu [class~='Field']:is(.gpfocus,.gpfocuswithin,:focus-within) :is(div,span,label,svg) {
+ color:var(--prime-menu-highlight-text)!important;
+}
+#QuickAccess-Menu :is(.DialogButton,.DropDownControlButton) {
+ border-radius:var(--prime-radius)!important;background:var(--prime-raised)!important;
+ box-shadow:none!important;color:var(--prime-text)!important;
+}
+#QuickAccess-Menu :is(.DialogButton,.DropDownControlButton):is(.gpfocus,:focus-visible,:hover) {
+ background:#fff!important;color:var(--prime-menu-highlight-text)!important;
+}
+/* CSS Loader's tiny disclosure buttons must not inherit a full-height pill. */
+#QuickAccess-Menu .CSSLoader_QAM_CollapseButton_Container [class~='Field'] {padding:0!important;min-height:0!important;background:transparent!important;}
+#QuickAccess-Menu .CSSLoader_QAM_CollapseButton_Container button {
+ min-height:20px!important;height:20px!important;padding:0!important;margin:0!important;
+ line-height:20px!important;background:transparent!important;border:0!important;
+}
+#QuickAccess-Menu .CSSLoader_QAM_CollapseButton_Container button>svg {display:block!important;width:14px!important;height:14px!important;margin:auto!important;transform:none!important;}
+/* The host paints the fade outside each native menu browser view. */
+.BasicUI [class~='BackgroundGlass']:has(>[class~='_1PGlK8mZ0CDISnm-gwJqo']),
+.BasicUI [class~='BackgroundGlass']:has(>[class~='_2orc8-PBheKd3BvuGXV6ZL']) {
+ background-color:transparent!important;backdrop-filter:none!important;
+}
+/* Single-line selections are capsules; two-line fields use the card radius. */
+:root {--prime-menu-highlight-radius:999px;}
+#MainNavMenuContainer [class~='ItemOuter'],
+#MainNavMenuContainer [class~='Item'],
+#QuickAccess-Menu [role='tab'],
+#QuickAccess-Menu [class~='Field']:is(.gpfocus,.gpfocuswithin,:focus-within),
+.BasicUI :is([class~='PagedSettingsDialog_PageListItem'],[class~='_2mL2HfT5AkDXRi1YBnRWKa'],[class~='_1-vlriAtKYDViAEunue4VO']) {
+ border-radius:var(--prime-menu-highlight-radius)!important;
+}
+.BasicUI :is([class~='contextMenuContents'],[class~='DialogDropDown_Menu'],[role='menu']) :is([class~='contextMenuItem'],[class~='MenuItem'],[class~='PopupMenuItem'],[class~='DialogDropDownMenuItem'],[role='menuitem']),
+.BasicUI :is([class~='contextMenuItem'],[class~='MenuItem'],[class~='PopupMenuItem'],[class~='DialogDropDownMenuItem']):is(:hover,:focus-visible,.gpfocus,[aria-selected='true'],[class~='Focused'],[class~='Selected']) {
+ border-radius:var(--prime-menu-highlight-radius)!important;
+}
+.BasicUI :is([class~='contextMenuContents'],[class~='DialogDropDown_Menu'],[role='menu']) :is([class~='FocusRing'],[class~='FocusRingRoot']) {
+ border-radius:var(--prime-menu-highlight-radius)!important;
+}
+/* Focus follows the menu item across Steam's different native menu renderers. */
+.BasicUI :is([class~='contextMenuItem'],[class~='DialogDropDownMenuItem']):is(.gpfocus,:hover,:focus-visible,[class~='Focused']):not(.disabled,[disabled],[aria-disabled='true']) {
+ background:var(--prime-menu-highlight,#fff)!important;
+ color:var(--prime-menu-highlight-text,#222220)!important;
+}
+.BasicUI :is([class~='contextMenuItem'],[class~='DialogDropDownMenuItem']):is(.gpfocus,:hover,:focus-visible,[class~='Focused']):not(.disabled,[disabled],[aria-disabled='true']) :is(div,span,label,svg) {
+ color:var(--prime-menu-highlight-text,#222220)!important;
+}
+.BasicUI :is([class~='contextMenuItem'],[class~='DialogDropDownMenuItem']):is(.gpfocus,:hover,:focus-visible,[class~='Focused']):not(.disabled,[disabled],[aria-disabled='true']) svg {
+ fill:currentColor!important;
+}
+.BasicUI :is([class~='contextMenuItem'],[class~='DialogDropDownMenuItem']):is(.gpfocus,:hover,:focus-visible,[class~='Focused']):not(.disabled,[disabled],[aria-disabled='true']) .SVGIcon_PlusCircle line {
+ stroke:currentColor!important;
+}
+#QuickAccess-Menu [class~='Field']:has(:is([class~='DialogDropDown'],[role='combobox'])) {
+ border-radius:var(--prime-card-radius,8px)!important;
+}
+.BasicUI [class~='BackgroundGlass']:has(>[class~='_1PGlK8mZ0CDISnm-gwJqo']) {
+ background-image:none!important;
+}
+#MainNavMenuContainer {
+ --prime-menu-fade-start:calc(min(300px,100vw) - 18px);
+ background-color:transparent!important;
+ background-image:linear-gradient(to right,#000 0,#000 var(--prime-menu-fade-start),rgba(0,0,0,.85) calc(var(--prime-menu-fade-start) + 16px),rgba(0,0,0,.65) calc(var(--prime-menu-fade-start) + 64px),rgba(0,0,0,.4) calc(var(--prime-menu-fade-start) + 140px),rgba(0,0,0,.2) calc(var(--prime-menu-fade-start) + 240px),rgba(0,0,0,.07) calc(var(--prime-menu-fade-start) + 340px),rgba(0,0,0,.015) calc(var(--prime-menu-fade-start) + 440px),transparent calc(var(--prime-menu-fade-start) + 520px))!important;
+}
+.BasicUI [class~='BackgroundGlass']:has(>[class~='_2orc8-PBheKd3BvuGXV6ZL']) {
+ --prime-menu-fade-start:calc(var(--prime-quick-menu-width,348px) + 2px);
+ background-image:linear-gradient(to left,#000 0,#000 var(--prime-menu-fade-start),rgba(0,0,0,.85) calc(var(--prime-menu-fade-start) + 16px),rgba(0,0,0,.65) calc(var(--prime-menu-fade-start) + 64px),rgba(0,0,0,.4) calc(var(--prime-menu-fade-start) + 140px),rgba(0,0,0,.2) calc(var(--prime-menu-fade-start) + 240px),rgba(0,0,0,.07) calc(var(--prime-menu-fade-start) + 340px),rgba(0,0,0,.015) calc(var(--prime-menu-fade-start) + 440px),transparent calc(var(--prime-menu-fade-start) + 520px))!important;
+}
+
+/* Linux paints the fade in the host as well as the native menu popup. */
+.BasicUI .BackgroundGlass:has(>._1PGlK8mZ0CDISnm-gwJqo) {
+ --prime-menu-fade-start:calc(min(300px,100vw) - 18px);
+ background-color:transparent!important;
+ background-image:linear-gradient(to right,#000 0,#000 var(--prime-menu-fade-start),rgba(0,0,0,.85) calc(var(--prime-menu-fade-start) + 16px),rgba(0,0,0,.65) calc(var(--prime-menu-fade-start) + 64px),rgba(0,0,0,.4) calc(var(--prime-menu-fade-start) + 140px),rgba(0,0,0,.2) calc(var(--prime-menu-fade-start) + 240px),rgba(0,0,0,.07) calc(var(--prime-menu-fade-start) + 340px),rgba(0,0,0,.015) calc(var(--prime-menu-fade-start) + 440px),transparent calc(var(--prime-menu-fade-start) + 520px))!important;
+}
+
+/* Linux native browser popups have an opaque backing. Keep it inside the panel. */
+.BasicUI [class~='_1PGlK8mZ0CDISnm-gwJqo']:not([class~='_26eRZxfJYfD_NywcU-TRuh']) {width:min(300px,100vw)!important;}
+
+/* Native popup visibility can precede Steam's host-backdrop Visible class. */
+.BasicUI [data-prime-main-menu-open=true] {opacity:1!important;}
+
+/* Keep the main feather above game-page stacking contexts, below native menus. */
+[data-prime-linux-main-fade]:not([hidden]) {
+ position:fixed;inset:0;z-index:2147483000;pointer-events:none;
+ background:linear-gradient(to right,#000 0,#000 282px,rgba(0,0,0,.85) 298px,rgba(0,0,0,.65) 346px,rgba(0,0,0,.4) 422px,rgba(0,0,0,.2) 522px,rgba(0,0,0,.07) 622px,rgba(0,0,0,.015) 722px,transparent 802px);
+}
+
+body:has(>[data-prime-linux-main-fade]) .BasicUI [class~='BackgroundGlass']:has(>[class~='_1PGlK8mZ0CDISnm-gwJqo']) {background-image:none!important;}

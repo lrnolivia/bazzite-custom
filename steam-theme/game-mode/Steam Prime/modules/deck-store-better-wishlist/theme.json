@@ -1,0 +1,42 @@
+{
+  "name": "Deck Store - Better Wishlist",
+  "author": "MattSeys",
+  "manifest_version": 7,
+  "version": "v0.1",
+  "patches": {
+    "Remove re-order": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "remove-reorder.css": [
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Show release date": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "show-release-date.css": [
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "No": {}
+      }
+    },
+    "Enable advanced filter": {
+      "type": "checkbox",
+      "values": {
+        "Yes": {
+          "enable-advanced-filter.css": [
+            "~https://store.steampowered.com~"
+          ]
+        },
+        "No": {}
+      }
+    }
+  },
+  "id": "44218814-10fe-4cd8-b571-a6106ffbebd0"
+}

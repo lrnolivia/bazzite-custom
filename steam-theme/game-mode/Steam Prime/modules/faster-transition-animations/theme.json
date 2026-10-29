@@ -1,0 +1,46 @@
+{
+  "name": "Faster Transition Animations",
+  "author": "SuchMeme",
+  "manifest_version": 3,
+  "version": "v1.1",
+  "inject": {
+    "shared.css": [
+      "SP"
+    ]
+  },
+  "patches": {
+    "Speed": {
+      "type": "slider",
+      "default": "3x",
+      "values": {
+        "Instant": {
+          "Time/0ms.css": [
+            "SP"
+          ]
+        },
+        "6x": {
+          "Time/100ms.css": [
+            "SP"
+          ]
+        },
+        "3x": {},
+        "2x": {
+          "Time/300ms.css": [
+            "SP"
+          ]
+        },
+        "1.5x": {
+          "Time/400ms.css": [
+            "SP"
+          ]
+        },
+        "1.2x": {
+          "Time/500ms.css": [
+            "SP"
+          ]
+        }
+      }
+    }
+  },
+  "id": "921a7ec8-b355-4799-b23f-73f4b9c713b8"
+}

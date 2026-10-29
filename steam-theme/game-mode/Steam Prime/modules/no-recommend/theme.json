@@ -1,0 +1,12 @@
+{
+  "name": "No Recommend",
+  "author": "ReticentRobot",
+  "version": "v1.0",
+  "manifest_version": 8,
+  "inject": {
+    "shared.css": [
+      "Steam"
+    ]
+  },
+  "id": "015ba30d-debc-4c1a-b81c-8a449db266c7"
+}

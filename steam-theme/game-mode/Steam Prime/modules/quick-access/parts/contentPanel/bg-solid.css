@@ -1,0 +1,8 @@
+/* ---
+Dependencies required (pre-injected via theme.json):
+    /
+--- */
+
+:root {
+    --chromahonQAM__main-bg: var(--chromahonQAM__Custom-main-bg);
+}

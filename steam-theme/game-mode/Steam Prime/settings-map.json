@@ -1,0 +1,1693 @@
+{
+  "schema": 1,
+  "profile": "settings.json",
+  "modules": [
+    {
+      "source": "Round",
+      "module": "radius",
+      "enabled": true,
+      "author": "EMERALD#0874"
+    },
+    {
+      "source": "Obsidian - Complete",
+      "module": "surfaces",
+      "enabled": true,
+      "author": "EMERALD0874"
+    },
+    {
+      "source": "Chromahon - All Sidebars",
+      "module": "main-menu",
+      "enabled": true,
+      "author": "Mugen"
+    },
+    {
+      "source": "CapyMenu (QAM)",
+      "module": "quick-access",
+      "enabled": true,
+      "author": "Mugen"
+    },
+    {
+      "source": "CapyMenu (Context Menus)",
+      "module": "context-menu",
+      "enabled": true,
+      "author": "Mugen"
+    },
+    {
+      "source": "CapyInputs",
+      "module": "input-controls",
+      "enabled": true,
+      "author": "Mugen"
+    },
+    {
+      "source": "Colored Toggles",
+      "module": "status-colors",
+      "enabled": true,
+      "author": "SuchMeme"
+    },
+    {
+      "source": "Top Bar Padding",
+      "module": "header",
+      "enabled": true,
+      "author": "SuchMeme"
+    },
+    {
+      "source": "Better Blur",
+      "module": "modal-blur",
+      "enabled": true,
+      "author": "the_bukkit"
+    },
+    {
+      "source": "MoreBlur",
+      "module": "shell-blur",
+      "enabled": true,
+      "author": "KokomiCat"
+    },
+    {
+      "source": "Artwork Play Buttons",
+      "module": "play-button",
+      "enabled": true,
+      "author": ""
+    },
+    {
+      "source": "Seamless Gameview",
+      "module": "game-page",
+      "enabled": true,
+      "author": ""
+    },
+    {
+      "source": "Avatar Customization Suite",
+      "destination": "modules/avatar-customization-suite",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Better Achievements",
+      "destination": "modules/better-achievements",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Better Game Badges",
+      "destination": "modules/better-game-badges",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Better Game Icons",
+      "destination": "modules/better-game-icons",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Blur Gameview Background",
+      "destination": "modules/blur-gameview-background",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Clean Game Launch",
+      "destination": "modules/clean-game-launch",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Clean Gameview",
+      "destination": "modules/clean-gameview",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Compact Activity & News",
+      "destination": "modules/compact-activity-news",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Customizable Keyboard",
+      "destination": "modules/customizable-keyboard",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Deck Store - Better Wishlist",
+      "destination": "modules/deck-store-better-wishlist",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Deck Store - Rounded",
+      "destination": "modules/deck-store-rounded",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "DellyFooter",
+      "destination": "modules/dellyfooter",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Desktop Rounded Games",
+      "destination": "modules/desktop-rounded-games",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Faster Transition Animations",
+      "destination": "modules/faster-transition-animations",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Fonts",
+      "destination": "modules/fonts",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Fullscreen Library & Community Media",
+      "destination": "modules/fullscreen-library-community-media",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Improved Media Details",
+      "destination": "modules/improved-media-details",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Library Move Extra Info",
+      "destination": "modules/library-move-extra-info",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Main Menu Hide Tabs (hide the Store)",
+      "destination": "modules/main-menu-hide-tabs-hide-the-store",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "More Library Icons",
+      "destination": "modules/more-library-icons",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "No News Section",
+      "destination": "modules/no-news-section",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "No Recommend",
+      "destination": "modules/no-recommend",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Overlay Colapse Fix",
+      "destination": "modules/overlay-colapse-fix",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Prominent Store Prices",
+      "destination": "modules/prominent-store-prices",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "QAM Hide Tabs",
+      "destination": "modules/qam-hide-tabs",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Rounded Keyboard",
+      "destination": "modules/rounded-keyboard",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    },
+    {
+      "source": "Rounded search",
+      "destination": "modules/rounded-search",
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-final-module-merge-2026-10-15.zip",
+      "fixed_choices": true
+    }
+  ],
+  "settings": [
+    {
+      "theme": "Round",
+      "old": "Intensity",
+      "new": "Appearance / Control Radius",
+      "value": "20px"
+    },
+    {
+      "theme": "Round",
+      "old": "Outlines",
+      "new": "Appearance / Outlines",
+      "value": "Round",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Obsidian - Complete",
+      "old": "Main Color",
+      "new": "Appearance / Main Color",
+      "value": {
+        "value": "Black",
+        "components": {
+          "Background Color": "#000"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Obsidian - Complete",
+      "old": "Recent Games Background",
+      "new": "Appearance / Recent Games Background",
+      "value": {
+        "value": "White",
+        "components": {
+          "Recent Games Color": "#fff"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Obsidian - Complete",
+      "old": "Disable Blur",
+      "new": "Appearance / Disable Blur",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Obsidian - Complete",
+      "old": "Disable Glow",
+      "new": "Appearance / Disable Glow",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel = Home, Library, etc.",
+      "new": null,
+      "kind": "section",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel = Resume game, Controller settings, etc. (In Game Only)",
+      "new": null,
+      "kind": "section",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Tertiary Panel = Paged content (In Game Only)",
+      "new": null,
+      "kind": "section",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Edges",
+      "new": "Main Menu / Edges",
+      "value": "Round",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Item Focus Grow Anim",
+      "new": "Main Menu / Item Focus Grow Anim",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Active Tab Indicator Type",
+      "new": "Main Menu / Active Tab Indicator Type",
+      "value": "Dot",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Background",
+      "new": "Main Menu / Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 0%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Bg Anim (Not on Solid Color, Stripes, IMG)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Collapse Bg",
+      "new": "Main Menu / Collapse Bg",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Label",
+      "new": "Main Menu / Item Label",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#f0f0f0"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Icon",
+      "new": "Main Menu / Item Icon",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#f0f0f0"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Background",
+      "new": "Main Menu / Item Focus Background",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Bg Anim (Not on Stripes)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Label",
+      "new": "Main Menu / Item Focus Label",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 18%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Icon",
+      "new": "Main Menu / Item Focus Icon",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(52, 100%, 0%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Underline",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Item Focus Underline Anim",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Active Tab Indicator",
+      "new": "Menus / Active Indicator Color",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(52, 100%, 50%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Primary Panel > Active Tab Indicator Anim",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Background",
+      "new": "Main Menu / Secondary Panel > Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 10%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Bg Anim (Not on Solid Color, Stripes, IMG)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Label",
+      "new": "Main Menu / Secondary Panel > Item Label",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 40%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Focus Background",
+      "new": "Main Menu / Secondary Panel > Item Focus Background",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 65%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Focus Bg Anim (Not on Stripes)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Focus Label",
+      "new": "Main Menu / Secondary Panel > Item Focus Label",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 10%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Focus Underline",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Item Focus Underline Anim",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Active Tab Indicator",
+      "new": "Main Menu / Secondary Panel > Active Tab Indicator",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(180, 100%, 35%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Secondary Panel > Active Tab Indicator Anim",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Tertiary Panel > Background",
+      "new": "Main Menu / Tertiary Panel > Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "hsla(0, 0%, 15%, 1)",
+          "Image Picker": ""
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Tertiary Panel > Bg Anim (Not on Solid Color, Stripes, IMG)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "Tertiary Panel > Foreground",
+      "new": "Main Menu / Tertiary Panel > Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#e3e3e3"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "\u00e2\u017e\u00a4 USAGE NOTES",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "\u00e2\u017e\u00a4 Global Settings",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "\u00e2\u017e\u00a4 Primary Panel",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "\u00e2\u017e\u00a4 Secondary Panel",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "Chromahon - All Sidebars",
+      "old": "\u00e2\u017e\u00a4 Tertiary Panel",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "QAM Type",
+      "new": "Quick Access / QAM Type",
+      "value": "Regular Rounded",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Layout",
+      "new": "Quick Access / Sidebar Layout",
+      "value": "Standard",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Show Sidebar Page Indicator",
+      "new": "Quick Access / Show Sidebar Page Indicator",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Hide Help Page",
+      "new": "Quick Access / Hide Help Page",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Extend QAM Styling To Notification Toasts",
+      "new": "Quick Access / Extend QAM Styling To Notification Toasts",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Content Panel Background Type",
+      "new": "Quick Access / Content Panel Background Type",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Solid Color": "#0f0f0f",
+          "Image Picker": ""
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Content Panel Bg Anim (Not on Solid Color, Stripes, IMG)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Content Panel Foreground",
+      "new": "Quick Access / Content Panel Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#adadad"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Header Layer 1 Bg Type",
+      "new": "Quick Access / Header Layer 1 Bg Type",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 2%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Header Layer 1 Bg Anim (Not on Stripes, Cutoff)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Header Layer 2 Bg Type",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Header Layer 2 Bg Anim (Not on Cutoff)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Header Foreground",
+      "new": "Quick Access / Header Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Focusable Item Bg Highlight Type",
+      "new": "Quick Access / Focusable Item Bg Highlight Type",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 0%, 0.6)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Focusable Item Highlight Bg Anim (Not on Stripes)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Focusable Item Highlight Fg",
+      "new": "Quick Access / Focusable Item Highlight Fg",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 85%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Item Separators",
+      "new": "Quick Access / Item Separators",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(2, 1%, 41%, 0)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Panel Background",
+      "new": "Quick Access / Sidebar Panel Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 0%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Icon",
+      "new": "Quick Access / Sidebar Icon",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 71%, 0.30196078431372547)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Icon Highlight",
+      "new": "Quick Access / Sidebar Icon Highlight",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Icon Bg Highlight",
+      "new": "Quick Access / Sidebar Icon Bg Highlight",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(0, 0%, 30%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Sidebar Icon Highlight Bg Anim (Not on Stripes)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Sidebar Page Indicator",
+      "new": "Quick Access / Sidebar Page Indicator",
+      "value": {
+        "value": "Solid Colors",
+        "components": {
+          "Color 1": "hsla(55, 79.48717948717946%, 45%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u21b3 Sidebar Indicator Anim (Not on Stripes)",
+      "new": null,
+      "fromDefault": true,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Top Bar Background",
+      "new": "Quick Access / Top Bar Background",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 3%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Top Bar Foreground",
+      "new": "Quick Access / Top Bar Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 100%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Top Bar Bg Highlight",
+      "new": "Quick Access / Top Bar Bg Highlight",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 4%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Top Bar Fg Highlight",
+      "new": "Quick Access / Top Bar Fg Highlight",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 61%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "Notification Mark",
+      "new": "Quick Access / Notification Mark",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(345.88235294117646, 73.91304347826087%, 62%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Global Settings",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Content Panel",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Content Panel Bg Anim (Not on Solid Color, Stripes, IMG)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Header Layer 1 Bg Anim (Not on Stripes, Cutoff)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Header Layer 2 Bg Anim (Not on Cutoff)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Focusable Items In Page",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Focusable Item Highlight Bg Anim (Not on Stripes)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Sidebar",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Sidebar Icon Highlight Bg Anim (Not on Stripes)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u2020\u00b3 Sidebar Indicator Anim (Not on Stripes)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Top Bar (Only Visible In-Game)",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (QAM)",
+      "old": "\u00e2\u017e\u00a4 Other",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Edges",
+      "new": "Context Menus / Edges",
+      "value": "Round",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Size",
+      "new": "Menus / Context Menu Width",
+      "value": "Normal"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Layout",
+      "new": "Menus / Context Menu Layout",
+      "value": "Default"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Menu Background",
+      "new": "Context Menus / Menu Background",
+      "value": "OLED Black",
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Menu Foreground",
+      "new": "Context Menus / Menu Foreground",
+      "value": {
+        "value": "White",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Item Focus Background",
+      "new": "Context Menus / Item Focus Background",
+      "value": "White",
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Item Focus Foreground",
+      "new": "Context Menus / Item Focus Foreground",
+      "value": {
+        "value": "Black",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Title Background",
+      "new": "Context Menus / Title Background",
+      "value": "Transparent Black",
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Title Foreground",
+      "new": "Context Menus / Title Foreground",
+      "value": {
+        "value": "White",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Modal Background (Affects all modals)",
+      "new": "Context Menus / Modal Background (Affects all modals)",
+      "value": {
+        "value": "SteamOS Default",
+        "components": {
+          "Color Picker": "#34e8eb80",
+          "Image Picker": ""
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Special Button Focus Background",
+      "new": "Context Menus / Special Button Focus Background",
+      "value": "Same as Item Focus",
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Special Button Focus Foreground",
+      "new": "Context Menus / Special Button Focus Foreground",
+      "value": {
+        "value": "Same as Item Focus",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Power: Destruct. Button Focus Background",
+      "new": "Context Menus / Power: Destruct. Button Focus Background",
+      "value": "Same as Item Focus",
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Power: Destruct. Button Focus Foreground",
+      "new": "Context Menus / Power: Destruct. Button Focus Foreground",
+      "value": {
+        "value": "Same as Item Focus",
+        "components": {
+          "Color Picker": "#eee"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Grow label on focus",
+      "new": "Context Menus / Grow label on focus",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Animate label gradient",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Center labels",
+      "new": "Menus / Center Context Labels",
+      "value": "No"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Remove label separators",
+      "new": "Context Menus / Remove label separators",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Blur title (Trsp solid colors only. Recommended w/ Modal Bg Img.)",
+      "new": "Context Menus / Blur title (Trsp solid colors only. Recommended w/ Modal Bg Img.)",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Modal Background fade-in",
+      "new": "Context Menus / Modal Background fade-in",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyMenu (Context Menus)",
+      "old": "Apply Special Button styling to Gameview",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Light Scheme Adjustments",
+      "new": "Controls / Light Scheme Adjustments",
+      "value": "Disabled",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Gradient Animations (Limited to Toggles & Sliders)",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Non-Round Toggles",
+      "new": "Controls / Quick Access / Non-Round Toggles",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Toggle Handle Animation",
+      "new": "Controls / Quick Access / Toggle Handle Animation",
+      "value": "Yes",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Toggle Rail 'Enabled'",
+      "new": "Controls / Quick Access / Toggle Rail 'Enabled'",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#50eb79"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Toggle Handle 'Enabled'",
+      "new": "Controls / Quick Access / Toggle Handle 'Enabled'",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#fff"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Toggle Rail 'Disabled'",
+      "new": "Controls / Quick Access / Toggle Rail 'Disabled'",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#292929"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Toggle Handle 'Disabled'",
+      "new": "Controls / Quick Access / Toggle Handle 'Disabled'",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#363636"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Non-Round Sliders",
+      "new": "Controls / Quick Access / Non-Round Sliders",
+      "value": "No",
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Slider Fill",
+      "new": "Controls / Quick Access / Slider Fill",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(50, 80%, 61.76470588235294%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Slider Empty",
+      "new": "Controls / Quick Access / Slider Empty",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 50%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Slider Handle",
+      "new": "Controls / Quick Access / Slider Handle",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#fff"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Slider Highlight",
+      "new": "Controls / Quick Access / Slider Highlight",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 80%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Button Decoration",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Button Background",
+      "new": "Controls / Quick Access / Button Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 60%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Button Foreground",
+      "new": "Controls / Quick Access / Button Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 20%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Button Highlight Background",
+      "new": "Controls / Quick Access / Button Highlight Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 90%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "QAM > Button Highlight Foreground",
+      "new": "Controls / Quick Access / Button Highlight Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "hsla(0, 0%, 35%, 1)"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Button Decoration",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Button Background",
+      "new": "Controls / Main Menu / Button Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "hsla(0, 0%, 10%, 1)"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Button Foreground",
+      "new": "Controls / Main Menu / Button Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#bababa"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Button Highlight Background",
+      "new": "Controls / Main Menu / Button Highlight Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#d6d6d6"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Button Highlight Foreground",
+      "new": "Controls / Main Menu / Button Highlight Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#121212"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Text Input Decoration",
+      "new": null,
+      "retired_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Chromahon-before-pattern-cleanup-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Text Input Background",
+      "new": "Controls / Main Menu / Text Input Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#0f0f0f"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Text Input Foreground",
+      "new": "Controls / Main Menu / Text Input Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#bababa"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Text Input Highlight Background",
+      "new": "Controls / Main Menu / Text Input Highlight Background",
+      "value": {
+        "value": "Solid Color",
+        "components": {
+          "Color": "#d6d6d6"
+        }
+      },
+      "simplified_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+      "fixed_by_request": true
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "Steam Menu > Text Input Highlight Foreground",
+      "new": "Controls / Main Menu / Text Input Highlight Foreground",
+      "value": {
+        "value": "_",
+        "components": {
+          "Color": "#121212"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "\u00e2\u017e\u00a4 Quick Access Menu",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "CapyInputs",
+      "old": "\u00e2\u017e\u00a4 Steam Menu",
+      "new": null,
+      "kind": "unrecognized-preserved",
+      "value": "_"
+    },
+    {
+      "theme": "Colored Toggles",
+      "old": "Theme Color",
+      "new": "Indicators / Theme Color",
+      "value": {
+        "value": "White",
+        "components": {
+          "Main Color": "#f00",
+          "Text Color": "#000"
+        }
+      },
+      "fixed_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Home Menu Top Padding",
+      "new": "Header / Home and Game Page Top Padding",
+      "value": "30px"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Sideways Padding",
+      "new": "Header / Sideways Padding",
+      "value": "25px"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Only Show Sideways Padding On Home",
+      "new": "Header / Only Show Sideways Padding On Home",
+      "value": "No"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Left Side Profile",
+      "new": "Header / Left Side Profile",
+      "value": "No"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Left Side Time",
+      "new": "Header / Left Side Time",
+      "value": "Yes"
+    },
+    {
+      "theme": "Top Bar Padding",
+      "old": "Left Side Battery",
+      "new": "Header / Left Side Battery",
+      "value": "No"
+    },
+    {
+      "theme": "Better Blur",
+      "old": "Blur Strength",
+      "new": "Effects / Dialog Blur",
+      "value": "6"
+    },
+    {
+      "theme": "Better Blur",
+      "old": "Opacity",
+      "new": "Effects / Dialog Opacity",
+      "value": "0.6"
+    },
+    {
+      "theme": "MoreBlur",
+      "old": "Blur strength",
+      "new": "Effects / Shell Blur",
+      "value": "8"
+    },
+    {
+      "theme": "MoreBlur",
+      "old": "Header opacity",
+      "new": "Effects / Header Opacity",
+      "value": "0.0",
+      "automatic_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-automatic-surface-settings-2026-10-15.zip",
+      "preserved_in": "automatic-surfaces.json"
+    },
+    {
+      "theme": "MoreBlur",
+      "old": "Footer opacity",
+      "new": "Effects / Footer Opacity",
+      "value": "0.9",
+      "automatic_by_request": true,
+      "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-before-automatic-surface-settings-2026-10-15.zip",
+      "preserved_in": "automatic-surfaces.json"
+    }
+  ],
+  "customization": {
+    "public_controls": 16,
+    "fixed_choices_file": "fixed-choices.json",
+    "recovery": "C:\\Users\\lrnol\\Documents\\Steam Theme\\Recovery\\Steam Prime-options-before-consolidation-2026-10-15.zip",
+    "reason": "Repeated low-level visual settings are fixed at their saved values; public controls are grouped by appearance, header, menus and effects.",
+    "automatic_surfaces_file": "automatic-surfaces.json"
+  }
+}

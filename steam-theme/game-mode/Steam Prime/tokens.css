@@ -1,0 +1,43 @@
+/* Steam Prime shared palette and geometry. */
+:root {
+ --prime-recessed:#000;
+ --prime-canvas:#121211;
+ --prime-surface:#222220;
+ --prime-raised:#343430;
+ --prime-floating:#272725;
+ --prime-border:#3d3d38;
+ --prime-text:#f2f1ee;
+ --prime-secondary:#c2c1bb;
+ --prime-disabled:#a6a69e;
+ --prime-focus:#18afc0;
+ --prime-action:#b5471f;
+ --prime-warning:#ffbf00;
+ --prime-enabled:#3bcb8d;
+ --prime-danger:#ff6f78;
+ --prime-menu-highlight:#fff;
+ --prime-menu-highlight-text:#222220;
+ --prime-menu-indicator:var(--chromahonSM__primaryPanel-tabIndicator,#ffdd00);
+ --round-radius-size:20px;
+ --prime-radius:var(--round-radius-size,20px);
+ --prime-card-radius:8px;
+ --prime-shadow:0 6px 18px #0000003d;
+ --prime-header-clearance:calc(52px + var(--seamless-window-inset,0px));
+}
+
+/* Migrated components share the public palette and radius controls. */
+:root {
+ --game-icon-radius:var(--prime-card-radius);
+ --library-extra-info-radius-size:var(--prime-card-radius);
+ --desktopgb:var(--prime-card-radius);
+ --keyboard-rounding-amount:var(--prime-radius);
+ --sdkb-bg-color:var(--prime-surface);
+ --sdkb-key-bg:var(--prime-raised);
+ --sdkb-key-bg-hover:var(--prime-floating);
+ --sdkb-key-bg-pressed:var(--prime-floating);
+ --sdkb-key-border-color:var(--prime-border);
+ --sdkb-key-text-color:var(--prime-text);
+ --sdkb-key-text-secondary:var(--prime-secondary);
+ --sdkb-accent:var(--prime-focus);
+ --sdkb-accent-text:var(--prime-canvas);
+ --sdkb-glow:0 0 transparent;
+}

@@ -1,0 +1,196 @@
+/* Terra Prime / HIS Surfaces, Dark. Fonts and icon artwork retain their existing owners. */
+
+.BasicUI {
+ color:var(--prime-text);
+ --obsidian-surface:var(--prime-surface);
+ --obsidian-surface-raised:var(--prime-raised);
+ --gpColor-Blue:var(--prime-focus)!important;
+ --gpColor-BlueHi:var(--prime-focus)!important;
+ --gpColor-Green:var(--prime-enabled)!important;
+ --gpColor-Red:var(--prime-danger)!important;
+ --colored-toggles-main-color:var(--prime-enabled)!important;
+ --colored-toggles-static-color:var(--prime-enabled)!important;
+ --colored-toggles-friends-text-color:#08281b!important;
+}
+/* Shared fields cover Settings, game properties, controller setup and quick panels. */
+.BasicUI :is(.Field.Background,.Field.HighlightOnFocus,.gamepaddialog_Field_S-_La) {
+ background:var(--prime-surface)!important;
+ background-image:none!important;
+ border-radius:var(--prime-card-radius)!important;
+ color:var(--prime-text)!important;
+ box-sizing:border-box;
+}
+.BasicUI [class~='PagedSettingsDialog_PageContent'] [class~='Field'][class~='Background'],
+.BasicUI [class~='PageContent'] [class~='Field'][class~='Background'] {margin-block:6px!important;}
+.BasicUI :is(.Field.Background,.Field.HighlightOnFocus,.gamepaddialog_Field_S-_La):is(.gpfocus,.gpfocuswithin,:focus-within) {
+ background:var(--prime-raised)!important;
+ background-image:none!important;
+ color:var(--prime-text)!important;
+}
+.BasicUI .Field:is(.WithBottomSeparatorStandard,.WithBottomSeparatorThick)::after {background:transparent!important;}
+.BasicUI :is(.DialogInput,.DialogDropDown,.DialogDropDown_Menu,.DialogButton,.DropDownControlButton) {
+ border-radius:var(--prime-radius)!important;
+ background-color:var(--prime-raised)!important;
+ background-image:none!important;
+ color:var(--prime-text)!important;
+}
+.BasicUI :is(.DialogInput,.DialogTextInputBase,input[type=text],input[type=search],textarea) {
+ color:var(--prime-text)!important;
+ caret-color:var(--prime-focus);
+}
+.BasicUI :is(input,textarea)::placeholder {color:var(--prime-secondary)!important;opacity:1!important;}
+.BasicUI :is(.FieldLabel,.FieldDescription,.FieldDescriptionText,.DialogLabel,.DialogBodyText) {color:var(--prime-text)!important;}
+.BasicUI :is(.FieldDescription,.FieldDescriptionText,.DialogBodyText,.SecondaryText,.SubLabel) {color:var(--prime-secondary)!important;}
+.BasicUI :is(.Field.Disabled,.Field[aria-disabled=true]) {opacity:1!important;}
+.BasicUI :is(.Field.Disabled,.Field[aria-disabled=true]) :is(.FieldLabel,.FieldDescription,.FieldDescriptionText,.DialogBodyText) {color:var(--prime-disabled)!important;}
+.BasicUI .Field a {color:var(--prime-focus)!important;text-underline-offset:.2em;}
+.BasicUI .Field :is(.Link,.TextLink) {color:var(--prime-focus)!important;}
+.BasicUI .BetaHeaderRow {background:var(--prime-raised)!important;background-image:none!important;color:var(--prime-secondary)!important;border-radius:var(--prime-card-radius)!important;}
+.BasicUI .BetaRow {background:var(--prime-surface)!important;background-image:none!important;color:var(--prime-text)!important;border:0!important;border-radius:var(--prime-card-radius)!important;}
+.BasicUI .BetaRow.Selected {box-shadow:inset 0 0 0 1px var(--prime-focus)!important;}
+.BasicUI .BetaRow.Selected::before {background:transparent!important;}
+.BasicUI :is(.DialogButton,.DropDownControlButton):is(:hover,:focus-visible,.gpfocus) {background-color:var(--prime-floating)!important;color:var(--prime-text)!important;}
+.BasicUI :is([class~='MenuButton'],[class~='MenuButtonContainer']) {border-radius:var(--prime-radius)!important;}
+/* The enabled rail is green in every panel; its native handle and interaction remain intact. */
+.BasicUI :is(.Toggle,.gamepaddialog_Toggle_24G4g) :is(.ToggleRail,.gamepaddialog_ToggleRail_2JtC3) {background:var(--prime-border)!important;border-color:var(--prime-border)!important;}
+.BasicUI :is(.Toggle[aria-checked=true],.Toggle.On,.gamepaddialog_Toggle_24G4g.gamepaddialog_On_3ld7T) :is(.ToggleRail,.gamepaddialog_ToggleRail_2JtC3) {
+ background:var(--prime-enabled)!important;border-color:var(--prime-enabled)!important;
+}
+.BasicUI :is(.Toggle[aria-checked=true],.Toggle.On) .ToggleRail::before {background:var(--prime-enabled)!important;animation:none!important;}
+.BasicUI :is(.Toggle,.gamepaddialog_Toggle_24G4g) :is(.ToggleSwitch,.gamepaddialog_ToggleSwitch_3__OD) {background:var(--prime-text)!important;}
+.BasicUI :is(input[type=checkbox],input[type=radio]) {accent-color:var(--prime-enabled);}
+.BasicUI :is(.SliderTrack,.gamepadslider_SliderTrack_Mq25N)::before {background:var(--prime-focus)!important;}
+.BasicUI [class~='SliderHandle'] {background:var(--prime-text)!important;color:var(--prime-text)!important;}
+.BasicUI [class~='SliderTrack'] {background:var(--prime-border)!important;}
+.BasicUI [class~='SliderTrack']::before {background:var(--prime-focus)!important;}
+.BasicUI [class~='SliderNotchTick'] {background:var(--prime-border)!important;}
+.BasicUI [class~='SliderNotchTick'][class~='TickActive'] {background:var(--prime-focus)!important;}
+/* Menus use one shared selection treatment across their different native renderers.
+   Stable semantic attributes use single quotes because the loader's class migration
+   table remaps ItemOuter/ItemLabel/ItemIcon to a different native menu renderer. */
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']),
+.BasicUI :is(.PagedSettingsDialog_PageListColumn,.PageListColumn,._1d6VIquCc410kNE7rDAje6,._2kwFFHckg8jvnwJfg9-la8) {
+ background:#000!important;background-image:none!important;
+}
+.BasicUI :is(.PagedSettingsDialog,.PagedSettingsDialog_PageContent,.PagedSettingsDialog_ContentColumn,._33vqr13-jdnjTkKKTh414f) {background:var(--prime-recessed)!important;background-image:none!important;}
+.BasicUI .PagedSettingsDialog_PageListColumn {padding-top:var(--prime-header-clearance)!important;box-sizing:border-box!important;}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ItemOuter'],
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO) {
+ border-radius:var(--prime-radius)!important;box-sizing:border-box!important;
+ background:transparent!important;color:var(--prime-text)!important;
+ animation:none!important;transform:none!important;position:relative;
+}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ItemOuter'] {
+ margin-inline:12px!important;opacity:1!important;
+}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='Item'] {background:transparent!important;border-radius:inherit!important;animation:none!important;}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) :is([class~='ItemLabel'],[class~='ItemIcon']) {color:var(--prime-text)!important;opacity:1!important;}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ItemOuter']:is(:hover,:focus-within,:has(.gpfocus),:has([class~='Active'])),
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO):is([aria-selected=true],.gpfocus,:hover,:focus-visible,._1ELdDY5kb5jxjXe-FpWBo5,._2DpXjzK3WWsOtUWUrcuOG7) {
+ background:var(--prime-menu-highlight)!important;color:var(--prime-menu-highlight-text)!important;
+ animation:none!important;box-shadow:none!important;
+}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ItemOuter']:is(:hover,:focus-within,:has(.gpfocus),:has([class~='Active'])) :is([class~='ItemLabel'],[class~='ItemIcon'],svg),
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO):is([aria-selected=true],.gpfocus,:hover,:focus-visible,._1ELdDY5kb5jxjXe-FpWBo5,._2DpXjzK3WWsOtUWUrcuOG7) :is(.ScaledChildren,span,svg,.PageListItem_Icon,.PageListItem_Title,._4niDTAfIpKQoRx-CR_3K) {color:var(--prime-menu-highlight-text)!important;}
+.BasicUI .PagedSettingsDialog_PageListItem[aria-selected=true]::before {
+ content:''!important;position:absolute;left:16px!important;top:50%;transform:translateY(-50%);
+ width:8px;height:8px;border-radius:50%;background:var(--prime-menu-indicator)!important;
+}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ActiveDot']::after {
+ content:''!important;position:absolute!important;inset:0!important;
+ width:100%!important;height:100%!important;border-radius:50%!important;
+ background:var(--prime-menu-indicator)!important;animation:none!important;
+}
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO):not([aria-disabled=true]) {opacity:1!important;}
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO)>*,
+.BasicUI :is(.PagedSettingsDialog_PageListItem,._2mL2HfT5AkDXRi1YBnRWKa,._1-vlriAtKYDViAEunue4VO)>*>* {
+ color:inherit!important;opacity:1!important;
+}
+:is([class~='_23IDiI-F_FxXotrgpY71r8'],[class~='mainmenu_Menu_23IDi']) [class~='ActiveDot'] {
+ position:absolute!important;left:16px!important;top:50%!important;bottom:auto!important;
+ transform:translateY(-50%)!important;width:8px!important;height:8px!important;margin:0!important;
+}
+/* Cards are restrained; buttons and selectors keep the larger control radius. */
+.BasicUI :is(.ActivityFeedContainer .Event.Panel,.PostTextEntry.AddToFeed,.CommunityItem,.AppGameInfoContainer,.FriendsPlayingNow,.FriendsPreviouslyPlayed,.FriendsSection,.DialogContent,.DialogContent_InnerWidth,.ModalPosition_Content>div,.PanelSection,.RecentlyCompletedItem,.DownloadGraph,.SectionItemWrapper,.SectionItem,.GamepadDialogContent>section) {
+ border-radius:var(--prime-card-radius)!important;
+}
+.BasicUI :is(.Field,.DialogInput,.DialogButton,.SectionItemWrapper,.Event.Panel,.LibraryItemBox)::after {border-radius:inherit!important;}
+.BasicUI .AppDetailsRoot .TabRow {border-radius:var(--prime-radius)!important;}
+.BasicUI .AppDetailsRoot :is(.PostTextEntry.AddToFeed,.CommunityItem,.AppGameInfoContainer) {border-radius:var(--prime-card-radius)!important;}
+.BasicUI .AppDetailsRoot .ActivityFeedContainer .Event.Panel {border-radius:var(--prime-card-radius)!important;}
+/* One clipping boundary per capsule; nested images must not cut the corner a second time. */
+.BasicUI .LibraryItemBox {border-radius:var(--prime-card-radius)!important;overflow:visible!important;}
+.BasicUI .LibraryItemBox :is(.Image,.GreyBackground) {border-radius:0!important;}
+.BasicUI .LibraryItemBox>.GreyBackground {border-radius:inherit!important;overflow:hidden!important;background:transparent!important;}
+.BasicUI .LibraryItemBox [class~='LibraryBottomItems'] {padding:8px!important;box-sizing:border-box!important;}
+.BasicUI .LibraryItemBox [class~='LibraryItemIcons'] {align-items:center!important;}
+.BasicUI .LibraryItemBox [class~='NumberOfCopies'] {
+ display:grid!important;place-items:center!important;box-sizing:border-box!important;
+ width:24px!important;height:24px!important;min-width:24px!important;flex:0 0 24px!important;
+ line-height:1!important;padding:0!important;margin:0!important;border-radius:50%!important;
+}
+.BasicUI :is(.FocusRing,._1wPplsegQqCoe06wXPhzKT) {
+ background:transparent!important;border-radius:calc(var(--prime-card-radius) + 2px)!important;
+}
+.BasicUI ::selection {background:var(--prime-focus);color:#041e21;}
+.BasicUI :is(.PagedSettingsDialog_PageContent,.GameInfoContainer) {scrollbar-color:var(--prime-border) transparent;}
+/* Header artwork contrast is sampled on scene changes, never with an animation loop.
+   Color inherits through currentColor glyphs; avatar art and battery fills stay intact. */
+#header [data-prime-header-tone] {
+ --prime-header-foreground:var(--prime-text);
+ --prime-header-glow:rgba(0,0,0,.55);
+ filter:drop-shadow(0 0 4px var(--prime-header-glow))!important;
+}
+#header [data-prime-header-tone=dark] {
+ --prime-header-foreground:var(--prime-canvas);
+ --prime-header-glow:rgba(255,255,255,.4);
+}
+#header [data-prime-header-tone]:not(#header_profile),
+#header [data-prime-header-tone]>svg {color:var(--prime-header-foreground)!important;}
+#header input[data-prime-header-tone]::placeholder {color:var(--prime-header-foreground)!important;opacity:1!important;}
+/* Feather only the backdrop, keeping header controls fully visible. */
+.BasicUI .BasicHome>#header {
+ isolation:isolate!important;background-color:transparent!important;background-image:none!important;
+ backdrop-filter:none!important;overflow:visible!important;
+}
+.BasicUI .BasicHome>#header::before {
+ content:''!important;position:absolute!important;inset:0 0 -24px!important;height:auto!important;
+ z-index:-1!important;pointer-events:none!important;opacity:1!important;transition:none!important;background-image:none!important;
+ background-color:rgba(0,0,0,var(--moreBlur-header-opacity,0))!important;
+ backdrop-filter:blur(var(--moreBlur-strength,8px))!important;
+ -webkit-backdrop-filter:blur(var(--moreBlur-strength,8px))!important;
+ mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 24px),transparent 100%)!important;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 24px),transparent 100%)!important;
+}
+html:not([data-prime-header-compact=true]) .BasicUI .BasicHome>#header::before {content:none!important;}
+html:is([data-steam-prime-page=home],[data-steam-prime-page=game]):not([data-prime-header-compact=true]) #header [class~='_1HhLUvHH6BZLIOyOE80TVh'] {font-size:18px!important;}
+/* Detached header controls need a stable dark backing over scrolling content. */
+html[data-prime-header-compact=true] .BasicUI .BasicHome>#header::before {
+ bottom:-64px!important;background-color:transparent!important;
+ background-image:linear-gradient(to bottom,rgba(0,0,0,.94),rgba(0,0,0,.82) 30px,rgba(0,0,0,.45) 52px,rgba(0,0,0,.12) 78px,transparent 104px)!important;
+ mask-image:linear-gradient(to bottom,#000 0,#000 40px,transparent 104px)!important;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 40px,transparent 104px)!important;
+}
+html[data-steam-prime-page=home] .BasicUI .BasicHome [class~='TabHeaderRowWrapper'] {
+ background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+/* A light search field has its own foreground; the transparent header stays white. */
+#header [class~='SearchAndTitleContainer']:is(.gpfocuswithin,:focus-within,[class~='_1bmuJRkMBGcApfJwlj_k-F'],[class~='_2YxXntwjdsceSnfMRClWHG']:hover) :is(input,svg) {
+ color:var(--prime-menu-highlight-text)!important;filter:none!important;text-shadow:none!important;
+}
+#header [class~='SearchAndTitleContainer']:is(.gpfocuswithin,:focus-within,[class~='_1bmuJRkMBGcApfJwlj_k-F'],[class~='_2YxXntwjdsceSnfMRClWHG']:hover) input::placeholder {
+ color:var(--prime-menu-highlight-text)!important;filter:none!important;text-shadow:none!important;
+}
+
+/* Keep the same inset when Home yields to a game detail route. */
+html:is([data-steam-prime-page=home],[data-steam-prime-page=game]):not([data-prime-header-compact=true]) .BasicUI #header {
+ position:fixed!important;top:0!important;
+ padding-top:var(--tbp-height,30px)!important;
+ height:calc(40px + var(--tbp-height,30px))!important;
+ min-height:calc(40px + var(--tbp-height,30px))!important;
+ max-height:calc(40px + var(--tbp-height,30px))!important;
+ box-sizing:border-box!important;
+}
+
+/* Keep the blurred placeholder while Steam advances past failed hero sources. */
+.HeaderBackgroundImage img[data-loew-artwork-ready=false]:not(.ImgBlur) {opacity:0!important;}

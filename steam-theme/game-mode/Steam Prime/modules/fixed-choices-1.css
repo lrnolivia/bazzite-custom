@@ -1,0 +1,28 @@
+/* Preserved selected values; shared styling is controlled by the public palette. */
+:root {
+ --chromahonSM__primaryPanel-bg:hsla(0, 0%, 0%, 1);
+ --chromahonSM__primaryPanel-item-label:#f0f0f0;
+ --chromahonSM__primaryPanel-item-label_r:240;
+ --chromahonSM__primaryPanel-item-label_g:240;
+ --chromahonSM__primaryPanel-item-label_b:240;
+ --chromahonSM__primaryPanel-item-label_rgb:240,240,240;
+ --chromahonSM__primaryPanel-item-svg:#f0f0f0;
+ --chromahonSM__primaryPanel-item-svg_r:240;
+ --chromahonSM__primaryPanel-item-svg_g:240;
+ --chromahonSM__primaryPanel-item-svg_b:240;
+ --chromahonSM__primaryPanel-item-svg_rgb:240,240,240;
+ --chromahonSM__primaryPanel-itemFocus-bg:hsla(0, 0%, 100%, 1);
+ --chromahonSM__primaryPanel-itemFocus-label:hsla(0, 0%, 18%, 1);
+ --chromahonSM__primaryPanel-itemFocus-svg:hsla(52, 100%, 0%, 1);
+ --chromahonSM__secondaryPanel-bg:hsla(0, 0%, 10%, 1);
+ --chromahonSM__secondaryPanel-item-label:hsla(0, 0%, 40%, 1);
+ --chromahonSM__secondaryPanel-itemFocus-bg:hsla(0, 0%, 65%, 1);
+ --chromahonSM__secondaryPanel-itemFocus-label:hsla(0, 0%, 10%, 1);
+ --chromahonSM__secondaryPanel-tabIndicator:hsla(180, 100%, 35%, 1);
+ --chromahonSM__tertiaryPanel-bg:hsla(0, 0%, 15%, 1);
+ --chromahonSM__tertiaryPanel-fg:#e3e3e3;
+ --chromahonSM__tertiaryPanel-fg_r:227;
+ --chromahonSM__tertiaryPanel-fg_g:227;
+ --chromahonSM__tertiaryPanel-fg_b:227;
+ --chromahonSM__tertiaryPanel-fg_rgb:227,227,227;
+}

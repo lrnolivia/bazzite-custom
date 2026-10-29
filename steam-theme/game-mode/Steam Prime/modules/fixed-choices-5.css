@@ -1,0 +1,39 @@
+/* Preserved selected values; shared styling is controlled by the public palette. */
+:root {
+ --chromahonControls__button-bg:hsla(0, 0%, 10%, 1);
+ --chromahonControls__button-fg:#bababa;
+ --chromahonControls__button-fg_r:186;
+ --chromahonControls__button-fg_g:186;
+ --chromahonControls__button-fg_b:186;
+ --chromahonControls__button-fg_rgb:186,186,186;
+ --chromahonControls__button-bg-hl:#d6d6d6;
+ --chromahonControls__button-bg-hl_r:214;
+ --chromahonControls__button-bg-hl_g:214;
+ --chromahonControls__button-bg-hl_b:214;
+ --chromahonControls__button-bg-hl_rgb:214,214,214;
+ --chromahonControls__button-fg-hl:#121212;
+ --chromahonControls__button-fg-hl_r:18;
+ --chromahonControls__button-fg-hl_g:18;
+ --chromahonControls__button-fg-hl_b:18;
+ --chromahonControls__button-fg-hl_rgb:18,18,18;
+ --chromahonControls__textInput-bg:#0f0f0f;
+ --chromahonControls__textInput-bg_r:15;
+ --chromahonControls__textInput-bg_g:15;
+ --chromahonControls__textInput-bg_b:15;
+ --chromahonControls__textInput-bg_rgb:15,15,15;
+ --chromahonControls__textInput-fg:#bababa;
+ --chromahonControls__textInput-fg_r:186;
+ --chromahonControls__textInput-fg_g:186;
+ --chromahonControls__textInput-fg_b:186;
+ --chromahonControls__textInput-fg_rgb:186,186,186;
+ --chromahonControls__textInput-bg-hl:#d6d6d6;
+ --chromahonControls__textInput-bg-hl_r:214;
+ --chromahonControls__textInput-bg-hl_g:214;
+ --chromahonControls__textInput-bg-hl_b:214;
+ --chromahonControls__textInput-bg-hl_rgb:214,214,214;
+ --chromahonControls__textInput-fg-hl:#121212;
+ --chromahonControls__textInput-fg-hl_r:18;
+ --chromahonControls__textInput-fg-hl_g:18;
+ --chromahonControls__textInput-fg-hl_b:18;
+ --chromahonControls__textInput-fg-hl_rgb:18,18,18;
+}

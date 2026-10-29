@@ -1,0 +1,163 @@
+/* The native full-height hero and bottom action row keep their current layout. */
+.BasicUI .basicappdetailssectionstyler_AppDetailsRoot_3fp5y {
+ --seamless-gameview-base:#000;--seamless-bar-top:calc(56px + var(--seamless-window-inset,0px) + var(--tbp-height,0px));position:relative;z-index:auto;background:transparent!important;height:auto!important;
+ display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;
+}
+.BasicUI .AppDetailsRoot>.PlaySection {grid-area:1/1;}
+.BasicUI .AppDetailsRoot>.AppDetailsContainer {grid-area:2/1;}
+.BasicUI .BasicHome>#header {top:var(--seamless-window-inset,0px)!important;}
+html:is([data-steam-prime-page=game],[data-steam-prime-page=home]) .BasicUI .BasicHome>#header {
+ padding-inline:var(--tbp-side,25px)!important;padding-top:var(--tbp-height,0px)!important;
+ height:calc(40px + var(--tbp-height,0px))!important;min-height:calc(40px + var(--tbp-height,0px))!important;
+ max-height:calc(40px + var(--tbp-height,0px))!important;box-sizing:border-box!important;
+}
+html[data-prime-header-compact=true] .BasicUI .BasicHome>#header {
+ padding:0 16px!important;height:40px!important;min-height:40px!important;max-height:40px!important;
+}
+html[data-prime-header-compact=true] .BasicUI [class~='AppDetailsRoot'] {--seamless-bar-top:calc(48px + var(--seamless-window-inset,0px));}
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3 {
+ --seamless-hero-tail:var(--seamless-playbar-height,80px);
+ position:relative!important;z-index:0!important;isolation:isolate;overflow:visible!important;background:#000!important;
+}
+/* Override whole-image blur without changing the other installed theme options. */
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3 .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
+ height:calc(100% + var(--seamless-hero-tail))!important;width:100%!important;filter:none!important;transform:none!important;
+ -webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 80px),transparent 100%)!important;
+ mask-image:linear-gradient(to bottom,#000 calc(100% - 80px),transparent 100%)!important;
+}
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3 .sharedappdetailsheader_HeaderBackgroundImage_1sarA::before {
+ content:none!important;
+}
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3 .sharedappdetailsheader_HeaderBackgroundImage_1sarA::after {
+ content:none!important;
+}
+.BasicUI .AppDetailsRoot::before,.BasicUI .AppDetailsRoot::after {content:none!important;}
+.BasicUI .AppDetailsRoot>[data-seamless-transition] {position:absolute;left:0;right:0;top:-80px;height:calc(240px + var(--seamless-playbar-height,80px));z-index:0;pointer-events:none;}
+.BasicUI [data-seamless-transition-blur] {position:absolute;left:0;right:0;top:-24px;height:calc(104px + var(--seamless-playbar-height,80px));backdrop-filter:blur(22px) saturate(1.1);mask-image:linear-gradient(to bottom,transparent,#000 140px);}
+.BasicUI [data-seamless-transition-shade] {
+ position:absolute;left:0;right:0;top:0;height:calc(80px + var(--seamless-playbar-height,80px));
+ background:linear-gradient(to bottom,transparent,rgba(0,0,0,.015) 18%,rgba(0,0,0,.07) 36%,rgba(0,0,0,.2) 54%,rgba(0,0,0,.48) 69%,rgba(0,0,0,.8) 84%,#000 100%);
+}
+.BasicUI [data-seamless-transition-shade]::after {content:'';position:absolute;top:100%;left:0;right:0;height:160px;background:linear-gradient(to bottom,#000,rgba(0,0,0,.9) 18%,rgba(0,0,0,.6) 40%,rgba(0,0,0,.22) 70%,transparent);}
+.BasicUI .TopCapsule .HeaderBackgroundImage .ImgBlurBackdrop {display:none!important;}
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3::after {content:none!important;}
+.BasicUI .TopCapsule .BoxSizerContainer {z-index:1;}
+.BasicUI .ScrollContainer:has(>.InnerContainer>.Header .TopCapsule) {background:#000!important;}
+.BasicUI .AppDetailsOverviewPanel>._2OOzYVWIHaKXm6_7sscT9i {position:relative;isolation:auto;background:transparent!important;}
+.BasicUI [class~='ScrollContainer']:has([class~='AppDetailsOverviewPanel'])>[class~='InnerContainer'] {height:auto!important;min-height:100%!important;}
+.BasicUI .AppDetailsOverviewPanel>._2OOzYVWIHaKXm6_7sscT9i>.Backdrop {
+ position:fixed!important;inset:var(--seamless-reflection-offset,0px) 0 auto!important;height:100vh!important;z-index:0!important;pointer-events:none;
+ opacity:var(--seamless-reflection-opacity,0)!important;
+ mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 85%,transparent 100%);
+}
+.BasicUI .AppDetailsOverviewPanel .Backdrop::before {
+ content:'';position:absolute;inset:-40px;background-image:var(--library-reflected-art);background-size:cover;background-position:center;
+ transform:scaleY(-1);filter:blur(36px) saturate(1.15) brightness(.65);opacity:.6;
+}
+.BasicUI .AppDetailsOverviewPanel .BackdropGlass {display:none!important;}
+.BasicUI .AppDetailsRoot .GamepadTabbedPage>.TabContents {background:transparent!important;}
+.BasicUI .AppDetailsRoot :is(.AppDetailsContainer,.GamepadTabbedPage,.TabContents,.TransitionGroup,.ContentWrapper,[role=tabpanel]) {
+ position:relative!important;inset:auto!important;height:auto!important;max-height:none!important;overflow:visible!important;
+}
+.BasicUI .AppDetailsRoot>.AppDetailsContainer {z-index:auto;}
+.BasicUI .AppDetailsRoot [role=tabpanel] {width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+.BasicUI .AppDetailsRoot [role=tabpanel] :is(.AppDetailsContent,.SeekTarget,.AppActivityDay) {min-width:0!important;max-width:100%!important;box-sizing:border-box!important;}
+.BasicUI .ScrollContainer:has(>.InnerContainer>.Header .TopCapsule),
+.BasicUI .AppDetailsRoot [role=tabpanel] {overscroll-behavior-y:auto!important;}
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH {
+ position:sticky!important;top:var(--seamless-bar-top,56px);z-index:20;isolation:auto;overflow:visible!important;
+ background:transparent!important;backdrop-filter:none!important;border:0!important;box-shadow:none!important;
+}
+.BasicUI .basicappdetailssectionstyler_PlaySection_3scbH::before {content:none!important;}
+.BasicUI .sharedappdetailsheader_TitleSection_1P_tv {background:transparent!important;backdrop-filter:none!important;border:0!important;}
+/* Reuse the Desktop cards within Game Mode's native tabs, focus and gutters. */
+.BasicUI .AppDetailsRoot :is(.ActivityFeedContainer,.CommunityContentContainer) {font-family:inherit!important;}
+.BasicUI .ActivityFeedContainer .Event.Panel {background:rgba(255,255,255,.09)!important;border-radius:var(--round-radius-size,8px)!important;backdrop-filter:blur(24px) saturate(1.1)!important;}
+.BasicUI .AppDetailsRoot .ActivityFeedContainer .Event.Panel {width:100%!important;min-height:0!important;height:auto!important;box-sizing:border-box!important;}
+.BasicUI .AppDetailsRoot .ActivityFeedContainer :is(.PartnerEventMediumImage_Container,.PartnerEventMediumImage_Contents,.PartnerEventLargeImage_Container,.PartnerEventLargeImage_Contents) {width:100%!important;max-width:100%!important;min-width:0!important;min-height:0!important;height:auto!important;box-sizing:border-box!important;}
+.BasicUI .ActivityFeedContainer [data-story-title] {font-size:22px!important;font-weight:700!important;}
+.BasicUI .ActivityFeedContainer [data-story-summary] {font-size:16px!important;line-height:1.5!important;}
+.BasicUI .ActivityFeedContainer [data-story-date] {font-size:13px!important;}
+.BasicUI .ActivityFeedContainer .Event.Panel:has(.gpfocus) {outline:2px solid #f4f4f4;outline-offset:3px;}
+.BasicUI .ActivityFeedContainer .PartnerEventMediumImage_Container:is(.gpfocus,:hover) {background:transparent!important;color:inherit!important;}
+.BasicUI .ActivityFeedContainer [data-composer-heading] {font-size:20px!important;}
+.BasicUI .ActivityFeedContainer .PostTextEntry.AddToFeed {border-radius:var(--round-radius-size,8px)!important;}
+.BasicUI .AppDetailsRoot :is(.ActivityFeedContainer .PostTextEntry.AddToFeed,.CommunityContentContainer .CommunityItem:not(.Blank)) {
+ background:rgba(255,255,255,.09)!important;backdrop-filter:blur(24px) saturate(1.1)!important;
+}
+.BasicUI .ActivityFeedContainer .PostTextEntryArea {font-size:16px!important;line-height:1.5!important;}
+.BasicUI .AppDetailsRoot .ActivityFeedContainer .PostTextEntryArea {color:#f4f4f4!important;caret-color:#fff!important;}
+.BasicUI .AppDetailsRoot .ActivityFeedContainer .PostTextEntryArea::placeholder {color:#d5dce3!important;opacity:1!important;font-style:normal!important;}
+.BasicUI .AppDetailsRoot .AppButtons .MenuButton {display:flex!important;align-items:center!important;justify-content:center!important;background:rgba(255,255,255,.12)!important;color:#f4f4f4!important;border:1px solid rgba(255,255,255,.1)!important;}
+.BasicUI .AppDetailsRoot .AppButtons .MenuButton svg {margin:0!important;position:static!important;}
+.BasicUI .AppDetailsRoot .AppButtons .MenuButton.gpfocus {outline:2px solid #fff;outline-offset:3px;}
+.BasicUI .AppDetailsRoot>.CloudStatusRow {
+ grid-area:1/1/3/2;align-self:start;justify-self:end;
+ position:sticky!important;top:calc(var(--seamless-bar-top,56px) + 16px)!important;right:auto!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:48px!important;height:48px!important;padding:7px!important;box-sizing:border-box!important;
+ transform:none!important;margin:16px calc(2.8vw + 116px) 0 0!important;background:transparent!important;border:0!important;box-shadow:none!important;z-index:22;
+}
+.BasicUI .AppDetailsRoot>.CloudStatusRow .CloudStatusIcon {display:grid;place-items:center;width:100%;height:100%;}
+.BasicUI .AppDetailsRoot>.CloudStatusRow .CloudStatusIcon>svg {display:block;width:24px!important;height:24px!important;margin:0!important;}
+.BasicUI .AppDetailsRoot>.CloudStatusRow [class~='CloudStatusLabel'] {display:none!important;}
+.BasicUI .AppDetailsRoot .GameInfoContainer .AppGameInfoContainer {height:auto!important;}
+.BasicUI .AppDetailsRoot .GameInfoContainer .FeaturesList .Container {min-height:36px;}
+.BasicUI .AppDetailsRoot .TabHeaderRowWrapper {
+ position:sticky!important;top:calc(var(--seamless-bar-top,56px) + 90px)!important;z-index:15;
+ padding:10px 2.8vw!important;box-sizing:border-box;background:transparent!important;backdrop-filter:none!important;box-shadow:none!important;
+}
+.BasicUI .AppDetailsRoot .TabHeaderRowWrapper::before,.BasicUI .AppDetailsRoot .TabHeaderRowWrapper::after {content:none!important;display:none!important;}
+.BasicUI .AppDetailsRoot .TabRow {
+ min-height:46px;box-sizing:border-box;padding:3px 12px;background:rgba(255,255,255,.09)!important;
+ border:1px solid rgba(255,255,255,.09);border-radius:999px;backdrop-filter:blur(28px) saturate(1.1);box-shadow:0 6px 18px rgba(0,0,0,.24);
+}
+.BasicUI .AppDetailsRoot [data-seamless-floating-logo] {display:none;}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]>.PlaySection {
+ margin-inline:20px;width:calc(100% - 40px);box-sizing:border-box;
+ height:var(--seamless-playbar-height,80px)!important;padding-block:calc((var(--seamless-playbar-height,80px) - 48px)/2 - 1px)!important;
+ border:1px solid rgba(255,255,255,.12)!important;border-radius:var(--round-radius-size,12px);
+ background:rgba(18,18,18,.72)!important;backdrop-filter:blur(28px) saturate(1.1)!important;
+ box-shadow:0 6px 18px rgba(0,0,0,.24)!important;
+}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]>.PlaySection .StatusAndStats {display:none!important;}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true] [data-seamless-floating-logo] {
+ display:block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+ width:220px;height:40px;object-fit:contain;object-position:center;margin:0;pointer-events:none;
+}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]>.PlaySection [class~='ActionRow'] {position:relative;}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]>.PlaySection [class~='AppButtons'] {margin-left:auto!important;}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]>.CloudStatusRow {
+ margin-right:calc(2.8vw + 136px)!important;
+}
+/* Keep detached controls above the header's fade within the same stacking context. */
+html[data-prime-playbar-floating=true] .BasicUI .BasicHome>#header::before {content:none!important;}
+.BasicUI .AppDetailsRoot[data-seamless-floating=true]::after {
+ content:''!important;position:fixed;top:var(--seamless-window-inset,0px);left:0;right:0;height:104px;
+ z-index:10;pointer-events:none;
+ background:linear-gradient(to bottom,rgba(0,0,0,.94),rgba(0,0,0,.82) 30px,rgba(0,0,0,.45) 52px,rgba(0,0,0,.12) 78px,transparent 104px);
+ backdrop-filter:blur(var(--moreBlur-strength,8px));-webkit-backdrop-filter:blur(var(--moreBlur-strength,8px));
+ mask-image:linear-gradient(to bottom,#000 0,#000 40px,transparent 104px);
+ -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 40px,transparent 104px);
+}
+.BasicUI .AppDetailsRoot::before {content:none!important;}
+.BasicUI .AppDetailsRoot .AppButtons [class~='MenuButton']:is(.gpfocus,.gpfocuswithin,:focus-visible,:hover) {
+ background:color-mix(in srgb,var(--artwork-play-color,var(--prime-focus)) 42%,var(--prime-surface))!important;
+ color:var(--artwork-play-text,var(--prime-text))!important;
+}
+.BasicUI .AppDetailsRoot .AppButtons [class~='MenuButton']:is(.gpfocus,.gpfocuswithin,:focus-visible,:hover) svg {color:inherit!important;}
+@media(max-width:900px) {
+ .BasicUI .ActivityFeedContainer [data-story-title] {font-size:20px!important;}
+ .BasicUI .ActivityFeedContainer [data-story-summary] {font-size:15px!important;}
+}
+@supports not (backdrop-filter:blur(1px)) {.BasicUI .ActivityFeedContainer .Event.Panel {background:#171717!important;}}
+.BasicUI [data-bpm-metadata-host]>:is([class~='AppGameInfoContainer'],[class~='GameInfoQuickLinks']) {display:none!important;}
+.BasicUI [data-bpm-shortcut-content] {width:100%;min-width:0;}
+.BasicUI [data-bpm-shortcut-content] [data-shortcut-info] {height:auto!important;}
+.BasicUI [data-bpm-shortcut-content] [data-shortcut-links] {margin:16px 20px 24px;}
+.BasicUI [data-bpm-shortcut-content] [data-shortcut-links] .Links {padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.09);backdrop-filter:blur(24px);}
+.BasicUI [data-bpm-shortcut-content] [data-shortcut-links] .Anchor {color:#f4f4f4;text-decoration:none;font-size:14px;}
+.BasicUI .AppDetailsRoot [data-shortcut-news] {margin-bottom:24px;}
+.BasicUI [data-shortcut-news]>.SectionHeader {padding-bottom:14px;}
+/* The shared artwork is already blurred; avoid repeating a viewport-sized blur per card. */
+.BasicUI .AppDetailsRoot :is(.ActivityFeedContainer .Event.Panel,.ActivityFeedContainer .PostTextEntry.AddToFeed,.CommunityContentContainer .CommunityItem:not(.Blank)) {backdrop-filter:none!important;}

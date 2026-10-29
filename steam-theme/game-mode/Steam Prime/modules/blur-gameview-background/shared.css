@@ -1,0 +1,11 @@
+/* Blurred Hero Background Theme */
+:root {
+  --gaker19-blur-strength-gameview: unset;
+  --gaker19-brightness-gameview: unset;
+}
+
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA {
+    filter: blur(var(--gaker19-blur-strength-gameview)) brightness(var(--gaker19-brightness-gameview)) !important;
+    transform: scale(1.05);
+    transform-origin: center;
+}
