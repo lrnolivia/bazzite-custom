@@ -4,9 +4,9 @@
     window.__steamPrimeArtworkCacheDispose?.();
     const host=window.opener||window;
     function createCache(){
-        const memory=new Map(),pending=new Map(),choices=new Map(),cooldown=new Map(),decoded=[];
+        const memory=new Map(),pending=new Map(),choices=new Map(),cooldown=new Map(),decoded=[],assetHooks=[],documents=new Set();
         const maxBytes=128*1024*1024,maxFile=32*1024*1024,maxDecoded=96*1024*1024;
-        const stats={hits:0,saved:0,hydrated:0,warmed:0,failures:0,bytes:0};
+        const stats={hits:0,saved:0,hydrated:0,warmed:0,failures:0,evictions:0,bytes:0};
         let db,store,wrapped,descriptor,opening,decodedBytes=0,warmTimer=0,stopped=false,fetchQueue=Promise.resolve(),warmQueue=Promise.resolve();
         let currentRoute=host.tempNavStore?.m_locationPathname||'';
         const noteRoute=()=>{const route=host.tempNavStore?.m_locationPathname||'';if(route!==currentRoute){currentRoute=route;choices.clear();}return route;};
@@ -15,7 +15,7 @@
                 const original=String(value).split('#steam-prime-original=')[1]||value;
                 const url=new host.URL(original,host.location.href);
                 const custom=/^\/customimages\/\d+_(?:hero|logo)\.(?:jpg|png)$/i.test(url.pathname)&&Number(url.searchParams.get('v'))>0;
-                const native=/^\/assets\/\d+\/[a-f0-9]{20,}\/(?:library_hero|logo|library_logo)\.(?:jpg|png)$/i.test(url.pathname);
+                const native=/^\/assets\/\d+\/(?:[a-f0-9]{20,}\/)?(?:library_hero|logo|library_logo)\.(?:jpg|png)$/i.test(url.pathname)&&Number(url.searchParams.get('c'))>0;
                 if(url.origin!==host.location.origin||(!custom&&!native))return null;
                 url.hash='';return url.href;
             }catch{return null;}
@@ -31,9 +31,18 @@
                 request.onerror=request.onblocked=()=>finish(null);
             }catch{finish(null);}
         }));
-        function remember(record){
+        function remember(record,evict=true){
             if(memory.has(record.source))return memory.get(record.source);
-            if(!record.blob?.size||record.blob.size>maxFile||stats.bytes+record.blob.size>maxBytes||memory.size>=32)return null;
+            if(!record.blob?.size||record.blob.size>maxFile)return null;
+            const active=new Set();
+            if(evict){for(const doc of documents)for(const image of doc.images)active.add(image.currentSrc||image.src);for(const choice of choices.values())for(const url of choice.urls)active.add(url);}
+            while(stats.bytes+record.blob.size>maxBytes||memory.size>=32){
+                if(!evict)return null;
+                const previous=[...memory.values()].find(entry=>!active.has(entry.url));if(!previous)return null;
+                memory.delete(previous.source);stats.bytes-=previous.blob.size;stats.evictions++;
+                host.URL.revokeObjectURL(previous.url.split('#')[0]);
+                for(let i=decoded.length-1;i>=0;i--)if(decoded[i].entry===previous){decodedBytes-=decoded[i].bytes;decoded.splice(i,1);}
+            }
             const url=host.URL.createObjectURL(record.blob)+'#steam-prime-original='+record.source;
             const entry={...record,url};memory.set(record.source,entry);stats.bytes+=record.blob.size;return entry;
         }
@@ -43,7 +52,7 @@
                 const timer=host.setTimeout(resolve,2000);
                 try{
                     const request=database.transaction('images').objectStore('images').getAll();
-                    request.onsuccess=()=>{host.clearTimeout(timer);for(const record of (request.result||[]).sort((a,b)=>b.created-a.created))if(identify(record.source)===record.source&&remember(record))stats.hydrated++;resolve();};
+                    request.onsuccess=()=>{host.clearTimeout(timer);for(const record of (request.result||[]).sort((a,b)=>b.created-a.created))if(identify(record.source)===record.source&&remember(record,false))stats.hydrated++;resolve();};
                     request.onerror=()=>{host.clearTimeout(timer);resolve();};
                 }catch{host.clearTimeout(timer);resolve();}
             });
@@ -130,7 +139,26 @@
             fetchQueue=task.catch(()=>{});
             pending.set(source,task);
         }
+        function selectCached(urls){
+            if(!Array.isArray(urls)||!urls.length||String(urls[0]).startsWith('blob:'))return urls;
+            const route=noteRoute(),signature='asset:'+urls.join('\n'),previous=choices.get(signature);
+            if(previous?.route===route)return previous.urls;
+            const entry=urls.map(identify).map(source=>memory.get(source)).find(Boolean);
+            const chosen=entry?[entry.url,...urls]:urls;
+            if(entry){memory.delete(entry.source);memory.set(entry.source,entry);stats.hits++;scheduleWarm(entry);}
+            choices.set(signature,{route,urls:chosen});return chosen;
+        }
+        function attachAssets(){
+            const target=host.appDetailsStore;if(!target||assetHooks.length)return;
+            for(const [name,field]of [['GetHeroImages','rgHeroImages'],['GetLogoImages','rgLogoImages']]){
+                const original=target[name];if(typeof original!=='function')continue;
+                const descriptor=Object.getOwnPropertyDescriptor(target,name);
+                const wrapped=function(...args){const result=original.apply(this,args);return result?{...result,[field]:selectCached(result[field])}:result;};
+                try{Object.defineProperty(target,name,{value:wrapped,writable:true,configurable:true});assetHooks.push({target,name,original,descriptor,wrapped});}catch{}
+            }
+        }
         function attach(images=[]){
+            attachAssets();
             const next=host.appStore;
             if(store||typeof next?.GetCustomImageURLs!=='function')return !!store;
             const original=next.GetCustomImageURLs;
@@ -143,7 +171,7 @@
                 if(manifest&&!(app?.rt_custom_image_mtime>manifest.scannedAt)){
                     const known=manifest.files[String(app?.appid)+':'+suffix];
                     if(known)urls=known.map(url=>new host.URL(url,host.location.href).href);
-                    else if(['','p','_hero','_logo'].some(kind=>manifest.files[String(app?.appid)+':'+kind]))urls=[];
+                    else urls=[];
                 }
                 if(!Array.isArray(urls)||!urls.length)return urls;
                 const source=urls.map(identify);if(!source.some(Boolean))return urls;
@@ -154,7 +182,7 @@
                 const alreadyMounted=!previous&&route===installRoute&&source.some(key=>key&&activeNative.has(key.replace(/\.(?:jpg|png)(?=\?)/i,'')));
                 const entry=!alreadyMounted&&source.map(key=>memory.get(key)).find(Boolean);
                 const chosen=entry?[entry.url,...urls]:urls;
-                if(entry){stats.hits++;scheduleWarm(entry);}
+                if(entry){memory.delete(entry.source);memory.set(entry.source,entry);stats.hits++;scheduleWarm(entry);}
                 choices.set(signature,{route,urls:chosen});
                 if(choices.size>2048)choices.delete(choices.keys().next().value);
                 return chosen;
@@ -165,6 +193,8 @@
         const detach=()=>{
             if(store?.GetCustomImageURLs===wrapped){if(descriptor)Object.defineProperty(store,'GetCustomImageURLs',descriptor);else delete store.GetCustomImageURLs;}
             store=null;wrapped=null;
+            for(const hook of assetHooks)if(hook.target[hook.name]===hook.wrapped){if(hook.descriptor)Object.defineProperty(hook.target,hook.name,hook.descriptor);else delete hook.target[hook.name];}
+            assetHooks.length=0;
         };
         host.addEventListener('unload',()=>{
             stopped=true;detach();host.clearTimeout(warmTimer);
@@ -172,19 +202,20 @@
             decoded.length=0;db?.close();
         },{once:true});
         function use(image){
-            if(image?.tagName!=='IMG'||image.src.startsWith('blob:')||image.srcset)return;
-            const entry=memory.get(identify(image.src));
-            if(entry){image.src=entry.url;stats.hits++;scheduleWarm(entry);}
+            if(image?.tagName!=='IMG'||!image.closest('.HeaderBackgroundImage,._1IX7FPSY9Jb82KhBVBSkZa')||image.matches('.ImgBlur,.HSQWw9HUAP6jtA2OZjS-u'))return;
+            const value=String(image.complete&&image.naturalWidth>0);
+            if(image.dataset.loewArtworkReady!==value)image.dataset.loewArtworkReady=value;
         }
-        return {version:4,clients:0,stats,ready,learn,attach,detach,noteRoute,use};
+        return {version:6,clients:0,documents,stats,ready,learn,attach,detach,noteRoute,use};
     }
     const previous=host.__steamPrimeOriginalArtworkCache;
-    if(previous&&previous.version!==4)previous.detach();
-    const cache=previous?.version===4?previous:(host.__steamPrimeOriginalArtworkCache=createCache());
-    cache.clients++;
+    if(previous&&previous.version!==6)previous.detach();
+    const cache=previous?.version===6?previous:(host.__steamPrimeOriginalArtworkCache=createCache());
+    cache.clients++;cache.documents.add(document);
     let disposed=false,attempts=0,retry=0;
     cache.ready.then(()=>{if(!disposed&&!cache.attach(document.images))retry=host.setInterval(()=>{if(cache.attach(document.images)||++attempts>=30)host.clearInterval(retry);},500);});
-    const loaded=event=>cache.learn(event.target);
+    const loaded=event=>{cache.learn(event.target);cache.use(event.target)};
+    const failed=event=>cache.use(event.target);
     const routes=new MutationObserver(records=>{
         cache.noteRoute();
         for(const r of records){
@@ -193,12 +224,12 @@
         }
     });
     routes.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['src']});
-    document.addEventListener('load',loaded,true);
-    for(const image of document.images)cache.learn(image);
+    document.addEventListener('load',loaded,true);document.addEventListener('error',failed,true);
+    for(const image of document.images){cache.learn(image);cache.use(image);}
     const dispose=()=>{
         if(disposed)return;disposed=true;host.clearInterval(retry);routes.disconnect();
-        document.removeEventListener('load',loaded,true);window.removeEventListener('unload',dispose);
-        if(--cache.clients===0)cache.detach();
+        document.removeEventListener('load',loaded,true);document.removeEventListener('error',failed,true);window.removeEventListener('unload',dispose);
+        cache.documents.delete(document);if(--cache.clients===0)cache.detach();
     };
     window.addEventListener('unload',dispose,{once:true});window.__steamPrimeArtworkCacheDispose=dispose;
 })();

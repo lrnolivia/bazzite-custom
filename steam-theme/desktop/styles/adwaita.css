@@ -154,3 +154,6 @@ body.DesktopUI .AppDetailsMain .InPage .PlayBar.PlayBar::before {
  background:linear-gradient(to bottom,transparent 0,rgba(0,0,0,.25) 36%,rgba(0,0,0,.62) 62%,rgba(0,0,0,.45) 80%,transparent 100%)!important;
  border:0!important;box-shadow:none!important;filter:none!important;
 }
+
+/* Keep the blurred placeholder while Steam advances past failed hero sources. */
+.HeaderBackgroundImage img[data-loew-artwork-ready=false]:not(.ImgBlur) {opacity:0!important;}

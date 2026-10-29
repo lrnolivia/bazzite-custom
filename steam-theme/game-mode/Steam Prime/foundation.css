@@ -191,3 +191,6 @@ html:is([data-steam-prime-page=home],[data-steam-prime-page=game]):not([data-pri
  max-height:calc(40px + var(--tbp-height,30px))!important;
  box-sizing:border-box!important;
 }
+
+/* Keep the blurred placeholder while Steam advances past failed hero sources. */
+.HeaderBackgroundImage img[data-loew-artwork-ready=false]:not(.ImgBlur) {opacity:0!important;}
