@@ -1,6 +1,6 @@
 /* Immutable, byte-for-byte cache for versioned local heroes and logos. */
 (() => {
-    if(document.title!=='Steam Big Picture Mode')return;
+    if(document.title!=='Steam Big Picture Mode'&&!(document.title==='Steam'&&document.body.classList.contains('DesktopUI')))return;
     window.__steamPrimeArtworkCacheDispose?.();
     const host=window.opener||window;
     function createCache(){

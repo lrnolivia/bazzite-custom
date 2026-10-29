@@ -48,6 +48,22 @@
  background:rgba(255,255,255,.055)!important;background-image:none!important;
  color:var(--prime-secondary)!important;border-radius:var(--prime-radius)!important;
 }
+/* Native activity cards also need an inset footer before story markup is added. */
+.BasicUI [class~='ActivityFeedContainer'] [class~='Event'][class~='Panel']>[class~='RatingBar'] {
+ display:flex!important;position:relative!important;align-items:center!important;justify-content:flex-end!important;
+ gap:10px!important;width:100%!important;height:auto!important;min-height:48px!important;
+ margin:0!important;padding:8px 16px!important;box-sizing:border-box!important;
+}
+.BasicUI [class~='ActivityFeedContainer'] [class~='RatingBar']>[class~='ButtonSpacer'],
+.BasicUI [class~='ActivityFeedContainer'] [class~='RatingBar']>[class~='RatingDetails']:empty {display:none!important;}
+.BasicUI [class~='ActivityFeedContainer'] [class~='RatingBar'] :is([class~='CommentButton'],[class~='LikeButton']) {
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;
+ flex:0 0 auto!important;min-height:30px!important;padding:4px 10px!important;
+ box-sizing:border-box!important;line-height:20px!important;
+}
+.BasicUI [class~='ActivityFeedContainer'] [class~='RatingBar'] :is([class~='CommentButton'],[class~='LikeButton']) svg {
+ display:block!important;width:16px!important;height:16px!important;flex:0 0 16px!important;
+}
 .BasicUI [class~='ActivityFeedContainer'] [class~='AppActivityDay'][data-dates-in-cards]>[class~='AppActivityDate'] {display:none!important;}
 .BasicUI [class~='ActivityFeedContainer'] [data-story-layout] :is([class~='PartnerEventMediumImage_Contents'],[class~='PartnerEventLargeImage_Contents'],[class~='PartnerEventTextOnly_Container']) {
  display:grid!important;grid-template-columns:minmax(150px,28%) minmax(0,1fr) max-content!important;
